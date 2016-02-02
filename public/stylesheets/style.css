@@ -97,7 +97,15 @@
 .advance{
 	height:200px;
 }
-
+/*加载中*/
+.bottom-pull-loading{
+	color:#ffffff;
+	line-height:30px;
+	text-align:center;
+	background:#ff0000;
+	display:none;
+	filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5;
+}
 /*返回顶部样式start*/
 #elevator_item {
 	width: 60px;
