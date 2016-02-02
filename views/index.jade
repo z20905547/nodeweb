@@ -3,6 +3,7 @@ extends layout
 block content
 	include ./head.jade
 	include ./adblock.html
-	h1= title
-	p Welcome to #{title}
+	include ./content.html
 	include ./footer.html
+	script( src='/javascripts/scroll.js')
+	script( src='/javascripts/backtop.js')
