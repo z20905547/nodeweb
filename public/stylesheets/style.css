@@ -41,6 +41,9 @@
 	.content-right-block{
 		display:none;
 	}
+	.one-active{
+		height:100px;
+	}
 }
 /*内容区*/
 .content-body{
@@ -49,6 +52,7 @@
 	content-body
 }
 .content-left-block{
+	overflow:hidden;
 }
 .one-active{
 	height:200px;
