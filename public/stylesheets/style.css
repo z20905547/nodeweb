@@ -45,10 +45,10 @@
 		height:100px;
 	}
 }
-/*内容区*/
+/*首页内容区*/
 .content-body{
 	padding-top:20px;
-	background:url('../images/content_bg.jpg') no-repeat #ECE9E9;
+	background:url('../images/content_bg.jpg') no-repeat #ffffff;
 	content-body
 }
 .content-left-block{
@@ -92,14 +92,49 @@
 }
 .content-right-block{
 }
-.right-ad{
-	height:200px;
-}
 .sys-message{
+	margin-left:0px;
 	height:200px;
+	background:#ffffff;
+	border-top:solid 2px #CE3367;
+	border-left:solid 1px #cccccc;
+	border-right:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
 }
-.advance{
+.notice-title{
+	
+}
+.notice-title .small-tab{
+	display:inline-block;
+	width:50%;
+	text-align:center;
+	font-size:16px;
+	font-weight: bold;
+	line-height:40px;
+	background:#CE3367;
+	color:#ffffff;
+	cursor: pointer;
+}
+.notice-title .active{
+	background:#ffffff;
+	color:#CE3367;
+	cursor: default;
+}
+.right-border{
+	border-right:solid 1px #CE3367;
+}
+.right-ad{
+	margin-top:10px;
+	margin-left:0px;
 	height:200px;
+	background:#ffffff;
+}
+
+.advance{
+	margin-left:0px;
+	margin-top:10px;
+	height:200px;
+	background:#ffffff;
 }
 /*加载中*/
 .bottom-pull-loading{
