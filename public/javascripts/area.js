@@ -1,23 +1,10 @@
-function ajaxGet(type,url,params,successFun){
-	$.ajax({
-		type: type,
-		url:url,
-		async: false,
-		dataType: 'jsonp',
-		data:params,
-		success:successFun,
-		error:function(data){
-			alert("网络错误");
-		}
-	});
-}
 function getSubList(pid,id,obj){
 	obj.html("");
 	obj.val("");
 	if(!pid){
 		return;
 	}
-	var url="http://www.vfhui.com:8080/management/jsondata/area/getSubAreaList";
+	var url=URLMAP.citylist;
 	var params={parentId:pid};
 	ajaxGet('get',url,params,function(data){
 		if(data.statusCode=="0000"){

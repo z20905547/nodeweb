@@ -1,19 +1,13 @@
 var express = require('express');
 var router = express.Router();
-router.get("/:cityId(\\d+)", function(req, res, next) {
+router.get("/:proId(\\d+)", function(req, res, next) {
 	//获取楼盘数据
-  res.render('index', { title: '唯房会',backcityId: req.params.cityId});
+  res.render('index', { title: '唯房会',backproId: req.params.proId});
 });
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	//获取楼盘数据
 	
-  res.render('index', { title: '唯房会',backcityId: 460100});
-});
-
-router.get("/buildings/:buildingsId(\\d+)", function(req, res, next) {
-	//获取楼盘数据
-	
-  res.render('buildings', { title: '唯房会' });
+  res.render('index', { title: '唯房会',backproId: 460000});
 });
 module.exports = router;

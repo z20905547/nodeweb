@@ -1,13 +1,13 @@
 extends layout
 
 block content
-	input.cityId(type="hidden",value="#{backcityId}")
+	input#proId(type="hidden",value="#{backproId}")
 	include ./head.jade
 	include ./adblock.html
 	include ./content.html
 	include ./footer.html
 	script( src='/javascripts/backtop.js')
-	script( src='/javascripts/area.js')
+	script( src='/javascripts/head.js')
 	script( src='/javascripts/index.js')
 	script( src='/javascripts/scroll.js')
 	script( src='/javascripts/countTime.js')

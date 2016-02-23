@@ -1,9 +1,31 @@
 /*头部*/
 .topbar-head{
 	background:#f5f5f5;
-	padding:3px 0px;
+	padding:5px 0px;
 }
-
+.top_city_item{
+	cursor: pointer;
+	display: inline;
+    padding: .2em .6em .3em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background:#BFB8B8;
+    color:#ffffff;
+    margin-right:.2em;
+}
+.top_city_item:HOVER{
+	color:#ffffff;
+	background:#ff0000;
+}
+.top_city_item.active{
+	color: #ffffff;
+	background:#CE3367;
+	cursor: default;
+}
 .head-logo{
 	width:150px;
 	height:65px;
@@ -26,25 +48,7 @@
 .footer{
 	background:#f5f5f5;
 }
-/*响应区*/
-@media screen and (max-width:992px){
-	.container{width:100%;}
-	.small-top-ad{
-		display:none;
-	}
-}
-@media screen and (max-width:768px){
-	.toolbar{
-		display:none;
-		
-	}
-	.content-right-block{
-		display:none;
-	}
-	.one-active{
-		height:100px;
-	}
-}
+
 /*首页内容区*/
 .content-body{
 	padding-top:20px;
@@ -60,6 +64,7 @@
 	border:solid 1px #ECE9E9;
 	background:#ffffff;
 	margin-bottom:10px;
+	cursor: pointer;
 }
 .main_active_logo{
 	padding:10px 0px;
@@ -132,7 +137,7 @@
 }
 .notice-title .small-tab{
 	display:inline-block;
-	width:50%;
+	width:100%;
 	text-align:center;
 	font-size:16px;
 	font-weight: bold;
@@ -162,7 +167,7 @@
 	height:200px;
 	background:#ffffff;
 }
-/*加载中*/
+/*首页加载中*/
 .bottom-pull-loading{
 	color:#ffffff;
 	line-height:30px;
@@ -171,6 +176,21 @@
 	display:none;
 	filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5;
 }
+/*楼盘详情start*/
+.module_detail_title{
+	border-bottom:solid 2px #CE3367;
+	border-top:solid 1px #f0f0f0;
+	border-right:solid 1px #f0f0f0;
+	border-left:solid 1px #f0f0f0;
+	background:#f5f5f5;
+}
+.module_detail_title .title_label{
+	color:#ffffff;
+	display:inline-block;
+	padding:5px 20px;
+	background:#CE3367;
+}
+/*楼盘详情end*/
 /*返回顶部样式start*/
 #elevator_item {
 	width: 60px;
@@ -255,6 +275,12 @@
 }
 /*返回顶部样式end*/
 /*小图标start*/
+.one_line{
+	height:1px;
+	width:100%;
+	background:#f5f5f5;
+	margin:10px 0px;
+}
 .ico_active_name{
 	display:inline-block;
 	vertical-align: middle;
@@ -282,3 +308,22 @@
     margin-right:5px;
 }
 /*小图标end*/
+/*响应区*/
+@media screen and (max-width:992px){
+	.container{width:100%;}
+	.small-top-ad{
+		display:none;
+	}
+}
+@media screen and (max-width:768px){
+	.toolbar{
+		display:none;
+		
+	}
+	.content-right-block{
+		display:none;
+	}
+	.right-img{
+		display:none;
+	}
+}

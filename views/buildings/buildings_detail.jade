@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	input#proId(type="hidden",value="#{backproId}")
+	input#buildingsId(type="hidden",value="#{buildingsId}")
+	include ../head.jade
+	include ./detail_content.html
+	include ../footer.html
+	script( src='/javascripts/head.js')
+	script( src='/javascripts/backtop.js')
+	script( src='/javascripts/countTime.js')
+	
