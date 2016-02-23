@@ -54,11 +54,37 @@
 .content-left-block{
 	overflow:hidden;
 }
+
 .one-active{
 	height:200px;
 	border:solid 1px #ECE9E9;
 	background:#ffffff;
 	margin-bottom:10px;
+}
+.main_active_logo{
+	padding:10px 0px;
+}
+.main_active_logo img{
+	width:170px;
+	height:60px;
+}
+.main_active_buildings_name{
+	font-weight: bold;
+	line-height:30px;	
+}
+.main_active_name span{
+	vertical-align: middle;
+	display:inline-block;
+	line-height:20px;
+}
+.main_active_price span{
+	vertical-align: middle;
+	font-size:28px;
+	font-weight: bolder;
+	color:#ff0000;
+}
+.main_active_count_down span{
+	vertical-align: middle;
 }
 .one-active:HOVER{
 	border:solid 1px #ff0000;
@@ -228,3 +254,31 @@
 	bottom: 14px
 }
 /*返回顶部样式end*/
+/*小图标start*/
+.ico_active_name{
+	display:inline-block;
+	vertical-align: middle;
+	width: 22px;
+    height: 18px;
+    background: url(/images/background_new.png) -28px -100px no-repeat;
+    margin-right:5px;
+}
+.ico_active_price{
+	padding:1px 5px 1px 10px;
+	font-size:10px;
+	color:#ffffff;
+	display:inline-block;
+	vertical-align: middle;
+    height: 18px;
+    background: url(/images/background_new.png) -304px -100px no-repeat;
+    margin-right:5px;
+}
+.ico_active_count_down{
+	display:inline-block;
+	vertical-align: middle;
+	width: 22px;
+    height: 18px;
+    background: url(/images/background_new.png) -28px -80px no-repeat;
+    margin-right:5px;
+}
+/*小图标end*/

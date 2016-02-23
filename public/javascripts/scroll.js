@@ -25,7 +25,7 @@ $(function () {
 //			setTimeout(function(){
 				//$('#div1').css("height", $(document).height() + 100);
 				params.first=curpage*10;
-				ajaxGet("get","http://www.vfhui.com:8080/management/jsondata/buildings/getBuildingsDetailList",params,function(){
+				ajaxGet("get","http://localhost:9080/httpInterface/jsondata/buildings/getBuildingsDetailList",params,function(data){
 					if(data.statusCode=="0000"){
 						var sublist=data.data.list;
 						var str="";
