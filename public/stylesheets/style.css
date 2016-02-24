@@ -179,9 +179,6 @@
 /*楼盘详情start*/
 .module_detail_title{
 	border-bottom:solid 2px #CE3367;
-	border-top:solid 1px #f0f0f0;
-	border-right:solid 1px #f0f0f0;
-	border-left:solid 1px #f0f0f0;
 	background:#f5f5f5;
 }
 .module_detail_title .title_label{
@@ -189,6 +186,52 @@
 	display:inline-block;
 	padding:5px 20px;
 	background:#CE3367;
+}
+.content_block{
+	border-left:solid 1px #DFDFDF;
+	border-right:solid 1px #DFDFDF;
+}
+.small_content{
+	border-right:solid 1px #cccccc;
+}
+.module_detail_body{
+	padding:20px 0px;
+}
+.buildings_detail_price{
+	padding:1em 0em;
+	text-align:center;
+}
+.buildings_detail_price img{
+	width:300px;
+	height:200px;
+}
+.buildings_detail_ad{
+	padding:1em 0em;
+	text-align: center;
+}
+.buildings_detail_text{
+	padding:1em;
+	line-height:30px;
+	font-weight: bold;
+}
+.detail_phone{
+	padding-top:10px;
+	
+	color:#CE3367;
+	font-size:2em;
+}
+.base_message_img{
+	padding:1em;
+}
+
+.base_message_img img{
+	
+	width:100%;
+}
+.base_message_text{
+	padding:15px;
+	line-height:28px;
+	color:#777777;
 }
 /*楼盘详情end*/
 /*返回顶部样式start*/
@@ -314,8 +357,18 @@
 	.small-top-ad{
 		display:none;
 	}
+	.small_content{
+		border:none;
+	}
 }
 @media screen and (max-width:768px){
+	
+	.container{
+		padding:0px;
+	}
+	.topbar .container{
+		padding:0px 15px;
+	}
 	.toolbar{
 		display:none;
 		
@@ -326,4 +379,12 @@
 	.right-img{
 		display:none;
 	}
+	.content_block{
+		border:none;
+	}
+	.small_content{
+		border-right:none;
+		border-bottom:solid 1px #f5f5f5;
+	}
+	.buildings_detail_price img{width:100%;}
 }
