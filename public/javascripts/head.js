@@ -1,6 +1,7 @@
 /**
  * 
  */
+proId=$("#proId").val();
 function ajaxGet(type,url,params,successFun){
 	$.ajax({
 		type: type,
@@ -22,7 +23,7 @@ $(document).ready(function(){
 //	proObj.on("change",function(){
 //		window.location.href=WEBURL+$(this).val();
 //	})
-	var proId=$("#proId").val();
+	
 	$("[data-proid="+proId+"]").addClass("active");
 	$(".top_city_item").on("click",function(){
 		window.location.href=WEBURL+$(this).attr("data-proid");

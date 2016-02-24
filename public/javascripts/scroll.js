@@ -38,8 +38,11 @@ $(function () {
 							if(sublist[i].path){
 								imglogo='<img src="'+sublist[i].path+sublist[i].name+'" onerror="/images/one5.png">'
 							}
-							str='<div class="one-active row" data-id="'+sublist[i].buildings_id+'">'+
-									'<div class="left-text col-xs-4 col-sm-4 col-md-4 col-lg-4">'+
+							var oneobj=$("<div></div>");
+							oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
+								window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId;
+							})
+							str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 										'<div class="main_active_logo">'+imglogo+'</div>'+
 										'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 										'<div class="main_active_name"><div class="ico_active_name"></div><span>'+sublist[i].active_name+'</span></div>'+
@@ -48,14 +51,14 @@ $(function () {
 											'<div class="ico_active_count_down"></div><span></span>'+
 										'</div>'+
 									'</div>'+
-									'<div class="right-img col-xs-8 col-sm-8 col-md-8 col-lg-8">'+
+									'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 										img+
 										'<div class="float-detail">'+
 										sublist[i].active_detail+
 										'</div>'+
-									'</div>'+
-								'</div>';
-							$('.active-list').append(str); 
+									'</div>';
+							oneobj.append(str);
+							$('.active-list').append(oneobj); 
 						}
 						
 						$(".bottom-pull-loading").hide();

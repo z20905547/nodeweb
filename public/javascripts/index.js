@@ -8,7 +8,6 @@ $(document).ready(function(){
 //		$(".notice-content").hide();
 //		$("."+did).show();
 //	});
-	var proId=$("#proId").val();
 	curpage=1;
 	totalpage=1;
 	params={
@@ -35,7 +34,7 @@ $(document).ready(function(){
 				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
 					window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId;
 				})
-				str+='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
+				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 							'<div class="main_active_logo">'+imglogo+'</div>'+
 							'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 							'<div class="main_active_name"><div class="ico_active_name"></div><span>'+sublist[i].active_name+'</span></div>'+
