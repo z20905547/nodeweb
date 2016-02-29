@@ -27,17 +27,15 @@ $(document).ready(function(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="/images/logo.png">';
 
-				if(sublist[i].resource_path){
-					//本地环境 logo
+				   //本地环境 logo
 					//imglogo='<img src="http://localhost:9080/httpInterface/resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">'
 				   //正式环境 logo
 					imglogo='<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">'
 
-				}
-				//本地环境宣传图 xct
-				//var img='<img src="http://localhost:9080/httpInterface/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
-                //正式环境 xct
-				var img='<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
+				   //本地环境宣传图 xct
+				  // var img='<img src="http://localhost:9080/httpInterface/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
+                   //正式环境 xct
+				   var img='<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
 
 				var oneobj=$("<div></div>");
 				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
