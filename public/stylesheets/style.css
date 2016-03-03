@@ -306,7 +306,9 @@
 }
 #elevator_item .qr-popup .code {
 	display: block;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	width:150px;
+	height:150px;
 }
 #elevator_item .qr-popup .arr {
 	width: 6px;
