@@ -70,8 +70,9 @@
 	padding:10px 0px;
 }
 .main_active_logo img{
-	width:170px;
+
 	height:60px;
+
 }
 .main_active_buildings_name{
 	font-weight: bold;
@@ -329,9 +330,9 @@
 .ico_active_name{
 	display:inline-block;
 	vertical-align: middle;
-	width: 22px;
+	width: 28px;
     height: 18px;
-    background: url(/images/background_new.png) -28px -100px no-repeat;
+
     margin-right:5px;
 }
 .ico_active_price{
