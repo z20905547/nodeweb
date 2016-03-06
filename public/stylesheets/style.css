@@ -213,10 +213,20 @@
 .buildings_detail_text{
 	padding:1em;
 	line-height:30px;
+	
+}
+.buildings_detail_text .text_label{
+	float:left;
 	font-weight: bold;
+	width:20%;
+}
+.buildings_detail_text .text_content{
+	float:left;
+	width:80%;
 }
 .detail_phone{
-	padding-top:10px;
+	float:left;
+	padding-top:20px;
 	
 	color:#CE3367;
 	font-size:2em;
@@ -233,6 +243,9 @@
 	padding:15px;
 	line-height:28px;
 	color:#777777;
+}
+.base_message_detail p span{
+	white-space:normal !important;
 }
 /*楼盘详情end*/
 /*返回顶部样式start*/
@@ -331,8 +344,8 @@
 	display:inline-block;
 	vertical-align: middle;
 	width: 28px;
-    height: 18px;
-
+    height: 20px;
+    background: url(/images/background_new.png) -369px -196px no-repeat;
     margin-right:5px;
 }
 .ico_active_price{
@@ -354,6 +367,26 @@
     margin-right:5px;
 }
 /*小图标end*/
+/*加载中start*/
+.loading-big{
+	background:#FCFCFC;
+	text-align:center;
+	width:100%;
+	height:300px;
+}
+.loading-big img{
+	height:300px;
+}
+.loading-small{
+	background:#FCFCFC;
+	text-align:center;
+	width:100%;
+	height:160px;
+}
+.loading-small img{
+	height:160px;
+}
+/*加载中end*/
 /*响应区*/
 @media screen and (max-width:992px){
 	.container{width:100%;}

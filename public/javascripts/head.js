@@ -15,6 +15,8 @@ function ajaxGet(type,url,params,successFun){
 		}
 	});
 }
+$(".loading-big").append("<img alt='加载中' src='"+WEBURL+"/images/loading_big.gif'>");
+$(".loading-small").append("<img alt='加载中' src='"+WEBURL+"/images/loading_big.gif'>");
 $(document).ready(function(){
 	//城市选择
 //	var proObj=$(".proId");
