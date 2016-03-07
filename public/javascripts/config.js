@@ -12,8 +12,6 @@ var WEBMAP={
 var URLMAP={
 		citylist:HTTPURL+"jsondata/area/getSubAreaList",
 		buildingslist:HTTPURL+"jsondata/buildings/getBuildingsDetailList",
-	    notecelist:HTTPURL+"jsondata/notice/getNoticeList",
-	    noticedetail:HTTPURL+"jsondata/notice/getNoticeList",
-	    buildingsDetail:HTTPURL+"jsondata/buildings/getBuildingsDetail",
-	    resourceList:HTTPURL+"jsondata/resource/getResourceList"
+	    notecelist:HTTPURL+"/jsondata/notice/getNoticeList",
+	    noticedetail:HTTPURL+"/jsondata/notice/getNoticeList"
 }
