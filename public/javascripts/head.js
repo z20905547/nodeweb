@@ -17,6 +17,8 @@ function ajaxGet(type,url,params,successFun){
 }
 $(".loading-big").append("<img alt='加载中' src='"+WEBURL+"/images/loading_big.gif'>");
 $(".loading-small").append("<img alt='加载中' src='"+WEBURL+"/images/loading_big.gif'>");
+var nodata="<div class='space_message'><img src='"+WEBURL+"/images/nodata.jpg'><div class='space_message_text'>没有对应数据！</div></div>";
+var netbusy="<div class='space_message'><img src='"+WEBURL+"/images/netbusy.jpg'><div class='space_message_text'>网络状况不佳，请稍后重试</div></div>";
 $(document).ready(function(){
 	//城市选择
 //	var proObj=$(".proId");
