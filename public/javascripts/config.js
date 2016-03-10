@@ -3,8 +3,8 @@
  */
 var WEBURL="http://www.vfhui.com/";
 var HTTPURL="http://www.vfhui.com:8080/management/";
-//var WEBURL="http://192.168.0.136:3000/";
-//var HTTPURL="http://192.168.0.136:9080/httpInterface/";
+//var WEBURL="http://localhost:3000/";
+//var HTTPURL="http://localhost:9080/httpInterface/";
 //var HTTPURL="http://localhost:9080/httpInterface/";
 var WEBMAP={
 		buildingsdetail:WEBURL+"buildings/"
