@@ -1,5 +1,5 @@
 $(function () {  
-	var loading=false;
+	
 	var i = 4;$(window).bind("scroll", function (event)  
 	{  
 		if(loading)return;
@@ -24,20 +24,14 @@ $(function () {
 			$(".bottom-pull-loading").show();
 //			setTimeout(function(){
 				//$('#div1').css("height", $(document).height() + 100);
-				params.first=curpage*10;
+				params.first=(curpage-1)*pagecount;
 				ajaxGet("get",URLMAP.buildingslist,params,function(data){
 					if(data.statusCode=="0000"){
 						var sublist=data.data.list;
 						var str="";
 						for(var i=0;i<sublist.length;i++){
-							var imglogo='<img src="/images/logo.png">';
-							if(sublist[i].path){
-								imglogo='<img src="'+sublist[i].path+sublist[i].name+'" onerror="/images/logo.png">'
-							}
-							var img='<img src="/images/one5.png">';
-							if(sublist[i].path){
-								imglogo='<img src="'+sublist[i].path+sublist[i].name+'" onerror="/images/one5.png">'
-							}
+							var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
+							var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 							var oneobj=$("<div></div>");
 							oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
 								window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId;
@@ -45,8 +39,8 @@ $(function () {
 							str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 										'<div class="main_active_logo">'+imglogo+'</div>'+
 										'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-										'<div class="main_active_name"><div class="ico_active_name"></div><span>'+sublist[i].active_name+'</span></div>'+
-										'<div class="main_active_price"><div class="ico_active_price">限时特价</div><span>'+sublist[i].active_price+'</span></div>'+
+										'<div class="main_active_name"><span>原价</span><span>'+sublist[i].nomal_price+'</span><span>元</span></div>'+
+										'<div class="main_active_price"><div class="ico_active_price">特价（均价）</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 										'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 											'<div class="ico_active_count_down"></div><span></span>'+
 										'</div>'+

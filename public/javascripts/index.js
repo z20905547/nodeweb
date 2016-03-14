@@ -10,33 +10,25 @@ $(document).ready(function(){
 //	});
 
 
-
+	loading=true;
 	curpage=1;
 	totalpage=1;
+	pagecount=10;
 	params={
 			proId:proId,
 			now:1,
 			first:0,
-			last:10
+			last:pagecount
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
+		
 		if(data.statusCode=="0000"){
-			totalpage=data.data.total;
+			totalpage=parseInt((data.data.total-1)/pagecount+1);
 			var sublist=data.data.list;
 			var str="";
 			for(var i=0;i<sublist.length;i++){
-				var imglogo='<img src="/images/logo.png">';
-
-				   //本地环境 logo
-					//imglogo='<img src="http://localhost:9080/httpInterface/resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">'
-				   //正式环境 logo
-					imglogo='<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">'
-
-				   //本地环境宣传图 xct
-				  // var img='<img src="http://localhost:9080/httpInterface/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
-                   //正式环境 xct
-				   var img='<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/logo.png">'
-
+				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
+				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
 				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
 					window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId;
@@ -61,7 +53,12 @@ $(document).ready(function(){
 			}
 			
 		}else{
+			$(".bottom-pull-loading").html("网络繁忙，稍后重试");
+			setTimeout(function(){
+				$(".bottom-pull-loading").hide();
+			},3000);
 		}
+		loading=false;
 	});
 
 	ajaxGet("get",URLMAP.notecelist,null,function(data){
