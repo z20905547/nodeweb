@@ -2135,6 +2135,105 @@ a:hover {
 .base_message_detail p span{
 	white-space:normal !important;
 }
+/*小图选项卡、列表start*/
+.pic-tag{
+	margin-bottom: -2px;
+    float: right;
+    padding: 5px 20px;
+    background-color: #f5f5f5;
+	
+}
+.pic-tag.active{
+	border-top:solid 2px #CE3367;
+	border-left:solid 2px #CE3367;
+	border-right:solid 2px #CE3367;
+	background-color: #ffffff;
+}
+.pic-div ul{
+	
+}
+.pic-div li{
+	float:left;
+	
+}
+.pic-div li img{
+	width:100%
+}
+/*小图列表end*/
+/*大图start*/
+.high_level{
+	
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100500;
+	height:100%;
+	width:100%;
+	
+}
+.opacity_level{
+	top:0;
+	left:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	filter:alpha(opacity=70); 
+	-moz-opacity:0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7; 
+	background:#111111;
+}
+.big-content{
+	width:100%;
+	position: absolute;
+	top: 50%;
+	margin: -15% 0 0 0;
+}
+.high_cur_pic{
+	-moz-opacity:1; 
+	-khtml-opacity: 1; 
+	opacity: 1; 
+}
+.cur_pic{
+	text-align: center;
+}
+.high_level .left_control,.high_level .right_control{
+	padding:20px 25px;
+	background:#cccccc;
+	color:#ffffff;
+	cursor: pointer;
+	filter:alpha(opacity=70); 
+	
+	-moz-border-radius: 22px;      /* Gecko browsers */
+    -webkit-border-radius: 22px;   /* Webkit browsers */
+    border-radius:29px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.high_level .left_control:HOVER,.high_level .right_control:HOVER{
+	background:#B5143E;
+}
+.cur_text{
+	text-align: center;
+	color:#ffffff;
+	font-size:18px;
+}
+.close_ico{
+	cursor:pointer;
+	position:absolute;
+	top:40px;
+	right:10%;
+	padding:15px 25px;
+	background:#cccccc;
+	color:#ff0000;
+	-moz-border-radius: 22px;      /* Gecko browsers */
+    -webkit-border-radius: 22px;   /* Webkit browsers */
+    border-radius:29px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+/*大图end*/
 .notice_list .selected {
     color: #dc5c95;
     background-color: #fcfafc;
@@ -2313,6 +2412,23 @@ a:hover {
 	height:160px;
 }
 /*加载中end*/
+/*通用替换框start*/
+.space_message{
+	background:#FCFCFC;
+	text-align:center;
+	width:100%;
+	height:300px;
+}
+.space_message img{
+	height:250px;
+}
+.space_message_text{
+	text-align:center;
+	color:#999999;
+	font-size:16px;
+}
+/*通用替换框end*/
+
 /*响应区*/
 @media screen and (max-width:992px){
 	.container{width:100%;}
