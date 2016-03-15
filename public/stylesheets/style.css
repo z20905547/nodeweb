@@ -2141,23 +2141,31 @@ a:hover {
     float: right;
     padding: 5px 20px;
     background-color: #f5f5f5;
-	
+	cursor: pointer;
 }
 .pic-tag.active{
 	border-top:solid 2px #CE3367;
 	border-left:solid 2px #CE3367;
 	border-right:solid 2px #CE3367;
 	background-color: #ffffff;
+	cursor: default;
 }
 .pic-div ul{
 	
 }
 .pic-div li{
 	float:left;
+	margin-bottom:10px;
 	
 }
 .pic-div li img{
 	width:100%
+}
+.imgtype1{
+	height:378px;
+}
+.imgtype2{
+	height:165px;
 }
 /*小图列表end*/
 /*大图start*/
