@@ -91,12 +91,14 @@ a:hover {
 }
 .main_active_buildings_name{
 	font-weight: bold;
-	line-height:30px;	
+	line-height:30px;
+	color: #f52d96;
 }
 .main_active_name span{
 	vertical-align: middle;
 	display:inline-block;
 	line-height:20px;
+
 }
 .main_active_price span{
 	vertical-align: middle;
@@ -2087,12 +2089,19 @@ a:hover {
 	padding:20px 0px;
 }
 .buildings_detail_price{
-	padding:1em 0em;
-	text-align:center;
+
+
 }
-.buildings_detail_price img{
-	width:300px;
-	height:200px;
+ .buildings_detail_price .text_label{
+	 font-weight: bold;
+	 color: #CE3266;
+	 line-height:30px;
+ }
+
+.buildings_detail_price .text_content{
+	float:left;
+	padding-left: 20px;;
+	width:80%;
 }
 .buildings_detail_ad{
 	padding:1em 0em;
@@ -2101,21 +2110,23 @@ a:hover {
 .buildings_detail_text{
 	padding:1em;
 	line-height:30px;
-	
+	margin:0 auto;
 }
 .buildings_detail_text .text_label{
 	float:left;
 	font-weight: bold;
 	width:20%;
+	padding-left:20px;
 }
 .buildings_detail_text .text_content{
 	float:left;
 	width:80%;
+	padding-left:20px;
 }
 .detail_phone{
 	float:left;
 	padding-top:20px;
-	
+	padding-left:90px;
 	color:#CE3367;
 	font-size:2em;
 }
@@ -2201,7 +2212,8 @@ a:hover {
 .high_cur_pic{
 	-moz-opacity:1; 
 	-khtml-opacity: 1; 
-	opacity: 1; 
+	opacity: 1;
+	height: 400px;
 }
 .cur_pic{
 	text-align: center;
@@ -2211,7 +2223,7 @@ a:hover {
 	background:#cccccc;
 	color:#ffffff;
 	cursor: pointer;
-	filter:alpha(opacity=70); 
+	filter:alpha(opacity=70);
 	
 	-moz-border-radius: 22px;      /* Gecko browsers */
     -webkit-border-radius: 22px;   /* Webkit browsers */
@@ -2221,6 +2233,7 @@ a:hover {
 }
 .high_level .left_control:HOVER,.high_level .right_control:HOVER{
 	background:#B5143E;
+
 }
 .cur_text{
 	text-align: center;
@@ -2380,6 +2393,7 @@ a:hover {
     height: 20px;
     background: url(/images/background_new.png) -369px -196px no-repeat;
     margin-right:5px;
+
 }
 .ico_active_price{
 	padding:1px 5px 1px 10px;
@@ -2419,6 +2433,10 @@ a:hover {
 .loading-small img{
 	height:160px;
 }
+.toolbar.row{
+	height:100px;
+	padding-top: 20px;
+}
 /*加载中end*/
 /*通用替换框start*/
 .space_message{
@@ -2457,7 +2475,7 @@ a:hover {
 	}
 	.toolbar{
 		display:none;
-		
+
 	}
 	.content-right-block{
 		display:none;

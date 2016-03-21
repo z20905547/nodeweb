@@ -16,7 +16,7 @@
 
 			<!-- 文字滚动广告位 -->
 			<div class="text_ad" id="J_textAd_frame">
-				<p class="J_textAd"> <img class="text_ad_icon" src="images/14527570640310.gif"> <a href="http://iclub.vip.com/" target="_blank">来微粉训练营，学习抢购秘籍</a> </p>
+				<p class="J_textAd"> <img class="text_ad_icon" src="images/14527570640310.gif"> <a href="http://www.vfhui.com/" target="_blank">来唯房训练营，学习如何抢购特价房</a> </p>
 			</div>
 
 			<script type="text/javascript" src="javascripts/common.js"></script>
@@ -37,6 +37,7 @@
 			<!-- 代码 结束 -->
 
 			<!--公告-->
+			<!--
 			<div class="sys-message row">
 				<div class="notice-title">
 					<!--<span class="small-tab" data-id="now">公告</span>-->
@@ -63,171 +64,172 @@
 							}
 						});
 					</script>
+
 					<!-- 代码部分end -->
+					<!--
+                                        <div class="notice">
+                                            <ul class="notice_list">
+                                                <li class="toc J_annouce_trigger selected">公告</li>
+                                                <li class="toc J_annouce_trigger ">合作专区</li>
+                                            </ul>
+                                            <div class="notice_content" >
 
-					<div class="notice">
-						<ul class="notice_list">
-							<li class="toc J_annouce_trigger selected">公告</li>
-							<li class="toc J_annouce_trigger ">合作专区</li>
-						</ul>
-						<div class="notice_content" >
+                                                <div class="J_announce_li active-pannel" style="display: block;">
+                                                    <ul id="J-fashionWnews hidden">
+                                                        <li><a class="notice_link gray" title="【支付优惠】使用快捷支付，每笔订单加送30V值" href="http://act.vip.com/14069.html" target="_blank">【支付优惠】使用快捷支付，每笔订单加送30V值</a></li>
+                                                        <li><a class="notice_link gray" title="【广发唯品会信用卡】权益升级享9.5折再送200元" href="http://n.vip.com/AviUJr60" target="_blank">【广发唯品会信用卡】权益升级享9.5折再送200元</a></li>
+                                                    </ul>
+                                                    <p><a class="notice_link_more" href="http://blog.vip.com" target="_blank" title="进入博客">进入博客>></a></p>
+                                                </div>
+                                                <div class="J_announce_li  active-pannel" style="display: none;">
+                                                    <ul id="J-cpnNews hidden">
+                                                        <li><a class="notice_link gray" title="广发唯品会信用卡权益升级享9.5折再送200元是看得见啊速度" href="http://n.vip.com/mYRfYg43" target="_blank">广发唯品会信用卡权益升级享9.5折再送200元5折再送200元是看得见啊速度</a></li>
+                                                        <li><a class="notice_link gray" title="唯品会龙卡折上直减2%，新开卡享新品1元购" href="http://n.vip.com/EJ3yMr76" target="_blank">唯品会龙卡折上直减2%，新开卡享新品1元购</a></li>
+                                                        <li><a class="notice_link gray" title="邀请您率先体验Apple Pay" href="http://n.vip.com/nmeaUn87" target="_blank">邀请您率先体验Apple Pay</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-							<div class="J_announce_li active-pannel" style="display: block;">
-								<ul id="J-fashionWnews hidden">
-									<li><a class="notice_link gray" title="【支付优惠】使用快捷支付，每笔订单加送30V值" href="http://act.vip.com/14069.html" target="_blank">【支付优惠】使用快捷支付，每笔订单加送30V值</a></li>
-									<li><a class="notice_link gray" title="【广发唯品会信用卡】权益升级享9.5折再送200元" href="http://n.vip.com/AviUJr60" target="_blank">【广发唯品会信用卡】权益升级享9.5折再送200元</a></li>
-								</ul>
-								<p><a class="notice_link_more" href="http://blog.vip.com" target="_blank" title="进入博客">进入博客>></a></p>
-							</div>
-							<div class="J_announce_li  active-pannel" style="display: none;">
-								<ul id="J-cpnNews hidden">
-									<li><a class="notice_link gray" title="广发唯品会信用卡权益升级享9.5折再送200元是看得见啊速度" href="http://n.vip.com/mYRfYg43" target="_blank">广发唯品会信用卡权益升级享9.5折再送200元5折再送200元是看得见啊速度</a></li>
-									<li><a class="notice_link gray" title="唯品会龙卡折上直减2%，新开卡享新品1元购" href="http://n.vip.com/EJ3yMr76" target="_blank">唯品会龙卡折上直减2%，新开卡享新品1元购</a></li>
-									<li><a class="notice_link gray" title="邀请您率先体验Apple Pay" href="http://n.vip.com/nmeaUn87" target="_blank">邀请您率先体验Apple Pay</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+                                </div>
+
+                           -->
+                                <!----新品开售预告开始---->
+					<!--
+                                <script>
+                                    $(function(){
+                                        $("#J_wrap_salePlan #J-comingBrand-trigger li").mouseover(function(){
+                                            $(this).addClass('selected').siblings().removeClass('selected');
+                                            var index = $(this).index();
+                                            number = index;
+                                            $('#J-comingBrand-wrap li').hide();
+                                            $('#J-comingBrand-wrap li:eq('+index+')').show();
+                                        });
+
+                                        var auto = 1;  //等于1则自动切换，其他任意数字则不自动切换
+                                        if(auto ==1){
+                                            var number = 0;
+                                            var maxNumber = $('#J_wrap_salePlan #J-comingBrand-trigger li').length;
+                                            function autotab(){
+                                                number++;
+                                                number == maxNumber? number = 0 : number;
+                                                $('#J_wrap_salePlan #J-comingBrand-trigger li:eq('+number+')').addClass('selected').siblings().removeClass('selected');
+                                                $('#J-comingBrand-wrap li:eq('+number+')').show().siblings().hide();
+                                            }
+                                            //var tabChange = setInterval(autotab,3000);
+                                            //鼠标悬停暂停切换
+                                            //$('.notice').mouseover(function(){
+                                            //	clearInterval(tabChange);
+                                            //});
+                                            //$('.notice').mouseout(function(){
+                                            //	tabChange = setInterval(autotab,3000);
+                                            //});
+                                        }
+                                    });
+                                </script>
+                                <div class="m-forecast" id="J_wrap_salePlan"> <strong class="forecast-title">新品牌开售预告</strong>
+                                    <ul class="forecast-tit" id="J-comingBrand-trigger">
+                                        <li data-date="20160304" class="toc J_comingBrand_btn selected"><span class="slider-l">明天<font>03/04</font></span></li>
+                                        <li data-date="20160305" class="toc J_comingBrand_btn"><span class="slider">后天<font>03/05</font></span></li>
+                                        <li data-date="20160306" class="toc J_comingBrand_btn"><span class="slider">周日<font>03/06</font></span></li>
+                                        <li data-date="20160307" class="toc J_comingBrand_btn "><span class="slider-r">周一<font>03/07</font></span></li>
+                                    </ul>
+                                    <ul id="J-comingBrand-wrap">
+                                        <li class="" style="display: block;">
+                                            <div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160304" style="display: block;">
+                                                <ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160304">
+                                                </ul>
+                                            </div>
+                                            <div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160304" >
+                                                <div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160304" style="margin-top: 0px;">
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                     <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="forecast-ft J_pageWrap" id="J_pageWrap_20160304" > <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160305"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160305"></i> </div>
+                                        </li>
+                                        <li style="display: none;" class="">
+                                            <div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160305" style="display: block;">
+                                                <ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160305">
+                                                </ul>
+                                            </div>
+                                            <div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160305" >
+                                                <div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160305" style="margin-top: 0px;">
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                     <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="forecast-ft J_pageWrap" id="J_pageWrap_20160305"> <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160306"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160306"></i> </div>
+                                        </li>
+                                        <li style="display: none;" class="">
+                                            <div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160306" style="display: block;">
+                                                <ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160306">
+                                                </ul>
+                                            </div>
+                                            <div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160306">
+                                                <div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160306" style="margin-top: 0px;">
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                     <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="forecast-ft J_pageWrap" id="J_pageWrap_20160306" > <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160306"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160306"></i> </div>
+                                        </li>
+                                        <li class="active-pannel" style="display: none";>
+                                            <div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160307" style="display: block;">
+                                                <ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160307">
+                                                </ul>
+                                            </div>
+                                            <div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160307" >
+                                                <div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160307" style="margin-top: 0px;">
+                                                     <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                     <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
+                                                      <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="forecast-ft J_pageWrap" id="J_pageWrap_20160307"> <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160307"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160307"></i> </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--新品开售预告结束-->
+
 				</div>
-
-			</div>
-
-
-			<!----新品开售预告开始---->
-
-			<script>
-				$(function(){
-					$("#J_wrap_salePlan #J-comingBrand-trigger li").mouseover(function(){
-						$(this).addClass('selected').siblings().removeClass('selected');
-						var index = $(this).index();
-						number = index;
-						$('#J-comingBrand-wrap li').hide();
-						$('#J-comingBrand-wrap li:eq('+index+')').show();
-					});
-
-					var auto = 1;  //等于1则自动切换，其他任意数字则不自动切换
-					if(auto ==1){
-						var number = 0;
-						var maxNumber = $('#J_wrap_salePlan #J-comingBrand-trigger li').length;
-						function autotab(){
-							number++;
-							number == maxNumber? number = 0 : number;
-							$('#J_wrap_salePlan #J-comingBrand-trigger li:eq('+number+')').addClass('selected').siblings().removeClass('selected');
-							$('#J-comingBrand-wrap li:eq('+number+')').show().siblings().hide();
-						}
-						//var tabChange = setInterval(autotab,3000);
-						//鼠标悬停暂停切换
-						//$('.notice').mouseover(function(){
-						//	clearInterval(tabChange);
-						//});
-						//$('.notice').mouseout(function(){
-						//	tabChange = setInterval(autotab,3000);
-						//});
-					}
-				});
-			</script>
-			<div class="m-forecast" id="J_wrap_salePlan"> <strong class="forecast-title">新品牌开售预告</strong>
-				<ul class="forecast-tit" id="J-comingBrand-trigger">
-					<li data-date="20160304" class="toc J_comingBrand_btn selected"><span class="slider-l">明天<font>03/04</font></span></li>
-					<li data-date="20160305" class="toc J_comingBrand_btn"><span class="slider">后天<font>03/05</font></span></li>
-					<li data-date="20160306" class="toc J_comingBrand_btn"><span class="slider">周日<font>03/06</font></span></li>
-					<li data-date="20160307" class="toc J_comingBrand_btn "><span class="slider-r">周一<font>03/07</font></span></li>
-				</ul>
-				<ul id="J-comingBrand-wrap">
-					<li class="" style="display: block;">
-						<div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160304" style="display: block;">
-							<ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160304">
-							</ul>
-						</div>
-						<div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160304" >
-							<div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160304" style="margin-top: 0px;">
-								<span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								 <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							</div>
-						</div>
-						<div class="forecast-ft J_pageWrap" id="J_pageWrap_20160304" > <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160305"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160305"></i> </div>
-					</li>
-					<li style="display: none;" class="">
-						<div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160305" style="display: block;">
-							<ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160305">
-							</ul>
-						</div>
-						<div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160305" >
-							<div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160305" style="margin-top: 0px;">
-								<span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								 <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							</div>
-						</div>
-						<div class="forecast-ft J_pageWrap" id="J_pageWrap_20160305"> <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160306"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160306"></i> </div>
-					</li>
-					<li style="display: none;" class="">
-						<div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160306" style="display: block;">
-							<ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160306">
-							</ul>
-						</div>
-						<div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160306">
-							<div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160306" style="margin-top: 0px;">
-								<span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								 <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							</div>
-						</div>
-						<div class="forecast-ft J_pageWrap" id="J_pageWrap_20160306" > <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160306"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160306"></i> </div>
-					</li>
-					<li class="active-pannel" style="display: none";>
-						<div class="sale-plan-big fwr J_salePlanBig" id="J_salePlanBig_20160307" style="display: block;">
-							<ul class="sale-plan-big-list J-sPbList" id="J_salePlanBingList_20160307">
-							</ul>
-						</div>
-						<div class="forecast-cnt J_sale_slidewrapper" id="J_comingViewWin_20160307" >
-							<div class="J_comingBrand clearfix" id="J_wrap_salePlan_20160307" style="margin-top: 0px;">
-								 <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								<span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								 <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-								<span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/2013090516540955411.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							    <span class="forecast-logo J_brandLogo" data-index="0"> <a href="" target="_blank"> <img src="images/201403061752276741.jpg" class="forecast-logo-pic" data-original="http://a.vpimg1.com/upload/brand/201303/2013030117361533231.jpg" alt="车上用品专场"> </a>
-                                  <p class="forecast-logo-fav-pop hidden"> <a href="" target="_blank" mars_sead="m_shop_slw_midsale_button"> <span>收藏商品&gt;</span> </a> </p>
-                                </span>
-							</div>
-						</div>
-						<div class="forecast-ft J_pageWrap" id="J_pageWrap_20160307"> <i class="vipFont forecast-btn-up J_salePlanPrev_btn" alt="up" data-date="20160307"></i> <i class="vipFont forecast-btn-down J_salePlanNext_btn" alt="down" data-date="20160307"></i> </div>
-					</li>
-				</ul>
-			</div>
-			<!--新品开售预告结束-->
-
-		</div>
 	</div>
 </div>
 <div class="bottom-pull-loading">

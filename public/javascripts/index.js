@@ -37,7 +37,7 @@ $(document).ready(function(){
 							'<div class="main_active_logo">'+imglogo+'</div>'+
 							'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 							'<div class="main_active_name"><span>原价</span><span>'+sublist[i].nomal_price+'</span><span>元</span></div>'+
-							'<div class="main_active_price"><div class="ico_active_price">特价（均价）</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+							'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 							'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 								'<div class="ico_active_count_down"></div><span></span>'+
 							'</div>'+

@@ -8,32 +8,33 @@ $(document).ready(function(){
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
 		if(data.statusCode=="0000"){
 			//楼盘动态
-			var adcontent='<div class="buildings_detail_price small_content col-xs-12 col-sm-12 col-md-4 col-lg-4">'+
-			'	<img src="/images/error.png" onerror="/images/error.png">'+
-			'</div>'+
-			'<div class="buildings_detail_ad small_content col-xs-12 col-sm-12 col-md-3 col-lg-3">'+
-			'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
-			'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
-			'			<div class="main_active_name">'+
-			'				<div class="ico_active_name"></div>'+
-			'				<span>'+data.data.active_name+'</span>'+
-			'			</div>'+
-			'			<div class="main_active_price">'+
-			'				<div class="ico_active_price">限时特价</div>'+
-			'				<span>'+data.data.active_price+'</span>'+
-			'			</div>'+
-			'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
-			'				<div class="ico_active_count_down"></div>'+
-			'				<span></span>'+
-			'			</div>'+
-			'</div>'+
-			'<div class="buildings_detail_text col-xs-12 col-sm-12 col-md-5 col-lg-5">'+
-			'	<div class="text_label">楼盘地址:</div><div class="text_content">'+data.data.address+'</div>'+
-			'	<div class="text_label">主力户型:</div><div class="text_content">'+data.data.main_door+'</div>'+
-			'	<div class="text_label">开盘时间:</div><div class="text_content">'+data.data.open_date+'</div>'+
-			'	<div class="text_label">交房时间:</div><div class="text_content">'+data.data.deliver_date+'</div>'+
-			'	<div class="detail_phone"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'+
-			'</div>';
+			var adcontent= '<div class="buildings_detail_ad small_content col-xs-12 col-sm-12 col-md-3 col-lg-3">'+
+				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
+				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
+				'			<div class="main_active_name"><span>原价</span><span>'+data.data.nomal_price+'</span><span>元</span></div>'+
+				'			<div class="main_active_price">'+
+				'				<div class="ico_active_price">限时特价</div>'+
+				'				<span>'+data.data.active_price+'</span>'+
+				'			</div>'+
+				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
+				'				<div class="ico_active_count_down"></div>'+
+				'				<span></span>'+
+				'			</div>'+
+				'</div>'+
+				'<div class="buildings_detail_text small_content col-xs-12 col-sm-12 col-md-5 col-lg-5">'+
+				'	<div class="text_label">楼盘地址:</div><div class="text_content">'+data.data.address+'</div>'+
+				'	<div class="text_label">主力户型:</div><div class="text_content">'+data.data.main_door+'</div>'+
+				'	<div class="text_label">开盘时间:</div><div class="text_content">'+data.data.open_date+'</div>'+
+				'	<div class="text_label">交房时间:</div><div class="text_content">'+data.data.deliver_date+'</div>'+
+				'	<div class="detail_phone"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'+
+				'</div>'+
+
+
+				'<div class="buildings_detail_price col-xs-12 col-sm-12 col-md-4 col-lg-4">'+
+			'	<div class="text_label">【唯房点评】:</div><div class="text_content">'+data.data.address+'</div>'+
+			'</div>'
+
+			;
 			$(".buildings_active_loading").html(adcontent);
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
@@ -42,20 +43,20 @@ $(document).ready(function(){
 			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
 			'	<div class="row">'+
 			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line">占地面积：'+data.data.floor_space+'平方米</div>'+
-			'		<div class="base_content_line">总栋数：'+data.data.building_count+'栋</div>'+
-			'		<div class="base_content_line">容积率：'+data.data.ratio+'</div>'+
-			'		<div class="base_content_line">装修状况：'+data.data.decoration_condition+'</div>'+
-			'		<div class="base_content_line">停车位：'+data.data.parking_count+'</div>'+
-			'		<div class="base_content_line">主力户型：'+data.data.main_door+'</div>'+
-			'		<div class="base_content_line">楼层状况：'+data.data.floor_detail+'</div>'+
+			'		<div class="base_content_line">占地面积：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.floor_space+'平方米</div>'+
+			'		<div class="base_content_line">总栋数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.building_count+'栋</div>'+
+			'		<div class="base_content_line">容积率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.ratio+'</div>'+
+			'		<div class="base_content_line">装修状况：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.decoration_condition+'</div>'+
+			'		<div class="base_content_line">停车位：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.parking_count+'个</div>'+
+			'		<div class="base_content_line">主力户型：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.main_door+'</div>'+
+			'		<div class="base_content_line">楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.floor_detail+'</div>'+
 			'	</div>'+
 			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line">建筑面积：'+data.data.building_space+'亩</div>'+
-			'		<div class="base_content_line">总套数：'+data.data.house_count+'户</div>'+
-			'		<div class="base_content_line">绿化率：'+data.data.green_rate+'%</div>'+
-			'		<div class="base_content_line">现房期房：'+data.data.util_type+'</div>'+
-			'		<div class="base_content_line">产权年限：'+data.data.right_years+'</div>'+
+			'		<div class="base_content_line">建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.building_space+'亩</div>'+
+			'		<div class="base_content_line">总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.house_count+'户</div>'+
+			'		<div class="base_content_line">绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.green_rate+'%</div>'+
+			'		<div class="base_content_line">现房期房：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.util_type+'</div>'+
+			'		<div class="base_content_line">产权年限：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.right_years+'年</div>'+
 			'	</div>'+
 			'	</div>'+
 			'</div>'+
@@ -175,7 +176,7 @@ $(document).ready(function(){
 	
 	//关闭大图
 	$(".close_ico").on("click",function(){
-		$(".high_level").hide(3000);
+		$(".high_level").hide(500);
 		$("body").attr("style","overflow-y:auto;")
 	});
 });
@@ -217,7 +218,7 @@ function highLevel(type,num){
 	//设置左右控制按钮的可点击状态
 	//显示大图
 	$(".high_level").show();
-	$(".high_level").animate({top:$(document).scrollTop()+"px"},2000);
+	$(".high_level").animate({top:$(document).scrollTop()+"px"},500);
 	$("body").attr("style","overflow-y:hidden;")
 }
 //大图左右切换
