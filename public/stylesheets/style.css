@@ -2205,18 +2205,21 @@ a:hover {
 }
 .big-content{
 	width:100%;
+	height:100%;
 	position: absolute;
 	top: 50%;
 	margin: -15% 0 0 0;
+	overflow-y:scroll;
 }
 .high_cur_pic{
 	-moz-opacity:1; 
 	-khtml-opacity: 1; 
 	opacity: 1;
-	height: 400px;
+
 }
 .cur_pic{
 	text-align: center;
+
 }
 .high_level .left_control,.high_level .right_control{
 	padding:20px 25px;
@@ -2245,7 +2248,7 @@ a:hover {
 	position:absolute;
 	top:40px;
 	right:10%;
-	padding:15px 25px;
+	padding:15px 23px;
 	background:#cccccc;
 	color:#ff0000;
 	-moz-border-radius: 22px;      /* Gecko browsers */
