@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$(".buildings_active_loading").html(adcontent);
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'	<img src="'+HTTPURL+data.data.ad_path+data.data.ad_name+'">'+
+			'	<img src="'+HTTPURL+'/resource/upload_buildings/'+ data.data.buildings_id +'/ldt/ldt.jpg'+'">'+
 			'</div>'+
 			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
 			'	<div class="row">'+
