@@ -39,8 +39,8 @@ $(document).ready(function(){
 			;
 			$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
-			var avtivepic= '<div class="buildings_detail_ad">'+
-				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'
+			var avtivepic=
+				'	<div class="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'
 
 				;
 			$(".active_pic").html(avtivepic);
