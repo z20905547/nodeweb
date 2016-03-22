@@ -89,6 +89,12 @@ a:hover {
 	height:60px;
 
 }
+
+.main_active_pic img{
+	margin-left:-14px;
+	weight:1140px;
+
+}
 .main_active_buildings_name{
 	font-weight: bold;
 	line-height:30px;
