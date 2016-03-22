@@ -3,9 +3,11 @@
  */
 $(document).ready(function(){
 	var params={
-			buildingsId:$("#buildingsId").val()
+			buildingsId:$("#buildingsId").val(),
+	        pid:$("#pid").val()
 	}
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
+
 		if(data.statusCode=="0000"){
 			//楼盘动态
 			var adcontent= '<div class="buildings_detail_ad small_content col-xs-12 col-sm-12 col-md-3 col-lg-3">'+
@@ -38,7 +40,7 @@ $(document).ready(function(){
 			$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic= '<div class="buildings_detail_ad">'+
-				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'
+				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'
 
 				;
 			$(".active_pic").html(avtivepic);
