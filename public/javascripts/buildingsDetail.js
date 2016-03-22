@@ -31,11 +31,17 @@ $(document).ready(function(){
 
 
 				'<div class="buildings_detail_price col-xs-12 col-sm-12 col-md-4 col-lg-4">'+
-			'	<div class="text_label">【唯房点评】:</div><div class="text_content">'+data.data.address+'</div>'+
+			'	<div class="text_label">【唯房点评】:</div><div class="text_content">'+data.data.dianping+'</div>'+
 			'</div>'
 
 			;
 			$(".buildings_active_loading").html(adcontent);
+			//特价图片加载
+			var avtivepic= '<div class="buildings_detail_ad">'+
+				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'
+
+				;
+			$(".active_pic").html(avtivepic);
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
 			'	<img src="'+HTTPURL+'/resource/upload_buildings/'+ data.data.buildings_id +'/ldt/ldt.jpg'+'">'+
