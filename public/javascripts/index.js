@@ -30,8 +30,8 @@ $(document).ready(function(){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).on("click",function(){
-					window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId;
+				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).on("click",function(){
+					window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2");
 				})
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 							'<div class="main_active_logo">'+imglogo+'</div>'+
