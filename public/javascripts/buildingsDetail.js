@@ -40,7 +40,7 @@ $(document).ready(function(){
 			$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic=
-				'	<div class="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'
+				'	<div class="main_active_pic" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'
 
 				;
 			$(".active_pic").html(avtivepic);
@@ -247,4 +247,15 @@ function movelist(index){
 	}
 	curbignum=newnum+1;
 	$(".cur_big_pic_num").html(curbignum);
+}
+
+//活动图动态加载
+$(function(){
+	//过两秒显示 showImage(); 内容
+	setTimeout("showImage();",2000);
+	//alert(location);
+});
+function showImage()
+{
+	$("#main_active_pic").slideUp(1000,function(){$("#main_active_pic").slideDown(1000);});
 }
