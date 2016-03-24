@@ -47,7 +47,7 @@ a:hover {
 }
 	
 .head-static{
-	width:570px;
+	width:630px;
 
 }
 
@@ -2469,7 +2469,9 @@ a:hover {
 	font-size:16px;
 }
 /*通用替换框end*/
-
+.small-top-ad{
+	float:right;
+}
 /*响应区*/
 @media screen and (max-width:992px){
 	.container{width:100%;}
@@ -2514,13 +2516,8 @@ a:hover {
 	z-index: 9;
 	left: 50%;
 	margin-left: -370px;
-	top: 240px;
+	top: 140px;
 	width: 740px;
-}
-div, form, ul, ol, li, dl, dt, dd, p, a, img, input, button, textarea, select, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	border: 0;
 }
 
 .head-tt {
@@ -2529,11 +2526,7 @@ div, form, ul, ol, li, dl, dt, dd, p, a, img, input, button, textarea, select, h
 	height: 170px;
 	margin-top: 10px;
 }
-div, form, ul, ol, li, dl, dt, dd, p, a, img, input, button, textarea, select, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+
 .head-tt-bj {
 	position: absolute;
 	left: 0;
