@@ -2470,7 +2470,7 @@ a:hover {
 }
 /*通用替换框end*/
 .small-top-ad{
-	float:right;
+	padding-left: 340px;
 }
 /*响应区*/
 @media screen and (max-width:992px){
