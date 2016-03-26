@@ -1,24 +1,33 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <div class="search">
-    <form class="head-tt" id="i_search" method="post" target="_blank" autocomplete="off">
+    <form class="head-tt" id="i_search" method="post"  autocomplete="off" action='/findListBybname'>
       <div class="head-tt-bj"></div>
       <div class="head-td f16">
         <ul>
           <li class="search-tr"><a href="javascript:void(0);" class="hover">找新房</a>
           </li>
           <li class="search-tt">
-            <input type="text" value="请输入楼盘名称" class="search-inp f16 keyword" onblur="if(!value){value=defaultValue;}">
+            <input type="text"  class="search-inp f16 keyword" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称、地址'}">
             <input type="submit" value="" class="search-but">
             <ul class="sous-ts">
             </ul>
           </li>
           <li class="search-hot f14">
-            <span>热门搜索：</span>
-            <a href="http://www.lydccp.com/house/201/" target="_bank">亿城江湾绿洲</a>
-            <a href="http://www.lydccp.com/house/42/" target="_bank">龙光海云天</a>
-            <a href="http://www.lydccp.com/house/713/" target="_bank">蓝海瑞园</a>
-            <a href="http://www.lydccp.com/house/161/" target="_bank">石梅山庄</a>
+            <span>热门片区：</span>
+            <a href="/cityId/460100" >海口</a>
+            <a href="/areaId/460105" >秀英区</a>
+            <a href="/areaId/460106" >龙华区</a>
+            <a href="/areaId/460107" >琼山区</a>
+            <a href="/areaId/460108" >美兰区</a>
+            <a href="/areaId/460109" >西海岸</a>
+            <a href="/cityId/460200" >三亚</a>
+            <a href="/cityId/460500" >澄迈</a>
+            <a href="/cityId/460400" >琼海</a>
+            <a href="/areaId/460220" >儋州</a>
+            <a href="/areaId/460503" >老城</a>
+            <a href="/areaId/460502" >金江</a>
+
           </li>
         </ul>
       </div>

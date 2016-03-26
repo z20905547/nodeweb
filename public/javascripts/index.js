@@ -1,3 +1,6 @@
+buildings_name=$("#buildings_name").val();
+city_id=$("#city_id").val();
+area_id=$("#area_id").val();
 $(document).ready(function(){
 	//公告切换
 //	$(".small-tab").on("mouseover",function(){
@@ -18,7 +21,10 @@ $(document).ready(function(){
 			proId:proId,
 			now:1,
 			first:0,
-			last:pagecount
+			last:pagecount,
+		    buildings_name:buildings_name,
+		    city_id:city_id,
+		    area_id:area_id
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		
