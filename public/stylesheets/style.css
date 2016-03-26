@@ -2516,7 +2516,7 @@ a:hover {
 	z-index: 9;
 	left: 50%;
 	margin-left: -370px;
-	top: 140px;
+	top: 35%;
 	width: 740px;
 }
 
@@ -2538,11 +2538,7 @@ a:hover {
 	opacity: 0.5;
 	border-radius: 6px;
 }
-div, form, ul, ol, li, dl, dt, dd, p, a, img, input, button, textarea, select, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+
 .head-td {
 	position: absolute;
 	left: 0;
@@ -2634,4 +2630,43 @@ a {
 }
 .f14 {
 	font-size: 14px;
+}
+
+/*第二页图片注释*/
+.box-img-one {
+	width: 225px;
+	height: 218px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.hx-p-img {
+	position: relative;
+	height: 256px;
+	overflow: hidden;
+}
+.hx-p-img img {
+	width: 100%;
+	height: auto;
+}
+
+
+.hx-p-txt {
+	height: 60px;
+	border: 1px solid #efefef;
+	border-top: none;
+	padding: 0px 4px 4px;
+	text-align: center;
+}
+.hx-p-txt p {
+padding-top:3px;
+}
+.hx-p-txt .p-last {
+	height: 26px;
+	line-height: 22px;
+	overflow: hidden;
+	background: url(/images/boxline.gif) no-repeat top center;
+	padding: 2px 0px;
+	clear: both;
+
 }
