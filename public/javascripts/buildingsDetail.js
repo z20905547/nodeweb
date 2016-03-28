@@ -1,6 +1,10 @@
 /**
  * 
  */
+
+
+
+
 $(document).ready(function(){
 	var params={
 			buildingsId:$("#buildingsId").val(),
@@ -9,9 +13,12 @@ $(document).ready(function(){
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
 
 		if(data.statusCode=="0000"){
+			map_x=data.data.map_x;
+			map_y=data.data.map_y;
+			xy(data.data.map_x,data.data.map_y);
+
 			//楼盘动态
-			var adcontent= '<div class="buildings_detail_ad small_content col-xs-12 col-sm-12 col-md-3 col-lg-3">'+
-				'	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
+			var adcontent1= '	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
 				'			<div class="main_active_name"><span>原价</span><span>'+data.data.nomal_price+'</span><span>元</span></div>'+
 				'			<div class="main_active_price">'+
@@ -21,23 +28,17 @@ $(document).ready(function(){
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
 				'				<div class="ico_active_count_down"></div>'+
 				'				<span></span>'+
-				'			</div>'+
-				'</div>'+
-				'<div class="buildings_detail_text small_content col-xs-12 col-sm-12 col-md-5 col-lg-5">'+
-				'	<div class="text_label">楼盘地址:</div><div class="text_content">'+data.data.address+'</div>'+
+				'			</div>'
+			$(".small_content").html(adcontent1);
+			var adcontent2='<div class="text_label">楼盘地址:</div><div class="text_content">'+data.data.address+'</div>'+
 				'	<div class="text_label">主力户型:</div><div class="text_content">'+data.data.main_door+'</div>'+
 				'	<div class="text_label">开盘时间:</div><div class="text_content">'+data.data.open_date+'</div>'+
 				'	<div class="text_label">交房时间:</div><div class="text_content">'+data.data.deliver_date+'</div>'+
-				'	<div class="detail_phone"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'+
-				'</div>'+
+				'	<div class="detail_phone"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'
 
+			$(".buildings_detail_text").html(adcontent2);
 
-				'<div class="buildings_detail_price col-xs-12 col-sm-12 col-md-4 col-lg-4">'+
-			'	<div class="text_label">【唯房点评】:</div><div class="text_content">'+data.data.dianping+'</div>'+
-			'</div>'
-
-			;
-			$(".buildings_active_loading").html(adcontent);
+			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic=
 				'	<div class="main_active_pic" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'
@@ -70,7 +71,7 @@ $(document).ready(function(){
 			'</div>'+
 			'<div class="base_message_detail col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 			'	<div class="row">'+
-			'	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+data.data.buildings_detail+
+			'	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+
 			'	</div>'+
 			'	</div>'+
 			'</div>';
@@ -78,6 +79,7 @@ $(document).ready(function(){
 			
 		}
 	});
+
 	//加载楼盘对应展示图
 	ajaxGet("get",URLMAP.resourceList,params,function(data){
 		if(data.statusCode=="0000"){
