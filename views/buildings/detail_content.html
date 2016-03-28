@@ -1,5 +1,5 @@
 
-	<div class="container">
+	<div class="container maincontent">
 		<div class="one_line col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
 		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="module_detail_title row"><span class="title_label">楼盘动态</span></div>
@@ -40,7 +40,7 @@
 		</div>
 -->
 	</div>
-<div id="elevator_item">
+<div id="elevator_item" class="maincontent">
         <a id="elevator" onclick="return false;" title="回到顶部"></a>
         <a class="qr"></a>
   	<div class="qr-popup">
@@ -50,24 +50,28 @@
   </div>
   
 </div>
-<div class="high_level">
+<div  class="high_level">
 	<div class="opacity_level"></div>
 	<div class="close_ico">X</div>
 	<div class="big-content">
-	<div class="cur_pic">
-		<span onclick="movelist(-1)" class="left_control">&lt;</span>
-		<img class="high_cur_pic" src="./images/banner_1.jpg">
-		<span onclick="movelist(1)" class="right_control">&gt;</span>
-	</div>
-	<div class="cur_text">
-		<span class="cur_big_pic_num">
-		5
-		</span>
-		/
-		<span class="total_big_pic_num">
-		10
-		</span>
-	</div>
+		
+		<div onclick="changeBigPic(-1)" class="control left_control">&lt;</div>
+		
+		<div class="cur_pic">
+				<img class="cur_big_pic">
+		</div>
+
+		<div onclick="changeBigPic(1)" class="control right_control">&gt;</div>
+
+		<div class="cur_text">
+			<span class="cur_big_pic_num">
+			5
+			</span>
+			/
+			<span class="total_big_pic_num">
+			10
+			</span>
+		</div>
 	</div>
 </div>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MfrGHAHxUwYQA9ypMVqZlIPkdGQeK8Bc"></script>
