@@ -2462,6 +2462,9 @@ filter: blur(15px);
     background: url(/images/background_new.png) -28px -80px no-repeat;
     margin-right:5px;
 }
+.pic-div img{
+	cursor: pointer;
+}
 /*小图标end*/
 /*加载中start*/
 .loading-big{
