@@ -184,10 +184,69 @@ $(document).ready(function(){
 		}
 	});
 	
-	//关闭大图
-	$(".close_ico").on("click",function(){
-		$(".high_level").hide(500);
-		$("body").attr("style","overflow-y:auto;")
+	//关闭遮罩层
+	$(".close_ico").bind("click",function(){
+		$(".high_level").hide();
+		$(".maincontent").removeClass("gaublue");
+		$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
+		$("body").unbind("touchmove");//解除对默认行为的阻止
+		
+	});
+	
+	//手机滑动
+	$(".big-content").bind("touchstart",function(e){
+		pointcurX=e.targetTouches[0].pageX;
+		
+	});
+	$(".big-content").bind("touchmove",function(e){
+		
+		
+	});
+	$(".big-content").bind("touchend",function(e){
+		if(e.changedTouches[0].pageX>pointcurX){//向左
+			changeBigPic(-1);
+		}else{//向右
+			changeBigPic(1);
+		}
+	});
+	pagex=0;
+	pagey=0;
+	begin=false;
+	//拖动大图
+	$(".cur_big_pic").bind("mousedown",function(e){
+		e.preventDefault();
+        e.stopPropagation();
+		//记录坐标，改变鼠标
+		$(this).css("cursor","-webkit-grabbing");
+		parentX=parseInt($(this).css("margin-left"));
+		parentY=parseInt($(this).css("margin-top"));
+		pagex=e.pageX;
+		pagey=e.pageY;
+		begin=true;
+	}).bind("mousemove",function(e){
+		//变更位置
+		if(begin){
+			$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+			$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+		}
+		
+	}).bind("mouseup",function(e){
+		//决定最终位置
+		if(begin){
+			$(this).css("cursor","-webkit-grab");
+			$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+			$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+			begin=false;
+		}
+	}).bind("mouseout",function(e){
+		//决定最终位置
+		if(begin){
+			$(this).css("cursor","-webkit-grab");
+			$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+			$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+			begin=false;
+		}
+		
 	});
 });
 //切换图片选项卡
@@ -215,7 +274,7 @@ function highLevel(type,num){
 	$(".ul"+type+"0 .imgtype"+type).each(function(){
 		if($(this).attr("data-num")==num){
 			//换大图
-			$(".high_cur_pic").attr("src",$(this).attr("src"));
+			$(".cur_big_pic").attr("src",$(this).attr("src"));
 			
 		}
 		picsrclist[i]=$(this).attr("src");
@@ -226,31 +285,76 @@ function highLevel(type,num){
 	$(".cur_big_pic_num").html(num);
 	$(".total_big_pic_num").html(bigpictotal);
 	//设置左右控制按钮的可点击状态
+	showControl(num-1);
+	$(".high_level").attr("style","top:"+getScrollTop()+"px");//触发遮罩层显示时，获取当前的高度
 	//显示大图
 	$(".high_level").show();
+	//添加高斯模糊
+	$(".maincontent").addClass("gaublue");
 	$(".high_level").animate({top:$(document).scrollTop()+"px"},500);
-	$("body").attr("style","overflow-y:hidden;")
+	//图片高度不够时设置上边距
+	var moreHeight=$(".cur_pic").height()-$(".cur_big_pic").height();
+	if(moreHeight>0){
+		$(".cur_big_pic").css("margin-top",moreHeight/2+"px");
+	}else{
+		$(".cur_big_pic").css("margin-top","0px");
+	}
+	var moreWidth=$(".cur_pic").width()-$(".cur_big_pic").width();
+	if(moreWidth>0){
+		$(".cur_big_pic").css("margin-left",moreWidth/2+"px");
+	}else{
+		$(".cur_big_pic").css("margin-left","0px");
+	}
+	$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
+	$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
 }
+
 //大图左右切换
-function movelist(index){
+function changeBigPic(index){
 	var nowindex=curbignum-1;
 	var newnum=nowindex+index;
 	if(newnum<0||newnum>=bigpictotal)return;
-	$(".high_cur_pic").attr("src",picsrclist[newnum]);
-	if(newnum==0){
+	$(".cur_big_pic").attr("src",picsrclist[newnum]);
+	//图片高度不够时设置上边距
+	var moreHeight=$(".cur_pic").height()-$(".cur_big_pic").height();
+	if(moreHeight>0){
+		$(".cur_big_pic").css("margin-top",moreHeight/2+"px");
+	}else{
+		$(".cur_big_pic").css("margin-top","0px");
+	}
+	var moreWidth=$(".cur_pic").width()-$(".cur_big_pic").width();
+	if(moreWidth>0){
+		$(".cur_big_pic").css("margin-left",moreWidth/2+"px");
+	}else{
+		$(".cur_big_pic").css("margin-left","0px");
+	}
+	showControl(newnum);
+	curbignum=newnum+1;
+	$(".cur_big_pic_num").html(curbignum);
+}
+//左右按钮的显示
+function showControl(index){
+	if(index==0){
 		$(".left_control").addClass("disabled");
 	}else{
 		$(".left_control").removeClass("disabled");
 	}
-	if(newnum==bigpictotal-1){
+	if(index==bigpictotal-1){
 		$(".right_control").addClass("disabled");
 	}else{
 		$(".right_control").removeClass("disabled");
 	}
-	curbignum=newnum+1;
-	$(".cur_big_pic_num").html(curbignum);
 }
-
+//获取滚动条距离顶部位置
+function getScrollTop() {  
+        var scrollPos;  
+        if (window.pageYOffset) {  
+        scrollPos = window.pageYOffset; }  
+        else if (document.compatMode && document.compatMode != 'BackCompat')  
+        { scrollPos = document.documentElement.scrollTop; }  
+        else if (document.body) { scrollPos = document.body.scrollTop; }   
+        return scrollPos;   
+} 
 //活动图动态加载
 $(function(){
 	//过两秒显示 showImage(); 内容
