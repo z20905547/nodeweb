@@ -20,7 +20,7 @@ $(document).ready(function(){
 			//楼盘动态
 			var adcontent1= '	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
-				'			<div class="main_active_name"><span>原价</span><span>'+data.data.nomal_price+'</span><span>元</span></div>'+
+				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>元</span></div>'+
 				'			<div class="main_active_price">'+
 				'				<div class="ico_active_price">限时特价</div>'+
 				'				<span>'+data.data.active_price+'</span>'+
@@ -52,24 +52,33 @@ $(document).ready(function(){
 			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
 			'	<div class="row">'+
 			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line">占地面积：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.floor_space+'平方米</div>'+
-			'		<div class="base_content_line">总栋数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.building_count+'栋</div>'+
-			'		<div class="base_content_line">容积率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.ratio+'</div>'+
-			'		<div class="base_content_line">装修状况：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.decoration_condition+'</div>'+
-			'		<div class="base_content_line">停车位：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.parking_count+'个</div>'+
-			'		<div class="base_content_line">主力户型：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.main_door+'</div>'+
-			'		<div class="base_content_line">楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.floor_detail+'</div>'+
+			'		<div class="base_content_line"><span>占地面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_space+'平方米</div>'+
+			'		<div class="base_content_line"><span>总栋数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_count+'栋</div>'+
+			'		<div class="base_content_line"><span>容积率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.ratio+'</div>'+
+			'		<div class="base_content_line"><span>装修状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.decoration_condition+'</div>'+
+			'		<div class="base_content_line"><span>停车位：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.parking_count+'个</div>'+
+
+
 			'	</div>'+
 			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line">建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.building_space+'亩</div>'+
-			'		<div class="base_content_line">总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.house_count+'户</div>'+
-			'		<div class="base_content_line">绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.green_rate+'%</div>'+
-			'		<div class="base_content_line">现房期房：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.util_type+'</div>'+
-			'		<div class="base_content_line">产权年限：&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.right_years+'年</div>'+
+			'		<div class="base_content_line"><span>建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_space+'亩</div>'+
+			'		<div class="base_content_line"><span>总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.house_count+'户</div>'+
+			'		<div class="base_content_line"><span>绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.green_rate+'%</div>'+
+			'		<div class="base_content_line"><span>现房期房：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.util_type+'</div>'+
+			'		<div class="base_content_line"><span>产权年限：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.right_years+'年</div>'+
 			'	</div>'+
+			'	</div>'+
+			'		<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
+			'	    <div class="base_content_line"><span>楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_detail+'</div>'+
+			'</div>'+
+
+			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
+			'	<div class="row">'+
+
 			'	</div>'+
 			'</div>'+
-			'<div class="base_message_detail col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
+
+				'<div class="base_message_detail col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 			'	<div class="row">'+
 			'	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+
 			'	</div>'+

@@ -1,3 +1,12 @@
+body {
+	font-family: "\5FAE\8F6F\96C5\9ED1",微软雅黑,"Microsoft Yahei",雅黑\9,Arial;
+
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+
 li, ol, ul {
     list-style: none;
     margin:0px;
@@ -2159,8 +2168,14 @@ a:hover {
 	line-height:28px;
 	color:#777777;
 }
+.base_content_line span{
+	font-weight: bold;
+}
+
 .base_message_detail p span{
 	white-space:normal !important;
+	line-height: 26px;
+
 }
 /*小图选项卡、列表start*/
 .pic-tag{
