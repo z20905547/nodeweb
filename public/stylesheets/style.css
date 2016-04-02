@@ -2150,10 +2150,26 @@ a:hover {
 }
 .detail_phone{
 	float:left;
-	padding-top:20px;
-	padding-left:90px;
+	padding-top:10px;
+	padding-left:30px;
 	color:#CE3367;
-	font-size:2em;
+	font-size:20px;
+	width: 380px;
+	height: 52px;
+	border: solid 1px #ebebeb;
+	background: #f4f4f4;
+	margin-top: 15px;
+	margin-left: 23px;
+}
+
+.f14 {
+	
+	font-size: 14px;
+}
+.f15 {
+    margin-left: 15px;
+	border: solid 1px #ebebeb;
+
 }
 .base_message_img{
 	padding:1em;

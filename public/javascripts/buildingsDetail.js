@@ -34,7 +34,7 @@ $(document).ready(function(){
 				'	<div class="text_label">主力户型:</div><div class="text_content">'+data.data.main_door+'</div>'+
 				'	<div class="text_label">开盘时间:</div><div class="text_content">'+data.data.open_date+'</div>'+
 				'	<div class="text_label">交房时间:</div><div class="text_content">'+data.data.deliver_date+'</div>'+
-				'	<div class="detail_phone"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'
+				'	<div class="detail_phone"><span class="f14">售楼处电话<span class="f15"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'
 
 			$(".buildings_detail_text").html(adcontent2);
 
