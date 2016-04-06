@@ -41,10 +41,9 @@ $(document).ready(function(){
 			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic=
-				'	<div class="main_active_pic" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'
-
-				;
+				'	<div class="main_active_pic" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'				;
 			$(".active_pic").html(avtivepic);
+
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
 			'	<img src="'+HTTPURL+'/resource/upload_buildings/'+ data.data.buildings_id +'/ldt/ldt.jpg'+'">'+
@@ -80,12 +79,14 @@ $(document).ready(function(){
 
 				'<div class="base_message_detail col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 			'	<div class="row">'+
-			'	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+
+			'	<div class="message_box  col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+data.data.around_peitao+data.data.traffic+
 			'	</div>'+
 			'	</div>'+
 			'</div>';
+
 			$(".buildings_base_loading").html(basetextcontent);
-			
+
+
 		}
 	});
 
@@ -374,3 +375,40 @@ function showImage()
 {
 	$("#main_active_pic").slideUp(1000,function(){$("#main_active_pic").slideDown(1000);});
 }
+
+
+ function cut(tt) {
+		alert(tt);
+	//	alert(options.value);
+
+		var	length=300;
+		var	showmore= "更多";
+	    var	hidemore= "隐藏";
+	    var replace="...";
+
+		var objhtml =tt;
+	 alert(tt.length);
+		if (tt.length > length) {
+			var precontent = tt.substring(0, length);
+			var lastcontent = "" + tt.substring(length, tt.length) + "";
+			var morelink = "" + showmore + "";
+			var newcontent = precontent + lastcontent +
+				replace + morelink;
+			$(this).html(newcontent);
+			$(".more").css("display", "none");
+			$(".morelink").click(function() {
+				if ($(".morelink").html() == showmore) {
+					$(".more").show(1000);
+					$(".morelink").html(hidemore);
+					return false;
+				}
+				else {
+					$(".more").hide(900);
+					$(".morelink").html(showmore);
+					return false;
+				}
+			});
+		}
+		return false;
+	}
+

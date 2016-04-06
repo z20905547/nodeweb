@@ -2163,7 +2163,7 @@ a:hover {
 }
 
 .f14 {
-	
+
 	font-size: 14px;
 }
 .f15 {
@@ -2746,5 +2746,29 @@ padding-top:3px;
 	background: url(/images/boxline.gif) no-repeat top center;
 	padding: 2px 0px;
 	clear: both;
+}
+.list-inline{
+
+	color: #969696;
+}
+
+.list-inline2{
+	line-height: 30px;
+	color: #969696;
+
+}
+.list-inline4{
+	line-height: 30px;
+	color: mediumvioletred;
+
+}
+.list-inline5{
+	line-height: 30px;
+	color: mediumvioletred;
+
+}
+.list-inline3{
+	line-height: 30px;
+	color: #969696;
 
 }
