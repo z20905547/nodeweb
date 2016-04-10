@@ -104,7 +104,7 @@ $(document).ready(function(){
 			for(var i=0;i<data.data.total;i++){
 				if(data.data.list[i].big_type==1){
 					firstcount++;
-					var str='<li onclick="highLevel(1,'+firstcount+')" class="picli1 lipic'+firstcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="hx-p-img"><img class="imgtype1" data-num="'+firstcount+'" src="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></div><div class="hx-p-txt"> <p>"'+data.data.list[i].house_type_name+'"</p> <p class="p-last">"'+data.data.list[i].tingshi+'"</p></div></li>';
+					var str='<li onclick="highLevel(1,'+firstcount+')" class="picli1 lipic'+firstcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="hx-p-img"><img class="imgtype1" data-num="'+firstcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'"  alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></div><div class="hx-p-txt"> <p>"'+data.data.list[i].house_type_name+'"</p> <p class="p-last">"'+data.data.list[i].tingshi+'"</p></div></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
 					if($(".hptag10").length==0){
 						var tagobj=$('<span class="pic-tag hptag10 active" data-type="10" data-space="house_pic_door">全部</span>');
@@ -145,7 +145,7 @@ $(document).ready(function(){
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}else if(data.data.list[i].big_type==2){
 					secendcount++;
-					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
+					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'" alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
 					if($(".hptag20").length==0){
 						var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
@@ -284,10 +284,10 @@ function highLevel(type,num){
 	$(".ul"+type+"0 .imgtype"+type).each(function(){
 		if($(this).attr("data-num")==num){
 			//换大图
-			$(".cur_big_pic").attr("src",$(this).attr("src"));
+			$(".cur_big_pic").attr("src",$(this).attr("alt1"));
 			
 		}
-		picsrclist[i]=$(this).attr("src");
+		picsrclist[i]=$(this).attr("alt1");
 		i++;
 	});
 	//设置当前张数与总张数
@@ -376,39 +376,4 @@ function showImage()
 	$("#main_active_pic").slideUp(1000,function(){$("#main_active_pic").slideDown(1000);});
 }
 
-
- function cut(tt) {
-		alert(tt);
-	//	alert(options.value);
-
-		var	length=300;
-		var	showmore= "更多";
-	    var	hidemore= "隐藏";
-	    var replace="...";
-
-		var objhtml =tt;
-	 alert(tt.length);
-		if (tt.length > length) {
-			var precontent = tt.substring(0, length);
-			var lastcontent = "" + tt.substring(length, tt.length) + "";
-			var morelink = "" + showmore + "";
-			var newcontent = precontent + lastcontent +
-				replace + morelink;
-			$(this).html(newcontent);
-			$(".more").css("display", "none");
-			$(".morelink").click(function() {
-				if ($(".morelink").html() == showmore) {
-					$(".more").show(1000);
-					$(".morelink").html(hidemore);
-					return false;
-				}
-				else {
-					$(".more").hide(900);
-					$(".morelink").html(showmore);
-					return false;
-				}
-			});
-		}
-		return false;
-	}
 
