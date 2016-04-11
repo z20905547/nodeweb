@@ -60,7 +60,7 @@ $(document).ready(function(){
 
 			'	</div>'+
 			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line"><span>建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_space+'亩</div>'+
+			'		<div class="base_content_line"><span>建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_space+'㎡</div>'+
 			'		<div class="base_content_line"><span>总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.house_count+'户</div>'+
 			'		<div class="base_content_line"><span>绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.green_rate+'%</div>'+
 			'		<div class="base_content_line"><span>现房期房：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.util_type+'</div>'+
