@@ -6,6 +6,8 @@
 
 
 $(document).ready(function(){
+
+
 	var params={
 			buildingsId:$("#buildingsId").val(),
 	        pid:$("#pid").val()
@@ -300,21 +302,10 @@ function highLevel(type,num){
 	//显示大图
 	$(".high_level").show();
 	//添加高斯模糊
-	$(".maincontent").addClass("gaublue");
-	$(".high_level").animate({top:$(document).scrollTop()+"px"},500);
+    //$(".maincontent").addClass("gaublue");
+	//$(".high_level").animate({top:$(document).scrollTop()+"px"},500);
 	//图片高度不够时设置上边距
-	var moreHeight=$(".cur_pic").height()-$(".cur_big_pic").height();
-	if(moreHeight>0){
-		$(".cur_big_pic").css("margin-top",moreHeight/2+"px");
-	}else{
-		$(".cur_big_pic").css("margin-top","0px");
-	}
-	var moreWidth=$(".cur_pic").width()-$(".cur_big_pic").width();
-	if(moreWidth>0){
-		$(".cur_big_pic").css("margin-left",moreWidth/2+"px");
-	}else{
-		$(".cur_big_pic").css("margin-left","0px");
-	}
+	
 	$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
 	$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
 }
@@ -375,5 +366,6 @@ function showImage()
 {
 	$("#main_active_pic").slideUp(1000,function(){$("#main_active_pic").slideDown(1000);});
 }
+
 
 

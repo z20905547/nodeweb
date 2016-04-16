@@ -1,14 +1,14 @@
 extends ../layout
 
 block content
-	input#proId(type="hidden",value="#{backproId}")
-	input#buildingsId(type="hidden",value="#{buildingsId}")
-	input#pid(type="hidden",value="#{pid}")
-
-	include ../head.jade
-	include ./detail_content.html
-	include ../footer.html
-	script( src='/javascripts/head.js')
-	script( src='/javascripts/backtop.js')
-	script( src='/javascripts/buildingsDetail.js')
-	script( src='/javascripts/countTime.js')
+    input#proId(type="hidden",value="#{backproId}")
+    input#buildingsId(type="hidden",value="#{buildingsId}")
+    input#pid(type="hidden",value="#{pid}")
+    input#buildings_name(type="hidden",value="#{buildingsname}")
+    include ../head.jade
+    include ./detail_content.html
+    include ../footer.html
+    script( src='/javascripts/head.js')
+    script( src='/javascripts/backtop.js')
+    script( src='/javascripts/buildingsDetail.js')
+    script( src='/javascripts/countTime.js')
