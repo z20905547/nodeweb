@@ -2274,6 +2274,8 @@ filter: blur(15px);
 }
 .cur_big_pic{
 	cursor: -webkit-grab;
+	text-align:center;
+	margin: 0 auto;
 }
 .control{
 	top:50%;
