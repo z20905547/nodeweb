@@ -1,102 +1,300 @@
 <style type="text/css">
-	#J_comingViewWin_20160306 {
-	}
+    #J_comingViewWin_20160306 {
+
+    }
 </style>
-<div  class="content-body">
-	<div class="container">
-		<div id="div1" class="content-left-block col-xs-12 col-sm-8 col-md-8 col-lg-8">
-			<div class="left-title row">
-				<img src="/images/new_title.png">
-			</div>
-			<div class="active-list">
+<div class="content-body">
+    <div class="container">
+        <div id="div1"
+             class="content-left-block col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="left-title row">
+                <img src="/images/new_title.png">
+            </div>
+            <div class="active-list"></div>
+        </div>
+        <div class="content-right-block col-sm-4 col-md-4 col-lg-4">
 
-			</div>
-		</div>
-		<div class="content-right-block col-sm-4 col-md-4 col-lg-4">
+            <!-- 文字滚动广告位 -->
+            <div class="text_ad" id="J_textAd_frame">
+                <p class="J_textAd">
+                    <img class="text_ad_icon" src="images/14527570640310.gif"> <a
+                        href="http://www.vfhui.com/" target="_blank">来唯房训练营，学习如何抢购特价房</a>
+                </p>
+            </div>
 
-			<!-- 文字滚动广告位 -->
-			<div class="text_ad" id="J_textAd_frame">
-				<p class="J_textAd"> <img class="text_ad_icon" src="images/14527570640310.gif"> <a href="http://www.vfhui.com/" target="_blank">来唯房训练营，学习如何抢购特价房</a> </p>
-			</div>
+            <script type="text/javascript" src="javascripts/common.js"></script>
+            <!-- 代码 开始 -->
+            <div class="banner_index">
+                <a href="javascript:void(0);" class="btn btnPre"
+                   id="banner_index_pre"></a> <a href="javascript:void(0);"
+                                                 class="btn btnNext" id="banner_index_next"></a>
+                <ul class="banner_wrap" id="banner_index">
+                    <li><a href="http://www.lanrentuku.com" target="_blank"><img
+                            src="/images/14545564155743.jpg" /></a></li>
+                    <li><a href="http://www.lanrentuku.com" target="_blank"><img
+                            src="/images/14569132970589.jpg" /></a></li>
+                </ul>
+                <div class="indexBanner_num" id="index_numIco"></div>
+            </div>
 
-			<script type="text/javascript" src="javascripts/common.js"></script>
-			<!-- 代码 开始 -->
-			<div class="banner_index">
-				<a href="javascript:void(0);" class="btn btnPre" id="banner_index_pre"></a>
-				<a href="javascript:void(0);" class="btn btnNext" id="banner_index_next"></a>
-				<ul class="banner_wrap" id="banner_index">
-					<li><a href="http://www.lanrentuku.com" target="_blank"><img  src="/images/14545564155743.jpg"/></a></li>
-					<li><a href="http://www.lanrentuku.com" target="_blank"><img  src="/images/14569132970589.jpg"/></a></li>
-				</ul>
-				<div class="indexBanner_num" id="index_numIco"></div>
-			</div>
+            <script type="text/javascript">
+                var ShowPre1 = new ShowPre({
+                    box : "banner_index",
+                    Pre : "banner_index_pre",
+                    Next : "banner_index_next",
+                    numIco : "index_numIco",
+                    loop : 1,
+                    auto : 1
+                });
+            </script>
+            <!-- 代码 结束 -->
 
-			<script type="text/javascript">
-				var ShowPre1 = new ShowPre({box:"banner_index",Pre:"banner_index_pre",Next:"banner_index_next",numIco:"index_numIco",loop:1,auto:1});
-			</script>
-			<!-- 代码 结束 -->
+            <!--公告-->
+            <!--
+            <div class="sys-message row">
+                <div class="notice-title">
+                    <!--<span class="small-tab" data-id="now">公告</span>-->
+            <script>
+                $(function() {
+                    $(".notice .notice_list li").mouseover(
+                            function() {
+                                $(this).addClass('selected').siblings()
+                                        .removeClass('selected');
+                                var index = $(this).index();
+                                number = index;
+                                $('.notice .notice_content .J_announce_li')
+                                        .hide();
+                                $(
+                                        '.notice .notice_content .J_announce_li:eq('
+                                        + index + ')').show();
+                            });
 
-			<!--公告-->
-			<!--
-			<div class="sys-message row">
-				<div class="notice-title">
-					<!--<span class="small-tab" data-id="now">公告</span>-->
-					<script>
-						$(function(){
-							$(".notice .notice_list li").mouseover(function(){
-								$(this).addClass('selected').siblings().removeClass('selected');
-								var index = $(this).index();
-								number = index;
-								$('.notice .notice_content .J_announce_li').hide();
-								$('.notice .notice_content .J_announce_li:eq('+index+')').show();
-							});
+                    var auto = 1; //等于1则自动切换，其他任意数字则不自动切换
+                    if (auto == 1) {
+                        var number = 0;
+                        var maxNumber = $('.notice .notice_list li').length;
+                        function autotab() {
+                            number++;
+                            number == maxNumber ? number = 0 : number;
+                            $('.notice .notice_list li:eq(' + number + ')')
+                                    .addClass('selected').siblings()
+                                    .removeClass('selected');
+                            $(
+                                    '.notice .notice_content .J_announce_li:eq('
+                                    + number + ')').show().siblings()
+                                    .hide();
+                        }
+                    }
+                });
+            </script>
 
-							var auto = 1;  //等于1则自动切换，其他任意数字则不自动切换
-							if(auto ==1){
-								var number = 0;
-								var maxNumber = $('.notice .notice_list li').length;
-								function autotab(){
-									number++;
-									number == maxNumber? number = 0 : number;
-									$('.notice .notice_list li:eq('+number+')').addClass('selected').siblings().removeClass('selected');
-									$('.notice .notice_content .J_announce_li:eq('+number+')').show().siblings().hide();
-								}
-							}
-						});
-					</script>
+            <!-- 代码部分end -->
 
-					<!-- 代码部分end -->
-					<!--
-                                        <div class="notice">
-                                            <ul class="notice_list">
-                                                <li class="toc J_annouce_trigger selected">公告</li>
-                                                <li class="toc J_annouce_trigger ">合作专区</li>
-                                            </ul>
-                                            <div class="notice_content" >
+            <div class="notice">
+                <ul class="notice_list">
+                    <li class="toc J_annouce_trigger selected">唯房会购房攻略</li>
+                    <li class="toc J_annouce_trigger ">合作专区</li>
+                </ul>
+                <div class="notice_content">
 
-                                                <div class="J_announce_li active-pannel" style="display: block;">
-                                                    <ul id="J-fashionWnews hidden">
-                                                        <li><a class="notice_link gray" title="【支付优惠】使用快捷支付，每笔订单加送30V值" href="http://act.vip.com/14069.html" target="_blank">【支付优惠】使用快捷支付，每笔订单加送30V值</a></li>
-                                                        <li><a class="notice_link gray" title="【广发唯品会信用卡】权益升级享9.5折再送200元" href="http://n.vip.com/AviUJr60" target="_blank">【广发唯品会信用卡】权益升级享9.5折再送200元</a></li>
-                                                    </ul>
-                                                    <p><a class="notice_link_more" href="http://blog.vip.com" target="_blank" title="进入博客">进入博客>></a></p>
-                                                </div>
-                                                <div class="J_announce_li  active-pannel" style="display: none;">
-                                                    <ul id="J-cpnNews hidden">
-                                                        <li><a class="notice_link gray" title="广发唯品会信用卡权益升级享9.5折再送200元是看得见啊速度" href="http://n.vip.com/mYRfYg43" target="_blank">广发唯品会信用卡权益升级享9.5折再送200元5折再送200元是看得见啊速度</a></li>
-                                                        <li><a class="notice_link gray" title="唯品会龙卡折上直减2%，新开卡享新品1元购" href="http://n.vip.com/EJ3yMr76" target="_blank">唯品会龙卡折上直减2%，新开卡享新品1元购</a></li>
-                                                        <li><a class="notice_link gray" title="邀请您率先体验Apple Pay" href="http://n.vip.com/nmeaUn87" target="_blank">邀请您率先体验Apple Pay</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="J_announce_li active-pannel" style="display: block;">
+                        <ul  class="tt22" id="J-fashionWnews hidden">
+                            
+                        </ul>
 
-                                </div>
+                    </div>
+                    <div class="J_announce_li  active-pannel" style="display: none;">
+                        <ul id="J-cpnNews hidden">
+                            <li><a class="notice_link gray" title="唯房会开发商合作热线 ：4008-606-181" href="#">开发商合作热线 ：4008-606-181</a></li>
 
-                           -->
-                                <!----新品开售预告开始---->
-					<!--
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="m-forecast cellphone-night-warp" id="J_wrap_cellphone">
+
+                <strong class="forecast-title cellphone-night-title">合作伙伴</strong>
+                <div class="cellphone-night-con" id="J_cellphone-night-con">
+                    <div class="cellphone-night-list J_cellphone_list clearfix"
+                         id="J_cellphone-night-list">
+						<span class="forecast-logo J_cellphoneLogo"> <a
+                                href="http://www.vfhui.com/buildings/194/460000/98/信达海天下"
+                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                            <img
+                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
+                                    class=""
+                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
+                                    height="48" alt="信达 海天下">
+                        </a>
+						</span><span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/21/460000/90/华盛·中央公园"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
+                                height="48" alt="华盛 中央公园">
+                    </a>
+						</span> <span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/123/460000/87/倚能美林湾"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
+                                height="48" alt="倚能 美林湾">
+                    </a>
+						</span>
+                    </div>
+                </div>
+                <div class="cellphone-night-con" id="J_cellphone-night-con">
+                    <div class="cellphone-night-list J_cellphone_list clearfix"
+                         id="J_cellphone-night-list">
+						<span class="forecast-logo J_cellphoneLogo"> <a
+                                href="http://www.vfhui.com/buildings/140/460000/54/远洋华墅"
+                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                            <img
+                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
+                                    class=""
+                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
+                                    height="48" alt="远洋华墅">
+                        </a>
+						</span><span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/329/460000/97/四季华庭阳光华府"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
+                                height="48" alt="四季华庭阳光华府">
+                    </a>
+						</span> <span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/355/460000/99/海信华庭"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
+                                height="48" alt="海信华庭">
+                    </a>
+						</span>
+                    </div>
+                </div>
+                <div class="cellphone-night-con" id="J_cellphone-night-con">
+                    <div class="cellphone-night-list J_cellphone_list clearfix"
+                         id="J_cellphone-night-list">
+						<span class="forecast-logo J_cellphoneLogo"> <a
+                                href="http://www.vfhui.com/buildings/151/460000/86/永庆湾"
+                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                            <img
+                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/151/logo/logo.gif"
+                                    class=""
+                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
+                                    height="48" alt="永庆湾">
+                        </a>
+						</span><span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/182/460000/77/滨江逸品"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
+                                height="48" alt="滨江逸品">
+                    </a>
+						</span> <span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/168/460000/80/船长de海寓"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
+                                height="48" alt="船长de海寓">
+                    </a>
+						</span>
+                    </div>
+                </div>
+                <div class="cellphone-night-con" id="J_cellphone-night-con">
+                    <div class="cellphone-night-list J_cellphone_list clearfix"
+                         id="J_cellphone-night-list">
+						<span class="forecast-logo J_cellphoneLogo"> <a
+                                href="http://www.vfhui.com/buildings/128/460000/61/海航豪庭"
+                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                            <img
+                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
+                                    class=""
+                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
+                                    height="48" alt="永庆湾">
+                        </a>
+						</span><span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/51/460000/55/保利中央海岸"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
+                                height="48" alt="保利中央海岸">
+                    </a>
+						</span> <span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/26/460000/75/澄迈碧桂园美浪湾"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
+                                height="48" alt="澄迈碧桂园美浪湾">
+                    </a>
+						</span>
+                    </div>
+                </div>
+                <div class="cellphone-night-con" id="J_cellphone-night-con">
+                    <div class="cellphone-night-list J_cellphone_list clearfix"
+                         id="J_cellphone-night-list">
+						<span class="forecast-logo J_cellphoneLogo"> <a
+                                href="http://www.vfhui.com/buildings/54/460000/71/慧远·美林谷"
+                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                            <img
+                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/54/logo/logo.gif"
+                                    class=""
+                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
+                                    height="48" alt="慧远·美林谷">
+                        </a>
+						</span><span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/24/460000/69/富力红树湾"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
+                                height="48" alt="富力红树湾">
+                    </a>
+						</span> <span class="forecast-logo J_cellphoneLogo"> <a
+                            href="http://www.vfhui.com/buildings/78/460000/81/鲁能海蓝福源"
+                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
+                        <img
+                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
+                                class=""
+                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
+                                height="48" alt="远洋华墅">
+                    </a>
+						</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!----新品开售预告开始---->
+<!--
                                 <script>
                                     $(function(){
                                         $("#J_wrap_salePlan #J-comingBrand-trigger li").mouseover(function(){
@@ -228,178 +426,16 @@
                                     </ul>
                                 </div>
                                 <!--新品开售预告结束-->
-            <div class="m-forecast cellphone-night-warp" id="J_wrap_cellphone">
 
-                <strong class="forecast-title cellphone-night-title">合作伙伴</strong>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-							<span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/194/460000/98/信达海天下"
-                                                                                   target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
-                                 height="48" alt="信达 海天下">
-                    </a>
-							</span><span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/21/460000/90/华盛·中央公园"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
-                                 height="48" alt="华盛 中央公园">
-                    </a>
-							</span>
-                        <span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/123/460000/87/倚能美林湾"
-                                                                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
-                                     height="48" alt="倚能 美林湾">
-                        </a>
-							</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                               id="J_cellphone-night-list">
-							<span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/140/460000/54/远洋华墅"
-                                                                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                                <img
-                                        src="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                        class=""
-                                        data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                        height="48" alt="远洋华墅">
-                            </a>
-							</span><span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/329/460000/97/四季华庭阳光华府"
-                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                    <img
-                            src="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
-                            class=""
-                            data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
-                            height="48" alt="四季华庭阳光华府">
-                </a>
-							</span>
-                        <span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/355/460000/99/海信华庭"
-                                                                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
-                                    height="48" alt="海信华庭">
-                        </a>
-							</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-							<span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/151/460000/86/永庆湾"
-                                                                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                                <img
-                                        src="http://www.vfhui.com:8080/management/resource/upload_buildings/151/logo/logo.gif"
-                                        class=""
-                                        data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                        height="48" alt="永庆湾">
-                            </a>
-							</span><span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/182/460000/77/滨江逸品"
-                                                                                   target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
-                                height="48" alt="滨江逸品">
-                    </a>
-							</span>
-                        <span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/168/460000/80/船长de海寓"
-                                                                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
-                                    height="48" alt="船长de海寓">
-                        </a>
-							</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-							<span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/128/460000/61/海航豪庭"
-                                                                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                                <img
-                                        src="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
-                                        class=""
-                                        data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
-                                        height="48" alt="永庆湾">
-                            </a>
-							</span><span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/51/460000/55/保利中央海岸"
-                                                                                   target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
-                                height="48" alt="保利中央海岸">
-                    </a>
-							</span>
-                        <span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/26/460000/75/澄迈碧桂园美浪湾"
-                                                                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
-                                    height="48" alt="澄迈碧桂园美浪湾">
-                        </a>
-							</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-							<span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/54/460000/71/慧远·美林谷"
-                                                                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                                <img
-                                        src="http://www.vfhui.com:8080/management/resource/upload_buildings/54/logo/logo.gif"
-                                        class=""
-                                        data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                        height="48" alt="慧远·美林谷">
-                            </a>
-							</span><span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/24/460000/69/富力红树湾"
-                                                                                   target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
-                                height="48" alt="富力红树湾">
-                    </a>
-							</span>
-                        <span class="forecast-logo J_cellphoneLogo"> <a href="http://www.vfhui.com/buildings/78/460000/81/鲁能海蓝福源"
-                                                                        target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                    height="48" alt="远洋华墅">
-                        </a>
-							</span>
-                    </div>
-                </div>
-            </div>
-				</div>
-	</div>
 </div>
-<div class="bottom-pull-loading">
-	加载中........
 </div>
+<div class="bottom-pull-loading">加载中........</div>
 <div id="elevator_item">
-	<a id="elevator" onclick="return false;" title="回到顶部"></a>
-	<a class="qr"></a>
-	<div class="qr-popup">
-		<a class="code-link"><img class="code" src="/images/wx.jpg"/></a>
-		<span>唯房会微信</span>
-		<div class="arr"></div>
-	</div>
+    <a id="elevator" onclick="return false;" title="回到顶部"></a> <a
+        class="qr"></a>
+    <div class="qr-popup">
+        <a class="code-link"><img class="code" src="/images/wx.jpg" /></a> <span>唯房会微信</span>
+        <div class="arr"></div>
+    </div>
 
 </div>

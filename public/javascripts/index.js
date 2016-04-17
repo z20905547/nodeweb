@@ -68,21 +68,18 @@ $(document).ready(function(){
 	});
 
 	ajaxGet("get",URLMAP.notecelist,null,function(data){
+
 		if(data.statusCode=="0000"){
 			var sublist=data.data.list;
 			var str="";
 			for(var i=0;i<sublist.length;i++){
-
-
-
-
-				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].Id).on("click",function(){
-					window.location.href=URLMAP.noticedetail+$(this).attr("data-id");
+				var oneobj=$("<li></li>");
+				oneobj.addClass("notice_link").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.location.href=WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit");
 				})
-				str=sublist[i].Title+'   ['+sublist[i].MessageDate+']';
+				str= '&nbsp;&nbsp;'+sublist[i].Title ;
 				oneobj.append(str);
-				$('.notice-item').append(oneobj);
+				$('.tt22').append(oneobj);
 			}
 
 		}else{
