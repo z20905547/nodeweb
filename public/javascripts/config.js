@@ -7,13 +7,14 @@ var HTTPURL="http://www.vfhui.com:8080/management/";
 //var HTTPURL="http://localhost:9080/httpInterface/";
 //var HTTPURL="http://localhost:9080/httpInterface/";
 var WEBMAP={
-		buildingsdetail:WEBURL+"buildings/"
+		buildingsdetail:WEBURL+"buildings/",
+	    noticedetail:WEBURL+"news/"
 }
 var URLMAP={
 		citylist:HTTPURL+"jsondata/area/getSubAreaList",
 		buildingslist:HTTPURL+"jsondata/buildings/getBuildingsDetailList",
 		notecelist:HTTPURL+"jsondata/notice/getNoticeList",
-		noticedetail:HTTPURL+"jsondata/notice/getNoticeList",
+
 		buildingsDetail:HTTPURL+"jsondata/buildings/getBuildingsDetail",
 		resourceList:HTTPURL+"jsondata/resource/getResourceList"
 }
