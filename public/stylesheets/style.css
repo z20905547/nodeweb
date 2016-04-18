@@ -2936,7 +2936,7 @@ a, img {
 	float: right;
 }
 .bolg_detail {
-	width: 770px;
+
 	height: auto;
 	background: #fff;
 	border-radius: 2px;
@@ -2960,9 +2960,12 @@ a, img {
 	padding-left: 27px;
 }
 
-.de_text {
-	padding: 30px;
+.J_zw_p {
+	 padding: 25px;
+	 height: auto;
+	 background: #fff;
 }
+
 .pagination {
 	display: inline-block;
 	padding-left: 0;
@@ -2986,6 +2989,7 @@ a, img {
 	border-left-color: #eaeaea;
 	border-right-color: #eaeaea;
 	border-bottom-color: #d2d2d2;
+	width: 880px;
 }
 
 .at_us {
