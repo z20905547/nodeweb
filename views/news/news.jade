@@ -1,11 +1,11 @@
 extends ../layout
 
 block content
-
+    input#Id(type="hidden",value="#{Id}")
     include ../head.jade
     include news_detail.html
     include ../footer.html
     script( src='/javascripts/head.js')
     script( src='/javascripts/backtop.js')
-    script( src='/javascripts/buildingsDetail.js')
+    script( src='/javascripts/newsDetail.js')
     script( src='/javascripts/countTime.js')
