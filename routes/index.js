@@ -22,5 +22,16 @@ router.get('/cityId/:city_id(\\d+)', function (req, res) {
 router.get('/areaId/:area_id(\\d+)', function (req, res) {
   res.render('index', { title: '唯房会 -一家专门做特价房的网站',area_id:req.params.area_id,backproId: 460000});
 });
+/* 网站地图 */
+router.get('/sitemap.html', function (req, res) {
+  res.render('sitemap', { title: '唯房会 -一家专门做特价房的网站'});
+});
+router.get('/sitemap.xml', function (req, res) {
+  res.render('sitemapx', { title: '唯房会 -一家专门做特价房的网站'});
+});
+/* 蜘蛛协议 */
+router.get('/robots.txt', function (req, res) {
+  res.render('robots', { title: '唯房会 -一家专门做特价房的网站'});
+});
 
 module.exports = router;
