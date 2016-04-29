@@ -75,7 +75,7 @@ $(document).ready(function(){
 			for(var i=0;i<sublist.length;i++){
 				var oneobj=$("<li></li>");
 				oneobj.addClass("notice_link").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
-					window.location.href=WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit");
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
 				})
 				str= '&nbsp;&nbsp;'+sublist[i].Title ;
 				oneobj.append(str);
