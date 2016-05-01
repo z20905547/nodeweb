@@ -1,22 +1,27 @@
 Id=$("#Id").val();
 newsTitle=$("#newsTitle").val();
+curpage=$("#curpage").val();
 
 loading=true;
-curpage=1;
-totalpage=1;
-pagecount=5;
+pagecount=8;
 
 params={
 	Id:Id,
-	newsTitle:newsTitle
+	newsTitle:newsTitle,
+	first:(curpage-1)*pagecount,
+	last:pagecount,
 };
 
 $(document).ready(function(){
-ajaxGet("get",URLMAP.notecelist,null,function(data){
+
+ajaxGet("get",URLMAP.notecelist,params,function(data){
 
 	if(data.statusCode=="0000"){
 		var sublist=data.data.list;
 		var str="";
+		var str2="";
+		var str3="";
+		var str4="";
 		for(var i=0;i<sublist.length;i++){
 			str='<div class="list_box box_show02">' +
 				'<a href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+
@@ -35,6 +40,18 @@ ajaxGet("get",URLMAP.notecelist,null,function(data){
 			$('.ttbox').append(oneobj);
 		}
 
+		str2='<span class="page_total">共'+data.data.total+'条</span>&nbsp;&nbsp;'+
+             '<a target="_self"  href="/news/newslist/1">首页</a>';
+
+		var totalpage=parseInt((data.data.total-1)/pagecount+1);
+
+		for(var i=0;i<totalpage;i++){
+			var k = i+1;
+		str3+='&nbsp;&nbsp;<a target="_self" href="/news/newslist/'+k+'">'+k+'</a>'
+		}
+		str4='&nbsp;&nbsp;<a	target="_self" href="/news/newslist/'+totalpage+'">尾页</a>&nbsp;&nbsp;'
+		var oneobj2=$("<dev></dev>");
+		$('.pagination-xs').append(str2+str3+str4);
 	}else{
 	}
 });

@@ -67,7 +67,12 @@ $(document).ready(function(){
 		loading=false;
 	});
 
-	ajaxGet("get",URLMAP.notecelist,null,function(data){
+	params={
+		first:0,
+		last:5,
+	};
+
+	ajaxGet("get",URLMAP.notecelist,params,function(data){
 
 		if(data.statusCode=="0000"){
 			var sublist=data.data.list;
