@@ -3183,6 +3183,37 @@ h3 {
 .hjsbox{
 	display:none
 }
+/*手机导航start*/
+.small-nav{
+	padding:1em 0em 0em 0em;
+	display:none;
+	background:#ffffff;
+}
+.small-nav ul li{
+	float:left;
+	text-align:center;
+	margin-bottom:1em;
+	cursor: pointer;
+}
+.small-nav ul li::after{
+	clean:both;
+}
+.small-nav ul li:HOVER,.small-nav ul li:HOVER .glyphicon{
+	background:#CE3367;
+	color:#ffffff;
+}
+.small-nav ul li span{
+	
+}
+.small-nav ul li .glyphicon{
+	width:100%;
+	display:inline-block;
+	text-align:center;
+	font-size:3em;
+	color:#CE3367;
+}
+
+/*手机导航end*/
 /*响应区*/
 @media screen and (max-width:992px){
 	.container{width:100%;}
@@ -3237,6 +3268,3 @@ h3 {
 	}
 }
 /*响应区end*/
-
-
-
