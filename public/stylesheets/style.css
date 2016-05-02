@@ -2546,53 +2546,6 @@ filter: blur(15px);
 .small-top-ad{
 	padding-left: 340px;
 }
-/*响应区*/
-@media screen and (max-width:992px){
-	.container{width:100%;}
-	.small-top-ad{
-		display:none;
-	}
-	.small_content{
-		border:none;
-	}
-}
-@media screen and (max-width:768px){
-	
-	.container{
-		padding:0px;
-	}
-	.topbar .container{
-		padding:0px 15px;
-	}
-	.toolbar{
-		display:none;
-
-	}
-	.content-right-block{
-		display:none;
-	}
-	.right-img{
-		display:none;
-	}
-	.content_block{
-		border:none;
-	}
-	.small_content{
-		border-right:none;
-		border-bottom:solid 1px #f5f5f5;
-	}
-	.buildings_detail_price img{width:100%;}
-	.control{
-		display:none;
-	}
-	.cur_pic{
-		left: 0;
-		width: 100%;
-	}
-	.cur_big_pic{
-		width:100%;
-	}
-}
 
 /*首页搜索框start*/
 .search {
@@ -2787,12 +2740,10 @@ padding-top:3px;
 
 .bolg_main{
 	overflow: hidden;
-	width: 1140px;
 	height: auto;
 	margin: 0 auto;
 }
 .bolg_left {
-	width: 190px;
 	height: auto;
 	margin-top: 40px;
 }
@@ -2928,7 +2879,6 @@ a, img {
 	color: #666;
 }
 .bolg_right {
-	width: 920px;
 	height: auto;
 	margin-top: 20px;
 }
@@ -2989,7 +2939,7 @@ a, img {
 	border-left-color: #eaeaea;
 	border-right-color: #eaeaea;
 	border-bottom-color: #d2d2d2;
-	width: 880px;
+	width:100%;
 }
 
 .at_us {
@@ -3047,7 +2997,6 @@ a, img {
 	transition: background-color,border-left .1s linear 0s;
 }
 .telephone1{
-   margin-left: 550px;
 	color:#f10582;
 	font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
 
@@ -3223,3 +3172,57 @@ padding-left: 500px;
 	width: 100%;
 	height: auto;
 }
+/*响应区*/
+@media screen and (max-width:992px){
+	.container{width:100%;}
+	.small-top-ad{
+		display:none;
+	}
+	.small_content{
+		border:none;
+	}
+}
+@media screen and (max-width:768px){
+	
+	.container{
+		padding:0px;
+	}
+	.topbar .container{
+		padding:0px 15px;
+	}
+	.toolbar{
+		display:none;
+
+	}
+	.content-right-block{
+		display:none;
+	}
+	.right-img{
+		display:none;
+	}
+	.content_block{
+		border:none;
+	}
+	.small_content{
+		border-right:none;
+		border-bottom:solid 1px #f5f5f5;
+	}
+	.buildings_detail_price img{width:100%;}
+	.control{
+		display:none;
+	}
+	.cur_pic{
+		left: 0;
+		width: 100%;
+	}
+	.cur_big_pic{
+		width:100%;
+	}
+	.search,.main-nav,.bolg_nav,.bolg_left,big{
+		display:none;
+	}
+	.small-nav{
+		display:block;
+	}
+}
+/*响应区end*/
