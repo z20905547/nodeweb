@@ -1,0 +1,277 @@
+<div class="bolg_box">
+	<div class="bolg_main">
+		<!--  <div class="bolg_nav"><span><edit type="text" name="Public_NavLocateText">您现在的位置是：</edit></span>
+                <a href="http://www.vip.com"><edit type="text" name="Public_NavLocateSecondText">特卖会</edit></a>
+                <a href="http://blog.vip.com/?r=/Blog/HTML_showList">&gt;&gt;博客首页</a><span class="last J_last">&gt;&gt;实体店购买唯品卡  方便快速·现付现拿</span>
+            </div>
+
+            -->
+		<div class="bolg_nav"><span><edit type="text" name="Public_NavLocateText">您现在的位置是：</edit></span>
+			<a href="/"><edit type="text" name="Public_NavLocateSecondText">唯房会</edit></a>
+			<a href="/news/newslist/1"><edit type="text" name="Public_NavLocateSecondText">&gt;&gt;购房方案</edit></a>
+			<span class="last J_last"></span>
+		</div>
+		<div class="wrap xxx">
+			<!--左栏：开始-->
+			<div class="left">
+				<div class="formTop">
+					<h1>填写您的购房方案</h1>
+					<form id="welcomeform" method="post" action="/demand/demandsub">
+						<div class="formBox form1">
+							<h2>意向城市<b>＊</b></h2>
+							<div class="webui ui_checkbox">
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="海口" style="display: none;">海口</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="三亚" style="display: none;">三亚</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="琼海" style="display: none;">琼海</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="文昌" style="display: none;">文昌</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="儋州" style="display: none;">儋州</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="澄迈" style="display: none;">澄迈</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="万宁" style="display: none;">万宁</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="陵水" style="display: none;">陵水</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="临高" style="display: none;">临高</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="定安" style="display: none;">定安</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="保亭" style="display: none;">保亭</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="五指山" style="display: none;">五指山</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="东方" style="display: none;">东方</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="琼中" style="display: none;">琼中</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="昌江" style="display: none;">昌江</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="白沙" style="display: none;">白沙</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="乐东" style="display: none;">乐东</label>
+
+								<label>
+									<input type="checkbox" name="areaname[]" value="屯昌" style="display: none;">屯昌</label>
+
+							</div>
+						</div>
+
+						<div class="formBox form2">
+							<h2>房屋类型<b>＊</b></h2>
+							<div class="webui ui_checkbox">
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="住宅" style="display: none;">住宅</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="养生社区" style="display: none;">养生社区</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="花园洋房" style="display: none;">花园洋房</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="海景房" style="display: none;">海景房</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="河(江)景房" style="display: none;">河(江)景房</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="温泉社区" style="display: none;">温泉社区</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="酒店式公寓" style="display: none;">酒店式公寓</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="商铺" style="display: none;">商铺</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="别墅" style="display: none;">别墅</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="公寓" style="display: none;">公寓</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="社区" style="display: none;">社区</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="学区房" style="display: none;">学区房</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="湖景房" style="display: none;">湖景房</label>
+
+								<label>
+									<input type="checkbox" name="HousesType[]" value="写字楼" style="display: none;">写字楼</label>
+
+							</div>
+						</div>
+
+						<div class="formBox form3">
+							<h2>意向户型<b>＊</b></h2>
+							<div class="webui ui_radio">
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="一房户型" style="display: none;">一房户型</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="二房户型" style="display: none;">二房户型</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="三房户型" style="display: none;">三房户型</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="四房户型" style="display: none;">四房户型</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="五房户型" style="display: none;">五房户型</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="别墅" style="display: none;">别墅</label>
+
+								<label>
+									<input type="radio" name="HousesIntention[]" value="其他" style="display: none;">其他</label>
+
+							</div>
+						</div>
+
+						<div class="formBox form4">
+							<h2>置业面积</h2>
+							<div class="webui ui_radio">
+								<label>
+									<input type="radio" name="HousesArea" value="50" style="display: none;">50㎡以内</label>
+								<label>
+									<input type="radio" name="HousesArea" value="50-70" style="display: none;">50-70㎡</label>
+								<label>
+									<input type="radio" name="HousesArea" value="70-100" style="display: none;">70-100㎡</label>
+								<label>
+									<input type="radio" name="HousesArea" value="100-130" style="display: none;">100-130㎡</label>
+								<label>
+									<input type="radio" name="HousesArea" value="130-160" style="display: none;">130-160㎡</label>
+								<label>
+									<input type="radio" name="HousesArea" value="160-200" style="display: none;">160-200㎡</label>
+								<label>
+									<input type="radio" name="HousesArea" value="200以上" style="display: none;">200㎡以上</label>
+							</div>
+						</div>
+
+						<div class="formBox form5">
+							<h2>预算价位</h2>
+							<!--下拉：开始-->
+							<div id="dropdown">
+								<p>预算总价</p>
+								<ul>
+									<li><a data-value="预算总价"  rel="1">预算总价</a></li>
+									<li><a data-value="30万以下" rel="30万以下">30万以下</a></li>
+									<li><a data-value="30-50万"rel="30-50万">30-50万</a></li>
+									<li><a data-value="50-80万"rel="50-80万">50-80万</a></li>
+									<li><a data-value="80-120万" rel="80-120万">80-120万</a></li>
+									<li><a data-value="120-160万" rel="120-160万">120-160万</a></li>
+									<li><a data-value="160-200万" rel="160-200万">160-200万</a></li>
+									<li><a data-value="200-300万" rel="200-300万">200-300万</a></li>
+									<li><a data-value="300-500万" rel="300-500万">300-500万</a></li>
+									<li><a data-value="500-1000万" rel="3500-1000万">500-1000万</a></li>
+									<li><a data-value="1000万以上" rel="1000万以上">1000万以上</a></li>
+								</ul>
+							</div>
+
+
+							<!--下拉：结束-->
+						</div>
+
+						<div class="formBox form6">
+							<h2>装修要求</h2>
+							<div class="webui ui_radio">
+								<label>
+									<input type="radio" name="Decoration" value="毛坯" style="display: none;">毛坯</label>
+								<label>
+									<input type="radio" name="Decoration" value="简单装修" style="display: none;">简单装修</label>
+								<label>
+									<input type="radio" name="Decoration" value="中档装修" style="display: none;">中档装修</label>
+								<label>
+									<input type="radio" name="Decoration" value="精装修" style="display: none;">精装修</label>
+							</div>
+						</div>
+
+						<div class="formBox form7">
+							<h2>附加需求</h2>
+							<textarea name="Message" cols="" rows="" class="itext"></textarea>
+						</div>
+
+						<div class="formBox form8">
+							<h2>联系方式</h2>
+							<dl>
+								<dt>
+									<span>您的称呼<input class="itext" name="Name" id="Name" type="text" required="required" defaultvalue="请输入您的称呼"></span>
+								<div class="webui ui_radio">
+									<label>
+										<input type="radio" name="Namedd" value="先生" checked="checked" style="display: none;">先生</label>
+									<label>
+										<input type="radio" name="Namedd" value="女士" style="display: none;">女士</label>
+								</div>
+								</dt>
+								<dd>
+									<span>联系电话<input class="itext " name="Phone" id="Phone" type="text" required="required" defaultvalue="请输入您的联系电话"></span>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="formBox form9"><a href="javascript:void(0)" class="btn orange" onclick="onClik123()">提交您的购房需求</a></div>
+						<input type="hidden" value="购房需求" name="ordertype">
+						<input type="hidden" value="" id="yusuan" name="yusuan">
+					</form>
+				</div>
+			</div>
+			<!--左栏：结束-->
+
+			<!--右栏：开始-->
+			<div class="right">
+				<div class="guidesPhone">
+					<img src="../images/dg.gif">
+					<span><ins class="icon-18"></ins>咨询热线</span>
+					<span>4008-606-181&nbsp;</span>
+					<em>工作时间：周一到周日24小时</em>
+				</div>
+				<div class="guidesNews">
+					<h3>最新购房方案<b>查看购房方案，了解大众需求意向</b></h3>
+					<ul>
+						<li><a><span>上海</span><em>陈先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>北京</span><em>陈先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>朱女士</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>杨女士</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>北京</span><em>杨先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>朱女士</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>上海</span><em>陈先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>北京</span><em>陈先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>朱女士</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>杨女士</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>北京</span><em>杨先生</em><cite>提交了购房需求</cite></a></li>
+						<li><a><span>江苏</span><em>朱女士</em><cite>提交了购房需求</cite></a></li>
+					</ul>
+
+				</div>
+			</div>
+			<!--右栏：结束-->
+		</div>
+	</div>
+</div>
