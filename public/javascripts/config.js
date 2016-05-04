@@ -16,5 +16,6 @@ var URLMAP={
 		notecelist:HTTPURL+"jsondata/notice/getNoticeList",
 	    noticedetail:HTTPURL+"jsondata/notice/getNoticedetail",
 		buildingsDetail:HTTPURL+"jsondata/buildings/getBuildingsDetail",
-		resourceList:HTTPURL+"jsondata/resource/getResourceList"
+		resourceList:HTTPURL+"jsondata/resource/getResourceList",
+	    demandorder:HTTPURL+"/jsondata/order/addOrder"
 }

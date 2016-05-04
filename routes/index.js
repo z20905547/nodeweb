@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 router.get("/:proId(\\d+)", function(req, res, next) {
 	//获取楼盘数据
   res.render('index', { title: '唯房会 -一家专门做特价房的网站',backproId: req.params.proId});
@@ -7,7 +8,6 @@ router.get("/:proId(\\d+)", function(req, res, next) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	//获取楼盘数据
-	
   res.render('index', { title: '唯房会 -一家专门做特价房的网站',backproId: 460000});
 });
 
