@@ -8,7 +8,7 @@
         -->
 	<div class="bolg_nav"><span><edit type="text" name="Public_NavLocateText">您现在的位置是：</edit></span>
 		<a href="/"><edit type="text" name="Public_NavLocateSecondText">特卖会</edit></a>
-		<a href="/news/newslist/1">&gt;&gt;博客首页</a>
+		<a href="/news/newslist/1"><edit type="text" name="Public_NavLocateSecondText">&gt;&gt;博客首页</edit></a>
 		<span class="last J_last"></span>
 	</div>
 	<div class="bolg_left fl">
@@ -50,3 +50,41 @@
 	</div>
 </div>
 	</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		//radio ui
+		$('.webui :radio').each(function () {
+			$(this).hide();
+			var html = '<u type="radio" class="ui_radio"></u>';
+			$(this).after(html)
+		});
+		$('.ui_radio label').click(function (e) {
+			var rdo = $(this).find('.ui_radio');
+			rdo.prev().attr('checked', true);
+			var ids = 'input[name="' + rdo.prev().attr('name') + '"]';
+			$(ids).each(function () { $(this).next().removeClass('radio_on'); })
+			rdo.addClass('radio_on');
+
+			event.stopPropagation(); event.preventDefault();
+		});
+		//checkbox ui
+		$('.webui :checkbox').each(function () {
+			$(this).hide();
+			var html = '<u type="checkbox" class="ui_checkbox"></u>';
+			$(this).after(html)
+		});
+		$('.ui_checkbox label').click(function (e) {
+			var chkbox = $(this).find('.ui_checkbox');
+			if (chkbox.hasClass('checkbox_on')) {
+				chkbox.removeClass('checkbox_on');
+				$(this).find(':checkbox').attr("checked", false);
+			} else {
+				chkbox.addClass('checkbox_on');
+				$(this).find(':checkbox').attr('checked', true)
+			}
+			event.stopPropagation(); event.preventDefault();
+		});
+
+	});
+</script>
