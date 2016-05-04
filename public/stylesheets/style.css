@@ -2740,10 +2740,12 @@ padding-top:3px;
 
 .bolg_main{
 	overflow: hidden;
+	width: 1140px;
 	height: auto;
 	margin: 0 auto;
 }
 .bolg_left {
+  width: 190px;
 	height: auto;
 	margin-top: 40px;
 }
@@ -2879,6 +2881,7 @@ a, img {
 	color: #666;
 }
 .bolg_right {
+	width: 920px;
 	height: auto;
 	margin-top: 20px;
 }
@@ -2939,7 +2942,7 @@ a, img {
 	border-left-color: #eaeaea;
 	border-right-color: #eaeaea;
 	border-bottom-color: #d2d2d2;
-	width:100%;
+	width:880px;
 }
 
 .at_us {
@@ -3183,6 +3186,81 @@ h3 {
 .hjsbox{
 	display:none
 }
+.banner_index2{height:150px;position: relative;overflow:hidden;width: 348px;margin:0px auto 15px;}
+/*需求页面*/
+.formTop { clear: both; margin-bottom: 30px; background: #FFF; }
+.formTop h1 { padding: 10px 20px; font-size: 32px; color: #00C8DE; border-bottom: 1px solid #E5E5E5; }
+.formTop h1 span { display: block; padding-top: 10px; font-size: 18px; font-weight: normal; }
+/**/
+.formBox { clear: both; padding: 20px; border-bottom: 1px dashed #E5E5E5; }
+.formBox h2 { font-size: 20px; margin: 0 0 10px 0; color: #37C3D2; }
+.formBox h2 b { color: #dd238b; }
+.formBox .mod-dropdownlist { margin: 0 10px 0 0; }
+/**/
+.form1 label { width: 100px; }
+.form2 label { width: 100px; margin-right: 50px; }
+.form3 label { width: 100px; }
+.form4 label { width: 100px; margin-right: 50px; }
+.form6 label { width: 100px; margin-right: 50px; }
+.form7 .itext { padding: 2%; width: 96%; height: 70px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.form8 { background: #FFFCE8; }
+.form8, .form8 h2 { color: #dd238b; }
+.form8 dl { clear: both; height: 32px; padding: 5px 0; overflow: hidden; font-size: 14px; }
+.form8 dt { float: left; width: 63%; }
+.form8 dd { float: left; width: 34%; }
+.form8 span { float: left; width: 240px; }
+.form8 .itext { width: 130px; margin-left: 10px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.form8 ins { font-size: 16px; }
+.form9 { border: 0; }
+.form9 .btn { display: block; width: 200px; height: 40px; line-height: 40px; margin: 0 auto; font-size: 16px; font-weight: 700; }
+.form9 a:link {color: white}
+.form9 a:visited{color:white}
+.form9 a:hover {color: black}
+.form9 a:active {color:white}
+
+.J_announce_li a:link {color: #b3b3b3;text-decoration: none;}
+.J_announce_li a:visited{color:#b3b3b3;text-decoration: none;}
+.J_announce_li a:hover {color: #dd238b;text-decoration: none;}
+.J_announce_li a:active {color:#b3b3b3;text-decoration: none;}
+/*--------------------*/
+.webui { font-size: 0; }
+.webui .ui_checkbox, .webui .ui_radio { float: left; width: 25px; height: 20px; line-height: 20px; *margin-right: -4px; }
+.webui label { padding: 5px 5px 5px 0; font-size: 14px; height: 20px; line-height: 20px; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline; zoom: 1; }
+/**/
+.webui .ui_checkbox { background: url(../images/check_01.png) no-repeat 0 center; }
+.webui .checkbox_on { background: url(../images/check_02.png) no-repeat 0 center; }
+/**/
+.webui .ui_radio { background: url(../images/radio_01.png) no-repeat 0 center; }
+.webui .radio_on { background: url(../images/radio_02.png) no-repeat 0 center; }
+/**/
+
+.guidesPhone { clear: both; color: #FFF; margin-bottom: 20px; background: #dd238b; }
+.guidesPhone img { width: 100%; }
+.guidesPhone ins { font-size: 16px; width: 26px; height: 26px; line-height: 26px; margin-right: 10px; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; background: #FFF; color: #dd238b; }
+.guidesPhone span { display: block; font-size: 20px; padding: 10px 15px 0 15px; white-space: nowrap; }
+.guidesPhone em { display: block; font-size: 14px; padding: 0 15px 10px 15px; }
+/**/
+.guidesNews { clear: both; padding: 10px; margin-bottom: 20px; background: #FFF; }
+.guidesNews h3 { font-size: 26px; margin-bottom: 10px; color: #dd238b; }
+.guidesNews h3 b { font-size: 14px; font-weight: normal; display: block; padding-top: 5px; white-space: nowrap; }
+.guidesNews ul { clear: both; margin-bottom: 10px; }
+.guidesNews li { clear: both; height: 35px; line-height: 35px; font-size: 14px; border-top: 1px dashed #CCC; }
+.guidesNews cite, .guidesNews em, .guidesNews span { float: left; white-space: nowrap; overflow: hidden; }
+.guidesNews cite { width: 50%; color: #999; text-align: right; }
+.guidesNews em, .guidesNews span { width: 25%; }
+.guidesNews em { color: #C06F00; }
+.guidesNews li a { display: block; }
+.guidesNews li a:hover, .guidesNews li a:hover em, .guidesNews li a:hover cite { color: #00C8DE; }
+.guidesNews p .btn { display: block; font-size: 14px; font-weight: bold; }
+
+@media only screen and (min-width:1220px) {
+	.formTop h1 { padding: 10px 30px; }
+	.formBox { padding: 20px 30px; }
+	.formBox h2 { font-size: 22px; }
+	.form1 label { width: 85px; }
+	.form4 label { width: 115px; margin: 0; }
+	.guidesPhone span { font-size: 24px; }
+}
 /*手机导航start*/
 .small-nav{
 	padding:1em 0em 0em 0em;
@@ -3211,6 +3289,122 @@ h3 {
 	text-align:center;
 	font-size:3em;
 	color:#CE3367;
+}
+
+.xxx .left {
+	width: 630px;
+	overflow: hidden;
+}
+.left {
+	float: left;
+}
+.xxx .right {
+	padding-top: 21px;
+	width: 300px;
+	overflow: hidden;
+	padding-left: 10px;
+}
+.right {
+	float: left;
+}
+#dropdown{width:250px;
+	color: #dd238b;
+	font-size: 12px;
+	font-family: 微软雅黑;
+	position:relative}
+#dropdown p{width:185px; height:24px; line-height:24px; padding-left:4px; padding-right:30px; border:1px solid #a9c9e2; background:#e8f5fe url(../images/arrow.gif) no-repeat right 4px; color:#807a62; cursor:pointer}
+#dropdown ul{width:184px; background:#e8f5fe; margin-top:2px; border:1px solid #a9c9e2; position:absolute; display:none}
+#dropdown ul li{height:24px; line-height:24px; text-indent:10px}
+#dropdown ul li a{display:block; height:24px; color:#807a62; text-decoration:none}
+#dropdown ul li a:hover{background:#c6dbfc; color:#dd238b}
+#result{margin-top:10px;text-align:center}
+.formTop h1 {
+	color: #dd238b;
+	font-size: 22px;
+	font-family: 微软雅黑;
+	font-weight: 100;
+	padding-top: 20px;
+}
+
+.form1 h2 {
+	 color: #dd238b;
+	 font-size: 18px;
+	 font-family: 微软雅黑;
+ }
+
+.form2 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+
+.form3 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+
+.form4 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+.form5 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+
+.form6 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+.form7 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+.form8 h2 {
+	color: #dd238b;
+	font-size: 18px;
+	font-family: 微软雅黑;
+}
+
+.webui label {
+	font-size: 12px;
+	font-family: 微软雅黑;
+}
+
+.btn {
+	background-color: #E5E5E5;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 20px;
+	font-size: 12px;
+	font-family: Helvetica,Arial,"宋体",sans-serif;
+	color: white;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	background-color: #f10582;
 }
 
 /*手机导航end*/
