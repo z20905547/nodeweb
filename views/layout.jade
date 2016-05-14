@@ -12,48 +12,15 @@ html
     //link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script( src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
-    script( src='/javascripts/spig.js')
+
     script( src='//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js')
     //script( src='https://qiyukf.com/script/53fa4dc33ef409d480b8b2c8eb9b3c5e.js' defer async )
-
+    //  script( src='/javascripts/spig.js')
     //script( src='//assets.kf5.com/supportbox/main.js' id='kf5-provide-supportBox' kf5-domain='vfh.kf5.com' )
 
     //script( src='/javascripts/jquery.min.js')
     //script( src='/javascripts/bootstrap.min.js')
-    script(type='text/javascript').
 
-      if (screen && screen.width > 480) {
-        document.write('<script src="//assets.kf5.com/supportbox/main.js" id="kf5-provide-supportBox" kf5-domain="vfh.kf5.com"><\/script>');
-      }
-
-
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?22d64a6414f666ab040acd632228d426";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-
-
-      //初始化一言
-      setTimeout("getkoto()",1000);
-      //加载一言
-      var t;
-      function getkoto(){
-        var hjs = document.createElement('script');
-        hjs.setAttribute('id', 'hjs');
-        hjs.setAttribute('src', 'http://api.hitokoto.us/rand?uid=3221&encode=jsc&fun=echokoto');
-        document.getElementById("hjsbox").appendChild(hjs);
-        t=setTimeout("getkoto()",2000);
-      }
-      //输出一言
-      function echokoto(result){
-        var hc = eval(result);
-        //$("#hitokoto").fadeTo(300,0);
-        document.getElementById("hitokoto").innerHTML = hc.hitokoto;
-        //$("#hitokoto").fadeTo(300,0.75);
-      }
     script( src='/javascripts/config.js')
 
   body
