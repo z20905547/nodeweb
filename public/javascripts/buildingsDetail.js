@@ -32,11 +32,13 @@ $(document).ready(function(){
 				'				<span></span>'+
 				'			</div>'
 			$(".small_content").html(adcontent1);
-			var adcontent2='<div class="text_label">楼盘地址:</div><div class="text_content">'+data.data.address+'</div>'+
-				'	<div class="text_label">主力户型:</div><div class="text_content">'+data.data.main_door+'</div>'+
-				'	<div class="text_label">开盘时间:</div><div class="text_content">'+data.data.open_date+'</div>'+
-				'	<div class="text_label">交房时间:</div><div class="text_content">'+data.data.deliver_date+'</div>'+
-				'	<div class="detail_phone"><span class="f14">售楼处电话<span class="f15"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.server_phone_num+'</div>'
+			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
+				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
+				'<div class="base_content_line"><span>开盘时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'</div>'+
+				'<div class="base_content_line"><span>交房时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.deliver_date+'</div>'+
+				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
+				'<div class="detail_phone "><span class="col-sm-4 col-md-4 col-lg-4">售楼处电话</span><span class="col-sm-1 col-md-1 col-lg-1">|</span><span class="col-sm-7 col-md-7 col-lg-7">'+data.data.server_phone_num+'</span></div>'+
+				'</div>'
 
 			$(".buildings_detail_text").html(adcontent2);
 
@@ -147,7 +149,7 @@ $(document).ready(function(){
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}else if(data.data.list[i].big_type==2){
 					secendcount++;
-					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'" alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
+					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-6 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'" alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
 					if($(".hptag20").length==0){
 						var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
