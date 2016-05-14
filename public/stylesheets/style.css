@@ -2127,9 +2127,9 @@ a:hover {
 
 .buildings_detail_price .text_content{
 	height:200px;
-	margin-left: 25px;
+
 	margin-top: 10px;
-	width: 300px;
+	width: 100%;
 	border: 1px solid #efefef;
 }
 .buildings_detail_ad{
@@ -2152,29 +2152,25 @@ a:hover {
 	width:80%;
 	padding-left:20px;
 }
+.f15 {
+
+	border: solid 1px #ebebeb;
+
+}
 .detail_phone{
-	float:left;
+
 	padding-top:10px;
 	padding-left:30px;
 	color:#CE3367;
-	font-size:20px;
-	width: 380px;
+	font-size:16px;
+	width: 100%;
 	height: 52px;
 	border: solid 1px #ebebeb;
 	background: #f4f4f4;
 	margin-top: 15px;
-	margin-left: 23px;
+	text-align:center;
 }
 
-.f14 {
-
-	font-size: 14px;
-}
-.f15 {
-    margin-left: 15px;
-	border: solid 1px #ebebeb;
-
-}
 .base_message_img{
 	padding:1em;
 }
@@ -3410,6 +3406,28 @@ h3 {
 /*手机导航end*/
 /*响应区*/
 @media screen and (max-width:992px){
+	bolg_right{
+		withd:100%
+	}
+	.bolg_box{
+		withd:100%
+	}
+	.bolg_main{
+		withd:100%
+	}
+	.list_box{
+		withd:100%
+	}
+	.list_box img{
+		withd:100%
+	}
+	.ttbox {
+		withd:100%
+	}
+	.bolg_main{
+		withd:100%
+	}
+
 	.container{width:100%;}
 	.small-top-ad{
 		display:none;
@@ -3419,7 +3437,7 @@ h3 {
 	}
 }
 @media screen and (max-width:768px){
-	
+
 	.container{
 		padding:0px;
 	}
@@ -3428,7 +3446,6 @@ h3 {
 	}
 	.toolbar{
 		display:none;
-
 	}
 	.content-right-block{
 		display:none;
