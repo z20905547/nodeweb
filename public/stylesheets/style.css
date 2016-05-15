@@ -3491,6 +3491,11 @@ h3 {
 /*响应区end*/
 
 /*m.vfhui.search*/
+
+.wx_logo{
+	margin:0 auto;
+	display:none;
+}
 .header2 {
 	height: 95px;
 	background-color: #f10582;
