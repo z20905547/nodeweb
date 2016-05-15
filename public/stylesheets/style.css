@@ -3438,6 +3438,9 @@ h3 {
 }
 @media screen and (max-width:768px){
 
+	.test{
+		display:none;
+	}
 	.container{
 		padding:0px;
 	}
@@ -3477,5 +3480,151 @@ h3 {
 	.small-nav{
 		display:block;
 	}
+
+}
+
+@media screen and (min-width:768px){
+	.header2{
+		display:none;
+	}
 }
 /*响应区end*/
+
+/*m.vfhui.search*/
+.header2 {
+	height: 95px;
+	background-color: #f10582;
+}
+.header_i {
+	width: 98%;
+	margin: 0px auto;
+	padding-top: 5px;
+}
+span.icon-my2 {
+	position: absolute;
+	top: 10px;
+	right: 1%;
+	color: #fff;
+	font-size: 11px;
+}
+.header_i span.icon-my2 i {
+	display: block;
+	margin: 0 auto;
+	width: 21px;
+	height: 21px;
+
+	background-size: 105px auto;
+}
+span.icon-my2 p {
+	margin-top: 2px;
+	white-space: nowrap;
+	color: #fff !important;
+	font-size: 10px;
+	line-height: 1;
+}
+.search2 {
+	clear: both;
+}
+#search_form {
+	position: relative;
+}
+.csearch_wrap {
+	background: none repeat scroll 0 0 #FFFFFF;
+	height: 32px;
+	margin: 0px auto;
+	width: 98%;
+	position: relative;
+}
+.choose_opts {
+	position: absolute;
+	top: 32px;
+	z-index: 1000;
+	width: 70px;
+	background: #fff;
+	border: solid 1px #C4C4C4;
+	left: 0px;
+	display: none;
+	border-top: none;
+}
+.choose_opts .wrap {
+}
+.choose_opts li {
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-bottom: solid 1px #eee;
+	font-size: 12px;
+}
+.csearch-input {
+	clear: both;
+	height: 32px;
+	position: relative;
+	width: 100%;
+	z-index: 1000;
+	overflow: hidden;
+}
+.choose_title {
+	color: #666666;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	padding-right: 10px;
+	position: relative;
+	text-align: center;
+	width: 60px;
+	font-size: 13px;
+}
+.choose_title {
+	color: #666666;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	padding-right: 10px;
+	position: relative;
+	text-align: center;
+	width: 60px;
+	font-size: 13px;
+}
+
+.choose_title .icon-arrow {
+	background-position: -65px 0;
+	position: absolute;
+	right: 2px;
+	top: 8px;
+}
+.csearch-input .textInput {
+	background: none repeat scroll 0 0 #fff;
+	border: 0 none;
+	color: #818181;
+	float: left;
+	height: 24px;
+	line-height: 18px;
+	margin-top: 4px;
+	padding-left: 5px;
+	top: 0px;
+	left: 70px;
+	width: 100%;
+	position: absolute;
+	font-size: 14px;
+	border-left: 1px solid #ccc;
+}
+
+.search-submit {
+	background: url("/images/icon_search.png") no-repeat scroll 4px 3px #e6e6e6;
+	background-size: 24px 24px;
+	border: medium none;
+	cursor: pointer;
+	height: 32px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	text-indent: -999em;
+	width: 36px;
+	border-radius: 0px;
+}
+.right {
+	float: right;
+}
