@@ -25,7 +25,7 @@ a:hover {
 /*头部*/
 .topbar-head{
 	background:#f5f5f5;
-	padding:5px 0px;
+
 }
 .top_city_item{
 	cursor: pointer;
@@ -2101,7 +2101,7 @@ a:hover {
 	color:#ffffff;
 	display:inline-block;
 	padding:5px 20px;
-	background:#CE3367;
+	background:#f10582;
 }
 .content_block{
 	border-left:solid 1px #DFDFDF;
@@ -2753,7 +2753,7 @@ padding-top:3px;
 	height: auto;
 	padding-bottom: 82px;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.03);
-	background: #fff url(http://blog.vip.com/view/static/public/img/1/story_bg.png) center bottom no-repeat;
+	background: #fff url(../images/story_bg.png) center bottom no-repeat;
 }
 .box_show01 {
 	border-width: 0 1px 1px;
@@ -2976,11 +2976,7 @@ a, img {
 	border-left: 3px #f32b80 solid;
 	width: 185px;
 }
-.vip_story .s_menu .on, .at_us i, .at_us a.plus, .bolg_right .list_til i, .de_art .art_list li i, .bc_tool .fenxian a, .bc_tool .bc_send, .bc_tool .bc_send_un, .J_widget_share, .vip_atte_us .article li, .textarea_box_un {
-	background-image: url(http://blog.vip.com/view/static/public/img/1/icon_all.png);
-	_background-image: url(http://blog.vip.com/view/static/public/img/1/icon_all_8.png);
-	background-repeat: no-repeat;
-}
+
 .vip_story .s_menu a {
 	display: block;
 	width: 145px;
@@ -3164,7 +3160,7 @@ h3 {
 }
 
 .bolg_box {
-	background-image: url(http://blog.vip.com/view/static/public/img/1/bolg_topbg.jpg);
+	background-image: url(../images/bolg_topbg.jpg);
 	background-color: #f7f7f7;
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -3487,6 +3483,10 @@ h3 {
 	.header2{
 		display:none;
 	}
+	.topbar-head{
+		background:#f5f5f5;
+		padding:5px 0px;
+	}
 }
 /*响应区end*/
 
@@ -3494,6 +3494,10 @@ h3 {
 .header2 {
 	height: 95px;
 	background-color: #f10582;
+}
+.item img {
+	width:100%;
+	height:100%;
 }
 .header_i {
 	width: 98%;
