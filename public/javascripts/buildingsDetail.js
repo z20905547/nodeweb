@@ -33,7 +33,7 @@ $(document).ready(function(){
 				'			</div>'
 			$(".small_content").html(adcontent1);
 			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
-				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
+				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'</div>'+
 				'<div class="base_content_line"><span>开盘时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'</div>'+
 				'<div class="base_content_line"><span>交房时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.deliver_date+'</div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
@@ -209,7 +209,9 @@ $(document).ready(function(){
 	
 	//手机滑动
 	$(".big-content").bind("touchstart",function(e){
-		pointcurX=e.targetTouches[0].pageX;
+		 e.preventDefault();
+		 startX = e.originalEvent.changedTouches[0].pageX,
+		 startY = e.originalEvent.changedTouches[0].pageY;
 		
 	});
 	$(".big-content").bind("touchmove",function(e){
@@ -217,11 +219,34 @@ $(document).ready(function(){
 		
 	});
 	$(".big-content").bind("touchend",function(e){
-		if(e.changedTouches[0].pageX>pointcurX){//向左
+
+		e.preventDefault();
+		    moveEndX = e.originalEvent.changedTouches[0].pageX,
+			moveEndY = e.originalEvent.changedTouches[0].pageY,
+			X = moveEndX - startX,
+			Y = moveEndY - startY;
+
+		if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
 			changeBigPic(-1);
-		}else{//向右
+		}
+		else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+			changeBigPic(1);
+		} else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+			changeBigPic(-1);
+		}
+		else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
 			changeBigPic(1);
 		}
+		else{
+
+		}
+
+
+		//if(e.changedTouches[0].pageX>pointcurX){//向左
+		//	changeBigPic(-1);
+		//}else{//向右
+		//	changeBigPic(1);
+		//}
 	});
 	pagex=0;
 	pagey=0;
