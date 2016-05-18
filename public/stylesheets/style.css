@@ -2262,6 +2262,7 @@ filter: blur(15px);
 	position: absolute;
 	top:0;
 	text-align: center;
+	background-color:black;
 }
 .cur_pic{
 	top: 0;
