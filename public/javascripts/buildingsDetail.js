@@ -231,22 +231,10 @@ $(document).ready(function(){
 		}
 		else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
 			changeBigPic(1);
-		} else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
-			changeBigPic(-1);
-		}
-		else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
-			changeBigPic(1);
-		}
-		else{
-
 		}
 
 
-		//if(e.changedTouches[0].pageX>pointcurX){//向左
-		//	changeBigPic(-1);
-		//}else{//向右
-		//	changeBigPic(1);
-		//}
+
 	});
 	pagex=0;
 	pagey=0;
