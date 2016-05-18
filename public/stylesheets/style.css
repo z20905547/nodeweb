@@ -100,13 +100,14 @@ a:hover {
 
 }
 .main_active_pic{
-	margin-left:-14px;
-	weight:1140px;
+	weight:100%;
 	display: none;
+	margin: auto 0;
 }
 .main_active_pic img{
+	text-align:center;
+	weight:100%;
 
-	weight:1140px;
 
 }
 
@@ -3433,7 +3434,10 @@ h3 {
 	}
 }
 @media screen and (max-width:768px){
+	.main_active_pic img{
+		width: 100%;
 
+	}
 	.test{
 		display:none;
 	}

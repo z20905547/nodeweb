@@ -45,7 +45,7 @@ $(document).ready(function(){
 			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic=
-				'	<div class="main_active_pic" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'				;
+				'	<div class="main_active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'				;
 			$(".active_pic").html(avtivepic);
 
 			//基本信息
