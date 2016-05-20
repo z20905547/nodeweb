@@ -45,7 +45,7 @@ $(document).ready(function(){
 			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
 			var avtivepic=
-				'	<div class="main_active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main_active_pic"><img src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+'></div>'				;
+				'	<div class="main_active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main_active_pic" onclick="bigPic()"><img class="dde" src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+' alt1="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'				;
 			$(".active_pic").html(avtivepic);
 
 			//基本信息
@@ -286,6 +286,61 @@ function tagchange(){
 	var contentClass=$(this).attr("data-type");
 	$(".picdiv"+contentClass).addClass("active").show();
 }
+//活动图点击后放大
+function bigPic() {
+	$(".cur_big_pic2").attr("src",$(".dde").attr("alt1"));
+	$(".high_level2").attr("style","top:"+getScrollTop()+"px");//触发遮罩层显示时，获取当前的高度
+	//显示大图
+	$(".high_level2").show();
+	$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
+	$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
+}
+//关闭遮罩层
+$(".close_ico2").bind("click",function(){
+	$(".high_level2").hide();
+	$(".maincontent2").removeClass("gaublue");
+	$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
+	$("body").unbind("touchmove");//解除对默认行为的阻止
+
+});
+//拖动大图
+$(".cur_big_pic2").bind("mousedown",function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	//记录坐标，改变鼠标
+	$(this).css("cursor","-webkit-grabbing");
+	parentX=parseInt($(this).css("margin-left"));
+	parentY=parseInt($(this).css("margin-top"));
+	pagex=e.pageX;
+	pagey=e.pageY;
+	begin=true;
+}).bind("mousemove",function(e){
+	//变更位置
+	if(begin){
+		$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+		$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+	}
+
+}).bind("mouseup",function(e){
+	//决定最终位置
+	if(begin){
+		$(this).css("cursor","-webkit-grab");
+		$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+		$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+		begin=false;
+	}
+}).bind("mouseout",function(e){
+	//决定最终位置
+	if(begin){
+		$(this).css("cursor","-webkit-grab");
+		$(this).css("margin-left",parentX+e.pageX-pagex+"px");
+		$(this).css("margin-top",parentY+e.pageY-pagey+"px");
+		begin=false;
+	}
+
+});
+
+
 var picsrclist;
 var bigpictotal;
 var curbignum;
@@ -374,7 +429,7 @@ function getScrollTop() {
 //活动图动态加载
 $(function(){
 	//过两秒显示 showImage(); 内容
-	setTimeout("showImage();",2000);
+	setTimeout("showImage();",1000);
 	//alert(location);
 });
 function showImage()
