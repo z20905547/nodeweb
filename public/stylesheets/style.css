@@ -2128,9 +2128,9 @@ a:hover {
 
 .buildings_detail_price .text_content{
 	height:200px;
-
+	margin:0 auto;
 	margin-top: 10px;
-	width: 100%;
+	width: 95%;
 	border: 1px solid #efefef;
 }
 .buildings_detail_ad{
@@ -2244,6 +2244,26 @@ filter: blur(15px);
 	height:100%;
 	width:100%;
 }
+.high_level2{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+.opacity_level2{
+	top:0;
+	left:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+	background:#111111;
+}
 .opacity_level{
 	top:0;
 	left:0;
@@ -2264,6 +2284,14 @@ filter: blur(15px);
 	text-align: center;
 	background-color:black;
 }
+.big-content2{
+	height:100%;
+	width:100%;
+	position: absolute;
+	top:0;
+	text-align: center;
+	background-color:black;
+}
 .cur_pic{
 	top: 0;
     left: 10%;
@@ -2274,7 +2302,22 @@ filter: blur(15px);
     position: absolute;
 	text-align:left;
 }
+.cur_pic2{
+	top: 0;
+	left: 10%;
+	height: 100%;
+	width: 80%;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	text-align:left;
+}
 .cur_big_pic{
+	cursor: -webkit-grab;
+	text-align:center;
+	margin: 0 auto;
+}
+.cur_big_pic2{
 	cursor: -webkit-grab;
 	text-align:center;
 	margin: 0 auto;
@@ -2335,7 +2378,25 @@ filter: blur(15px);
     font-weight: bolder;
     font-size: 18px;
 }
+.close_ico2{
+	z-index:100;
+	cursor:pointer;
+	position:absolute;
+	top:40px;
+	right:10%;
+	padding: 15px 22px;
+	background: #CC1616;
+	color: #FFFFFF;
+	-moz-border-radius: 22px;      /* Gecko browsers */
+	-webkit-border-radius: 22px;   /* Webkit browsers */
+	border-radius:29px;
+	font-weight: bolder;
+	font-size: 18px;
+}
 .close_ico:HOVER{
+	background:#B5143E;
+}
+.close_ico2:HOVER{
 	background:#B5143E;
 }
 /*大图end*/
@@ -3473,6 +3534,13 @@ h3 {
 		width: 100%;
 	}
 	.cur_big_pic{
+		width:100%;
+	}
+	.cur_pic2{
+		left: 0;
+		width: 100%;
+	}
+	.cur_big_pic2{
 		width:100%;
 	}
 	.search,.main-nav,.bolg_nav,.bolg_left,big{
