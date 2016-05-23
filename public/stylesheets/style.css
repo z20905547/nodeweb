@@ -2130,7 +2130,7 @@ a:hover {
 	height:200px;
 	margin:0 auto;
 	margin-top: 10px;
-	width: 95%;
+	width: 92%;
 	border: 1px solid #efefef;
 }
 .buildings_detail_ad{
@@ -2314,8 +2314,7 @@ filter: blur(15px);
 }
 .cur_big_pic{
 	cursor: -webkit-grab;
-	text-align:center;
-	margin: 0 auto;
+
 }
 .cur_big_pic2{
 	cursor: -webkit-grab;
@@ -3465,7 +3464,7 @@ h3 {
 /*手机导航end*/
 /*响应区*/
 @media screen and (max-width:992px){
-	bolg_right{
+	.bolg_right{
 		withd:100%
 	}
 	.bolg_box{
@@ -3533,9 +3532,19 @@ h3 {
 		left: 0;
 		width: 100%;
 	}
+	.close_ico{
+		display:none;
+	}
+	.close_ico2{
+		display:none;
+	}
 	.cur_big_pic{
 		width:100%;
+		display:table-cell;
+		vertical-align:middle;
+
 	}
+
 	.cur_pic2{
 		left: 0;
 		width: 100%;

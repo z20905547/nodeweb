@@ -231,14 +231,30 @@ $(document).ready(function(){
 		}
 		else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
 			changeBigPic(1);
+		}else if ( Math.abs(X)== Math.abs(Y) && X == 0 ) {
+
+				$(".high_level").hide();
+				$(".maincontent").removeClass("gaublue");
+				$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
+				$("body").unbind("touchmove");//解除对默认行为的阻止
 		}
 
 
 
 	});
-	pagex=0;
-	pagey=0;
-	begin=false;
+	//获取浏览器高度 设置图片显示高度
+	var winhetght = $(window).height();
+	var winwidth = $(window).width();
+
+    if(winwidth>768) {
+	  $(".cur_big_pic").css("height", winhetght);
+    }
+
+	//获取图片宽度
+	//var imgWidth = $(".cur_big_pic").attr("width");
+	//alert(imgWidth);
+
+
 	//拖动大图
 	$(".cur_big_pic").bind("mousedown",function(e){
 		e.preventDefault();
@@ -256,7 +272,7 @@ $(document).ready(function(){
 			$(this).css("margin-left",parentX+e.pageX-pagex+"px");
 			$(this).css("margin-top",parentY+e.pageY-pagey+"px");
 		}
-		
+
 	}).bind("mouseup",function(e){
 		//决定最终位置
 		if(begin){
@@ -273,7 +289,7 @@ $(document).ready(function(){
 			$(this).css("margin-top",parentY+e.pageY-pagey+"px");
 			begin=false;
 		}
-		
+
 	});
 });
 //切换图片选项卡
@@ -286,6 +302,7 @@ function tagchange(){
 	var contentClass=$(this).attr("data-type");
 	$(".picdiv"+contentClass).addClass("active").show();
 }
+//------------------特价图片处理
 //活动图点击后放大
 function bigPic() {
 	$(".cur_big_pic2").attr("src",$(".dde").attr("alt1"));
@@ -301,6 +318,36 @@ $(".close_ico2").bind("click",function(){
 	$(".maincontent2").removeClass("gaublue");
 	$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
 	$("body").unbind("touchmove");//解除对默认行为的阻止
+
+});
+
+$(".big-content2").bind("touchstart",function(e){
+	e.preventDefault();
+	startX = e.originalEvent.changedTouches[0].pageX,
+	startY = e.originalEvent.changedTouches[0].pageY;
+
+});
+$(".big-content2").bind("touchmove",function(e){
+
+});
+
+$(".big-content2").bind("touchend",function(e){
+
+	e.preventDefault();
+	moveEndX = e.originalEvent.changedTouches[0].pageX,
+	moveEndY = e.originalEvent.changedTouches[0].pageY,
+	X = moveEndX - startX,
+	Y = moveEndY - startY;
+
+	if  ( Math.abs(X)== Math.abs(Y) && X == 0 ) {
+
+		$(".high_level2").hide();
+		$(".maincontent2").removeClass("gaublue");
+		$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
+		$("body").unbind("touchmove");//解除对默认行为的阻止
+	}
+
+
 
 });
 //拖动大图
@@ -339,8 +386,8 @@ $(".cur_big_pic2").bind("mousedown",function(e){
 	}
 
 });
-
-
+// ---------------特价图片处理结束
+//-------户型图等开始
 var picsrclist;
 var bigpictotal;
 var curbignum;
@@ -387,18 +434,18 @@ function changeBigPic(index){
 	if(newnum<0||newnum>=bigpictotal)return;
 	$(".cur_big_pic").attr("src",picsrclist[newnum]);
 	//图片高度不够时设置上边距
-	var moreHeight=$(".cur_pic").height()-$(".cur_big_pic").height();
-	if(moreHeight>0){
-		$(".cur_big_pic").css("margin-top",moreHeight/2+"px");
-	}else{
-		$(".cur_big_pic").css("margin-top","0px");
-	}
-	var moreWidth=$(".cur_pic").width()-$(".cur_big_pic").width();
-	if(moreWidth>0){
-		$(".cur_big_pic").css("margin-left",moreWidth/2+"px");
-	}else{
-		$(".cur_big_pic").css("margin-left","0px");
-	}
+	//var moreHeight=$(".cur_pic").height()-$(".cur_big_pic").height();
+	//if(moreHeight>0){
+	//	$(".cur_big_pic").css("margin-top",moreHeight/2+"px");
+	//}else{
+	//	$(".cur_big_pic").css("margin-top","0px");
+	//}
+	//var moreWidth=$(".cur_pic").width()-$(".cur_big_pic").width();
+	//if(moreWidth>0){
+	//	$(".cur_big_pic").css("margin-left",moreWidth/2+"px");
+	//}else{
+	//	$(".cur_big_pic").css("margin-left","0px");
+	//}
 	showControl(newnum);
 	curbignum=newnum+1;
 	$(".cur_big_pic_num").html(curbignum);
