@@ -15,17 +15,10 @@
 <div class="mapL">
     <div class="mapLT">
         <div class="mapLTT clearfix">
-            <div class="mapSea w_360" id="suggestId"><input placeholder="楼盘名/地名/开发商" type="text" id="xfmap_E01_46"
+            <div class="mapSea w_360" id="suggestId"><input placeholder="请输入楼盘名称" type="text" id="xfmap_E01_46"
                                                             style="color: rgb(153, 153, 153);"
-                                                            value="大华闪购会 不止特价房"><a id="xfmap_E01_06"></a>
-                <ul class="seaTip dis" id="search_ad" style="display: none;">
-                    <li class="adv"><a class="clearfix ad"
-                                       href="http://newhouse.hn.fang.com/zt/201605/top10shangouhn.html"
-                                       target="_blank" id="xfmap_D02_25" style="color:#cf0000">TOP10闪购 爆款一网打尽</a>
-                    </li>
-                    <li class="adv"><a class="clearfix ad" href="http://newhouse.hn.fang.com/zt/201605/jgdff.html"
-                                       target="_blank" id="xfmap_D02_26" style="color:#cf0000">大华闪购会 不止特价房</a></li>
-                </ul>
+                                                            value="请输入楼盘名称" onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}"><a id="xfmap_E01_06"></a>
+
             </div>
 
 
@@ -94,6 +87,9 @@
             map.centerAndZoom(point, 12);                 // 初始化地图，设置中心点坐标和地图级别
             map.enableScrollWheelZoom();
             map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+
+
+
             function submiBtn() {
 
                 value = $("#loupanText").val();
@@ -151,7 +147,7 @@
                         y = "20.021123";
                     }
                     map.centerAndZoom(new BMap.Point(x, y), 12);
-                    //map.clearOverlays();
+                    map.clearOverlays();
 
                     // $("#loupanNum").html(icon);
                     var sortName = $("#sortName").val();
@@ -160,7 +156,7 @@
                     var bs = map.getBounds();   //获取可视区域
                     var bssw = bs.getSouthWest();   //可视区域左下角
                     var bsne = bs.getNorthEast();   //可视区域右上角
-                    var city_id = $(".haveSelM1").val();
+
                     var active_price = $(".haveSelM2").val();
                     var acreage = $(".haveSelM3").val();
                     var shi = $(".haveSelM4").val();
@@ -174,74 +170,20 @@
                     }
                     ajaxGet("get", URLMAP.findListByselect, params, function (data) {
 
-
                         if (data.statusCode == "0000") {
 
-                            var obj = data;
+                            //var obj = data;
                             //alert("Data Loaded: " + obj.status);
                             //先清空左侧buildingList
-                            window.listDate = obj.data;
-                            $("#buildingList").empty();
+                            listDate = data.data;
                             $.each(listDate, function (i, n) {
+
                                 biaozhu(n);
 
                             });
 
-
-//                            var sublist=data.data;
-//                          //  alert(sublist.length);
-//
-//                            for (var i = 0; i < sublist.length ; i++) {
-//                                var position_info = sublist[i];
-//                                var lng = position_info["map_x"];
-//                                var lat = position_info["map_y"];
-//                                var title = position_info["buildings_name"];
-//                                var point = new BMap.Point(lng, lat);
-//                                var id = position_info["id"];
-//                                var htm =  '<p class="icon3" id="m'+id+'"><span>'+title+'</span></div></span></p>';
-//                                var myRichMarkerObject = new BMapLib.RichMarker(htm, point, {"anchor": new BMap.Size(-72, -84), "enableDragging": true});
-//                                myRichMarkerObject.disableDragging();
-//
-//                                //标注点击事件
-//                                myRichMarkerObject.addEventListener("onclick", function(e) {
-//                                    //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
-//                                    //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
-//                                    alert(id);
-//                                });
-//                                myRichMarkerObject.addEventListener("onmouseover", function(e) {
-//                                    alert(id);
-//                                    $("#m"+id).addClass("hover");
-//                                    $("#m"+id).parent("div").css("z-index",99999);
-//                                });
-//                                myRichMarkerObject.addEventListener("onmouseout", function(e) {
-//                                    //document.getElementById("rm3_image").src = "http://1.com/Public/images/icon.png";
-//                                    //alert(222);
-//                                    $("#m"+id).removeClass("hover");
-//                                    $("#m"+id).parent("div").css("z-index",0);
-//                                });
-//                                map.addOverlay(myRichMarkerObject); // 将标注添加到地图中
-//                                 }
-//
-//                            //标注点击事件
-//                            myRichMarkerObject.addEventListener("onclick", function(e) {
-//                                //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
-//                                //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
-//                                alert(id);
-//                            });
-//                            myRichMarkerObject.addEventListener("onmouseover", function(e) {
-//                                alert(id);
-//                                $("#m"+id).addClass("hover");
-//                                $("#m"+id).parent("div").css("z-index",99999);
-//                            });
-//                            myRichMarkerObject.addEventListener("onmouseout", function(e) {
-//                                //document.getElementById("rm3_image").src = "http://1.com/Public/images/icon.png";
-//                                //alert(222);
-//                                $("#m"+id).removeClass("hover");
-//                                $("#m"+id).parent("div").css("z-index",0);
-//                            });
                         } else {
-                            alert("ssssssssssssssss");
-                            $(".bottom-pull-loading").html("数据测试");
+                            $(".bottom-pull-loading").html("宝贝儿，出错啦，联系客服再试试哦！");
                             setTimeout(function () {
                                 $(".bottom-pull-loading").hide();
                             }, 3000);
@@ -249,10 +191,6 @@
                         loading = false;
                     });
                 }
-            }
-
-            function setIcon(value) {
-                return value > 3 ? 2 : 3;
             }
 
 
@@ -265,8 +203,6 @@
                 });
                 //标注点击事件
                 myRichMarker.addEventListener("onclick", function (e) {
-                    //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
-                    //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
                     myInfo(n);
                 });
                 myRichMarker.addEventListener("onmouseover", function (e) {
