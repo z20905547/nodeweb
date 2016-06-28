@@ -1,1629 +1,310 @@
-<div id="ttt" class="mapp" onselectstart="return false;"  style="height: 844px; witdh:800px; -moz-user-select:none;">
+<div id="ttt" class="mapp" onselectstart="return false;" style="height: 844px; witdh:800px; -moz-user-select:none;">
 
 </div>
 
-<div class="wrapper" onselectstart="return false;" >
-    <div class="mapL" style="max-height: 844px;">
-        <div class="mapLT">
-            <div class="mapLTT clearfix">
-                <div class="mapSea w_360" id="suggestId"><input placeholder="楼盘名/地名/开发商" type="text" id="xfmap_E01_46"
-                                                                style="color: rgb(153, 153, 153);"
-                                                                value="大华闪购会 不止特价房"><a id="xfmap_E01_06"></a>
-                    <ul class="seaTip dis" id="search_ad" style="display: none;">
-                        <li class="adv"><a class="clearfix ad"
-                                           href="http://newhouse.hn.fang.com/zt/201605/top10shangouhn.html"
-                                           target="_blank" id="xfmap_D02_25" style="color:#cf0000">TOP10闪购 爆款一网打尽</a>
-                        </li>
-                        <li class="adv"><a class="clearfix ad" href="http://newhouse.hn.fang.com/zt/201605/jgdff.html"
-                                           target="_blank" id="xfmap_D02_26" style="color:#cf0000">大华闪购会 不止特价房</a></li>
-                    </ul>
-                </div>
-                <div class="seaSelectM1 mt5" id="schoolDist" style="border: none;height: 32px;">
-                    <div class="haveSelM1" id="schoolDistParam"><span id="schoolDistParamContent">学校找房</span><em></em>
-                    </div>
-                    <div class="priceSel1 dis" id="schoolDistContent">
-                        <ul>
-                            <li><a data-id="ALL" id="xfmap_E01_52">不限</a></li>
-                            <li id="xfmap_E01_53"><a data-id="KG">幼儿园</a></li>
-                            <li id="xfmap_E01_54"><a data-id="L">小学</a></li>
-                            <li id="xfmap_E01_55"><a data-id="JH">初中</a></li>
-                            <li id="xfmap_E01_56"><a data-id="SH">高中</a></li>
-                            <li id="xfmap_E01_57"><a data-id="NYS">九年一贯制</a></li>
-                            <li id="xfmap_E01_58"><a data-id="M">完中</a></li>
-                            <li id="xfmap_E01_59" style="display: none"><a data-id="">取消</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="henggang"></div>
-                <div class="seaSelect mt5" style="z-index: 11;" id="area">
-                    <div class="haveSel" id="areaParam"><span id="areaParamContent">区域找房</span><em></em></div>
-                    <div class="area clearfix qy" id="xfmap_E01_08">
-                        <ul id="distAreaLeft" class="areaL">
-                            <li class="clearfix" data-id="all,haikoushi"><a data-id="all" data-x="" data-y="">全部</a><a
-                                    data-id="haikoushi" data-x="110.33541107177734375000"
-                                    data-y="20.03648757934570312500">海口市</a></li>
-                            <li class="clearfix" data-id="qionghaishi,wenchangshi"><a data-id="qionghaishi"
-                                                                                      data-x="110.47562408447265625000"
-                                                                                      data-y="19.26386451721191406250">琼海市</a><a
-                                    data-id="wenchangshi" data-x="110.80362701416015625000"
-                                    data-y="19.54851913452148437500">文昌市</a></li>
-                            <li class="clearfix" data-id="chengmaixian,wanningshi"><a data-id="chengmaixian"
-                                                                                      data-x="110.01604461669921875000"
-                                                                                      data-y="19.74308967590332031250">澄迈县</a><a
-                                    data-id="wanningshi" data-x="110.39276885986328125000"
-                                    data-y="18.80348587036132812500">万宁市</a></li>
-                            <li class="clearfix" data-id="lingshuixian,danzhoushi"><a data-id="lingshuixian"
-                                                                                      data-x="109.94866180419921875000"
-                                                                                      data-y="18.57598495483398437500">陵水县</a><a
-                                    data-id="danzhoushi" data-x="109.58821105957031250000"
-                                    data-y="19.52871704101562500000">儋州市</a></li>
-                            <li class="clearfix" data-id="lingaoxian,dinganxian"><a data-id="lingaoxian"
-                                                                                    data-x="109.72409820556640625000"
-                                                                                    data-y="19.80592155456542968750">临高县</a><a
-                                    data-id="dinganxian" data-x="110.34355163574218750000"
-                                    data-y="19.69885826110839843750">定安县</a></li>
-                            <li class="clearfix" data-id="wuzhishanshi,tunchangxian"><a data-id="wuzhishanshi"
-                                                                                        data-x="109.52332305908203125000"
-                                                                                        data-y="18.78397560119628906250">五指山市</a><a
-                                    data-id="tunchangxian" data-x="110.06336212158203125000"
-                                    data-y="19.34774971008300781250">屯昌县</a></li>
-                            <li class="clearfix" data-id="ledongxian,baotingxian"><a data-id="ledongxian"
-                                                                                     data-x="109.06269836425781250000"
-                                                                                     data-y="18.65861320495605468750">乐东县</a><a
-                                    data-id="baotingxian" data-x="109.71112060546875000000"
-                                    data-y="18.64266204833984375000">保亭县</a></li>
-                            <li class="clearfix" data-id="qiongzhongxian,dongfangshi"><a data-id="qiongzhongxian"
-                                                                                         data-x="109.86184692382812500000"
-                                                                                         data-y="19.03977012634277343750">琼中县</a><a
-                                    data-id="dongfangshi" data-x="108.65856170654296875000"
-                                    data-y="19.10643386840820312500">东方市</a></li>
-                            <li class="clearfix" data-id="baishaxian1,changjiangxian1"><a data-id="baishaxian1"
-                                                                                          data-x="109.35858917236328125000"
-                                                                                          data-y="19.21605682373046875000">白沙县</a><a
-                                    data-id="changjiangxian1" data-x="109.01129913330078125000"
-                                    data-y="19.22248268127441406250">昌江县</a></li>
-                        </ul>
-                        <div id="distAreaRight" class="areaR">
-                            <ul class="clearfix hide" data-id="haikoushi">
-                                <li class="areaRtitle" data-x="110.33541107177734375000"
-                                    data-y="20.03648757934570312500">海口市
-                                </li>
-                                <li><a data-x="110.33541107177734375000" data-y="20.03648757934570312500">全部</a></li>
-                                <li><a data-x="110.35393524169921875000" data-y="20.06291580200195312500">海口美兰区</a></li>
-                                <li><a data-x="110.25566101074218750000" data-y="20.01288414001464843750">海口秀英区</a></li>
-                                <li><a data-x="110.36144256591796875000" data-y="20.00814819335937500000">海口琼山区</a></li>
-                                <li><a data-x="110.33518981933593750000" data-y="20.03633689880371093750">海口龙华区</a></li>
-                                <li><a data-x="110.25750732421875000000" data-y="20.03524589538574218750">西海岸</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul class="clearfix hide" data-id="qionghaishi">
-                                <li class="areaRtitle" data-x="110.47562408447265625000"
-                                    data-y="19.26386451721191406250">琼海市
-                                </li>
-                                <li><a data-x="110.47562408447265625000" data-y="19.26386451721191406250">全部</a></li>
-                                <li><a data-x="110.58324432373046875000" data-y="19.16575813293457031250">博鳌</a></li>
-                                <li><a data-x="110.53372192382812500000" data-y="19.25717735290527343750">官塘</a></li>
-                                <li><a data-x="110.47615814208984375000" data-y="19.24426269531250000000">嘉积</a></li>
-                                <li><a data-x="110.48278808593750000000" data-y="19.26527595520019531250">琼海商业圈</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul class="clearfix hide" data-id="wenchangshi">
-                                <li class="areaRtitle" data-x="110.80362701416015625000"
-                                    data-y="19.54851913452148437500">文昌市
-                                </li>
-                                <li><a data-x="110.80362701416015625000" data-y="19.54851913452148437500">全部</a></li>
-                                <li><a data-x="110.82799530029296875000" data-y="19.54812812805175781250">高隆湾</a></li>
-                                <li><a data-x="111.02836608886718750000" data-y="19.67443084716796875000">铜鼓岭</a></li>
-                                <li><a data-x="110.80611419677734375000" data-y="19.54972267150878906250">文昌商业圈</a></li>
-                                <li><a data-x="110.75688171386718750000" data-y="19.61783599853515625000">文城</a></li>
-                                <li><a data-x="111.00808715820312500000" data-y="19.78278160095214843750">月亮湾</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul class="clearfix hide" data-id="chengmaixian">
-                                <li class="areaRtitle" data-x="110.01604461669921875000"
-                                    data-y="19.74308967590332031250">澄迈县
-                                </li>
-                                <li><a data-x="110.01604461669921875000" data-y="19.74308967590332031250">全部</a></li>
-                                <li><a data-x="121.27417755126953125000" data-y="37.50360488891601562500">福山</a></li>
-                                <li><a data-x="110.00845336914062500000" data-y="19.73690414428710937500">金江</a></li>
-                                <li><a data-x="110.13314819335937500000" data-y="19.95890045166015625000">老城</a></li>
-                                <li><a data-x="110.11703491210937500000" data-y="19.98642730712890625000">盈滨半岛</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul class="clearfix hide" data-id="wanningshi">
-                                <li class="areaRtitle" data-x="110.39276885986328125000"
-                                    data-y="18.80348587036132812500">万宁市
-                                </li>
-                                <li><a data-x="110.39276885986328125000" data-y="18.80348587036132812500">全部</a></li>
-                                <li><a data-x="110.40052795410156250000" data-y="18.80175018310546875000">万宁商业圈</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul></ul>
-                            <ul class="clearfix hide" data-id="danzhoushi">
-                                <li class="areaRtitle" data-x="109.58821105957031250000"
-                                    data-y="19.52871704101562500000">儋州市
-                                </li>
-                                <li><a data-x="109.58821105957031250000" data-y="19.52871704101562500000">全部</a></li>
-                                <li><a data-x="109.55296325683593750000" data-y="19.52127456665039062500">儋州商业圈</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul></ul>
-                            <ul></ul>
-                            <ul class="clearfix hide" data-id="wuzhishanshi">
-                                <li class="areaRtitle" data-x="109.52332305908203125000"
-                                    data-y="18.78397560119628906250">五指山市
-                                </li>
-                                <li><a data-x="109.52332305908203125000" data-y="18.78397560119628906250">全部</a></li>
-                                <li><a data-x="109.79417419433593750000" data-y="19.27404022216796875000">五指山商业圈</a>
-                                </li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul></ul>
-                            <ul></ul>
-                            <ul class="clearfix hide" data-id="baotingxian">
-                                <li class="areaRtitle" data-x="109.71112060546875000000"
-                                    data-y="18.64266204833984375000">保亭县
-                                </li>
-                                <li><a data-x="109.71112060546875000000" data-y="18.64266204833984375000">全部</a></li>
-                                <li><a data-x="109.66875457763671875000" data-y="18.75401306152343750000">保亭商业圈</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul></ul>
-                            <ul class="clearfix hide" data-id="dongfangshi">
-                                <li class="areaRtitle" data-x="108.65856170654296875000"
-                                    data-y="19.10643386840820312500">东方市
-                                </li>
-                                <li><a data-x="108.65856170654296875000" data-y="19.10643386840820312500">全部</a></li>
-                                <li><a data-x="108.66740417480468750000" data-y="19.11220932006835937500">东方商业圈</a></li>
-                            </ul>
-                            <div class="lineH hide"></div>
-                            <ul></ul>
-                            <ul></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mapLTB clearfix">
-                <div class="seaSelectM">
-                    <div class="haveSelM" id="priceParam"><span id="priceParamContent"
-                                                                class="leixing">价格</span><em></em></div>
-                    <div class="priceSel dis w_160" id="xfmap_E01_10">
-                        <ul id="priceWrap">
-                            <li class="w_160"><a>不限</a></li>
-                            <li><a data-id="[,5000]">5千以下</a></li>
-                            <li><a data-id="[5000,6000]">5千-6千</a></li>
-                            <li><a data-id="[6000,8000]">6千-8千</a></li>
-                            <li><a data-id="[8000,10000]">8千-1万</a></li>
-                            <li><a data-id="[10000,15000]">1万-1.5万</a></li>
-                            <li><a data-id="[15000,]">1.5万以上</a></li>
-                        </ul>
-                        <div class="w_160"><input id="priceBegTxt" type="text">&nbsp;-&nbsp;<input id="priceEndTxt" t=""
-                                                                                                   type="text"><input
-                                id="priceInputBtn" type="button" value="确定"></div>
-                    </div>
-                </div>
-                <div class="seaSelectM">
-                    <div class="haveSelM" id="huxingParam"><span id="huxingParamContent">户型</span><em></em></div>
-                    <div class="priceSel dis" id="xfmap_E01_11">
-                        <ul id="roomWrap">
-                            <li><a>不限</a></li>
-                            <li><a data-id="1">一居</a></li>
-                            <li><a data-id="2">两居</a></li>
-                            <li><a data-id="3">三居</a></li>
-                            <li><a data-id="4">四居</a></li>
-                            <li><a data-id="5">五居</a></li>
-                            <li><a data-id="[5,]">五居以上</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="seaSelectM">
-                    <div class="haveSelM" id="purposeParam"><span id="purposeParamCont">类型</span><em></em></div>
-                    <div class="priceSel dis" id="xfmap_E01_12">
-                        <ul id="purposesWrap">
-                            <li><a>不限</a></li>
-                            <li><a>住宅</a></li>
-                            <li><a>经济适用房</a></li>
-                            <li><a>别墅</a></li>
-                            <li><a>写字楼</a></li>
-                            <li><a>商铺</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="seaSelectM mr0">
-                    <div class="haveSelM more1" id="haveSelM"><span>更多条件</span><span id="moresearchcount"></span><em
-                            class=""></em></div>
-                    <div class="haveSelTC dis" id="xfmap_E01_13" style="display: none;">
-                        <dl class="clearfix" id="xfmap_E01_14">
-                            <dt>特??色</dt>
-                            <dd id="houseTag"><a>全部</a><a>小户型</a><a>精装修</a><a>低总价</a><a>品牌地产</a></dd>
-                            <dd class="gang"></dd>
-                        </dl>
-                        <dl class="clearfix" id="xfmap_E01_15">
-                            <dt>销售状态</dt>
-                            <dd id="sellWrap"><a>全部</a><a data-id="1">在售</a><a data-id="2">待售</a><a data-id="0">售完</a>
-                            </dd>
-                            <dd class="gang"></dd>
-                        </dl>
-                        <dl class="clearfix" id="xfmap_E01_16">
-                            <dt>环??线</dt>
-                            <dd id="roundWrap"><a>全部</a></dd>
-                            <dd class="gang"></dd>
-                        </dl>
-                        <dl class="clearfix" id="xfmap_E01_17">
-                            <dt>开盘时间</dt>
-                            <dd id="kaipanWrap"><a>全部</a><a>本月开盘</a><a>下月开盘</a><a>三月内开盘</a><a>六月内开盘</a><a>前三个月已开</a><a>前六个月已开</a>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="search_nei" id="searchResult"><p id="Tab" class="micon-map"><a id="xfmap_E01_42"></a></p>
+<!--城市列表-->
 
-            <div class="searchResult bt_none">
-                <div class="houseNum subWay1"><h3>海南</h3>
+<div class="map_popup" id="cityList" style="display:none;">
+    <div class="popup_main">
+        <div class="title">城市列表</div>
+        <div class="cityList" id="citylist_container"></div>
+        <button id="popup_close"></button>
+    </div>
+</div>
 
-                    <p>共227个楼盘</p></div>
-            </div>
-            <div class="mapList">
-                <ul class="mapListT" id="sortWrap">
-                    <li id="xfmap_E01_18" class="on"><a class="zhineng">智能</a></li>
-                    <li id="xfmap_E01_19"><a id="orderPrice" class="price1">价格<em></em></a></li>
-                    <li id="xfmap_E01_20"><a id="orderTime" class="price1">开盘时间<em class="down1"></em></a></li>
+<div class="mapL">
+    <div class="mapLT">
+        <div class="mapLTT clearfix">
+            <div class="mapSea w_360" id="suggestId"><input placeholder="楼盘名/地名/开发商" type="text" id="xfmap_E01_46"
+                                                            style="color: rgb(153, 153, 153);"
+                                                            value="大华闪购会 不止特价房"><a id="xfmap_E01_06"></a>
+                <ul class="seaTip dis" id="search_ad" style="display: none;">
+                    <li class="adv"><a class="clearfix ad"
+                                       href="http://newhouse.hn.fang.com/zt/201605/top10shangouhn.html"
+                                       target="_blank" id="xfmap_D02_25" style="color:#cf0000">TOP10闪购 爆款一网打尽</a>
+                    </li>
+                    <li class="adv"><a class="clearfix ad" href="http://newhouse.hn.fang.com/zt/201605/jgdff.html"
+                                       target="_blank" id="xfmap_D02_26" style="color:#cf0000">大华闪购会 不止特价房</a></li>
                 </ul>
-                <div id="scrollbar1" style="height: 263px;">
-                    <div class="scrollbar"
-                         style="width: 370px; height: 255px; margin-right: 10px; margin-bottom: 10px;">
-                        <div class="content1" style="width: 480px; top: 0px; left: 0px;">
-                            <div class="scrollf" id="picContainer">
-                                <ul class="mapListBt" id="xfmap_E01_34">
-                                    <li class="clearfix" data-id="5011236644" data_x="110.28646087646484375000"
-                                        data_y="19.98670959472656250000" data_tao="0"><a
-                                            href="http://wandaguangchanghk.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://imgs.soufun.com/viewimage/house/2015_10/10/hainan/1444461412037_000/232x162.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_10/10/hainan/1444461412037_000/232x162.jpg"
-                                                class="imgts" style="display: inline;"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海口万达广场</u><span>7300<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>塔楼</u></li>
-                                                <li><u>普通住宅</u></li>
-                                                <li><u>低密度</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011202618" data_x="110.34825897216796875000"
-                                        data_y="19.98342323303222656250" data_tao="0"><a
-                                            href="http://wuyueguangchanghk.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://img.soufun.com/viewimage/house/2015_05/18/hainan/1431964455700_000/232x162.jpg"
-                                                data-original="http://img.soufun.com/viewimage/house/2015_05/18/hainan/1431964455700_000/232x162.jpg"
-                                                class="imgts" style="display: inline;"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海口新城吾悦广场</u><span>8300<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>板楼</u></li>
-                                                <li><u>酒店式公寓</u></li>
-                                                <li><u>普通住宅</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011214448" data_x="110.17935180664062500000"
-                                        data_y="20.05994796752929687500" data_tao="73"><a
-                                            href="http://xihaiandh.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://imgs.soufun.com/viewimage/house/2015_07/21/hainan/1437449742748_000/232x162.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_07/21/hainan/1437449742748_000/232x162.jpg"
-                                                class="imgts" style="display: inline;"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>东汇西海岸</u><span>7800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款74折</u></li>
-                                                <li><u>搜房红包8000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010364702" data_x="110.12786865234375000000"
-                                        data_y="19.99036979675292968750" data_tao="0"><a
-                                            href="http://hailanfuyln.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2009_11/04/hainan/1257299834204_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix">
-                                                <u>鲁能海蓝福源·依澜湾</u><span>7600<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                                <li><u>五居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款9折</u></li>
-                                                <li><u>搜房红包30000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011113822" data_x="110.36248779296875000000"
-                                        data_y="20.08073806762695312500" data_tao="1678"><a
-                                            href="http://binhaiguojigw.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2016_02/01/hainan/1454317594722_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>广物·滨海国际</u><span>10000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款96折</u></li>
-                                                <li><u>搜房红包5000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011218748" data_x="110.29740905761718750000"
-                                        data_y="19.98289680480957031250" data_tao="13"><a
-                                            href="http://zizhuyuanyh.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_07/28/hainan/1438065343722_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>紫竹园</u><span>7500<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.7分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>13套可售</u></li>
-                                                <li><u>塔楼</u></li>
-                                                <li><u>酒店式公寓</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011179538" data_x="110.33605194091796875000"
-                                        data_y="20.05188369750976562500" data_tao="685"><a
-                                            href="http://hengdawaitanhk.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_12/18/hainan/1418868864832_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>恒大外滩</u><span>12000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>685套可售</u></li>
-                                                <li><u>毛坯</u></li>
-                                                <li><u>小户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011085336" data_x="110.38115692138671875000"
-                                        data_y="20.02594947814941406250" data_tao="168"><a
-                                            href="http://shengdajingdu.fang.com/2/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2013_08/22/hainan/1377175372027_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>盛达景都二期</u><span>11000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>五居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>168套可售</u></li>
-                                                <li><u>全款75折</u></li>
-                                                <li><u>板楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011236556" data_x="110.19646453857421875000"
-                                        data_y="20.05388259887695312500" data_tao="0"><a
-                                            href="http://huafulanwan.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_09/02/hainan/1441188295266_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>华府蓝湾</u><span>8460<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.2分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>小户型</u></li>
-                                                <li><u>双卫</u></li>
-                                                <li><u>塔楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010171208" data_x="110.34053039550781250000"
-                                        data_y="19.99130630493164062500" data_tao="0"><a
-                                            href="http://hemutiancheng.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2016_03/29/hainan/1459235648866_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>和沐天成</u><span>7000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>小户型</u></li>
-                                                <li><u>南北通透</u></li>
-                                                <li><u>双卫</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011068684" data_x="110.37948608398437500000"
-                                        data_y="19.99655342102050781250" data_tao="168"><a
-                                            href="http://juhengmingdu.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2013_01/23/hainan/1358912262305_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>巨恒名都</u><span>6500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.7分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>168套可售</u></li>
-                                                <li><u>小户型</u></li>
-                                                <li><u>普通住宅</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011225646" data_x="110.30664825439453125000"
-                                        data_y="20.01666069030761718750" data_tao="48"><a
-                                            href="http://aishanghailan.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_08/20/hainan/1440051515337_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>爱尚海蓝</u><span>7000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>48套可售</u></li>
-                                                <li><u>一口价9折</u></li>
-                                                <li><u>小户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011178780" data_x="110.34981536865234375000"
-                                        data_y="19.97584724426269531250" data_tao="0"><a
-                                            href="http://kongqueshanhncj.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_12/18/hainan/1418880328412_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>沁源汇养生度假公园</u><span>200<span>万元/套</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>开盘享9折</u></li>
-                                                <li><u>板塔结合</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010932954" data_x="110.25338745117187500000"
-                                        data_y="20.03494071960449218750" data_tao="0"><a
-                                            href="http://nancaopingms.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2010_11/24/hainan/1290592909285_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>美视南草坪</u><span>26000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>公寓全款98折</u></li>
-                                                <li><u>大户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011179306" data_x="110.21274566650390625000"
-                                        data_y="20.04580116271972656250" data_tao="325"><a
-                                            href="http://haiyuntian0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_12/01/hainan/1417400243655_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>龙光海云天</u><span>9600<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.7分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款92折</u></li>
-                                                <li><u>搜房红包10000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011193290" data_x="110.32759857177734375000"
-                                        data_y="20.07711410522460937500" data_tao="0"><a
-                                            href="http://meilishahd.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_04/17/hainan/1429243730600_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海口·恒大美丽沙</u><span>11000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>loft</u></li>
-                                                <li><u>大户型</u></li>
-                                                <li><u>独栋</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011188842" data_x="110.35188293457031250000"
-                                        data_y="20.00870323181152343750" data_tao="0"><a
-                                            href="http://huchengdajingyh.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_02/25/hainan/1424833237393_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>怡和·湖城大境</u><span>待定<span></span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>四居</u></li>
-                                                <li><u>五居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.2分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>塔楼</u></li>
-                                                <li><u>普通住宅</u></li>
-                                                <li><u>湖景地产</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011272002" data_x="110.21374511718750000000"
-                                        data_y="20.00458908081054687500" data_tao="0"><a
-                                            href="http://shidaicheng0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_12/22/hainan/1450750154903_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>时代城</u><span>5800<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>起价4740</u></li>
-                                                <li><u>搜房红包2000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011264312" data_x="110.36618041992187500000"
-                                        data_y="20.07667732238769531250" data_tao="0"><a
-                                            href="http://hefenghuayuanhnzx.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_11/17/hainan/1447745774053_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>和风花苑</u><span>10500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.4分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>小户型</u></li>
-                                                <li><u>双卫</u></li>
-                                                <li><u>板楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011263080" data_x="110.30957794189453125000"
-                                        data_y="20.02133750915527343750" data_tao="0"><a
-                                            href="http://haixiutiancheng.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_11/17/hainan/1447730414991_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海秀天成</u><span>8500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款96折</u></li>
-                                                <li><u>小户型</u></li>
-                                                <li><u>板塔结合</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010939724" data_x="110.20161437988281250000"
-                                        data_y="20.05959510803222656250" data_tao="777"><a
-                                            href="http://haiyuyangguang.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_04/22/hainan/1429685007266_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海域阳光</u><span>13000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                                <li><u>五居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>独家优惠</u></li>
-                                                <li><u>搜房红包10000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011061964" data_x="110.34984588623046875000"
-                                        data_y="19.99762916564941406250" data_tao="0"><a
-                                            href="http://bashundasha.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2012_08/15/hainan/1344997930698_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>名门学府</u><span>8600<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>小户型</u></li>
-                                                <li><u>板塔结合</u></li>
-                                                <li><u>普通住宅</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011273048" data_x="110.28662872314453125000"
-                                        data_y="19.99750137329101562500" data_tao="0"><a
-                                            href="http://xinhaihuating0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_12/17/hainan/1450322240759_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>鑫海华庭</u><span>7500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.2分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房独家优惠</u></li>
-                                                <li><u>搜房红包2000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011078420" data_x="110.32524108886718750000"
-                                        data_y="20.06844139099121093750" data_tao="0"><a
-                                            href="http://haiyuexuanjt.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_09/22/hainan/1411382587965_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>金泰·海悦轩</u><span>12000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款97折</u></li>
-                                                <li><u>普通住宅</u></li>
-                                                <li><u>商住楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011254198" data_x="110.19779968261718750000"
-                                        data_y="20.05074119567871093750" data_tao="0"><a
-                                            href="http://luomandike.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_10/19/hainan/1445243794346_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>罗曼帝克</u><span>10000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>小户型</u></li>
-                                                <li><u>双卫</u></li>
-                                                <li><u>板楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011058972" data_x="110.13954925537109375000"
-                                        data_y="19.97561073303222656250" data_tao="0"><a href="http://058972.fang.com/"
-                                                                                         class="wai_yuan"
-                                                                                         target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2012_07/10/hainan/1341889483632_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix">
-                                                <u>四季康城三期荣和新城</u><span>5800<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款98折</u></li>
-                                                <li><u>小户型</u></li>
-                                                <li><u>双卫</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011226680" data_x="110.33531188964843750000"
-                                        data_y="20.00460243225097656250" data_tao="0"><a
-                                            href="http://baoshunhaoyuan.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_08/27/hainan/1440656923998_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>宝顺豪苑</u><span>8500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.7分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款91折</u></li>
-                                                <li><u>小户型</u></li>
-                                                <li><u>双卫</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011221870" data_x="110.34944915771484375000"
-                                        data_y="20.07902336120605468750" data_tao="0"><a
-                                            href="http://xiyuedajiudian.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_11/09/hainan/1447063225786_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix">
-                                                <u>田德海泉湾·喜悦大酒店</u><span>8800<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">0.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>板塔结合</u></li>
-                                                <li><u>酒店式公寓</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011203876" data_x="110.29636383056640625000"
-                                        data_y="20.03738975524902343750" data_tao="0"><a
-                                            href="http://zhongyanghaianbl.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_05/26/hainan/1432608773775_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>保利中央海岸</u><span>11000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.7分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>购房优惠</u></li>
-                                                <li><u>双卫</u></li>
-                                                <li><u>板楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011109122" data_x="110.43673706054687500000"
-                                        data_y="19.97460746765136718750" data_tao="1"><a
-                                            href="http://lvdicheng0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_09/17/hainan/1442483498615_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海南绿地城</u><span>7500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房独家优惠</u></li>
-                                                <li><u>搜房红包5000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011067822" data_x="110.18509674072265625000"
-                                        data_y="20.05566787719726562500" data_tao="17"><a
-                                            href="http://haichangliuld.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_10/08/hainan/1444293996297_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>绿地海长流</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款76折</u></li>
-                                                <li><u>搜房红包1000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011127648" data_x="110.18838500976562500000"
-                                        data_y="20.06052780151367187500" data_tao="298"><a
-                                            href="http://jinxiuhaiandh.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_03/05/hainan/1394001221084_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>大华·锦绣海岸</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款87折</u></li>
-                                                <li><u>298套可售</u></li>
-                                                <li><u>小户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011172132" data_x="110.20461273193359375000"
-                                        data_y="20.06143760681152343750" data_tao="1005"><a
-                                            href="http://fenghuangchengtd.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://img.soufun.com/viewimage/house/2015_01/23/hainan/1422019562374_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>天地·凤凰城</u><span>11000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房独家优惠</u></li>
-                                                <li><u>搜房红包8000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011126788" data_x="110.23394012451171875000"
-                                        data_y="20.02902603149414062500" data_tao="55"><a
-                                            href="http://zhongyangwenhuachengld.fang.com/" class="wai_yuan"
-                                            target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_09/29/hainan/1443515587460_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>绿地·中央文化城</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                                <li><u>五居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款76折</u></li>
-                                                <li><u>搜房红包4000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011151562" data_x="110.34717559814453125000"
-                                        data_y="19.96528816223144531250" data_tao="0"><a
-                                            href="http://haikouwenhualvyouchenghd.fang.com/" class="wai_yuan"
-                                            target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_07/04/hainan/1404456774126_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>恒大海口文化旅游城</u><span>9000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>赠送面积</u></li>
-                                                <li><u>板塔结合</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011171636" data_x="110.34242248535156250000"
-                                        data_y="20.02369117736816406250" data_tao="99"><a
-                                            href="http://haotinghh.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_10/09/hainan/1412837407426_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海航豪庭</u><span>14000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                                <li><u>五居</u></li>
-                                                <li><u>五居以上</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>99套可售</u></li>
-                                                <li><u>暂无折扣</u></li>
-                                                <li><u>大户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010972982" data_x="110.14382934570312500000"
-                                        data_y="19.97580718994140625000" data_tao="680"><a
-                                            href="http://yujingwanhnhd.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_08/06/hainan/1407295599377_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海南恒大御景湾</u><span>6400<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>五居以上</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>680套可售</u></li>
-                                                <li><u>双卫</u></li>
-                                                <li><u>板塔结合</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011210838" data_x="110.32736206054687500000"
-                                        data_y="19.99811363220214843750" data_tao="36"><a
-                                            href="http://haixinhuating.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_07/03/hainan/1435913778516_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海信华庭</u><span>8200<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.6分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>36套可售</u></li>
-                                                <li><u>全款94折</u></li>
-                                                <li><u>小户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011091726" data_x="110.19451904296875000000"
-                                        data_y="20.04865264892578125000" data_tao="1"><a
-                                            href="http://yuhaigongguanzd.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2013_06/21/hainan/1371784238407_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>置地·御海公馆</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房独家钜惠</u></li>
-                                                <li><u>搜房红包6000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011074364" data_x="110.15589904785156250000"
-                                        data_y="19.98146057128906250000" data_tao="500"><a
-                                            href="http://lishuiwanfl.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2012_12/17/hainan/1355736103703_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>福隆·丽水湾</u><span>5800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>一次性95折</u></li>
-                                                <li><u>搜房红包8000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5010322262" data_x="110.25819396972656250000"
-                                        data_y="20.01844024658203125000" data_tao="593"><a
-                                            href="http://ziyuan0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_07/10/hainan/1404964250092_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>紫园</u><span>13000<span>元/平</span></span></div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>593套可售</u></li>
-                                                <li><u>全款97折</u></li>
-                                                <li><u>低密度</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011089922" data_x="110.37014007568359375000"
-                                        data_y="19.98375320434570312500" data_tao="58"><a
-                                            href="http://xiangxiehuayuan0898.fang.com/" class="wai_yuan"
-                                            target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_08/11/hainan/1407750848147_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>香榭花园</u><span>7500<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房独家优惠</u></li>
-                                                <li><u>搜房红包100元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011097904" data_x="110.27352905273437500000"
-                                        data_y="20.02880477905273437500" data_tao="0"><a
-                                            href="http://xihaiwan.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_11/11/hainan/1447232124869_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>南光·西海湾</u><span>14000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>五居</u></li>
-                                                <li><u>五居以上</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款96折</u></li>
-                                                <li><u>大户型</u></li>
-                                                <li><u>露台</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011120400" data_x="110.19079589843750000000"
-                                        data_y="20.06035041809082031250" data_tao="304"><a
-                                            href="http://chenhuidijing.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2013_12/24/hainan/1387873356404_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>晨晖·帝景</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>304套可售</u></li>
-                                                <li><u>全款64折</u></li>
-                                                <li><u>小户型</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011184392" data_x="110.33316040039062500000"
-                                        data_y="19.99502754211425781250" data_tao="2"><a
-                                            href="http://jinpanhuayuanhm.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_01/20/hainan/1421736994258_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>海马金盘花园</u><span>7088<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.8分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房红包</u></li>
-                                                <li><u>2套可售</u></li>
-                                                <li><u>塔楼</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011054554" data_x="110.20581817626953125000"
-                                        data_y="20.05917930603027343750" data_tao="321"><a
-                                            href="http://xintiandibh0898.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2012_09/07/hainan/1346984939930_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>滨海新天地</u><span>9800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>独家优惠</u></li>
-                                                <li><u>搜房红包16000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011113482" data_x="110.32521820068359375000"
-                                        data_y="19.99658012390136718750" data_tao="93"><a
-                                            href="http://dadihaotingjb.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2015_04/15/hainan/1429068521140_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>金碧大地豪庭</u><span>8800<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                                <li><u>四居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.1分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>93套可售</u></li>
-                                                <li><u>全款减6百/平</u></li>
-                                                <li><u>双卫</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011043738" data_x="110.11030578613281250000"
-                                        data_y="19.96356010437011718750" data_tao="3"><a
-                                            href="http://houhaiwenquanxiaozhen.fang.com/" class="wai_yuan"
-                                            target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2013_01/14/hainan/1358153507912_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>后海温泉小镇</u><span>6300<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房红包</u></li>
-                                                <li><u>搜房红包2000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011122680" data_x="110.20057678222656250000"
-                                        data_y="20.04854583740234375000" data_tao="240"><a
-                                            href="http://zhongyanggongyuanhs0898.fang.com/" class="wai_yuan"
-                                            target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2014_12/18/hainan/1418890435855_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>华盛·中央公园</u><span>10000<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">4.0分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>全款78折</u></li>
-                                                <li><u>搜房红包8000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                    <li class="clearfix" data-id="5011070944" data_x="110.11956024169921875000"
-                                        data_y="19.95188331604003906250" data_tao="5"><a
-                                            href="http://fenghuangchenggy.fang.com/" class="wai_yuan" target="_blank">
-                                        <div class="mapListImg"><img
-                                                src="http://js.soufunimg.com/map/ditu/img/shipin0.jpg"
-                                                data-original="http://imgs.soufun.com/viewimage/house/2012_10/30/hainan/1351565368248_000/232x162.jpg"
-                                                class="imgts"></div>
-                                        <div class="mapListDet rel">
-                                            <div class="timu clearfix"><u>冠永·凤凰城</u><span>5700<span>元/平</span></span>
-                                            </div>
-                                            <ul class="jushi clearfix">
-                                                <li><u>一居</u></li>
-                                                <li><u>二居</u></li>
-                                                <li><u>三居</u></li>
-                                            </ul>
-                                            <div class="pingfen f12 gray6">3.9分</div>
-                                            <ul class="mesMore clearfix">
-                                                <li><u>搜房红包</u></li>
-                                                <li><u>搜房红包3000元</u></li>
-                                            </ul>
-                                        </div>
-                                    </a></li>
-                                </ul>
-                                <div id="xfmap_E01_38" class="fanye"><a class="pageNow" data-id="1">1</a><a data-id="2">2</a><a
-                                        data-id="3">3</a><a data-id="4">4</a><a data-id="5">5</a><a data-id="2">下一页</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scrollbar_dragger vertical" style="width: 10px;">
-                        <div class="back"
-                             style="width: 10px; height: 255px; border-radius: 5px; opacity: 1; background-color: rgb(241, 241, 241);"></div>
-                        <div class="dragger"
-                             style="top: 0px; width: 10px; border-radius: 5px; height: 10.6337px; opacity: 1; background-color: rgb(204, 204, 204);"></div>
-                    </div>
-                </div>
             </div>
+
+
+            <select class="haveSelM1" name="city_id" id="city_id" onchange="submiBtn()">
+                <option value="111" selected="selected">区域</option>
+                <option value="460100">海口市</option>
+                <option value="460200">三亚市</option>
+                <option value="460500">澄迈县</option>
+                <option value="460400">琼海市</option>
+                <option value="460600">文昌市</option>
+                <option value="460700">万宁市</option>
+                <option value="460300">东方市</option>
+                <option value="460800">定安县</option>
+                <option value="469000">屯昌县</option>
+                <option value="460100">临高县</option>
+                <option value="460120">白沙县</option>
+                <option value="460130">昌江县</option>
+                <option value="460140">乐东县</option>
+                <option value="460700">兴隆镇</option>
+            </select>
+
+            <select class="haveSelM2" name="active_price" id="active_price" onchange="submiBtn()">
+                <option value="222" selected="selected">价格</option>
+                <option value="4000">4000以下</option>
+                <option value="6000">4000-6000</option>
+                <option value="8000">6000-8000</option>
+                <option value="10000">8000-100000</option>
+                <option value="11000">100000以上</option>
+            </select>
+            <select class="haveSelM3" name="acreage" id="acreage" onchange="submiBtn()">
+                <option value="333" selected="selected">面积</option>
+                <option value="50"> 50㎡以下</option>
+                <option value="70">50-70㎡</option>
+                <option value="90">70-90㎡</option>
+                <option value="110">90-110㎡</option>
+                <option value="150">110-150㎡</option>
+            </select>
+            <select class="haveSelM4" name="shi" id="shi" onchange="submiBtn()">
+                <option value="444" selected="selected">户型</option>
+                <option value="1">一居</option>
+                <option value="2">二居</option>
+                <option value="3">三居</option>
+                <option value="4">四居</option>
+                <option value="5">五居居</option>
+                <option value="6">五居以上</option>
+            </select>
+
+
         </div>
-    </div>
-    <div id="xfmap_E01_04" class="marR">
-        <div class="map_bg" id="mapCanvas"
-             style="overflow: hidden; position: relative; z-index: 0; color: rgb(0, 0, 0); text-align: left; background-color: rgb(243, 241, 236);">
-            <div style="overflow: visible; position: absolute; z-index: 0; left: 706px; top: 90px; cursor: url(http://api.map.baidu.com/images/openhand.cur) 8 8, default;">
-                <div class="BMap_mask"
-                     style="position: absolute; left: -706px; top: -90px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 1200px; height: 844px;"></div>
-                <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;">
-                        <div style="position: absolute; z-index: -2000000012; cursor: pointer; -webkit-user-select: none; left: 98px; top: 157px; background: none;">
-                            <ul id="xfmap_E01_30" class="lpNum">
-                                <li class=""><a data-bgclass="" data-zoneid="海口市">海口市<br><br>182个楼盘</a></li>
-                            </ul>
-                        </div>
-                        <div style="position: absolute; z-index: -3948616; cursor: pointer; -webkit-user-select: none; left: -457px; top: 696px; background: none;">
-                            <ul id="xfmap_E01_30" class="lpNum">
-                                <li><a data-bgclass="" data-zoneid="澄迈县">澄迈县<br>0.6万元/㎡<br>45个楼盘</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div>
-                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div>
-                </div>
-                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;">
-                    <div style="position: absolute; overflow: visible; z-index: -100; left: -106px; top: 332px;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=750&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 331px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=748&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -181px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=749&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 75px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=749&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 75px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=751&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 587px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=747&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -437px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=748&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -181px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=748&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -181px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=750&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 331px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=750&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 331px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=749&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 75px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=751&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 587px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=747&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -437px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=747&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -437px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=751&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 587px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=750&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 331px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=748&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -181px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=751&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 587px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=747&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -437px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=746&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -693px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=746&amp;y=136&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -693px; top: 138px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=746&amp;y=138&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -693px; top: -374px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=746&amp;y=139&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -693px; top: -630px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=749&amp;y=137&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 75px; top: -118px; max-width: none; opacity: 1;"><img
-                            src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=747&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -437px; top: 394px; max-width: none; opacity: 1;"><img
-                            src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=748&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -181px; top: 394px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=746&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: -693px; top: 394px; max-width: none; opacity: 1;"><img
-                            src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=749&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 75px; top: 394px; max-width: none; opacity: 1;"><img
-                            src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=751&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 587px; top: 394px; max-width: none; opacity: 1;"><img
-                            src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=750&amp;y=135&amp;z=12&amp;styles=pl&amp;udt=20140928"
-                            style="position: absolute; border: none; width: 256px; height: 256px; left: 331px; top: 394px; max-width: none; opacity: 1;">
-                    </div>
-                </div>
-                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2;"></div>
-            </div>
-            <div class=" anchorBL"
-                 style="height: 32px; position: absolute; z-index: 10; bottom: 0px; right: auto; top: auto; left: 1px;">
-                <a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img
-                        style="border:none;width:77px;height:32px"
-                        src="http://api.map.baidu.com/images/copyright_logo.png"></a></div>
-            <div id="zoomer"
-                 style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default">
-                <div class="BMap_zoomer" style="top:0;left:0;"></div>
-                <div class="BMap_zoomer" style="top:0;right:0;"></div>
-                <div class="BMap_zoomer" style="bottom:0;left:0;"></div>
-                <div class="BMap_zoomer" style="bottom:0;right:0;"></div>
-            </div>
-            <div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorBR"
-                 style="width: 62px; height: 144px; bottom: 10px; right: 10px; top: auto; left: auto; position: absolute; z-index: 1100;">
-                <div class="BMap_stdMpPan">
-                    <div class="BMap_button BMap_panN" title="向上平移"></div>
-                    <div class="BMap_button BMap_panW" title="向左平移"></div>
-                    <div class="BMap_button BMap_panE" title="向右平移"></div>
-                    <div class="BMap_button BMap_panS" title="向下平移"></div>
-                    <div class="BMap_stdMpPanBg BMap_smcbg"></div>
-                </div>
-                <div class="BMap_stdMpZoom" style="height: 99px; width: 62px;">
-                    <div class="BMap_button BMap_stdMpZoomIn" title="放大一级">
-                        <div class="BMap_smcbg"></div>
-                    </div>
-                    <div class="BMap_button BMap_stdMpZoomOut" title="缩小一级" style="top: 78px;">
-                        <div class="BMap_smcbg"></div>
-                    </div>
-                    <div class="BMap_stdMpSlider" style="height: 60px;">
-                        <div class="BMap_stdMpSliderBgTop" style="height: 60px;">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                        <div class="BMap_stdMpSliderBgBot" style="top: 37px; height: 27px;"></div>
-                        <div class="BMap_stdMpSliderMask" title="放置到此级别"></div>
-                        <div class="BMap_stdMpSliderBar" title="拖动缩放"
-                             style="cursor: url(http://api.map.baidu.com/images/openhand.cur) 8 8, default; top: 37px;">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                    </div>
-                    <div class="BMap_zlHolder">
-                        <div class="BMap_zlSt">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                        <div class="BMap_zlCity">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                        <div class="BMap_zlProv">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                        <div class="BMap_zlCountry">
-                            <div class="BMap_smcbg"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div unselectable="on" class=" BMap_scaleCtrl BMap_noprint anchorBR"
-                 style="bottom: 18px; right: 81px; top: auto; left: auto; width: 86px; position: absolute; z-index: 10;">
-                <div class="BMap_scaleTxt" unselectable="on" style="color: black; background-color: transparent;">5&nbsp;公里</div>
-                <div class="BMap_scaleBar BMap_scaleHBar" style="background-color: black;"><img style="border:none"
-                                                                                                src="http://api.map.baidu.com/images/mapctrls.png">
-                </div>
-                <div class="BMap_scaleBar BMap_scaleLBar" style="background-color: black;"><img style="border:none"
-                                                                                                src="http://api.map.baidu.com/images/mapctrls.png">
-                </div>
-                <div class="BMap_scaleBar BMap_scaleRBar" style="background-color: black;"><img style="border:none"
-                                                                                                src="http://api.map.baidu.com/images/mapctrls.png">
-                </div>
-            </div>
-            <div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL"
-                 style="cursor: default; white-space: nowrap; color: black; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10; background: none;">
-                <span _cid="1" style="display: inline;"><span style="font-size:11px">? 2015 Baidu&nbsp;- Data ? <a
-                        target="_blank" href="http://www.navinfo.com/" style="display:inline;">NavInfo</a> &amp; <a
-                        target="_blank" href="http://www.cennavi.com.cn/" style="display:inline;">CenNavi</a> &amp; <a
-                        target="_blank" href="http://www.365ditu.com/" style="display:inline;">道道通</a></span></span>
-            </div>
-        </div>
-        <div class="mapCon">
-            <ul class="mapChoose">
-                <li id="xfmap_E01_41">
-                    <div></div>
-                    <a>只看优惠房</a></li>
-                <li id="xfmap_E01_40">
-                    <div class="on"></div>
-                    <a>移动地图时搜索</a></li>
-            </ul>
-            <div class="qh"><span class="list"><a id="xfmap_E01_07" href="http://newhouse.hn.fang.com/house/s/"
-                                                  target="_self">列表模式</a></span></div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MfrGHAHxUwYQA9ypMVqZlIPkdGQeK8Bc"></script>
-<script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("ttt");    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom();      //开启鼠标滚轮缩放
-
-    var winhetght = $(window).height();
-    var winwidth = $(window).width();
 
 
-        $(".mapp").css("height", winhetght);
-        $(".mapp").css("width", winwidth);
+        <script type="text/javascript"
+                src="http://api.map.baidu.com/api?v=2.0&ak=lR8YgG9kxGWrpjNgVQgxgqi0OVyNpAIh"></script>
+        <!-- 加载百度地图样式信息窗口 -->
+        <script type="text/javascript"
+                src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+        <link rel="stylesheet"
+              href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
+        <!-- 加载城市列表 -->
+        <script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
+        <script type="text/javascript"
+                src="http://api.map.baidu.com/library/RichMarker/1.2/src/RichMarker_min.js"></script>
+        <script type="text/javascript">
+            var map = new BMap.Map("ttt");          // 创建地图实例
+            var point = new BMap.Point(110.301567, 20.013559);  // 创建点坐标
+            map.centerAndZoom(point, 12);                 // 初始化地图，设置中心点坐标和地图级别
+            map.enableScrollWheelZoom();
+            map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+            function submiBtn() {
 
-</script>
+                value = $("#loupanText").val();
+                if (value == "" || value == "请输入关键字（楼盘名）") {
+                    alert("请输入楼盘名称");
+                } else {
+                    // 根据条件 设置中心坐标
+                    var city_id = $(".haveSelM1").val();
+
+
+                    if (city_id == '460100') {
+                        x = "110.299848";
+                        y = "20.021123";
+                    } else if (city_id == '460200') {
+                        var x = "109.516346";
+                        var y = "18.257942";
+                    } else if (city_id == '460500') {
+                        var x = "110.012617";
+                        var y = "19.741514";
+                    } else if (city_id == '460400') {
+                        var x = "110.485375";
+                        var y = "19.262427";
+                    } else if (city_id == '460600') {
+                        var x = "110.808991";
+                        var y = "19.741514";
+                    } else if (city_id == '460700') {
+                        var x = "110.397725";
+                        var y = "18.801295";
+                    } else if (city_id == '460300') {
+                        var x = "108.658514";
+                        var y = "19.103064";
+                    } else if (city_id == '460800') {
+                        var x = "110.36612";
+                        var y = "19.686898";
+                    } else if (city_id == '469000') {
+                        var x = "110.111197";
+                        var y = "19.357635";
+                    } else if (city_id == '460100') {
+                        var x = "109.697787";
+                        var y = "19.918299";
+                    } else if (city_id == '460120') {
+                        var x = "109.457711";
+                        var y = "19.231907";
+                    } else if (city_id == '460130') {
+                        var x = "109.06263";
+                        var y = "19.304712";
+                    } else if (city_id == '460140') {
+                        var x = "109.179257";
+                        var y = "18.756883";
+                    } else if (city_id == '460700') {
+                        var x = "110.233622";
+                        var y = "18.751916";
+                    } else {
+                        x = "110.299848";
+                        y = "20.021123";
+                    }
+                    map.centerAndZoom(new BMap.Point(x, y), 12);
+                    //map.clearOverlays();
+
+                    // $("#loupanNum").html(icon);
+                    var sortName = $("#sortName").val();
+                    var sortType = $("#sortType").val();
+
+                    var bs = map.getBounds();   //获取可视区域
+                    var bssw = bs.getSouthWest();   //可视区域左下角
+                    var bsne = bs.getNorthEast();   //可视区域右上角
+                    var city_id = $(".haveSelM1").val();
+                    var active_price = $(".haveSelM2").val();
+                    var acreage = $(".haveSelM3").val();
+                    var shi = $(".haveSelM4").val();
+
+                    params = {
+                        proId: proId,
+                        city_id: city_id,
+                        active_price: active_price,
+                        acreage: acreage,
+                        shi: shi
+                    }
+                    ajaxGet("get", URLMAP.findListByselect, params, function (data) {
+
+
+                        if (data.statusCode == "0000") {
+
+                            var obj = data;
+                            //alert("Data Loaded: " + obj.status);
+                            //先清空左侧buildingList
+                            window.listDate = obj.data;
+                            $("#buildingList").empty();
+                            $.each(listDate, function (i, n) {
+                                biaozhu(n);
+
+                            });
+
+
+//                            var sublist=data.data;
+//                          //  alert(sublist.length);
+//
+//                            for (var i = 0; i < sublist.length ; i++) {
+//                                var position_info = sublist[i];
+//                                var lng = position_info["map_x"];
+//                                var lat = position_info["map_y"];
+//                                var title = position_info["buildings_name"];
+//                                var point = new BMap.Point(lng, lat);
+//                                var id = position_info["id"];
+//                                var htm =  '<p class="icon3" id="m'+id+'"><span>'+title+'</span></div></span></p>';
+//                                var myRichMarkerObject = new BMapLib.RichMarker(htm, point, {"anchor": new BMap.Size(-72, -84), "enableDragging": true});
+//                                myRichMarkerObject.disableDragging();
+//
+//                                //标注点击事件
+//                                myRichMarkerObject.addEventListener("onclick", function(e) {
+//                                    //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
+//                                    //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
+//                                    alert(id);
+//                                });
+//                                myRichMarkerObject.addEventListener("onmouseover", function(e) {
+//                                    alert(id);
+//                                    $("#m"+id).addClass("hover");
+//                                    $("#m"+id).parent("div").css("z-index",99999);
+//                                });
+//                                myRichMarkerObject.addEventListener("onmouseout", function(e) {
+//                                    //document.getElementById("rm3_image").src = "http://1.com/Public/images/icon.png";
+//                                    //alert(222);
+//                                    $("#m"+id).removeClass("hover");
+//                                    $("#m"+id).parent("div").css("z-index",0);
+//                                });
+//                                map.addOverlay(myRichMarkerObject); // 将标注添加到地图中
+//                                 }
+//
+//                            //标注点击事件
+//                            myRichMarkerObject.addEventListener("onclick", function(e) {
+//                                //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
+//                                //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
+//                                alert(id);
+//                            });
+//                            myRichMarkerObject.addEventListener("onmouseover", function(e) {
+//                                alert(id);
+//                                $("#m"+id).addClass("hover");
+//                                $("#m"+id).parent("div").css("z-index",99999);
+//                            });
+//                            myRichMarkerObject.addEventListener("onmouseout", function(e) {
+//                                //document.getElementById("rm3_image").src = "http://1.com/Public/images/icon.png";
+//                                //alert(222);
+//                                $("#m"+id).removeClass("hover");
+//                                $("#m"+id).parent("div").css("z-index",0);
+//                            });
+                        } else {
+                            alert("ssssssssssssssss");
+                            $(".bottom-pull-loading").html("数据测试");
+                            setTimeout(function () {
+                                $(".bottom-pull-loading").hide();
+                            }, 3000);
+                        }
+                        loading = false;
+                    });
+                }
+            }
+
+            function setIcon(value) {
+                return value > 3 ? 2 : 3;
+            }
+
+
+            //富标注函数
+            function biaozhu(n) {
+
+                myRichMarker = new BMapLib.RichMarker('<p class="my_marker icon3" id="m' + n.id + '"><span>' + n.buildings_name + '&nbsp;' + n.active_price + '元/㎡</span></div></span></p>', new BMap.Point(n.map_x, n.map_y), {
+                    "anchor": new BMap.Size(-12, -38),
+                    "enableDragging": false
+                });
+                //标注点击事件
+                myRichMarker.addEventListener("onclick", function (e) {
+                    //var price = getPrice(n.priceMin,n.priceAvg,n.priceMax);
+                    //var marker = new BMap.Marker(new BMap.Point(n.mapLng,n.mapLat));
+                    myInfo(n);
+                });
+                myRichMarker.addEventListener("onmouseover", function (e) {
+                    $("#m" + n.id).addClass("hover");
+                    $("#m" + n.id).parent("div").css("z-index", 99999);
+                });
+                myRichMarker.addEventListener("onmouseout", function (e) {
+                    //document.getElementById("rm3_image").src = "http://1.com/Public/images/icon.png";
+                    //alert(222);
+                    $("#m" + n.id).removeClass("hover");
+                    $("#m" + n.id).parent("div").css("z-index", 0);
+                });
+
+                map.addOverlay(myRichMarker);
+
+            }
+
+            //弹出信息框
+            function myInfo(n) {
+                //changeCookie(n);
+                var marker = new BMap.Marker(new BMap.Point(n.mapLng, n.mapLat));
+                var sContent = '<div class="t_box"><div class="boxt"><h3 class="all366C"> <a target="_blank" href="/buildings/'+n.id+'/460000/'+n.ac_id+'/'+n.buildings_name+'">' + n.buildings_name + '</a></h3>&nbsp;<img src="http://statics.wofangwang.com/images/icon/shou3.gif" width="49" height="19" /></div><div class="boxm"><div class="m1"><div class="txt"><ul><li><em>楼盘类型：</em>' + n.buildings_name + '</li><em>最新特价：</em><li>' + n.active_price + '元/平米</li><li><em>咨询热线：</em><i>' + n.server_phone_num + '</i></li><li><em>楼盘地址：</em> ' + n.address + '</li></ul></div></div></div>';
+
+                //var opt = {
+//	 offset:new BMap.Size(-5, -28),
+//	};
+                var opts = {
+                    offset: new BMap.Size(-5, -28)
+                }
+                var infoWindow = new BMap.InfoWindow(sContent, opts); // 创建信息窗口对象
+                map.openInfoWindow(infoWindow, new BMap.Point(n.map_x, n.map_y)); // 打开信息窗口
+
+            }
+
+
+            var winhetght = $(window).height();
+            var winwidth = $(window).width();
+
+            $(".mapp").css("height", winhetght);
+            $(".mapp").css("width", winwidth);
+        </script>
