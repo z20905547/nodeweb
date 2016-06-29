@@ -70,7 +70,7 @@ $(document).ready(function () {
     function myInfo(n) {
         //changeCookie(n);
         var marker = new BMap.Marker(new BMap.Point(n.map_x, n.map_y));
-        var sContent = '<div class="t_box"><div class="boxt"><h3 class="all366C"> <a target="_blank" href="/buildings/'+n.id+'/460000/'+n.ac_id+'/'+n.buildings_name+'">' + n.buildings_name + '</a></h3>&nbsp;<img src="http://statics.wofangwang.com/images/icon/shou3.gif" width="49" height="19" /></div><div class="boxm"><div class="m1"><div class="txt"><ul><li><em>楼盘类型：</em>' + n.buildings_name + '</li><em>最新特价：</em><li>' + n.active_price + '元/平米</li><li><em>咨询热线：</em><i>' + n.server_phone_num + '</i></li><li><em>楼盘地址：</em> ' + n.address + '</li></ul></div></div></div>';
+        var sContent = '<div class="t_box"><div class="boxt"><h3 class="all366C"> <a target="_blank" href="/buildings/'+n.id+'/460000/'+n.ac_id+'/'+n.buildings_name+'">' + n.buildings_name + '</a></h3>&nbsp;<img src="../images/shou3.gif" width="49" height="19" /></div><div class="boxm"><div class="m1"><div class="txt"><ul><li><em>楼盘类型：</em>' + n.buildings_name + '</li><em>最新特价：</em><li>' + n.active_price + '元/平米</li><li><em>咨询热线：</em><i>' + n.server_phone_num + '</i></li><li><em>楼盘地址：</em> ' + n.address + '</li></ul></div></div></div>';
         //var opt = {
 //	 offset:new BMap.Size(-5, -28),
 //	};
