@@ -19,7 +19,7 @@ $(document).ready(function () {
             var obj = data;
             //alert("Data Loaded: " + obj.status);
             //先清空左侧buildingList
-            window.listDate = obj.data;
+            listDate = obj.data;
 
             $("#buildingList").empty();
             $.each(listDate, function (i, n) {

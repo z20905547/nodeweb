@@ -15,9 +15,9 @@
 <div class="mapL">
     <div class="mapLT">
         <div class="mapLTT clearfix">
-            <div class="mapSea w_360" id="suggestId"><input placeholder="请输入楼盘名称" type="text" id="xfmap_E01_46"
+            <div class="mapSea w_360" id="suggestId"><input placeholder="请输入关键字（楼盘名)" type="text" id="xfmap_E01_46"
                                                             style="color: rgb(153, 153, 153);"
-                                                            value="请输入楼盘名称" onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}"><a id="xfmap_E01_06"></a>
+                                                            value="请输入关键字（楼盘名)" onfocus="if (value =='请输入关键字（楼盘名)'){value =''}" onblur="if (value ==''){value='请输入关键字（楼盘名）'}"><a id="xfmap_E01_06" onclick="submitFourm();"></a>
 
             </div>
 
@@ -236,7 +236,43 @@
                 map.openInfoWindow(infoWindow, new BMap.Point(n.map_x, n.map_y)); // 打开信息窗口
 
             }
+            //楼盘搜索-单个标注
+            function submitFourm(){
+                map.clearOverlays();
+               var buildings_name = $("#xfmap_E01_46").val();
+                //alert(buildings_name);
+                if($.trim(buildings_name)=="请输入关键字（楼盘名)"){
 
+                    buildings_name="";
+
+                }
+               // alert(buildings_name);
+                params = {
+                    buildings_name: buildings_name
+                }
+                ajaxGet("get", URLMAP.findListByselect, params, function (data) {
+
+                    if (data.statusCode == "0000") {
+
+                        //var obj = data;
+                        //alert("Data Loaded: " + obj.status);
+                        //先清空左侧buildingList
+                        listDate = data.data;
+                        $.each(listDate, function (i, n) {
+
+                            biaozhu(n);
+
+                        });
+
+                    } else {
+                        $(".bottom-pull-loading").html("宝贝儿，出错啦，联系客服再试试哦！");
+                        setTimeout(function () {
+                            $(".bottom-pull-loading").hide();
+                        }, 3000);
+                    }
+                    loading = false;
+                });
+            }
 
             var winhetght = $(window).height();
             var winwidth = $(window).width();
