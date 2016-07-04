@@ -24,11 +24,9 @@
 </nav>
 <div class="header2">
     <div class="header_i"><a href="/"><img src="/images/m_banner.png" height="43"></a><span
-            class="icon-my2"><a href="/index.php?g=user&amp;m=index&amp;a=index"><i></i>
-
-        <p></p></a></span></div>
+            class="icon-my2"> </span></div>
     <div class="search2" style="display: block;">
-        <form target="_self" method="post" id="search_form" name="search_form" action="/findListBybname">
+
             <div class="csearch_wrap">
                 <div class="choose_opts">
                     <div class="wrap">
@@ -45,14 +43,56 @@
                     </div>
                 </div>
                 <div class="csearch-input"><span class="choose_title"><font>新房</font>
-                    <i class="icon-arrow"></i></span><input type="text" class="textInput" name="buildings_name"
+                    <i class="icon-arrow"></i></span><input type="text" class="textInput keyword" name="buildings_name"
                                                             id="buildings_name" placeholder="请输入楼盘名称" value=""><input
                         type="hidden" id="search_type" value="">
 
-                    <input type="submit" id="search_submit" class="search-submit right">搜索</input>
+                    <input type="submit" id="search_submit" class="search-submit right" onclick="submitFourm()">搜索</input>
                 </div>
             </div>
-            <div class="blank10"></div>
-        </form>
+            <div class="blank10 row"><select class="haveSelM1 col-xs-3 col-sm-3 col-md-3 col-lg-3" name="city_id" id="city_id" onchange="submiBtn()">
+                <option value="111" selected="selected">区域</option>
+                <option value="460100">海口市</option>
+                <option value="460200">三亚市</option>
+                <option value="460500">澄迈县</option>
+                <option value="460400">琼海市</option>
+                <option value="460600">文昌市</option>
+                <option value="460700">万宁市</option>
+                <option value="460300">东方市</option>
+                <option value="460800">定安县</option>
+                <option value="469000">屯昌县</option>
+                <option value="460100">临高县</option>
+                <option value="460120">白沙县</option>
+                <option value="460130">昌江县</option>
+                <option value="460140">乐东县</option>
+                <option value="460700">兴隆镇</option>
+            </select>
+
+                <select class="haveSelM2 col-xs-3 col-sm-3 col-md-3 col-lg-3" name="active_price" id="active_price" onchange="submiBtn()">
+                    <option value="222" selected="selected">价格</option>
+                    <option value="4000">4000以下</option>
+                    <option value="6000">4000-6000</option>
+                    <option value="8000">6000-8000</option>
+                    <option value="10000">8000-100000</option>
+                    <option value="11000">100000以上</option>
+                </select>
+                <select class="haveSelM3 col-xs-3 col-sm-3 col-md-3 col-lg-3" name="acreage" id="acreage" onchange="submiBtn()">
+                    <option value="333" selected="selected">面积</option>
+                    <option value="50"> 50㎡以下</option>
+                    <option value="70">50-70㎡</option>
+                    <option value="90">70-90㎡</option>
+                    <option value="110">90-110㎡</option>
+                    <option value="150">110-150㎡</option>
+                </select>
+                <select class="haveSelM4 col-xs-3 col-sm-3 col-md-3 col-lg-3" name="shi" id="shi" onchange="submiBtn()">
+                    <option value="444" selected="selected">户型</option>
+                    <option value="1">一居</option>
+                    <option value="2">二居</option>
+                    <option value="3">三居</option>
+                    <option value="4">四居</option>
+                    <option value="5">五居居</option>
+                    <option value="6">五居以上</option>
+                </select></div>
+
     </div>
 </div>
