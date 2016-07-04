@@ -6,6 +6,15 @@
       <div class="head-td f16">
         <ul>
           <li class="search-tr"><a href="javascript:void(0);" class="hover">找新房</a>
+
+          </li>
+          <li class="search-tt">
+            <input type="text"  class="search-inp f16 keyword" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}">
+            <input type="submit" value="" class="search-but" onclick="submitFourm()">
+            <ul class="sous-ts">
+            </ul>
+          </li>
+          <li class="search-hot f14">
             <select class="haveSelM1" name="city_id" id="city_id" onchange="submiBtn()">
               <option value="111" selected="selected">区域</option>
               <option value="460100">海口市</option>
@@ -49,27 +58,6 @@
               <option value="5">五居居</option>
               <option value="6">五居以上</option>
             </select>
-          </li>
-          <li class="search-tt">
-            <input type="text"  class="search-inp f16 keyword" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}">
-            <input type="submit" value="" class="search-but" onclick="submitFourm()">
-            <ul class="sous-ts">
-            </ul>
-          </li>
-          <li class="search-hot f14">
-            <span>热门片区：</span>
-            <a href="/cityId/460100" >海口</a>
-            <a href="/areaId/460105" >秀英区</a>
-            <a href="/areaId/460106" >龙华区</a>
-            <a href="/areaId/460107" >琼山区</a>
-            <a href="/areaId/460108" >美兰区</a>
-            <a href="/areaId/460109" >西海岸</a>
-            <a href="/cityId/460200" >三亚</a>
-            <a href="/cityId/460500" >澄迈</a>
-            <a href="/cityId/460400" >琼海</a>
-            <a href="/areaId/460220" >儋州</a>
-            <a href="/areaId/460503" >老城</a>
-            <a href="/areaId/460502" >金江</a>
 
           </li>
         </ul>
@@ -121,3 +109,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
