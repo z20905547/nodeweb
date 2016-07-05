@@ -4263,3 +4263,44 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 	padding-top: 3px;
 
 }
+
+.haveSelM1_m {
+	padding: 0 10px;
+	height: 30px;
+	width: 84.5px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #333;
+	word-break: break-all;
+	overflow: hidden;
+}
+.haveSelM2_m {
+	padding: 0 10px;
+	height: 30px;
+	width: 84.5px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #333;
+	word-break: break-all;
+	overflow: hidden;
+}
+.haveSelM3_m {
+	padding: 0 10px;
+	height: 30px;
+	width: 84.5px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #333;
+	word-break: break-all;
+	overflow: hidden;
+}
+.haveSelM4_m {
+	padding: 0 10px;
+	height: 30px;
+	width: 84.5px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #333;
+	word-break: break-all;
+	overflow: hidden;
+}
