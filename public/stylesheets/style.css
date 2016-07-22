@@ -4304,3 +4304,29 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 	word-break: break-all;
 	overflow: hidden;
 }
+.red_box_top {
+	top: 212px;
+}
+.red_box {
+	width: 60px;
+	height: 35px;
+	background: url(../images/hb.png) no-repeat;
+	position: absolute;
+	top: 4px;
+	right: 0px;
+}
+.red_box p {
+	text-align: center;
+	font-size: 12px;
+	color: #ffe92c;
+	margin-top: 17px;
+	line-height: 16px;
+	height: 16px;
+}
+.hongbao{
+	background: url(../images/hogbao.png) no-repeat;
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 20px;
+	color: red;
+}

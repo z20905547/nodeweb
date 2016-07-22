@@ -18,9 +18,15 @@ $(document).ready(function(){
 			map_x=data.data.map_x;
 			map_y=data.data.map_y;
 			xy(data.data.map_x,data.data.map_y);
+			var tejia = data.data.discount_price;
+			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'元</p></div>';
+			if (typeof(tejia) == "undefined")
+			{
+				var hongbao = '';
+			}
 
 			//楼盘动态
-			var adcontent1= '	<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
+			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
 				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>元</span></div>'+
 				'			<div class="main_active_price">'+
@@ -33,6 +39,7 @@ $(document).ready(function(){
 				'			</div>'
 			$(".small_content").html(adcontent1);
 			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
+
 				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'</div>'+
 				'<div class="base_content_line"><span>开盘时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'</div>'+
 				'<div class="base_content_line"><span>交房时间：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.deliver_date+'</div>'+
