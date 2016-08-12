@@ -154,8 +154,7 @@ function submiBtn() {
 		$('.active-list').html("");
 		if(data.statusCode=="0000"){
 		//	alert("33333333333");
-			var tejia = sublist[i].discount_price;
-			var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+
 			if (typeof(tejia) == "undefined")
 			{
 				var hongbao = '';
@@ -165,6 +164,9 @@ function submiBtn() {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
@@ -231,6 +233,9 @@ function submitFourm(){
 			var str="";
 
 			for(var i=0;i<sublist.length;i++){
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
