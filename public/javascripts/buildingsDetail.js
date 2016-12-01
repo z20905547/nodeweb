@@ -34,7 +34,7 @@ $(document).ready(function(){
 				'				<span>'+data.data.active_price+'</span>'+
 				'			</div>'+
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
-				'				<div class="ico_active_count_down"></div>'+
+		//		'				<div class="ico_active_count_down"></div>'+
 				'				<span></span>'+
 				'			</div>'
 			$(".small_content").html(adcontent1);
