@@ -59,7 +59,7 @@ $(document).ready(function(){
 							'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 							'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 							'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-								'<div class="ico_active_count_down"></div><span></span>'+
+				//				'<div class="ico_active_count_down"></div><span></span>'+
 							'</div>'+
 						'</div>'+
 						'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -180,7 +180,7 @@ function submiBtn() {
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-					'<div class="ico_active_count_down"></div><span></span>'+
+				//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -248,7 +248,7 @@ function submitFourm(){
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-					'<div class="ico_active_count_down"></div><span></span>'+
+				//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -326,7 +326,7 @@ function submiBtn_p() {
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-					'<div class="ico_active_count_down"></div><span></span>'+
+			//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -400,7 +400,7 @@ function submitFourm_p(){
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-					'<div class="ico_active_count_down"></div><span></span>'+
+			//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
