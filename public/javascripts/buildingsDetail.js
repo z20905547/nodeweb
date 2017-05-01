@@ -46,8 +46,18 @@ $(document).ready(function(){
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
 				'<div class="detail_phone "><span class="col-sm-4 col-md-4 col-lg-4">售楼处电话</span><span class="col-sm-1 col-md-1 col-lg-1">|</span><span class="col-sm-7 col-md-7 col-lg-7">'+data.data.server_phone_num+'</span></div>'+
 				'</div>'
-
 			$(".buildings_detail_text").html(adcontent2);
+
+			if(data.data.latestnews != "wu"){
+			    var adcontent3='<div class="banner_index4 row">'+
+
+				'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></div>'+
+				'<div class="jieshao2 col-sm-8 col-md-8 col-lg-8"><dl><dd><strong>楼盘最新情况：</strong>'+data.data.latestnews+'</dd>'+
+				'<dd>此消息由 <strong> '+data.data.nickname+' </strong>   最新发布！  想了解更多信息，请联系手机：<strong>'+data.data.user_phone+'</strong>（同微信） <p>'+data.data.recodetime+'</p> </dd></dl></div>'+
+
+				'</div>'
+			}
+			$(".module_detail_zuixinzhuangtai").html(adcontent3);
 
 			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
