@@ -3615,7 +3615,7 @@ h3 {
      }
 	.banner_index5{height:90px;position: relative;overflow:hidden;width: 100%;padding-top: 3px}
 	.sm_tx{ width: 20%;float: left}
-	.sm_nr{ width: 70%;float:left;margin-left: 20px;}
+	.sm_nr{ width: 78%;float:left;margin-left: 2px;}
 }
 
 @media screen and (min-width:768px){
