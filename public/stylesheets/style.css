@@ -51,9 +51,9 @@ a:hover {
 	cursor: default;
 }
 .head-logo{
-	width:465px;
-	height:100px;
-	margin-top: -15px;
+    margin-left: 50px;
+	height:70px;
+	margin-top: -5px;
 }
 	
 .head-static{
