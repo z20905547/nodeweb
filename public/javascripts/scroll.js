@@ -42,7 +42,7 @@ $(function () {
 							}
 							var oneobj=$("<div></div>");
 							oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-								window.location.href=WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3");
+								window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 							})
 							str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 										'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
