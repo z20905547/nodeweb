@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
@@ -12,7 +13,13 @@ var news = require('./routes/news');
 var demand = require('./routes/demand');
 var map = require('./routes/map');
 var app = express();
-
+app.use(session({
+	  secret: '12345',
+	 //name: 'testapp',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
+	cookie: {maxAge: 80000 },  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
+	resave: false,
+	saveUninitialized: true
+	}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
