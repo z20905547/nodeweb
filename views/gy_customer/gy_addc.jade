@@ -1,0 +1,18 @@
+extends ../gy_layout
+
+block content
+
+    input#user_name(type="hidden",value="#{user_name}")
+    input#worker_name(type="hidden",value="#{worker_name}")
+    input#worker_id(type="hidden",value="#{worker_id}")
+    input#p_id(type="hidden",value="#{p_id}")
+    input#partners_mark(type="hidden",value="#{partners_mark}")
+    input#remark(type="hidden",value="#{remark}")
+    include gy_addc.html
+    script( src='/javascripts/gy_addc.js')
+    script( src='/javascripts/head.js')
+    script( src='/javascripts/jquery.form.js')
+
+
+
+

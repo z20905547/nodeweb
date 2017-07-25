@@ -1,0 +1,83 @@
+<div id="mainLayer" style="height:100%;">
+
+    <div class="page-content" id="pageBackground">
+        <!-- ngIf: !IsMicroShop --><header ng-if="!IsMicroShop" class="ng-scope">
+        <div class="left">
+            <a href="javascript:history.back(-1);" class="head-icon red-txt red-f7">返回</a>
+
+        </div>
+    </header><!-- end ngIf: !IsMicroShop -->
+        <!-- ngIf: IsMicroShop -->
+        <!-- 头图 Begin -->
+        <article class="showPic" id="showPic">
+            <img ng-src="../images/1.png" ng-alt="产品图" class="showPic-img" id="bannerUrl" src="/images/1.png">
+            <div class="ay-topmenu" id="">
+                <div class="ay-arrup"></div>
+
+            </div>
+
+
+        </article>
+        <!-- 头图 End -->
+        <!-- 产品信息 Begin -->
+        <article class="productBox ay-tour-summary" id="productBox">
+
+
+        </article>
+        <!-- 产品信息 End -->
+        <!--限购政策 Begin-->
+
+        <!--／限购政策 End-->
+        <!-- 线路特色及亮点 Begin -->
+        <article class="wrapperBox" id="wrapFeature" ng-show="IsShowProductFeature">
+            <section class="wrapperBox-title">
+                <h2>线路特色及亮点</h2>
+            </section>
+            <section class="wrapperBox-main marginTop15 travel_describe" id="sectionFeature" >
+
+            </section>
+        </article>
+        <aside id="youhuiBtn" class="wrapperBox-aside-btn">
+            <div class="show"></div>
+        </aside>
+        <!-- 线路特点及亮点 end -->
+        <!--抢游惠出发日期 Begin
+        <!-- <div class="ay-list" ng-show="!IsSaleOut">
+            <h3 ng-click="ShowLayer('priceLayer')">查看出发日期</h3>
+            <div class="ay-list-content ay-list-button">
+                <ul>
+      <li ng-repeat="ditem in activityProduct.ShowDatelist" class="ng-scope">
+                    <a ng-click="btnSelect($index,'ditem.ActivityID')" ng-class="{'ay-active':isButtonActive == $index}" class="ng-binding ay-active">07-29</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        -->
+        <!--抢游惠出发日期 End-->
+
+        <!--参考行程 Begin-->
+      <article id="articleJourney" class="wrapperBox ng-scope" ng-if="IsShowJourneyList">
+        <section class="wrapperBox-title">
+            <h2>参考行程</h2>
+        </section>
+          <section class="wrapperBox-main marginTop15 travel_details" id="sectionFeature" >
+
+          </section>
+
+    </article>
+
+        <!-- 线路特色及亮点 Begin -->
+        <article class="wrapperBox22" id="wrapFeature22" >
+            <section class="wrapperBox-title">
+                <h2>包含楼盘</h2>
+            </section>
+
+                <div class="active-list"></div>
+
+        </article>
+
+
+    </div>
+
+
+</div>

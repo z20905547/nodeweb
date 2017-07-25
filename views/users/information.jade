@@ -1,0 +1,7 @@
+extends ../gy_layout
+
+block content
+    input#worker_id(type="hidden",value="#{worker_id}")
+    include information.html
+    script( src='/javascripts/gy_information.js')
+    script( src='/javascripts/gy_head.js')

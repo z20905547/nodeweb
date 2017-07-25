@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var buildings = require('./routes/buildings');
+var gy_buildings = require('./routes/gongying');
+var gy_customer = require('./routes/gy_customer');
 var news = require('./routes/news');
 var demand = require('./routes/demand');
 var map = require('./routes/map');
@@ -35,6 +37,8 @@ app.use('/', routes);
 
 app.use('/users', users);
 app.use('/buildings', buildings);
+app.use('/gy_customer', gy_customer);
+app.use('/gy_buildings', gy_buildings);
 app.use('/news', news);
 app.use('/demand', demand);
 app.use('/map', map);

@@ -1,10 +1,7 @@
-extends ../layout
+extends ../gy_layout
 
 block content
-    include ../head.jade
-    div #{errorMsg}
+
     include login.html
-    include ../footer.html
-    script( src='/javascripts/head.js')
-    script( src='/javascripts/backtop.js')
-    script( src='/javascripts/countTime.js')
+    script( src='/javascripts/login.js')
+    script( src='/javascripts/jquery.form.js')
