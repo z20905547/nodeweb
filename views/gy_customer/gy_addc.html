@@ -1,0 +1,54 @@
+<header class="header">
+
+    <div class="left">
+        <a href="javascript:history.back(-1);" class="head-icon red-txt red-f7">返回</a>
+
+    </div>
+
+    <div class="clear"></div>
+</header>
+<div class="container flow">
+    <form id="customerform" action="/gy_customer/gy_customer">
+
+
+        <!-- 客户性别 -->
+        <input type="hidden" id="c_sex" name="c_sex" value="1">
+        <div class="ttt" ></div>
+        <div class="recommend-client">
+            <div class="recommend-info bg-fff clearFix" id="user-name-div">
+                <span class="icon name"></span>
+                <input id="c_name" name="c_name" type="text" placeholder="客户姓名">
+                <a class="lady fr" href="javascript:void(0);" data-val="2"></a>
+                <a class="gentleman fr current" href="javascript:void(0);" data-val="1"></a>
+            </div>
+            <div class="recommend-info bg-fff" id="phone-number-div">
+                <span class="icon phone-num"></span>
+                <input id="c_phone" name="c_phone" type="text" maxlength="17" placeholder="客户手机号">
+            </div>
+
+            <div class="recommend-info h-auto bg-fff clearFix" id="remark-div">
+                <span class="icon remark fl"></span>
+                <div class="textarea">
+                    <textarea id="c_note" name="c_note" cols="30" rows="10" placeholder="备注客户意向及其他相关信息（选填）"></textarea>
+                </div>
+            </div>
+            <p class="hint-info">服务承诺：您的身份完全保密，客户信息也只仅限于本平台合作楼盘。</p>
+            <div class="submit-info">
+                <div id="tijiao">
+                    <button class="btn btn-success"  onclick="submitForm();">提交信息</button>
+                </div>
+                <div class="explain-info">
+                    <span class="check-box selected"><i></i></span>
+                    <span>我已阅读并同意</span>
+                    <a href="javascript:void(0);" onclick="">《推荐规则说明》</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+

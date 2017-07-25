@@ -1,0 +1,8 @@
+extends ../gy_layout
+
+block content
+    input#worker_id(type="hidden",value="#{worker_id}")
+    input#worker_name(type="hidden",value="#{worker_name}")
+    include wo.html
+    script( src='/javascripts/wo.js')
+    script( src='/javascripts/gy_head.js')

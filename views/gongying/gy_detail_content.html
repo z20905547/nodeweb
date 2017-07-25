@@ -1,0 +1,121 @@
+<header class="header">
+
+	<div class="left">
+		<a href="javascript:history.back(-1);" class="head-icon red-txt red-f7">返回</a>
+
+	</div>
+
+	<div class="clear"></div>
+</header>
+	<div class="container maincontent">
+		<div class="one_line col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="module_detail_title row"><span class="title_label">楼盘动态</span></div>
+			<div class="module_detail_body row buildings_active_loading">
+				<div class="buildings_detail_ad small_content col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+				<div class="buildings_detail_text small_content col-xs-12 col-sm-12 col-md-5 col-lg-5"></div>
+			<!--	<div class="module_detail_zuixinzhuangtai2 col-xs-12 col-sm-12 col-md-12 col-lg-12">	</div>-->
+				<div class="buildings_detail_price col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="text_content" id="text_content"></div>
+				</div>
+
+			</div>
+			<!--<div class="module_detail_zuixinzhuangtai col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			</div>
+			-->
+		</div>
+
+		<div class="active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="module_detail_title row"><span class="title_label">基本信息</span></div>
+			<div class="module_detail_body row buildings_base_loading">
+				<div class="loading-big"></div>
+			</div>
+		</div>
+		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="module_detail_title row house_pic_tag"><span class="title_label">户型图</span></div>
+			<div class="module_detail_body row house_pic_door">
+				<div class="loading-big"></div>
+			</div>
+		</div>
+		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="module_detail_title row effect_pic_tag"><span class="title_label">效果图</span></div>
+			<div class="module_detail_body row effect_pic_door">
+				<div class="loading-big"></div>
+			</div>
+		</div>
+<!--
+		<div class="content_block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="module_detail_title row"><span class="title_label">地图周边</span></div>
+			<div class="module_detail_body row">
+				<div class="loading-big"></div>
+			</div>
+		</div>
+-->
+	</div>
+<div id="elevator_item" class="maincontent  col-lg-12 ">
+        <a id="elevator" onclick="return false;" title="回到顶部"></a>
+        <a class="qr"></a>
+  	<div class="qr-popup">
+    	<a class="code-link"><img class="code" src="/images/wx.jpg"/></a>
+        <span>唯房会公众号</span>
+    <div class="arr"></div>
+  </div>
+  
+</div>
+<div  class="high_level">
+	<div class="opacity_level"></div>
+	<div class="close_ico">X</div>
+	<div class="big-content">
+		
+		<div onclick="changeBigPic(-1)" class="control left_control">&lt;</div>
+		
+		<div class="cur_pic ">
+			<table width="100%" height="100%">
+				<tr>
+					<td align="center">
+						<img class="cur_big_pic">
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div onclick="changeBigPic(1)" class="control right_control">&gt;</div>
+
+		<div class="cur_text">
+			<span class="cur_big_pic_num">
+			5
+			</span>
+			/
+			<span class="total_big_pic_num">
+			10
+			</span>
+		</div>
+	</div>
+</div>
+	<div  class="high_level2">
+		<div class="opacity_level2"></div>
+		<div class="close_ico2">X</div>
+		<div class="big-content2">
+
+			<div class="cur_pic2">
+				<img class="cur_big_pic2">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MfrGHAHxUwYQA9ypMVqZlIPkdGQeK8Bc"></script>
+	<script type="text/javascript">
+		// 百度地图API功能
+		function xy(map_x,map_y) {
+			var x = map_x;
+			var y = map_y;
+			var map = new BMap.Map("text_content");
+			var point = new BMap.Point(x, y);
+			map.addControl(new BMap.NavigationControl());
+			map.centerAndZoom(point, 15);
+			var marker = new BMap.Marker(point);  // 创建标注
+			map.addOverlay(marker);               // 将标注添加到地图中
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+		}
+	</script>

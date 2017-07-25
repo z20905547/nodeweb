@@ -1,0 +1,52 @@
+<header class="header">
+
+    <div class="left">
+        <a href="javascript:history.back(-1);" class="head-icon red-txt red-f7">返回</a>
+
+    </div>
+
+    <div class="clear"></div>
+</header>
+<form id="logform" action="gy_customer/log">
+
+    <div class="container flow bg-fff" id="area-con" style="height: 929px; overflow-y: auto;">
+        <textarea name="log_content" id="log_content" class="edit-progress" placeholder="填写客户信息或跟进详情。" maxlength="50" onpropertychange="this.style.height=this.scrollHeight + 'px'" oninput="this.style.height=this.scrollHeight + 'px'" style="height: 118px;"></textarea>
+    </div>
+
+</form>
+<div class="edit-container">
+    <button class="btn btn-success" onclick="saveFollowUp();">保存</button>
+</div>
+<div id="sendFloat" class="tz-box txz" style="display: none;">
+    <!--图文验证码提示框-->
+    <div id="mathCode" class="tz-con" style="display: none;">
+        <ul class="ipt-list">
+
+            <li class="tw-yzm">
+                <div class="flexbox">
+                    <img id="picVerifyCode" class="yzm" src="https://Captcha.fang.com/Display?type=wap&amp;width=150&amp;height=80&amp;r=">
+                    <input id="verifyCode" type="tel" class="ipt-text vcode" placeholder="请输入右侧验证码">
+                </div>
+            </li>
+        </ul>
+        <div class="tz-btn flexbox">
+            <input id="closeMathCode" type="button" value="取消">
+            <input id="submitVerifyCode" type="button" value="确定">
+        </div>
+    </div>
+    <div id="sendText" class="yzm-sta" style="display: none;">你确定啥都不填 就想提交？</div>
+
+    <!--语音验证码拨打提示框-->
+    <div id="voiceShow" class="tz-con" style="display: none;">
+        <ul class="ipt-list">
+            <li class="f15 center h65">
+                语音播报验证码电话拨打中，请留意接听来电
+            </li>
+        </ul>
+        <div class="tz-btn center">
+            <a id="closeVoice" class="red-df f16">我知道了</a>
+        </div>
+    </div>
+    <!--提示语框-->
+    <div id="voiceCodeNum" class="yzm-sta" style="display: none">验证码播报次数过多，请明天再试！<!--登录失败--></div>
+</div>

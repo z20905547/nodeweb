@@ -1,0 +1,15 @@
+extends ../gy_layout
+
+block content
+    input#customer_id(type="hidden",value="#{customer_id}")
+    input#log_userid(type="hidden",value="#{log_userid}")
+    input#log_username(type="hidden",value="#{log_username}")
+    input#log_phone(type="hidden",value="#{log_phone}")
+    input#order_id(type="hidden",value="#{order_id}")
+    include gy_log.html
+    script( src='/javascripts/gy_log.js')
+    script( src='/javascripts/head.js')
+    script( src='/javascripts/jquery.form.js')
+
+
+

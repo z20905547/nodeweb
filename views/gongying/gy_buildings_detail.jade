@@ -1,0 +1,13 @@
+extends ../gy_layout
+
+block content
+    input#proId(type="hidden",value="#{backproId}")
+    input#buildingsId(type="hidden",value="#{buildingsId}")
+    input#pid(type="hidden",value="#{pid}")
+    input#buildings_name(type="hidden",value="#{buildingsname}")
+
+    include ./gy_detail_content.html
+    script( src='/javascripts/gy_head.js')
+    script( src='/javascripts/backtop.js')
+    script( src='/javascripts/gy_buildingsDetail.js')
+   // script( src='/javascripts/countTime.js')
