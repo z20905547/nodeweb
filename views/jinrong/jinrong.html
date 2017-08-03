@@ -1,0 +1,216 @@
+
+
+<div>
+    <div class="banner-lc-vip">
+        <ul class="lc-banner clearfix" id="animationCarousel"><li class="lc-banner-bg3" mars_sead="JRWPHVISITOR_1_jrsyydlwph_btn__N" style="z-index: 3; opacity: 1;">   <a href="https://jr.vip.com/publicity?backId=ppc2016091603&amp;ep=pjinrongshoujiao" style="background-image: url(../images/jrbanner.png)" target="_blank">   </a></li></ul>
+        <ol id="turnDot" style="display: none;"></ol>
+        <a href="javascript:;" class="prev" style="display: none;"></a>
+        <a href="javascript:;" class="next" style="display: none;"></a>
+    </div>
+</div>
+
+
+<!-- 滚动公告 -->
+<div style="background: #F2F2F2;">
+<div class="notice" style="display:none;">
+    <div class="notice-main">
+        <i class=""></i>
+        <div id="marquee2" class="noticeContent">
+            <ul class="noticeText"></ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="lc-main clearfix">
+    <div class="float-l clearfix">
+        <div class="new-user-vip" style="display: none;" id="newUserVip"></div>
+        <!-- 唯品宝 -->
+        <!--在光大白名单内-->
+        <div class="clearfix xfdai-t">
+            <div class="float-l">
+                <a style="display: block;" id="gotoDetailLeftImg" href="//lc.vip.com/shanghaibank/fundDetail" mars_sead="shouye_wdl_logo_link_sh__N" target="_blank">
+                    <img src="../images/wfb.jpg">
+                </a>
+            </div>
+            <div class="vipb-l-con float-l vipb-l-con-new">
+                <div class="vipb-title clearfix">
+                    <div class="float-l js-tip">购房就送</div>
+                    <div class="float-l js-tip">按月返利</div>
+                    <div class="float-l wpb-desc">全新升级，更便捷，更高效</div>
+                    <div class="float-r font15px vipb-title-right">
+                        <a id="gotoDetail" class="gotoDetail" href="/" mars_sead="shouye_wdl_ckxq_link_sh__N"></a>
+                    </div>
+                </div>
+                <div class="vipb-l-con-content">
+
+                    <div class="vipb-con-bd  vipb-con-bd-new">
+                        <ul class="clearfix">
+                            <li class="vipb-con-bd-li-new">
+                                <div class="c-f10 pb18">
+                                    <span class="font30px" id="sevenAnnualIncomeActive">1-30</span>
+                                    <span class="font30px">%</span>
+                                </div>
+                                <!-- <div class="pb6">七日年化收益率</div> -->
+                                <div style="display:none;"><a href="javascript:;" class="rate-a">利率走势</a></div>
+                            </li>
+                            <li class="vipb-enter">
+                                <div style="" id="div-wangfenshouyi" class="vdl-advantage">
+                                    <!-- <div class="c-f10 pb18 font42px" id="millionCopiesIncome"></div>
+                                    <div>万份收益（元）</div> -->
+                                    <div class="font16px c-333">按月返还</div>
+                                    <div class="clearfix jr-advantage pt25">
+                                        <span>投资风险：</span>
+                                        <img src="//lc.vipstatic.com/images/low-denger_b3e691a.png">
+                                        <span>低</span>
+                                    </div>
+                                </div>
+                                <div style="display:none;" id="div-zuorishouyi" class="yesterday-profit">
+                                    <!-- <div class="c-f10 pb18 font30px" id="totalProfit-history">0.00</div>
+                                    <div>昨日收益（元）</div> -->
+                                    <div class="clearfix"><span class="lc-profit-l">昨日基金收益（元）</span><span class="lc-profit-r" id="totalProfit-history">0.00</span></div>
+                                    <div class="clearfi pt35"><span class="lc-profit-l">昨日奖励唯品币(元)</span><span class="lc-profit-r" id="yesterdayRewardAmount2">1.39</span></div>
+                                </div>
+                            </li>
+                            <!-- 这里要判断是否已经登录 未登录状态-->
+                            <li class="no-border-r vipb-user" id="unloginStatus" style="">
+                                <!-- <div class="c-333 font16px">
+                                    <span>稳健</span>
+                                    <span>灵活</span>
+                                    <span>赚钱</span>
+                                </div>
+                                <div>
+                                    <span>安全稳健</span>
+                                    <span>随时存取</span>
+                                    <span>持续收益</span>
+                                </div> -->
+                                <div class="pt24">
+                                    <a href="//lc.vip.com/productDetail" role="button" class="ui-btn-large ui-btn-primary" id="btn-continue-buy-2" mars_sead="shouye_wdl_ljgm_btn_sh__N">购房即送</a>
+                                    <a href="//lc.vip.com/productDetail" role="button" class="ui-btn-large ui-btn-disable" id="btn-cannot-buy-2" style="display: none">暂停购买</a>
+                                    <div class="stop-buy-tip" style="display: none">该产品已停止申购</div>
+                                </div>
+                            </li>
+                            <!-- 这里要判断是否已经登录 已登录状态-->
+                            <li class="no-border-r vipb-profit-show" id="loginStatus" style="display:none;">
+                                <div class="c-333 font16px redeem-left">
+                                    <span>总金额（元）</span>
+                                    <span class="font18px" id="loginStatus-totalAmount1">0.</span>
+                                    <span id="loginStatus-totalAmount2">00</span>
+                                </div>
+                                <div class="pt24 redeem-left">
+                                    <a href="//lc.vip.com/shanghaibank/fundDetail" role="button" class="ui-btn-large ui-btn-primary" id="btn-continue-buy" mars_sead="shouye_wdl_ljgm_btn_sh__N">立即购买</a>
+                                    <a href="javascript:;" role="button" class="width-90 ui-btn-large ui-btn-disable" id="btn-cannot-buy" style="display: none">暂停购买</a>
+                                    <a href="//lc.vip.com/shanghaibank/fundDetail?channel=htf#opreate=2" role="button" class="width-90 marlf-10 ui-btn-large ui-btn-primary" id="btn-redeem" mars_sead="shouye_htfsh_btn" style="display:none">赎回</a>
+                                    <div class="stop-buy-tip redeem-left" style="display: none">该产品已停止申购</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- 唯品众筹 3坑位改2-->
+
+
+
+
+
+
+    </div>
+    <div class="side-main clearfix">
+
+
+        <!-- 消费贷开通前 -->
+        <div class="vph-right-img" id="viphua-img" style="">
+            <ul id="getModuleRightImg"><li style="z-index: 3; opacity: 1;">  <a href="https://jr.vip.com/publicity?backId=ppc2016091603&amp;ep=pjinrongyoulun" class="xfdai-q" mars_sead="JRYLVISITOR_1_jrsyylwdl_btn__N" target="_blank">   <img src="../images/wfh.jpg">   </a></li></ul>
+            <ol id="turnDot2" style="display: none;"></ol>
+        </div>
+        <!-- 消费贷开通后 -->
+        <div class="viphua" id="viphua" style="display: none;">
+
+            <div class="viphua-title clearfix">
+                <div class="float-l">
+                    <span class="c-cbcbcf">◆</span>
+                    <a href="//jr.vip.com/center?ep=pjinrongxiangqing">我的唯品花</a>
+                </div>
+                <a class="float-r font15px" href="https://jr.vip.com/center?ep=pjinrongxiangqing">查看详情&gt;</a>
+            </div>
+            <div class="viphua-pendingPay">
+                <div class="amount" id="currentShouldRepayTotal"></div>
+                <div>本期待还款（元）</div>
+                <div class="interest" id="interest" style="display: none;">
+                    <img class="repay" src="//lc.vipstatic.com/images/repayment2_0b790b0.png">
+                    （含逾期利息<span class="c-f10" id="currentLateInterset"></span>元）
+                </div>
+            </div>
+            <div class="viphua-tip clearfix">
+                <!-- 已登录已开花-青年精英已开未用 或者 已登录已开花-青年精英已开已用 两者文案不同-->
+                <div class="viphua-tip-cost font18px c-f10 mt10" id="young-group"></div>
+                <!-- 已登录已开花-其他 -->
+                <div class="viphua-tip-cost" id="other-group">
+                    <div class="font18px c-f10  mt10" id="freeAmount"></div>
+                    <div class="c-999 mt5"> 可用额度( 元 )</div>
+                </div>
+                <div class="viphua-tip-date">
+                    <div class="font18px c-f10  mt10" id="latestBillRepayDate"></div>
+                    <div class="c-999 mt5">最晚还款日</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 唯品宝购买前 -->
+
+        <!-- 唯品宝购买后 -->
+
+
+        <!--右轮下方可配置广告页 -->
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+<div class="ui-window-mask" style="display: none;"></div>
+<!-- 提示用户输入出错信息 -->
+<div class="ui-dialog ui-dialog-small z-ui-dialog-in" id="ui-dialog-UserInput-error" style="display:none;">
+    <div class="ui-dialog-inner">
+        <a href="javascript:;" role="button" class="ui-dialog-close vipFont"><img src="//lc.vipstatic.com/images/close-img_ef231a3.png"></a>
+        <div class="ui-dialog-content">
+            <h3 class="ui-dialog-tips"><span class="text" id="ui-dialog-UserInput-error-msg"><i class="vipFont if-sigh"></i>信息输入有误，请重新输入</span></h3>
+            <p style="text-align:center;padding-left:25px;">如有疑问，请联系客服400-6789-888</p>
+        </div>
+        <div class="ui-dialog-command"><a href="javascript:;" role="button" id="ui-dialog-UserInput-error-OK" class="ui-btn-medium ui-btn-primary">确定</a></div>
+    </div>
+</div>
+<!-- 公告弹窗 -->
+<div class="ui-dialog z-ui-dialog-in notice-dialog" style="display:none;">
+    <div class="notice-dialog-inner">
+        <div class="notice-dialog-head">
+            <a href="javascript:;" role="button" class="ui-dialog-close vipFont"><img src="//lc.vipstatic.com/images/close-img_ef231a3.png"></a>
+        </div>
+        <div class="ui-dialog-content notice-content">
+            <h3 class="ui-dialog-tips" id="notice-title"></h3>
+            <p id="notice-detail"></p>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+

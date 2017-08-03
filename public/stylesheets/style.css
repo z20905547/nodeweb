@@ -4435,3 +4435,463 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 	margin-left: 20px;
 	color: red;
 }
+
+.banner-lc-vip {
+	position: relative;
+	width: 1160px;
+	margin: 0 auto;
+}
+.lc-banner {
+	width: 1920px;
+	height: 272px;
+	position: relative;
+	margin-left: -380px;
+}
+.lc-banner li {
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+}
+.lc-banner li a {
+	display: block;
+}
+.lc-banner-bg3 a {
+	background: url(//lc.vipstatic.com/images/vdl-banner_bac8183.jpg) 50% 0 no-repeat;
+	height: 272px;
+}
+.banner-lc-vip ol, .vph-right-img ol {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	z-index: 10;
+	margin-left: -74px;
+}
+
+.prev {
+	left: 0;
+	background-position: 11px 24px;
+}
+.prev, .next {
+	width: 36px;
+	display: block;
+	height: 70px;
+	position: absolute;
+	background: rgba(0,0,0,.6);
+	opacity: .6;
+	filter: alpha(opacity=60);
+	background-image: url(//lc.vipstatic.com/images/prev-next_701c5f6.png);
+	background-repeat: no-repeat;
+	top: 50%;
+	margin-top: -35px;
+	z-index: 100;
+}
+.next {
+	right: 0;
+	background-position: -26px 24px;
+}
+
+.notice {
+	position: relative;
+	background: #fff;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+	border-bottom: 1px solid #DDD;
+}
+
+.notice .notice-main {
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.notice .notice-main i {
+	position: absolute;
+	top: 9px;
+	display: inline-block;
+	height: 13px;
+	width: 16px;
+	background: url(//lc.vipstatic.com/images/horn_7ecf0cc.png) no-repeat center;
+	background-size: 16px 13px;
+}
+
+.notice .notice-main .noticeContent {
+	width: 928px;
+	height: 30px;
+	overflow: hidden;
+	margin-left: 26px;
+}
+
+.lc-main {
+	padding: 16px 0 43px;
+	width: 1160px;
+	margin: 0 auto;
+	background: #F2F2F2;
+}
+.float-l {
+	float: left;
+}
+.new-user-vip {
+	width: 873px;
+	height: 266px;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+.xfdai-t {
+	margin-bottom: 23px;
+}
+.float-l {
+	float: left;
+}
+.vipb-l-con-new {
+	width: 683px;
+	padding: 0;
+}
+.vipb-l-con {
+	border-top: 2px solid #AE6ADF;
+	width: 643px;
+	padding: 0 20px;
+	background: #fff;
+}
+.vipb-title {
+	margin: 0 20px;
+	height: 70px;
+	border-bottom: 1px solid #eee;
+	line-height: 70px;
+}
+
+.js-tip {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-top: 25px;
+	border-radius: 2px;
+	color: #fff;
+	background-color: #FE9D83;
+	text-align: center;
+	padding: 0 8px;
+}
+
+.gotoDetail {
+	line-height: 50px;
+	text-decoration: none;
+	color: #343434;
+	margin-left: 18px;
+}
+
+.vipb-l-con-content {
+	padding: 0 20px;
+}
+
+.vipb-con-bd-new {
+	padding-bottom: 45px;
+	padding-top: 50px;
+}
+.clearfix {
+}
+.vipb-con-bd {
+	padding: 8px 0 31px;
+	color: #999;
+	line-height: normal;
+	padding-bottom: 45px;
+	padding-top:52px;
+}
+
+.vipb-con-bd-li-new {
+	height: 93px!important;
+}
+.pb18 {
+	padding-bottom: 18px;
+}
+.c-f10 {
+	color: #f10180;
+}
+.font30px {
+	font-size: 30px;
+}
+.vipb-con-bd .rate-a {
+	color: #5eb4f1;
+	font-size: 12px;
+}
+.vipb-con-bd a {
+	font-size: 16px;
+	padding: 0;
+	text-align: center;
+	line-height: 33px;
+	width: 120px;
+	height: 33px;
+}
+.ui-btn-big, .ui-btn-large, .ui-btn-medium, .ui-btn-mini, .ui-btn-nor, .ui-btn-small {
+	display: inline-block;
+	border-radius: 3px;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: top;
+	-webkit-transition: .3s;
+	transition: .3s;
+	cursor: pointer;
+	_overflow-y: hidden;
+}
+.vipb-con-bd .vipb-enter {
+	width: 202px;
+	text-align: center;
+}
+.vipb-con-bd li {
+	border-right: 1px solid #ddd;
+	padding: 10px;
+	width: 162px;
+	height: 97px;
+	float: left;
+}
+.vipb-enter .vdl-advantage div {
+	padding-left: 20px;
+}
+.vdl-advantage div {
+	text-align: left;
+}
+.c-333 {
+	color: #333;
+}
+.vipb-enter .vdl-advantage div {
+	padding-left: 20px;
+}
+.vdl-advantage div {
+	text-align: left;
+}
+.pt25 {
+	padding-top: 25px;
+}
+.yesterday-profit {
+	line-height: 24px;
+}
+.lc-profit-l {
+	float: left;
+	vertical-align: middle;
+	color: #999;
+}
+.lc-profit-r {
+	float: right;
+	vertical-align: middle;
+	color: #f10180;
+	font-size: 20px;
+}
+.pt35 {
+	padding-top: 35px;
+}
+.lc-profit-l {
+	float: left;
+	vertical-align: middle;
+	color: #999;
+}
+.lc-profit-r {
+	float: right;
+	vertical-align: middle;
+	color: #f10180;
+	font-size: 20px;
+}
+
+.no-border-r li{
+	border-right: 0;
+}
+
+.vipb-con-bd .vipb-profit-show {
+	width: 217px;
+}
+li.no-border-r {
+	border-right: 0;
+
+}
+
+.lc-sale {
+	width: 873px;
+	background: #fff;
+	margin-bottom: 23px;
+	position: relative;
+}
+.xfdai-t {
+	margin-bottom: 23px;
+}
+.float-l {
+	float: left;
+}
+.side-main {
+	width: 270px;
+	float: right;
+}
+.vph-right-img {
+	position: relative;
+	margin-bottom: 16px;
+	width: 270px;
+	height: 266px;
+}
+.vph-right-img ul {
+	position: relative;
+}
+.vph-right-img ul li {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+}
+.vph-right-img ul a {
+	display: block;
+	height: 266px;
+}
+.side-main a {
+	text-decoration: none;
+}
+.xfdai-q {
+	display: block;
+}
+.banner-lc-vip ol, .vph-right-img ol {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	z-index: 10;
+	margin-left: -74px;
+}
+.viphua {
+	position: relative;
+	width: 270px;
+	height: 265px;
+	border-top: 2px solid #e0308b;
+	background: #fff;
+	margin-bottom: 16px;
+}
+.xfdai-t {
+	margin-bottom: 23px;
+}
+.xfdai-t {
+	margin-bottom: 23px;
+}
+.vipb-r-t {
+	width: 270px;
+	border-top: 2px solid #FF6266;
+	height: 91px;
+	background: url(//lc.vipstatic.com/images/user-bg_149726e.png) #fff;
+	text-align: center;
+	margin-bottom: 16px;
+}
+.user-lc {
+	padding-left: 25px;
+	background: url(//lc.vipstatic.com/images/user-person_df836ac.png) no-repeat;
+	color: #333;
+	display: inline-block;
+	margin: 30px 0 10px;
+}
+.user-lc-fast {
+	background: #FF6266;
+	width: 100px;
+	height: 18px;
+	color: #fff;
+	line-height: 18px;
+	font-size: 12px;
+	margin: 0 auto;
+}
+.side-main a {
+	text-decoration: none;
+}
+.vipb-r-b1 {
+	color: #999;
+	padding: 12px 18px;
+	width: 234px;
+	height: 120px;
+	background: url(//lc.vipstatic.com/images/enter-user_053131e.jpg) no-repeat right bottom #fff;
+}
+.vipb-r-b1 div {
+	padding-bottom: 10px;
+}
+.vipb-r-b1 div {
+	padding-bottom: 10px;
+}
+.vipb-r-b2 {
+	color: #999;
+	padding: 0;
+	width: 270px;
+	height: 144px;
+	background: url(//lc.vipstatic.com/images/new-lottery-banner2_ce710cd.png) no-repeat center center #fff;
+}
+.xfdai-t {
+	margin-bottom: 23px;
+}
+.vipb-yr {
+	width: 270px;
+	background: #fff;
+}
+.viplc-help-title {
+	height: 54px;
+	line-height: 54px;
+	font-size: 18px;
+	background: url(//lc.vipstatic.com/images/tip_e061d15.png) no-repeat 19px center;
+	padding-left: 39px;
+	border-bottom: 1px solid #ddd;
+	padding-right: 16px;
+}
+
+.side-main a {
+	text-decoration: none;
+}
+.font15px {
+	font-size: 15px;
+}
+.float-r {
+	float: right;
+}
+.profit-text {
+	padding: 25px 0 10px;
+	text-align: center;
+	color: #999;
+}
+.yesterday-profit {
+	line-height: 24px;
+}
+.font30px {
+	font-size: 30px;
+}
+.font30px {
+	font-size: 30px;
+}
+.c-f10 {
+	color: #f10180;
+}
+.vipb-con-bd .vipb-user div {
+	padding-bottom: 5px;
+}
+.pt24 {
+	padding-top: 24px;
+}
+
+.ui-btn-primary, .ui-btn-primary:active, .ui-btn-primary:hover, .ui-btn1, .ui-btn1:active, .ui-btn1:hover {
+	color: #fff;
+}
+.ui-btn-primary, .ui-btn1 {
+	background-color: #f10180;
+	border: 1px solid #f10180;
+}
+.ui-btn-disable, .ui-btn-disable:active, .ui-btn-disable:hover, .z-ui-btn-loading, .z-ui-btn-loading:active, .z-ui-btn-loading:hover {
+	border: 1px solid #d0d0d0;
+	color: #999;
+	background: #d0d0d0;
+	cursor: not-allowed;
+}
+.ui-btn-big, .ui-btn-large {
+	min-width: 72px;
+	_width: 72px;
+	padding: 0 35px;
+	font: 18px/44px tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,'\5FAE\8F6F\96C5\9ED1','\5B8B\4F53',sans-serif;
+	_line-height: 48px;
+	height: 44px;
+}
+.vipb-con-bd .vipb-user {
+
+	text-align: center;
+	float: right;
+}
