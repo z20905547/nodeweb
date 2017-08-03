@@ -13,6 +13,7 @@ var gy_buildings = require('./routes/gongying');
 var gy_customer = require('./routes/gy_customer');
 var news = require('./routes/news');
 var demand = require('./routes/demand');
+var jinrong = require('./routes/jinrong');
 var map = require('./routes/map');
 var app = express();
 app.use(session({
@@ -41,6 +42,7 @@ app.use('/gy_customer', gy_customer);
 app.use('/gy_buildings', gy_buildings);
 app.use('/news', news);
 app.use('/demand', demand);
+app.use('/jinrong', jinrong);
 app.use('/map', map);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
