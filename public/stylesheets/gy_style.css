@@ -144,7 +144,10 @@ a:hover {
 }
 
 .none-padding {
-    padding: 0 !important;
+    padding-top: 10px;
+    padding-right: 0px;
+
+    padding-left: 0px;
 }
 
 
@@ -5629,6 +5632,7 @@ pre {
     border-bottom: 1px solid #e2e2e2;
     margin-top: 10px;
 }
+
 .ay-tour-summary {
     padding: 10px;
     background-color: #fff;
