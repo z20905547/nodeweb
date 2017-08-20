@@ -3626,6 +3626,14 @@ h3 {
 	.touxiang3{
 		display:none;
 	}
+	.notice {
+		position: relative;
+		background: #fff;
+
+		line-height: 30px;
+		margin: 0 auto;
+		border-bottom: 1px solid #DDD;
+	}
 	/*详情页 楼盘最新状况*/
 	.banner_index4{height:auto;position: relative;overflow:hidden;width: 100%;	font: 15px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
 		color: #333;float: left;background-color: #FFF1EE }
@@ -4494,14 +4502,7 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 	background-position: -26px 24px;
 }
 
-.notice {
-	position: relative;
-	background: #fff;
-	height: 30px;
-	line-height: 30px;
-	margin: 0 auto;
-	border-bottom: 1px solid #DDD;
-}
+
 
 .notice .notice-main {
 	width: 1024px;
