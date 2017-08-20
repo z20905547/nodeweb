@@ -53,7 +53,7 @@ $(document).ready(function(){
 				'</div>'+
 				'</div>';
 				oneobj4.addClass("right-img none-padding").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].acid).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.gy_buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+					window.open(WEBMAP.gy_buildingsdetail+$(this).attr("data-id")+"/"+46000+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 			oneobj4.append(str4);
 			$('.active-list').append(oneobj4);

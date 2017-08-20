@@ -114,7 +114,7 @@ $(document).ready(function(){
 				'<figure>'+
 				'<p class="img"><img src="../images/'+i+'.png" alt="旅游地产"></p>'+
 				'<figcaption>'+
-				'<h3>边旅游边看房</h3>'+
+				'<h3>'+sublist[i].travel_name+'</h3>'+
 				'<p class="text">'+sublist[i].travel_route+'</p>'+
 				'</figcaption>'+
 				'</figure>'+
@@ -205,7 +205,7 @@ function submiBtn() {
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原22222222价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 				//	'<div class="ico_active_count_down"></div><span></span>'+
@@ -214,7 +214,9 @@ function submiBtn() {
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					'<div class="main_active_buildings_name1"><span><strong>'+sublist[i].buildings_name+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>'+
+					'<span class="main_active_name">均价：</span><span>'+sublist[i].first_price+'</span><span>元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+
+					'<span class="main_active_name">佣金：<span>'+sublist[i].commission_out+'</span></div>'+
 					'</div>'+
 					'</div>';
 				oneobj.append(str);
@@ -282,7 +284,9 @@ function submitFourm(){
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					'<div class="main_active_buildings_name1"><span><strong>'+sublist[i].buildings_name+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>'+
+					'<span class="main_active_name">均价：</span><span>'+sublist[i].first_price+'</span><span>元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+
+					'<span class="main_active_name">佣金：<span>'+sublist[i].commission_out+'</span></div>'+
 					'</div>'+
 					'</div>';
 				oneobj.append(str);
@@ -360,7 +364,9 @@ function submiBtn_p() {
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					'<div class="main_active_buildings_name1"><span><strong>'+sublist[i].buildings_name+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>'+
+					'<span class="main_active_name">均价：</span><span>'+sublist[i].first_price+'</span><span>元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+
+					'<span class="main_active_name">佣金：<span>'+sublist[i].commission_out+'</span></div>'+
 					'</div>'+
 					'</div>';
 				oneobj.append(str);
@@ -434,7 +440,9 @@ function submitFourm_p(){
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					'<div class="main_active_buildings_name1"><span><strong>'+sublist[i].buildings_name+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>'+
+					'<span class="main_active_name">均价：</span><span>'+sublist[i].first_price+'</span><span>元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+
+					'<span class="main_active_name">佣金：<span>'+sublist[i].commission_out+'</span></div>'+
 					'</div>'+
 					'</div>';
 				oneobj.append(str);
