@@ -20,7 +20,7 @@ $(document).ready(function(){
 				var str2=
 					'<h4 class="ay-ellipsis ng-binding" id="sourcetxt" ng-bind="ProductName1">'+sublist[i].travel_name+'</h4>'+
 
-					'<p class="productBox-des ng-binding " >'+sublist[i].travel_route+'</p>'
+					'<p class="productBox-des ng-binding " ><h5>'+sublist[i].travel_route+'</h5></p>'
 
 				var str= sublist[i].travel_describe
 
