@@ -24,7 +24,7 @@ function onClik123() {
  //   alert(JSON.stringify(data));
     var jsonuserinfo = $('#loginForm').serializeObject();
     ////alert(JSON.stringify(jsonuserinfo));
-    //
+    alert("333333333333");
     var options = {
         url:URLMAP.gy_login,
         data:JSON.stringify(jsonuserinfo),
@@ -81,7 +81,7 @@ function onClik123() {
 
                 document.getElementById('loginForm').submit();
       //          res.render('users/user_info', { title: '我的信息 | 共赢经纪',worker_name:worker_name});
-      //          alert("333333333333");
+                alert("333333333333");
             }else{//登陆失败，返回登陆页面
        //         res.render('users/login', { title: '登陆 | 海南唯房会',errorMsg:userName+'闲人免进！'});
             }
@@ -150,7 +150,7 @@ function onClik123() {
     }
 }
 
-//注册
+//gongying用户注册
 
 function onClik456(){
   // var data1 = $("#registerPage").serializeArray(); //自动将form表单封装成json
@@ -230,7 +230,7 @@ function onClik456(){
                     }
                     ;
                 }
-                setTimeout(window.location.href = "/users/login", "30000")
+                setTimeout(window.location.href = "/users/login2", "30000")
 
 
             }
@@ -244,6 +244,205 @@ function onClik456(){
     $('#registerPage').ajaxSubmit(options);
 
   //  $('#registerPage').clearForm();
+
+
+    function showRequest() {
+        var name = $("#usname").val();
+        var phone = $("#user_name").val(); //手机号码
+        var password = $("#password").val();
+        var remark = '0';// 机构编码
+
+
+
+        if (name == '') {
+
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText").css('display') == "none") {
+                $("#sendText").css("display", 'block');
+            }
+            setTimeout(func, "2000");//三秒后执行
+
+            function func() {
+                if ($("#sendText").css('display') == "block") {
+                    $("#sendText").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+
+            return false;
+        }
+
+        if (phone == '') {
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText2").css('display') == "none") {
+                $("#sendText2").css("display", 'block');
+            }
+
+            setTimeout(func, "2000");//三秒后执行
+
+            function func() {
+                if ($("#sendText2").css('display') == "block") {
+                    $("#sendText2").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+            return false;
+        }
+
+
+
+        if (password == '') {
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText3").css('display') == "none") {
+                $("#sendText3").css("display", 'block');
+            }
+
+            setTimeout(func, "2000");//三秒后执行
+
+            function func() {
+                if ($("#sendText3").css('display') == "block") {
+                    $("#sendText3").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+            return false;
+        }
+
+
+        if (partners_mark == '') {
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText4").css('display') == "none") {
+                $("#sendText4").css("display", 'block');
+            }
+
+            setTimeout(func, "2000");//三秒后执行
+
+            function func() {
+                if ($("#sendText4").css('display') == "block") {
+                    $("#sendText4").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+            return false;
+        }
+    }
+}
+
+
+//唯房会用户注册
+
+function onClikWfh(){
+    // var data1 = $("#registerPage").serializeArray(); //自动将form表单封装成json
+    //  alert(JSON.stringify(data1));
+    var jsonuserinfo = $('#registerPage').serializeObject();
+    //alert(JSON.stringify(jsonuserinfo));
+
+    var options = {
+        url:URLMAP.gy_register,
+        data:JSON.stringify(jsonuserinfo),
+        type:"post",
+        dataType: "JSONP",
+        beforeSubmit: showRequest,
+        success: function (data) {
+
+            if (data.statusCode == "1111"){
+                if ($("#sendFloat").css('display') == "none") {
+                    $("#sendFloat").css("display", 'block');
+                }
+
+                if ($("#sendText5").css('display') == "none") {
+                    $("#sendText5").css("display", 'block');
+                }
+
+                setTimeout(func, "2000");//三秒后执行
+
+                function func() {
+                    if ($("#sendText5").css('display') == "block") {
+                        $("#sendText5").css("display", 'none');
+                    }
+                    if ($("#sendFloat").css('display') == "block") {
+                        $("#sendFloat").css("display", 'none');
+                    }
+                }
+                return false;
+            }
+
+            if (data.statusCode == "2222"){
+                if ($("#sendFloat").css('display') == "none") {
+                    $("#sendFloat").css("display", 'block');
+                }
+
+                if ($("#sendText6").css('display') == "none") {
+                    $("#sendText6").css("display", 'block');
+                }
+
+                setTimeout(func, "2000");//三秒后执行
+
+                function func() {
+                    if ($("#sendText6").css('display') == "block") {
+                        $("#sendText6").css("display", 'none');
+                    }
+                    if ($("#sendFloat").css('display') == "block") {
+                        $("#sendFloat").css("display", 'none');
+                    }
+                }
+                return false;
+            }
+
+            if (data.statusCode == "0000"){
+                if ($("#sendFloat").css('display') == "none") {
+                    $("#sendFloat").css("display", 'block');
+                }
+
+                if ($("#sendText7").css('display') == "none") {
+                    $("#sendText7").css("display", 'block');
+                }
+
+                setTimeout(func, "3000");//三秒后执行
+
+                function func() {
+                    if ($("#sendText7").css('display') == "block") {
+                        $("#sendText7").css("display", 'none');
+                    }
+                    if ($("#sendFloat").css('display') == "block") {
+                        $("#sendFloat").css("display", 'none');
+                    }
+                    ;
+                }
+                setTimeout(window.location.href = "/users/login2", "30000")
+
+
+            }
+
+        },
+        error: function () {
+
+            alert("系统出现错误，请联系管理员");
+        }
+    };
+    $('#registerPage').ajaxSubmit(options);
+
+    //  $('#registerPage').clearForm();
 
 
     function showRequest() {
@@ -346,6 +545,3 @@ function onClik456(){
         }
     }
 }
-
-// 登录
-
