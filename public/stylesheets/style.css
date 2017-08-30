@@ -3247,7 +3247,7 @@ h3 {
 .hjsbox{
 	display:none
 }
-.banner_index2{height:150px;position: relative;overflow:hidden;width: 348px;margin:0px auto 15px;}
+.banner_index2{position: relative;overflow:hidden;width: 348px;margin:0px auto 15px;}
 .banner_index4{position: relative;overflow:hidden;width: 348px;margin:0px auto 15px;}
 .banner_index5{height:191px;position: relative;overflow:hidden;width: 348px;margin:0px auto 15px;}
 /*需求页面*/
