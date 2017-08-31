@@ -1,0 +1,6 @@
+extends ../gy_layout
+block content
+    input#customer_id(type="hidden",value="#{customer_id}")
+    include gy_order.html
+    script( src='/javascripts/gy_order.js')
+    script( src='/javascripts/head.js')
