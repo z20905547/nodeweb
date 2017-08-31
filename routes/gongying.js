@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+
 /* GET home page. */
 router.get('/gy_biuldList', function(req, res, next) {
   //获取楼盘数据

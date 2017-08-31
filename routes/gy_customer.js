@@ -20,6 +20,7 @@ router.get('/gy_customer', function(req, res, next) {
 		})
 
 
+
 });
 router.get('/:customer_id(\\d+)', function(req, res, next) {
 	res.render('gy_customer/gy_order', { customer_id:req.params.customer_id});

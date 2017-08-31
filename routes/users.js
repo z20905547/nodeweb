@@ -101,7 +101,7 @@ router.post('/login', function(req, res, next) {
 	var partners_mark=req.body.partners_mark;
 	var remark=req.body.remark;
 
-	
+
 	//var worker_id=req.body.id;
 	//var tag=req.body.user_name;
 
@@ -114,6 +114,7 @@ router.post('/login', function(req, res, next) {
 	    req.session.p_id=p_id;
 	    req.session.partners_mark=partners_mark;
 	    req.session.remark=remark;
+
 
 
 		res.render('gongying/gy_index', { title: '我的信息 | 海南唯房会',remark:remark,worker_name:worker_name,worker_id:worker_id,backproId:460000});
