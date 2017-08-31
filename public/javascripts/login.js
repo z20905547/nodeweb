@@ -24,7 +24,7 @@ function onClik123() {
  //   alert(JSON.stringify(data));
     var jsonuserinfo = $('#loginForm').serializeObject();
     ////alert(JSON.stringify(jsonuserinfo));
-    alert("333333333333");
+   // alert("333333333333");
     var options = {
         url:URLMAP.gy_login,
         data:JSON.stringify(jsonuserinfo),
@@ -81,7 +81,7 @@ function onClik123() {
 
                 document.getElementById('loginForm').submit();
       //          res.render('users/user_info', { title: '我的信息 | 共赢经纪',worker_name:worker_name});
-                alert("333333333333");
+        //        alert("333333333333");
             }else{//登陆失败，返回登陆页面
        //         res.render('users/login', { title: '登陆 | 海南唯房会',errorMsg:userName+'闲人免进！'});
             }
