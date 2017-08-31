@@ -12,6 +12,7 @@ var WEBMAP={
 	    orderdetail:WEBURL+"gy_customer/",
 	    gy_buildingsdetail:WEBURL+"gy_buildings/"
 }
+
 var URLMAP={
 		citylist:HTTPURL+"jsondata/area/getSubAreaList",
 		buildingslist:HTTPURL+"jsondata/buildings/getBuildingsDetailList",
