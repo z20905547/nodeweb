@@ -4,6 +4,9 @@ block content
     input#worker_id(type="hidden",value="#{worker_id}")
     input#worker_name(type="hidden",value="#{worker_name}")
     input#remark(type="hidden",value="#{remark}")
+    #{worker_id}
+    #{worker_name}
+    #{remark}    
     include gy_customer.html
     script( src='/javascripts/gy_customer.js')
     script( src='/javascripts/head.js')

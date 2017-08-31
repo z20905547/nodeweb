@@ -81,9 +81,9 @@ function onClik123() {
 
                 document.getElementById('loginForm').submit();
       //          res.render('users/user_info', { title: '我的信息 | 共赢经纪',worker_name:worker_name});
-               alert("444444444444");
+      //         alert("444444444444");
             }else{//登陆失败，返回登陆页面
-                res.render('users/login', { title: '登陆 | 海南唯房会',errorMsg:userName+'闲人免进！'});
+            //    res.render('users/login', { title: '登陆 | 海南唯房会',errorMsg:userName+'闲人免进！'});
             }
 
         },
