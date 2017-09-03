@@ -5006,21 +5006,12 @@ p {
     color: #333;
     padding-left: 19px;
 }
-.container.flow {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-    margin-top: -10px;
-    padding-top: -10px;
-}
+
 
 .client-info .head-info {
     height: 130px;
     padding: 0 16px;
-    background-color: #4891d1;
+    background-color: #ff5350;
 }
 .client-info .head-info .name {
     padding-top: 19px;
@@ -5129,12 +5120,7 @@ pre {
 .bg-fff {
     background-color: #fff;
 }
-.container {
 
-    margin-right: auto;
-    margin-left: auto;
-    overflow-x: hidden;
-}
 .edit-container {
     overflow: hidden;
     width: 80%;
@@ -5294,7 +5280,7 @@ pre {
     padding: 15px 36px 4px;
 }
 .btn.btn-success {
-    background-color: #2e71ba;
+    background-color: #ff5350;
 }
 .btn {
     display: inline-block;
@@ -5972,4 +5958,23 @@ header {
     border-bottom: 1px solid #e2e2e2;
     margin-top: 10px;
 
+}
+.lvju{
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: -8px;
+    margin-bottom: -5px;
+}
+.active-list {
+    padding-top: 2px;
+}
+.zaixiao{
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 2px;
+
+}
+.mima{
+   padding-top: 100px;
+   text-align: center;
 }

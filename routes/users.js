@@ -4,10 +4,10 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 	//已经登陆跳转到user_info
 	if(req.session.sign){
-		res.render('users/user_info', { title: '我的信息 | 海南唯房会'});
+		res.render('users/user_info', { title: '我的信息 | 共赢经纪'});
 	}else{
 		//未登陆跳转login
-		res.render('users/login', { title: '登陆 | 海南唯房会'});
+		res.render('users/login', { title: '登陆 | 共赢经纪'});
 	}
 	
 });
@@ -23,11 +23,22 @@ router.get('/user_info', function(req, res, next) {
 });
 router.get('/login', function(req, res, next) {
 	//已经登陆跳转到user_info
-	if(req.session.sign){
-		res.render('users/gy_index', { title: '我的信息 | 海南唯房会',backproId:460000});
+	if(req.session.sign) {
+			res.render('users/gy_index', {title: '我的信息 | 共赢经纪', backproId: 460000});
 	}else{
 		//未登陆跳转login
-		res.render('users/login', { title: '登陆 | 海南唯房会',backproId:460000});
+		res.render('users/login', { title: '登陆 | 共赢经纪',backproId:460000});
+	}
+});
+
+router.get('/login/:pagemark(\\d+)', function(req, res, next) {
+	//console.log("pagemark:"+pagemark);
+	//已经登陆跳转到user_info
+	if(req.session.sign) {
+		res.render('users/gy_index', {title: '我的信息 | 共赢经纪', backproId: 460000});
+	}else{
+		//未登陆跳转login
+		res.render('users/login', { title: '登陆 | 共赢经纪',backproId:460000,pagemark:req.params.pagemark});
 	}
 });
 router.get('/login2', function(req, res, next) {
@@ -59,6 +70,15 @@ router.get('/register2', function(req, res, next) {
 
 
 });
+// 找回密码
+router.get('/mm', function(req, res, next) {
+	//已经登陆跳转到user_info
+
+	res.render('users/mm', { title: '找回密码'});
+
+
+});
+
 
 router.get('/gy_index', function(req, res, next) {
 	//已经登陆跳转到user_info
@@ -72,7 +92,7 @@ router.get('/wo', function(req, res, next) {
 	if(req.session.sign){
 		worker_name=req.session.worker_name;
 		worker_id=req.session.worker_id;
-		res.render('users/wo', { title: '我的信息 | 海南唯房会',worker_name:worker_name,worker_id:worker_id});
+		res.render('users/wo', { title: '我的信息 | 共赢经纪',worker_name:worker_name,worker_id:worker_id});
 	}else{
 		//未登陆跳转login
 		res.render('users/wo', { title: '我的帐户'});
@@ -83,7 +103,7 @@ router.get('/information', function(req, res, next) {
 	if(req.session.sign){
 		worker_name=req.session.worker_name;
 		worker_id=req.session.worker_id;
-		res.render('users/information', { title: '我的信息 | 海南唯房会',worker_name:worker_name,worker_id:worker_id});
+		res.render('users/information', { title: '我的信息 | 共赢经纪',worker_name:worker_name,worker_id:worker_id});
 	}else{
 		//未登陆跳转login
 		res.render('users/information', { title: '我的资料'});
@@ -100,7 +120,7 @@ router.post('/login', function(req, res, next) {
 	var p_id=req.body.p_id;
 	var partners_mark=req.body.partners_mark;
 	var remark=req.body.remark;
-
+	var pagemark=req.body.pagemark;
 
 	//var worker_id=req.body.id;
 	//var tag=req.body.user_name;
@@ -115,9 +135,19 @@ router.post('/login', function(req, res, next) {
 	    req.session.partners_mark=partners_mark;
 	    req.session.remark=remark;
 
+	    //console.log("pagemark:"+pagemark);
+
+       if(pagemark==1){
+		   res.render('gy_customer/gy_addc', { worker_id:worker_id, user_name:user_name, worker_name:worker_name, p_id:p_id, partners_mark:partners_mark,remark:remark});
+	   }else if (pagemark==2){
+		   res.render('users/wo', {title: '我的信息 | 共赢经纪', worker_name: worker_name, worker_id: worker_id});
+	   } else{
+		   res.render('gongying/gy_index', { title: '我的信息 | 共赢经纪',remark:remark,worker_name:worker_name,worker_id:worker_id,backproId:460000});
+	   }
 
 
-		res.render('gongying/gy_index', { title: '我的信息 | 海南唯房会',remark:remark,worker_name:worker_name,worker_id:worker_id,backproId:460000});
+
+
 	//}else{//登陆失败，返回登陆页面
 	//	res.render('users/login', { title: '登陆 | 海南唯房会',errorMsg:userName+'闲人免进！'});
 	//}
@@ -126,8 +156,6 @@ router.post('/login', function(req, res, next) {
 	//res.render('users/login', { title: req.body+'登陆 | 海南唯房会'});
 
 });
-
-
 //唯房会注册用户登录
 router.post('/login2', function(req, res, next) {
 

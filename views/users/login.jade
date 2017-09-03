@@ -1,7 +1,7 @@
 extends ../gy_layout
 
 block content
-
+    input#pagemark(type="hidden",value="#{pagemark}")
     include login.html
     script( src='/javascripts/login.js')
     script( src='/javascripts/jquery.form.js')

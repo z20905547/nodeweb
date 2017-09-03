@@ -9,13 +9,13 @@
 </header>
 <form id="logform" action="gy_customer/log">
 
-    <div class="container flow bg-fff" id="area-con" style="height: 929px; overflow-y: auto;">
-        <textarea name="log_content" id="log_content" class="edit-progress" placeholder="填写客户信息或跟进详情。" maxlength="50" onpropertychange="this.style.height=this.scrollHeight + 'px'" oninput="this.style.height=this.scrollHeight + 'px'" style="height: 118px;"></textarea>
+    <div class="container flow bg-fff" id="area-con" style="height: 300px; overflow-y: auto;">
+        <textarea name="log_content" id="log_content" class="edit-progress" placeholder="填写客户信息或跟进详情。" maxlength="50"  style="height: 100px;"></textarea>
     </div>
 
 </form>
 <div class="edit-container">
-    <button class="btn btn-success" onclick="saveFollowUp();">保存</button>
+    <button class="btn btn-success" onclick="saveFollowUp();">保   存</button>
 </div>
 <div id="sendFloat" class="tz-box txz" style="display: none;">
     <!--图文验证码提示框-->
@@ -24,7 +24,7 @@
 
             <li class="tw-yzm">
                 <div class="flexbox">
-                    <img id="picVerifyCode" class="yzm" src="https://Captcha.fang.com/Display?type=wap&amp;width=150&amp;height=80&amp;r=">
+                    <img id="picVerifyCode" class="yzm" src="/">
                     <input id="verifyCode" type="tel" class="ipt-text vcode" placeholder="请输入右侧验证码">
                 </div>
             </li>

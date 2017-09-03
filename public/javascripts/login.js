@@ -1,4 +1,4 @@
-
+pagemark=$("#pagemark").val();
 
 
 $.fn.serializeObject = function()
@@ -70,11 +70,13 @@ function onClik123() {
                 //req.session.password=data.data.password;
                 //req.session.record_time=data.data.record_time;
                 //req.session.is_right=data.data.is_right;
+               // alert(pagemark);
                 str='<input type="hidden" name="worker_name" id="worker_name" value="'+data.data.worker_name+'"> '+
                     '<input type="hidden" name="worker_id" id="worker_id" value="'+data.data.id+'"> '+
                     '<input type="hidden" name="p_id" id="p_id" value="'+data.data.p_id+'"> '+
                     '<input type="hidden" name="partners_mark" id="partners_mark" value="'+data.data.partners_mark+'"> '+
                     '<input type="hidden" name="remark" id="remark" value="'+data.data.remark+'"> '+
+                    '<input type="hidden" name="pagemark" id="pagemark" value="'+pagemark+'"> '+
                     '<input type="hidden" name="user_name" id="user_name" value="'+data.data.user_name+'"> ';
                 //oneobj.append(str);
                 $('.hedden').append(str);
