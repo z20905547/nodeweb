@@ -55,7 +55,7 @@ $.fn.serializeObject = function()
 function submitForm() {
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
-	var jsonuserinfo = $('#logform').serializeObject();
+	var jsonuserinfo = $('#customerform').serializeObject();
 	//alert(JSON.stringify(jsonuserinfo));
 
 	var options = {

@@ -96,10 +96,7 @@ $(document).ready(function(){
 		last:5,
 	};
 
-
-	params={
-
-	};
+	
 	ajaxGet("get",URLMAP.gy_roadlist,params,function(data){
 
 		if(data.statusCode=="0000"){

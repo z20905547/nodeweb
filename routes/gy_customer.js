@@ -13,7 +13,7 @@ router.get('/gy_customer', function(req, res, next) {
 		var remark = req.session.remark;
 		//console.log(worker_id);
 		res.render('gy_customer/gy_customer', {
-			title: '我的信息 | 海南唯房会',
+			title: '我的信息 | 共赢经纪',
 			worker_name: worker_name,
 			worker_id: worker_id,
 			remark: remark
@@ -27,7 +27,7 @@ router.get('/:customer_id(\\d+)', function(req, res, next) {
 });
 
 router.get('/gy_addc', function(req, res, next) {
-
+	var pagemark = 1;
    if(req.session.sign){
 	var user_name =req.session.userName;
 	var worker_name =req.session.worker_name;
@@ -38,7 +38,7 @@ router.get('/gy_addc', function(req, res, next) {
 
 	res.render('gy_customer/gy_addc', { worker_id:worker_id, user_name:user_name, worker_name:worker_name, p_id:p_id, partners_mark:partners_mark,remark:remark});
    }else{
-	   res.render('users/login', { title: '登陆 | 海南唯房会'});
+	   res.render('users/login', { title: '登陆 | 共赢经纪',pagemark: pagemark,});
    }
 
    });
@@ -55,7 +55,7 @@ router.get('/gy_log/:customer_id(\\d+)/:order_id', function(req, res, next) {
 
 		//console.log(worker_id);
 		res.render('gy_customer/gy_log', {
-			title: '我的信息 | 海南唯房会',
+			title: '我的信息 | 共赢经纪',
 			log_username: log_username,
 			log_userid: log_userid,
 			customer_id: req.params.customer_id,
@@ -63,7 +63,7 @@ router.get('/gy_log/:customer_id(\\d+)/:order_id', function(req, res, next) {
 			log_phone: log_phone
 		})
 	}else {
-		res.render('users/login', { title: '登陆 | 海南唯房会'});
+		res.render('users/login', { title: '登陆 | 共赢经纪'});
 	}
 
 });
