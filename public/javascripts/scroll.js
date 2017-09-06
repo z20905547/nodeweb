@@ -58,7 +58,11 @@ $(function () {
 										'<div class="float-detail">'+
 										sublist[i].active_detail+
 										'</div>'+
-									'</div>';
+								'<div class="float-detail2">'+
+								sublist[i].buildings_name+
+								'</div>'+
+								'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+								'</div>';
 							oneobj.append(str);
 							$('.active-list').append(oneobj); 
 						}
