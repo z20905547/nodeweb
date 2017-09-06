@@ -52,7 +52,7 @@ $(document).ready(function(){
 				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
 					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
-				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
+				str='<div class="left-text col-sm-6 col-md-5 col-lg-4">'+
 							'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 
 							'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
@@ -62,11 +62,15 @@ $(document).ready(function(){
 				//				'<div class="ico_active_count_down"></div><span></span>'+
 							'</div>'+
 						'</div>'+
-						'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
+						'<div class="right-img col-xs-12  col-sm-6 col-md-7 col-lg-8">'+
 							img+
 							'<div class="float-detail">'+
-							sublist[i].active_detail+
+					         sublist[i].active_detail+
 							'</div>'+
+					        '<div class="float-detail2">'+
+					        sublist[i].buildings_name+
+					        '</div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 						'</div>';
 				oneobj.append(str);
 				$('.active-list').append(oneobj); 

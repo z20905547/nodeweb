@@ -33,4 +33,15 @@ $(document).ready(function(){
 		window.location.href=WEBURL+$(this).attr("data-proid");
 	})
 });
-	
+
+function bannerClick() {
+	window.open('/users/register2');
+}
+
+function bannerClick2() {
+	window.open('/buildings/505/460000/126/石梅山庄');
+}
+
+function bannerClick3() {
+	window.open('/buildings/679/460000/399/融创观澜湖公园壹号');
+}
