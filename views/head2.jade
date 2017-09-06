@@ -3,9 +3,16 @@ block content
         div.topbar-head
             div.container
                 div.test.row
-                    div.col-xs-4.col-sm-4.col-md-8.col-lg-9
+                    div.col-xs-6.col-sm-6.col-md-6.col-lg-7
                         span.top_city_item(data-proid='460000') 海南
-                    div.telephone1.col-xs-8.col-sm-4.col-md-4.col-lg-3  24小时免费客服热线：0898-32861405
+                    div.telephone1.col-xs-6.col-sm-6.col-md-6.col-lg-5
+                        if (remark != '0')
+                            a(href="/users/login2") &nbsp;&nbsp;/&nbsp;&nbsp;登录
+                            a(href="/users/register2")&nbsp;&nbsp; /&nbsp;&nbsp;注册
+                            a(href="/users/wo")&nbsp;&nbsp; /&nbsp;&nbsp;我的帐户
+                        if (remark == '0')
+                           a(href="/users/wo") &nbsp;&nbsp;  您好， #{user_name}
+                        &nbsp;&nbsp;/&nbsp;&nbsp;24小时免费客服热线：0898-32861405
         div.container
             div.toolbar.row
                 div.wx_logo
