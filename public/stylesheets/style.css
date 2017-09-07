@@ -3644,7 +3644,18 @@ h3 {
 	.shoujiduan {
 		color: #e849d6;
 		padding-left: 12px;
-		padding-top: 5px;
+		padding-top: 3px;
+		font-size: 17px;
+	}
+
+	.contact {
+		height: 10px;
+	}
+	.contact img {
+		height: 20px;
+		float: right;
+		width: 20px;
+		margin-right: 50px;
 	}
 }
 
@@ -5828,3 +5839,6 @@ li {
 	padding-right: 0px;
 	padding-left: 0px;
 }
+
+
+

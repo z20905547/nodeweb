@@ -68,10 +68,21 @@ $(document).ready(function(){
 					         sublist[i].active_detail+
 							'</div>'+
 					        '<div class="float-detail2">'+
-					        sublist[i].buildings_name+
-					        '</div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
-						'</div>';
+					          sublist[i].buildings_name+
+					        '&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<span class="contact">'+
+					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
+
+
+
+
+
+					'</div>';
 				oneobj.append(str);
 				$('.active-list').append(oneobj); 
 			}
@@ -194,7 +205,9 @@ function submiBtn() {
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
-					'</div>'+
+					'&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'</div>';
 
@@ -267,7 +280,9 @@ function submitFourm(){
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
-					'</div>'+
+					'&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'</div>';
 
@@ -350,7 +365,9 @@ function submiBtn_p() {
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
-					'</div>'+
+					'&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'</div>';
 
@@ -429,8 +446,18 @@ function submitFourm_p(){
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
-					'</div>'+
+					'&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="lp_right">'+
+					'<span class="contact">'+
+					'<a href="tel:0898-32861405"><img src="http://hn.meifang.com/statics/hainankf/images/hp/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
+
+
+
 					'</div>';
 				oneobj.append(str);
 				$('.active-list').append(oneobj);

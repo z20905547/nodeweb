@@ -55,12 +55,14 @@ $(function () {
 									'</div>'+
 									'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 										img+
-										'<div class="float-detail">'+
-										sublist[i].active_detail+
-										'</div>'+
+								'<div class="float-detail">'+
+								sublist[i].active_detail+
+								'</div>'+
 								'<div class="float-detail2">'+
 								sublist[i].buildings_name+
-								'</div>'+
+								'&nbsp;* '+
+								sublist[i].address+
+								' </div>'+
 								'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 								'</div>';
 							oneobj.append(str);
