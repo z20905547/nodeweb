@@ -70,7 +70,7 @@ function tuangouPC(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
 	var jsonuserinfo = $('#tuangouPC').serializeObject();
-	alert(JSON.stringify(jsonuserinfo));
+	//alert(JSON.stringify(jsonuserinfo));
 
 	var options = {
 		url:URLMAP.demandorder,
