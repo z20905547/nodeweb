@@ -70,14 +70,13 @@ function tuangouPC(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
 	var jsonuserinfo = $('#tuangouPC').serializeObject();
-	//alert(JSON.stringify(jsonuserinfo));
+	alert(JSON.stringify(jsonuserinfo));
 
 	var options = {
 		url:URLMAP.demandorder,
 		dataType: "json",
 		data:JSON.stringify(jsonuserinfo),
 		type:"post",
-		dataType: "json",
 		beforeSubmit: showRequest,
 
 	};
@@ -93,7 +92,6 @@ function tuangouPC(){
 			alert('请输入您的称呼哦!');
 			return false;
 		}
-		var phone = $("#PhonePC").val();
 		if ( phone == '') {
 			alert('请输入您的联系方式哦!');
 			return false;
@@ -119,7 +117,6 @@ function tuangouSJ(){
 		dataType: "json",
 		data:JSON.stringify(jsonuserinfo),
 		type:"post",
-		dataType: "json",
 		beforeSubmit: showRequest,
 
 	};
@@ -135,7 +132,6 @@ function tuangouSJ(){
 			alert('请输入您的称呼哦!');
 			return false;
 		}
-		var phone = $("#Phone").val();
 		if ( phone == '') {
 			alert('请输入您的联系方式哦!');
 			return false;
