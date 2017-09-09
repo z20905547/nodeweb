@@ -34,14 +34,114 @@ $(document).ready(function(){
 	})
 });
 
-function bannerClick() {
+function zhuce() {
 	window.open('/users/register2');
 }
 
-function bannerClick2() {
+function loupan() {
 	window.open('/buildings/505/460000/126/石梅山庄');
 }
 
-function bannerClick3() {
-	window.open('/buildings/679/460000/399/融创观澜湖公园壹号');
+function tuangoubaoming() {
+	$("#rePriceOpen").css('display','block');
+}
+function shut() {
+	$("#rePriceOpen").css('display','none');
+}
+
+
+$.fn.serializeObject = function()
+{
+	var o = {};
+	var a = this.serializeArray();
+	$.each(a, function() {
+		if (o[this.name]) {
+			if (!o[this.name].push) {
+				o[this.name] = [o[this.name]];
+			}
+			o[this.name].push(this.value || '');
+		} else {
+			o[this.name] = this.value || '';
+		}
+	});
+	return o;
+};
+function tuangouPC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#tuangouPC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		dataType: "json",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tuangouPC').ajaxSubmit(options);
+
+	$('#tuangouPC').clearForm();
+
+	function showRequest() {
+		var name = $("#NamePC").val();
+		var phone = $("#PhonePC").val();
+		if (name == '') {
+			alert('请输入您的称呼哦!');
+			return false;
+		}
+		var phone = $("#PhonePC").val();
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen").css('display','none');
+		return true;
+	}
+}
+
+
+
+
+
+function tuangouSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#tuangouSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		dataType: "json",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tuangouSJ').ajaxSubmit(options);
+
+	$('#tuangouSJ').clearForm();
+
+	function showRequest() {
+		var name = $("#Name").val();
+		var phone = $("#Phone").val();
+		if (name == '') {
+			alert('请输入您的称呼哦!');
+			return false;
+		}
+		var phone = $("#Phone").val();
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen").css('display','none');
+		return true;
+	}
 }
