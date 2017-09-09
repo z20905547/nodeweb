@@ -67,9 +67,9 @@ $(document).ready(function(){
 							'<div class="float-detail">'+
 					         sublist[i].active_detail+
 							'</div>'+
-					        '<div class="float-detail2">'+
+					        '<div class="float-detail2"><strong>'+
 					          sublist[i].buildings_name+
-					        '&nbsp;* '+
+					        '</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
@@ -77,10 +77,6 @@ $(document).ready(function(){
 					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
 					'</div>'+
-
-
-
-
 
 					'</div>';
 				oneobj.append(str);
@@ -472,3 +468,8 @@ function submitFourm_p(){
 		loading=false;
 	});
 }
+
+// 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
+$("#hideNotice").click(function(){
+	$("#rePriceOpen").css('display','none');
+});

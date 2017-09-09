@@ -550,3 +550,55 @@
     </div>
 
 </div>
+
+<div id="rePriceOpen" class="tz-box" style="display: none;">
+    <div class="tz-con">
+        <div class="tz-tit">
+            <span>加入特价团</span>
+        </div>
+        <form id="tuangouSJ" method="post" action="/demand/demandsub">
+        <ul class="ipt-list">
+            <li><input class="ipt-text phone" name="Name" id="Name" placeholder="请输入您的姓名" type="text"></li>
+            <li class="yzm">
+                <div class="flexbox">
+                    <input class="ipt-text vcode" name="Phone" id="Phone" placeholder="请输入您的手机号码" type="text">
+                    <!-- <input class="ipt-btn1" value="获取验证码" id="getPhoneVcode" type="button">-->
+
+                     <!-- <input type="button" class="ipt-btn1 disabled" value="60S后获取">
+                     <input type="button" class="ipt-btn1" value="重新获取"> -->
+                </div>
+            </li>
+        </ul>
+        <p class="tz-word">团购特价会通过手机短信通知您</p>
+        <div class="tz-btn flexbox">
+            <input value="取消" id="hideNotice" type="button">
+            <input id="qd" value="确定" type="button" onclick="tuangouSJ()">
+        </div>
+            </form>
+    </div>
+
+    <div class="subscribe" >
+        <p class="title" style="height:54px;">加入团购 价格更低</p>
+        <p class="cue">团购信息将通过短信通知您！</p>
+        <div>
+            <form id="tuangouPC" method="post" action="/demand/demandsub">
+            <div class="p1">
+                <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+                <input class="tel" name="NamePC" id="NamePC" type="text"  placeholder="请输入您的姓名"><!--消息错误加类h-->
+
+            </div>
+            <div class="p1">
+                <label>手机号码：</label>
+                <input class="tel" name="PhonePC" id="PhonePC" type="text"  placeholder="请输入您的手机号码">><!--消息错误加类h-->
+
+            </div>
+             <div class="p3">
+                <em class="ml lpt_icon" onclick="chooseType(1);" value="jjtz"></em><span>降价通知</span>
+                <em class="mlf lpt_icon" onclick="chooseType(2);" value="kptz"></em><span>开盘通知</span>
+            </div>
+
+            <input type="button" class="quick ts_linear cp tf" onclick="tuangouPC();" value="加入团购">
+        </div>
+        <a class="newhouse_login_close ts_linear" onclick="shut();" title="关闭"><span></span></a>
+    </div>
+</div>
