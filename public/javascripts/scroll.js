@@ -56,7 +56,7 @@ $(function () {
 									'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 										img+
 								'<div class="float-detail">'+
-								sublist[i].active_detail+
+								sublist[i].address+
 								'</div>'+
 								'<div class="float-detail2">'+
 								sublist[i].buildings_name+
