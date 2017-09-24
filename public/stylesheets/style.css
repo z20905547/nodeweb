@@ -3497,6 +3497,9 @@ h3 {
 		width: 100%;
 
 	}
+	.buildings_detail_price{
+		display: none;
+	}
     .subscribe{
 	    display: none;
     }
@@ -3745,9 +3748,9 @@ h3 {
     .ddxx{
 	   display:none;
      }
-	.banner_index5{height:90px;position: relative;overflow:hidden;width: 100%;padding-top: 3px}
+	.banner_index5{height:90px;position: relative;overflow:hidden;width: 100%;padding-top: 3px;margin-left: 5%;}
 	.sm_tx{ width: 20%;float: left}
-	.sm_nr{ width: 78%;float:left;margin-left: 2px;}
+	.sm_nr{ width: 78%;float:left;margin-left: 4px;}
 	.regSingle{
 		display:none;
 	}
@@ -6322,7 +6325,7 @@ a.newhouse_login_close span {
 
 }
 .fr1 a {
-	width: 220px;
+	width: 80%;
 	height: 34px;
 	border-radius: 6px;
 	position: absolute;

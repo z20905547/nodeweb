@@ -76,7 +76,7 @@ $(document).ready(function(){
 			$(".small_content").html(adcontent1);
 			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 
-				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'<span class="lp_dt"><span class="dz_icon "></span>查看地图</span></div>'+
+				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'<span class="lp_dt"><span class="dz_icon "></span></span></div>'+
 				'<div class="base_content_line"><span>开  发  商：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.developer_company+'</div>'+
 				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'<a href="javascript:void(0)"  onclick="jiangjiatongzhi();" id="informBtn">开盘通知我</a></div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
@@ -90,9 +90,10 @@ $(document).ready(function(){
 				'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></div>'+
 				'<div class="jieshao2 col-sm-8 col-md-8 col-lg-8"><dl><dd><strong>楼盘最新情况：</strong>'+data.data.latestnews+'</dd>'+
 				'<dd  class="ddxx">此消息由 <strong> '+data.data.nickname+' </strong>   最新发布！  想了解更多信息，请联系手机：<strong>'+data.data.user_phone+'</strong>（同微信） <p>'+data.data.recodetime+'</p> </dd></dl></div>'+
-				'<div class="banner_index5 row">'+
-				'<div class="sm_tx  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></div>'+
-				'<div class="sm_nr  col-sm-6 col-md-6 col-lg-6"><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'
+				'<div class="banner_index5 ">'+
+				'<div class="sm_tx"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></div>'+
+
+				'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'
 				'</div>'+
 				'</div>'
 
@@ -597,7 +598,7 @@ function tuangouSJ(){
 }
 
 
-function tuangouPC(){
+function tuangouSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
 	var jsonuserinfo = $('#tuangouPC').serializeObject();
@@ -667,7 +668,38 @@ function yuyuePC(){
 	}
 }
 
+function yuyueSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#yuyueSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
 
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#yuyueSJ').ajaxSubmit(options);
+
+	$('#yuyueSJ').clearForm();
+
+	function showRequest() {
+		var name = $("#yysjName").val();
+		var phone = $("#yysjPhone").val();
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("预约成功！客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen2").css('display','none');
+		return true;
+	}
+}
 
 
 function jiangjiatongzhi() {
