@@ -25,6 +25,41 @@ $(document).ready(function(){
 				var hongbao = '';
 			}
 
+			var buildname='<input type="hidden" name="from_tag" id="from_tag"  value="3">'+
+					        '<input type="hidden" name="buildings_name" id="buildings_name"  value="'+data.data.buildings_name+'">'+
+				          '<input type="hidden" name="buildings_id" id="buildings_id"  value="'+data.data.id+'">'
+
+
+			$(".forbset").html(buildname);
+
+
+//周边顾问
+			var guwen =' <div class="consultant_nearby c_n_2">  '+
+			' <dl class="clearfix">'+
+			'  <dt>周边顾问：<a style="cursor:pointer" class="seek_more_" onclick="">更多顾问</a></dt>'+
+			'			<dd>'+
+			'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
+			'                        <a 	class="cnu_head"  href="">'+
+			'                             <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></a><img class="cnu_head_asied" alt="">'+
+
+			'                      <div class="cnu_info">'+
+			'                   <div class="cnu_name" ><a href="" 	target="_blank"><span id="AgentRealname_164001707"> '+data.data.nickname+'</span></a>  </div> '+
+
+			'                   <p class="cnu_tel">'+data.data.user_phone+'</p></div></div></dd>' +
+				'	<div class="fr1">'+
+				'	<a href="javascript:void(0)" class="fr" id="baomingBtn"  onclick="yuyuekanfangche();">预约免费看房专车</a>'+
+				'	</div>'
+			'</dl> '
+
+
+
+
+
+
+			$(".buildings_detail_price").html(guwen);
+
+
+
 			//楼盘动态
 			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
@@ -34,15 +69,16 @@ $(document).ready(function(){
 				'				<span>'+data.data.active_price+'</span>'+
 				'			</div>'+
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
+				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon" ></i>降价通知我</a>'+
 		//		'				<div class="ico_active_count_down"></div>'+
 				'				<span></span>'+
 				'			</div>'
 			$(".small_content").html(adcontent1);
 			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 
-				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'</div>'+
+				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'<span class="lp_dt"><span class="dz_icon "></span>查看地图</span></div>'+
 				'<div class="base_content_line"><span>开  发  商：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.developer_company+'</div>'+
-				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'</div>'+
+				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'<a href="javascript:void(0)"  onclick="jiangjiatongzhi();" id="informBtn">开盘通知我</a></div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
 				'<div class="detail_phone "><span class="col-sm-4 col-md-4 col-lg-4">售楼处电话</span><span class="col-sm-1 col-md-1 col-lg-1">|</span><span class="col-sm-7 col-md-7 col-lg-7">'+data.data.server_phone_num+'</span></div>'+
 				'</div>'
@@ -507,3 +543,147 @@ function showImage()
 
 
 
+
+$.fn.serializeObject = function()
+{
+	var o = {};
+	var a = this.serializeArray();
+	$.each(a, function() {
+		if (o[this.name]) {
+			if (!o[this.name].push) {
+				o[this.name] = [o[this.name]];
+			}
+			o[this.name].push(this.value || '');
+		} else {
+			o[this.name] = this.value || '';
+		}
+	});
+	return o;
+};
+function tuangouSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#tuangouSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tuangouSJ').ajaxSubmit(options);
+
+	$('#tuangouSJ').clearForm();
+
+	function showRequest() {
+		var name = $("#Name").val();
+		var phone = $("#Phone").val();
+		if (name == '') {
+			alert('请输入您的称呼哦!');
+			return false;
+		}
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen").css('display','none');
+		return true;
+	}
+}
+
+
+function tuangouPC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#tuangouPC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tuangouPC').ajaxSubmit(options);
+
+	$('#tuangouPC').clearForm();
+
+	function showRequest() {
+		var name = $("#NamePC").val();
+		var phone = $("#PhonePC").val();
+		if (name == '') {
+			alert('请输入您的称呼哦!');
+			return false;
+		}
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen").css('display','none');
+		return true;
+	}
+}
+
+
+function yuyuePC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#yuyuePC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#yuyuePC').ajaxSubmit(options);
+
+	$('#yuyuePC').clearForm();
+
+	function showRequest() {
+		var name = $("#yyNamePC").val();
+		var phone = $("#yyPhonePC").val();
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("预约成功！客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen2").css('display','none');
+		return true;
+	}
+}
+
+
+
+
+function jiangjiatongzhi() {
+	$("#rePriceOpen").css('display','block');
+}
+
+function shut() {
+	$("#rePriceOpen").css('display','none');
+	$("#rePriceOpen2").css('display','none');
+}
+
+// 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
+$("#hideNotice").click(function(){
+	$("#rePriceOpen").css('display','none');
+});
+
+function yuyuekanfangche() {
+	$("#rePriceOpen2").css('display','block');
+}

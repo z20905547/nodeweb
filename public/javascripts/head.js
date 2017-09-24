@@ -48,7 +48,10 @@ function tuangoubaoming() {
 function shut() {
 	$("#rePriceOpen").css('display','none');
 }
-
+// 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
+$("#hideNotice").click(function(){
+	$("#rePriceOpen").css('display','none');
+});
 
 $.fn.serializeObject = function()
 {

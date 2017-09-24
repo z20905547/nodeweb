@@ -20,7 +20,7 @@ $(document).ready(function(){
 	loading=true;
 	curpage=1;
 	totalpage=1;
-	pagecount=10;
+	pagecount=15;
 	params={
 			proId:proId,
 			now:1,
@@ -65,7 +65,7 @@ $(document).ready(function(){
 						'<div class="right-img col-xs-12  col-sm-6 col-md-7 col-lg-8">'+
 							img+
 							'<div class="float-detail">'+
-					         sublist[i].active_detail+
+					sublist[i].address+
 							'</div>'+
 					        '<div class="float-detail2"><strong>'+
 					          sublist[i].buildings_name+
@@ -197,14 +197,18 @@ function submiBtn() {
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					sublist[i].address+
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<span class="contact">'+
+					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
 					'</div>';
 
 				oneobj.append(str);
@@ -272,14 +276,18 @@ function submitFourm(){
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					sublist[i].address+
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<span class="contact">'+
+					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
 					'</div>';
 
 				oneobj.append(str);
@@ -357,14 +365,18 @@ function submiBtn_p() {
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					sublist[i].address+
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<span class="contact">'+
+					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
 					'</div>';
 
 				oneobj.append(str);
@@ -438,17 +450,16 @@ function submitFourm_p(){
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
 					img+
 					'<div class="float-detail">'+
-					sublist[i].active_detail+
+					sublist[i].address+
 					'</div>'+
 					'<div class="float-detail2">'+
 					sublist[i].buildings_name+
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
-					'<div class="lp_right">'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
 					'<span class="contact">'+
-					'<a href="tel:0898-32861405"><img src="http://hn.meifang.com/statics/hainankf/images/hp/11.png" alt="联系电话" style="color:#000"></a>'+
+					'<a href="tel:0898-32861405"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
 					'</div>'+
 
@@ -469,7 +480,3 @@ function submitFourm_p(){
 	});
 }
 
-// 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
-$("#hideNotice").click(function(){
-	$("#rePriceOpen").css('display','none');
-});
