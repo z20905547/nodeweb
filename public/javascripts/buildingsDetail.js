@@ -594,6 +594,10 @@ function tuangouSJ(){
 		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
 		$("#rePriceOpen").css('display','none');
 		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：'+name+'电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
 	}
 }
 
@@ -631,6 +635,10 @@ function tuangouSJ(){
 		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
 		$("#rePriceOpen").css('display','none');
 		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：'+name+'电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
 	}
 }
 
@@ -664,7 +672,14 @@ function yuyuePC(){
 		}
 		alert("预约成功！客服将尽快与您联系，请保持手机畅通！");
 		$("#rePriceOpen2").css('display','none');
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+
+		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		alert(content);
+		duanxin(content);
 		return true;
+
 	}
 }
 
@@ -687,6 +702,7 @@ function yuyueSJ(){
 
 	$('#yuyueSJ').clearForm();
 
+
 	function showRequest() {
 		var name = $("#yysjName").val();
 		var phone = $("#yysjPhone").val();
@@ -698,6 +714,12 @@ function yuyueSJ(){
 		alert("预约成功！客服将尽快与您联系，请保持手机畅通！");
 		$("#rePriceOpen2").css('display','none');
 		return true;
+		// 发送短信通知
+		var from_tag = $("#from_tag").val();
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		alert(content);
+		duanxin(content);
 	}
 }
 
@@ -718,4 +740,19 @@ $("#hideNotice").click(function(){
 
 function yuyuekanfangche() {
 	$("#rePriceOpen2").css('display','block');
+}
+
+function duanxin(content){
+
+	$.post("http://www.467890.com/Admin/index.php/Message/send",
+		{
+			"uid":"14",
+			"pwd":"13876002062",
+			"mobile":"13876002062",
+			"content":content
+		},
+		function(data,status){
+			alert("数据：" + data + "\n状态：" + status);
+		});
+
 }
