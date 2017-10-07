@@ -135,7 +135,7 @@ router.post('/login', function(req, res, next) {
 	    req.session.partners_mark=partners_mark;
 	    req.session.remark=remark;
 
-	    //console.log("pagemark:"+pagemark);
+	    console.log("req.sessionID:"+req.sessionID);
 
        if(pagemark==1){
 		   res.render('gy_customer/gy_addc', { worker_id:worker_id, user_name:user_name, worker_name:worker_name, p_id:p_id, partners_mark:partners_mark,remark:remark});
