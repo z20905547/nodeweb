@@ -85,12 +85,37 @@ function submitForm() {
 			alert('不填电话 咋联系客户？');
 			return false;
 		}
+		duanxin();
 		return true;
+		// 发送短信通知
+		//var from_tag = $("#from_tag").val();
+		//var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		//var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		//alert(content);
+
 	}
 
 }
 
+function duanxin(){
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有共赢经纪用户注册了，请立即处理！" }';
+	//var obj = jQuery.parseJSON(str);
+	alert("5555555");
 
+	$.ajax({
+		url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
+		data:str,
+		type:'post',    //数据传输方式
+		dataType:'json',//数据传输格式
+		success:function(data) {
+			//执行成功后的回调函数，data为返回的数据
+			//alert("成功"+data);
+		},
+		error : function(data22) {
+			//alert("失败"+data22.status+"uu"+JSON.stringify(data22));
+		}
+	});
+}
 
 
 
