@@ -65,7 +65,7 @@ function submitForm() {
 		type: "post",
 		beforeSubmit: showRequest,
 		success: function (data) {
-			//window.location.href="/gy_customer/gy_customer";
+			window.location.href="/gy_customer/gy_customer";
 
 		}
 	};
