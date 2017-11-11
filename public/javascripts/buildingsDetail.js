@@ -602,7 +602,7 @@ function tuangouSJ(){
 }
 
 
-function tuangouSJ(){
+function tuangouPC(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
 	var jsonuserinfo = $('#tuangouPC').serializeObject();
@@ -620,7 +620,7 @@ function tuangouSJ(){
 	$('#tuangouPC').ajaxSubmit(options);
 
 	$('#tuangouPC').clearForm();
-
+	duanxin();
 	function showRequest() {
 		var name = $("#NamePC").val();
 		var phone = $("#PhonePC").val();
@@ -636,9 +636,9 @@ function tuangouSJ(){
 		$("#rePriceOpen").css('display','none');
 		return true;
 		// 发送短信通知
-		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
-		var content = '团购用户：'+name+'电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
-		duanxin(content);
+		//var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		//var content = '团购用户：'+name+'电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+
 	}
 }
 
@@ -743,7 +743,7 @@ function yuyuekanfangche() {
 }
 
 function duanxin(content){
-	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有唯房会用户注册了，请立即处理！" }';
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有唯房会客户预约了，请立即处理！" }';
 	//var obj = jQuery.parseJSON(str);
 	//alert(obj.toString);
 

@@ -247,7 +247,7 @@ function onClik456(){
 
   //  $('#registerPage').clearForm();
 
-
+    wfh_duanxin();
     function showRequest() {
         var name = $("#usname").val();
         var phone = $("#user_name").val(); //手机号码
@@ -446,7 +446,7 @@ function onClikWfh(){
 
     //  $('#registerPage').clearForm();
 
-
+    wfh_duanxin();
     function showRequest() {
         var name = $("#usname").val();
         var phone = $("#user_name").val(); //手机号码
@@ -546,4 +546,44 @@ function onClikWfh(){
             return false;
         }
     }
+}
+
+function wfh_duanxin(){
+    var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有唯房会用户注册了，请立即处理！" }';
+    //var obj = jQuery.parseJSON(str);
+    //alert("5555555");
+
+    $.ajax({
+        url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
+        data:str,
+        type:'post',    //数据传输方式
+        dataType:'json',//数据传输格式
+        success:function(data) {
+            //执行成功后的回调函数，data为返回的数据
+            //alert("成功"+data);
+        },
+        error : function(data22) {
+            //alert("失败"+data22.status+"uu"+JSON.stringify(data22));
+        }
+    });
+}
+
+function gy_duanxin(){
+    var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有共赢经纪用户注册了，请立即处理！" }';
+    //var obj = jQuery.parseJSON(str);
+   // alert("5555555");
+
+    $.ajax({
+        url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
+        data:str,
+        type:'post',    //数据传输方式
+        dataType:'json',//数据传输格式
+        success:function(data) {
+            //执行成功后的回调函数，data为返回的数据
+            //alert("成功"+data);
+        },
+        error : function(data22) {
+            //alert("失败"+data22.status+"uu"+JSON.stringify(data22));
+        }
+    });
 }
