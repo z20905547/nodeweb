@@ -676,7 +676,7 @@ function yuyuePC(){
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
 
 		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
-		alert(content);
+	//	alert(content);
 		duanxin(content);
 		return true;
 
@@ -718,7 +718,7 @@ function yuyueSJ(){
 		var from_tag = $("#from_tag").val();
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
 		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
-		alert(content);
+		//alert(content);
 		duanxin(content);
 	}
 }
@@ -743,16 +743,21 @@ function yuyuekanfangche() {
 }
 
 function duanxin(content){
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有唯房会用户注册了，请立即处理！" }';
+	//var obj = jQuery.parseJSON(str);
+	//alert(obj.toString);
 
-	$.post("http://www.467890.com/Admin/index.php/Message/send",
-		{
-			"uid":"14",
-			"pwd":"13876002062",
-			"mobile":"13876002062",
-			"content":content
+	$.ajax({
+		url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
+		data:str,
+		type:'post',    //数据传输方式
+		dataType:'json',//数据传输格式
+		success:function(data) {
+			//执行成功后的回调函数，data为返回的数据
+			//alert("成功"+data);
 		},
-		function(data,status){
-			alert("数据：" + data + "\n状态：" + status);
-		});
-
+		error : function(data22) {
+			//alert("失败"+data22.status+"uu"+JSON.stringify(data22));
+		}
+	});
 }
