@@ -98,7 +98,7 @@ function submitForm() {
 }
 
 function duanxin(){
-	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有共赢经纪用户注册了，请立即处理！" }';
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有共赢客户推送了，请立即处理！" }';
 	//var obj = jQuery.parseJSON(str);
 	alert("5555555");
 
