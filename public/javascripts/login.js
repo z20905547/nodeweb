@@ -232,7 +232,7 @@ function onClik456(){
                     }
                     ;
                 }
-                setTimeout(window.location.href = "/users/login2", "30000")
+                setTimeout(window.location.href = "/users/login", "30000")
 
 
             }
@@ -247,7 +247,7 @@ function onClik456(){
 
   //  $('#registerPage').clearForm();
 
-    wfh_duanxin();
+    gy_duanxin();
     function showRequest() {
         var name = $("#usname").val();
         var phone = $("#user_name").val(); //手机号码

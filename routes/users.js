@@ -57,7 +57,7 @@ router.get('/login2', function(req, res, next) {
 router.get('/register', function(req, res, next) {
 	//已经登陆跳转到user_info
 
-		res.render('users/register', { title: '注册'});
+		res.render('users/register', { title: '注册'} );
 
 
 });
