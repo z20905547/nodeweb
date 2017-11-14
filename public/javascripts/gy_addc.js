@@ -114,12 +114,14 @@ function duanxin(content){
 		data:str,
 		type:'post',    //数据传输方式
 		dataType:'json',//数据传输格式
+		async: false,//设置为同步传输
 		success:function(data) {
 			//执行成功后的回调函数，data为返回的数据
 		//	alert("成功"+data);
+
 			 		},
-		error : function(data) {
-			//alert("失败"+data.status+"uu"+JSON.stringify(data));
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+		//	alert("失败"+XMLHttpRequest.status+"uu"+XMLHttpRequest.readyState+"uu"+XMLHttpRequest.responseText);
 					}
 	});
 }

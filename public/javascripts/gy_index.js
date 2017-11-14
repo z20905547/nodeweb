@@ -145,16 +145,17 @@ var code_url =  window.location.href;
 		$.ajax({
 			url: 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx632df32f90c89d91&secret=579af1f3fe1def341b2951ebf09f59d1&code=' + code + '&grant_type=authorization_code',  //api接口地址
 			type: 'post',    //数据传输方式
+			data:{},
 			dataType: 'jsonp',//数据传输格式
 			async: false,//设置为同步传输
 			success: function (data) {
 				//执行成功后的回调函数，data为返回的数据
 				//alert("成功" + JSON.stringify(data.hasOwnProperty('openid')));
-				alert("成功" + data);
+			//	alert("成功" + data);
 			},
 			error: function (data) {
-				alert("失败" + data.status + "uu" + JSON.stringify(data));
-				console.log('发生错误:'+JSON.stringify(data));
+			//	alert("失败" + data.status + "uu" + JSON.stringify(data));
+			//	console.log('发生错误:'+JSON.stringify(data));
 
 
 
