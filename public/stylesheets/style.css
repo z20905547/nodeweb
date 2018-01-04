@@ -2165,7 +2165,10 @@ a:hover {
 	margin-top: 15px;
 	text-align:center;
 }
-
+.detail_phone a {
+	display:none;
+	color:#f43499;
+}
 .base_message_img{
 	padding:1em;
 }

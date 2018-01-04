@@ -59,7 +59,6 @@ $(document).ready(function(){
 			$(".buildings_detail_price").html(guwen);
 
 
-
 			//楼盘动态
 			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
@@ -74,13 +73,16 @@ $(document).ready(function(){
 				'				<span></span>'+
 				'			</div>'
 			$(".small_content").html(adcontent1);
+
+			var df = data.data.server_phone_num;
+			var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
 			var adcontent2='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
 
 				'<div class="base_content_line"><span>楼盘地址：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.address+'<span class="lp_dt"><span class="dz_icon "></span></span></div>'+
 				'<div class="base_content_line"><span>开  发  商：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.developer_company+'</div>'+
 				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'<a href="javascript:void(0)"  onclick="jiangjiatongzhi();" id="informBtn">开盘通知我</a></div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
-				'<div class="detail_phone "><a href="tel:4008520213,001"><span class="col-sm-12 col-md-12 col-lg-12">售楼处电话&nbsp;&nbsp;|&nbsp;&nbsp;'+data.data.server_phone_num+'</span></a></div>'+
+				'<div class="detail_phone "><a href="tel:4008520213,'+df3+'"><span class="col-sm-12 col-md-12 col-lg-12">售楼处电话&nbsp;&nbsp;|&nbsp;&nbsp;'+data.data.server_phone_num+'</span></a></div>'+
 				'</div>'
 			$(".buildings_detail_text").html(adcontent2);
 

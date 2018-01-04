@@ -45,6 +45,8 @@ $(document).ready(function(){
 				var oneobj=$("<div></div>");
 				var tejia = sublist[i].discount_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var df = sublist[i].server_phone_num;
+				var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -74,7 +76,7 @@ $(document).ready(function(){
 					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
 					'<span class="contact">'+
-					'<a href="tel:4008520213,001"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
 					'</div>'+
 
