@@ -80,7 +80,7 @@ $(document).ready(function(){
 				'<div class="base_content_line"><span>开  发  商：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.developer_company+'</div>'+
 				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'<a href="javascript:void(0)"  onclick="jiangjiatongzhi();" id="informBtn">开盘通知我</a></div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
-				'<div class="detail_phone "><span class="col-sm-4 col-md-4 col-lg-4">售楼处电话</span><span class="col-sm-1 col-md-1 col-lg-1">|</span><span class="col-sm-7 col-md-7 col-lg-7">'+data.data.server_phone_num+'</span></div>'+
+				'<div class="detail_phone "><a href="tel:4008520213,001"><span class="col-sm-12 col-md-12 col-lg-12">售楼处电话&nbsp;&nbsp;|&nbsp;&nbsp;'+data.data.server_phone_num+'</span></a></div>'+
 				'</div>'
 			$(".buildings_detail_text").html(adcontent2);
 
