@@ -40,7 +40,7 @@ $(document).ready(function(){
 			'			<dd>'+
 			'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
 			'                        <a 	class="cnu_head"  href="">'+
-			'                             <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></a><img class="cnu_head_asied" alt="">'+
+			'                             <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg" onerror="javascript:this.src=\'/images/tx.jpg\'"'+'></a><img class="cnu_head_asied" alt="">'+
 
 			'                      <div class="cnu_info">'+
 			'                   <div class="cnu_name" ><a href="" 	target="_blank"><span id="AgentRealname_164001707"> '+data.data.nickname+'</span></a>  </div> '+
