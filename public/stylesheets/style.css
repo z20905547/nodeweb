@@ -2155,7 +2155,7 @@ a:hover {
 .detail_phone{
 
 	padding-top:3px;
-	padding-left:30px;
+	padding-left:2px;
 	color:#CE3367;
 	font-size:16px;
 	width: 100%;
@@ -3702,9 +3702,7 @@ h3 {
 	.small-nav{
 		display:block;
 	}
-	.detail_phone{
-		display:none;
-	}
+
 
 	.banner_index4{height:auto;position: relative;overflow:hidden;width: 100%;font: 15px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
 		color: #333;float: left;background-color: #FFF1EE}
