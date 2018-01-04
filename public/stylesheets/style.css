@@ -2165,8 +2165,21 @@ a:hover {
 	margin-top: 15px;
 	text-align:center;
 }
+.detail_phone1{
+
+	padding-top:3px;
+	padding-left:2px;
+	color:#CE3367;
+	font-size:16px;
+	width: 100%;
+	height: 52px;
+	border: solid 1px #ebebeb;
+	background: #f4f4f4;
+	margin-top: 15px;
+	text-align:center;
+}
 .detail_phone a {
-	display:none;
+
 	color:#f43499;
 }
 .base_message_img{
@@ -3480,10 +3493,15 @@ h3 {
 	.ttbox {
 		withd:100%
 	}
+	.footer{
+		display: none;
+	}
 	.bolg_main{
 		withd:100%
 	}
-
+	.detail_phone1 {
+		display:none;
+	}
 	.container{width:100%;}
 	.small-top-ad{
 		display:none;
@@ -3801,7 +3819,9 @@ h3 {
 	.shoujiduan {
 		display: none;
 	}
-
+   .detail_phone {
+	display: none;
+    }
 	.tz-con {display: none}
 	.topbar-head{
 		background:#f5f5f5;

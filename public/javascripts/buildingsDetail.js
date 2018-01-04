@@ -83,13 +83,14 @@ $(document).ready(function(){
 				'<div class="base_content_line"><span>近期开盘：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.open_date+'<a href="javascript:void(0)"  onclick="jiangjiatongzhi();" id="informBtn">开盘通知我</a></div>'+
 				'<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
 				'<div class="detail_phone "><a href="tel:4008520213,'+df3+'"><span class="col-sm-12 col-md-12 col-lg-12">售楼处电话&nbsp;&nbsp;|&nbsp;&nbsp;'+data.data.server_phone_num+'</span></a></div>'+
+				'<div class="detail_phone1 "><span class="col-sm-4 col-md-4 col-lg-4">售楼处电话</span><span class="col-sm-1 col-md-1 col-lg-1">|</span><span class="col-sm-7 col-md-7 col-lg-7">'+data.data.server_phone_num+'</span></div>'+
 				'</div>'
 			$(".buildings_detail_text").html(adcontent2);
 
 			if(data.data.latestnews != "wu"){
 			    var adcontent3='<div class="banner_index4 row">'+
 
-				'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"'+'></div>'+
+				'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"  onerror="javascript:this.src=\'/images/tx.jpg\'" '+'></div>'+
 				'<div class="jieshao2 col-sm-8 col-md-8 col-lg-8"><dl><dd><strong>楼盘最新情况：</strong>'+data.data.latestnews+'</dd>'+
 				'<dd  class="ddxx">此消息由 <strong> '+data.data.nickname+' </strong>   最新发布！  想了解更多信息，请联系手机：<strong>'+data.data.user_phone+'</strong>（同微信） <p>'+data.data.recodetime+'</p> </dd></dl></div>'+
 				'<div class="banner_index5 ">'+
