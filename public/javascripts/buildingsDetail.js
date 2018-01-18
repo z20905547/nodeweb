@@ -674,12 +674,12 @@ function yuyuePC(){
 			alert('请输入您的联系方式哦!');
 			return false;
 		}
-		alert("预约成功！客服将尽快与您联系，请保持手机畅通！");
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
 		$("#rePriceOpen2").css('display','none');
 		// 发送短信通知
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
-
-		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		var content = phone;
+		//var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
 	//	alert(content);
 		duanxin(content);
 		return true;
@@ -721,7 +721,8 @@ function yuyueSJ(){
 		// 发送短信通知
 		var from_tag = $("#from_tag").val();
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
-		var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		//var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		var content = phone;
 		//alert(content);
 		duanxin(content);
 	}
@@ -747,9 +748,10 @@ function yuyuekanfangche() {
 }
 
 function duanxin(content){
-	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":"有唯房会客户预约了，请立即处理！" }';
+	var ct = content;
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":'+ct+' }';
 	//var obj = jQuery.parseJSON(str);
-	//alert(obj.toString);
+	alert(ct);
 
 	$.ajax({
 		url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
