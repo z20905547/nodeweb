@@ -6289,7 +6289,7 @@ a.newhouse_login_close span {
 .c_n_2 .consultant_nearby_unit {
 	margin-right: 13px;
 	width: 100%;
-	padding-top: 10px;
+
 }
 .consultant_nearby_unit {
 	position: relative;
@@ -6319,15 +6319,17 @@ a.newhouse_login_close span {
 }
 .c_n_2 .consultant_nearby_unit .cnu_info {
 	margin-top: -10px;
-	overflow: hidden;
+
 }
 .c_n_2 .cnu_name {
-	height: 19px;
-	line-height: 19px;
-	width: 100px;
+
+	line-height: 16px;
+	text-align:center;
+
 }
 .cnu_name {
-	font-size: 14px;
+	font-size: 19px;
+	color: #df0083;
 	height: 22px;
 	line-height: 22px;
 	margin-bottom: 4px;
