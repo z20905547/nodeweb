@@ -5,6 +5,8 @@ city_id = $(".haveSelM1").val();
 active_price = $(".haveSelM2").val();
 acreage = $(".haveSelM3").val();
 shi = $(".haveSelM4").val();
+proId = 460000;
+wuye_type='别墅';
 $(document).ready(function(){
 	//公告切换
 //	$(".small-tab").on("mouseover",function(){
@@ -21,6 +23,7 @@ $(document).ready(function(){
 	curpage=1;
 	totalpage=1;
 	pagecount=15;
+
 	params={
 			proId:proId,
 			now:1,
@@ -31,7 +34,8 @@ $(document).ready(function(){
 		    area_id:area_id,
 		    active_price: active_price,
 		    acreage: acreage,
-		    shi: shi
+		    shi: shi,
+		    wuye_type: wuye_type
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		
@@ -103,6 +107,7 @@ $(document).ready(function(){
 	params={
 		first:0,
 		last:5,
+		wuye_type: wuye_type
 	};
 
 	ajaxGet("get",URLMAP.notecelist,params,function(data){
@@ -162,7 +167,8 @@ function submiBtn() {
 		area_id:area_id,
 		active_price: active_price,
 		acreage: acreage,
-		shi: shi
+		shi: shi,
+		wuye_type: wuye_type
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		$('.active-list').html("");
@@ -244,8 +250,8 @@ function submitFourm(){
 		now:1,
 		first:0,
 		last:pagecount,
-		buildings_name:buildings_name
-
+		buildings_name:buildings_name,
+		wuye_type: wuye_type
 	}
 
 
@@ -332,7 +338,8 @@ function submiBtn_p() {
 		area_id:area_id,
 		active_price: active_price,
 		acreage: acreage,
-		shi: shi
+		shi: shi,
+		wuye_type: wuye_type
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		$('.active-list').html("");
@@ -415,8 +422,8 @@ function submitFourm_p(){
 		now:1,
 		first:0,
 		last:pagecount,
-		buildings_name:buildings_name
-
+		buildings_name:buildings_name,
+		wuye_type: wuye_type
 	}
 
 
@@ -483,4 +490,12 @@ function submitFourm_p(){
 	});
 }
 
-
+function loupan1() {
+	window.open('/buildings/505/460000/126/石梅山庄');
+}
+function loupan2() {
+	window.open('/buildings/585/460000/298/富力湾	');
+}
+function loupan3() {
+	window.open('/buildings/505/460000/126/石梅山庄');
+}

@@ -133,6 +133,7 @@ $(document).ready(function(){
 			'		<div class="base_content_line"><span>产权年限：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.right_years+'年</div>'+
 			'	</div>'+
 			'	</div>'+
+			'		<div class="base_content_line"><span>物业类型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.wuye_type+'</div>'+
 			'		<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
 			'	    <div class="base_content_line"><span>楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_detail+'</div>'+
 			'</div>'+

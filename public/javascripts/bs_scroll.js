@@ -25,7 +25,6 @@ $(function () {
 //			setTimeout(function(){
 				//$('#div1').css("height", $(document).height() + 100);
 				params.first=(curpage-1)*pagecount;
-
 			//alert("first:"+params.first+";curpage:"+curpage+"pagecount:"+pagecount+"totalpage:"+totalpage);
 				ajaxGet("get",URLMAP.buildingslist,params,function(data){
 					if(data.statusCode=="0000"){
