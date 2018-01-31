@@ -2720,7 +2720,7 @@ input {
 	display: inline-block;
 	color: #FFF;
 	padding: 0 25px;
-	margin-right: 70px;
+
 }
 a {
 	text-decoration: none;
@@ -2734,7 +2734,9 @@ a {
 .f14 {
 	font-size: 14px;
 }
-
+.resou{
+	padding-left: 150px;
+}
 
 /*第二页图片注释*/
 .box-img-one {
@@ -6360,4 +6362,9 @@ a.newhouse_login_close span {
 	display: block;
 	line-height: 34px;
 	font-size: 16px;
+}
+
+.haikou {
+	font-size: 12px;
+	margin-left: -24px;
 }

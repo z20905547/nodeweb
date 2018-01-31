@@ -6,14 +6,23 @@
       <div class="head-td f16">
         <ul>
           <li class="search-tr"><a href="javascript:void(0);" class="hover">找新房</a>
-
+            <a href="javascript:void(0)"  class="haikou">热门片区：</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460100)">海口市</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460200)"  class="haikou">三亚市</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460150)"  class="haikou">陵水市</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460700)"  class="haikou">万宁市</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460500)"  class="haikou">澄迈县</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460600)"  class="haikou">文昌市</a>
+            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460800)"  class="haikou">定安县</a>
           </li>
+
           <li class="search-tt">
             <input type="text"  class="search-inp f16 keyword_p" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}">
             <input type="submit" value="" class="search-but" onclick="submitFourm_p()">
             <ul class="sous-ts">
             </ul>
           </li>
+
           <li class="search-hot f14">
             <select class="haveSelM1_p" name="city_id" id="city_id" onchange="submiBtn_p()">
               <option value="111" selected="selected">区域</option>
@@ -26,6 +35,7 @@
               <option value="460160">保亭县</option>
               <option value="460700">万宁市</option>
               <option value="460300">东方市</option>
+              <option value="460150">陵水市</option>
               <option value="460800">定安县</option>
               <option value="469000">屯昌县</option>
               <option value="460110">临高县</option>
