@@ -400,6 +400,97 @@ function submiBtn_p() {
 
 
 
+function submiBtn_m(ct) {
+	$('.keyword_p').val("请输入楼盘名称");
+	buildings_name="";
+	//alert(buildings_name);
+//city_id=$("#city_id").val();
+	area_id=$("#area_id").val();
+	city_id = ct;
+	active_price = $(".haveSelM2_p").val();
+	acreage = $(".haveSelM3_p").val();
+	shi = $(".haveSelM4_p").val();
+	loading=true;
+	curpage=1;
+	totalpage=1;
+	pagecount=10;
+	params={
+		proId:proId,
+		now:1,
+		first:0,
+		last:pagecount,
+		buildings_name:buildings_name,
+		city_id:city_id,
+		area_id:area_id,
+		active_price: active_price,
+		acreage: acreage,
+		shi: shi
+	}
+	ajaxGet("get",URLMAP.buildingslist,params,function(data){
+		$('.active-list').html("");
+		if(data.statusCode=="0000"){
+			//	alert("33333333333");
+
+			totalpage=parseInt((data.data.total-1)/pagecount+1);
+			var sublist=data.data.list;
+			var str="";
+			//alert(sublist.length);
+			for(var i=0;i<sublist.length;i++){
+				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
+				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				if (typeof(tejia) == "undefined")
+				{
+					var hongbao = '';
+				}
+				var oneobj=$("<div></div>");
+				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
+					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
+					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
+						//		'<div class="ico_active_count_down"></div><span></span>'+
+					'</div>'+
+					'</div>'+
+					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
+					img+
+					'<div class="float-detail">'+
+					sublist[i].address+
+					'</div>'+
+					'<div class="float-detail2">'+
+					sublist[i].buildings_name+
+					'&nbsp;* '+
+					sublist[i].address+
+					' </div>'+
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<span class="contact">'+
+					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+					'</span>'+
+					'</div>'+
+					'</div>';
+
+				oneobj.append(str);
+				$('.active-list').append(oneobj);
+			}
+			//$('.active-list').append(oneobj);
+		}else{
+			$(".bottom-pull-loading").html("ddddd");
+			setTimeout(function(){
+				$(".bottom-pull-loading").hide();
+			},3000);
+		}
+		loading=false;
+	});
+
+
+}
+
+
 
 //楼盘搜索-单个标注
 function submitFourm_p(){
