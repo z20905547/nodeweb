@@ -32,8 +32,33 @@
             <div class="banner_index2">
                 <a href="/demand/demand" target="_blank"><img
                         src="/images/yzs2.gif" /></a>
-                <div class="indexBanner_num" id="index_numIco"></div>
+                <div class="indexBanner_num" id="index_numIco2"></div>
             </div>
+            <div class="notice2">
+                <ul class="notice_list2">
+                    <li class="toc2 J_annouce_trigger selected">热销楼盘</li>
+                    <li class="toc2 J_annouce_trigger ">海南购房必读</li>
+                </ul>
+                <div class="notice_content2">
+
+                    <div class="J_announce_li2 active-pannel" style="display: block;">
+                        <ul  class="tt222" >
+
+                        </ul>
+                        <p><a class="notice_link_more" href="/news/newslist/1" target="_blank" title="更多">更多&gt;&gt;</a></p>
+                    </div>
+                    <div class="J_announce_li2  active-pannel" style="display: none;">
+                        <ul class="tt22" >
+                           <!-- <li><a class="notice_link gray" title="唯房会开发商合作热线 ：0898-32861406" href="#">开发商合作热线 ：0898-32861406</a></li> -->
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="banner_index3 row">
 
                 <div class="touxiang  col-sm-4 col-md-4 col-lg-4">
@@ -149,11 +174,43 @@
                         }
                     }
                 });
+
+                $(function() {
+                    $(".notice2 .notice_list2 li").mouseover(
+                            function() {
+                                $(this).addClass('selected').siblings()
+                                        .removeClass('selected');
+                                var index = $(this).index();
+                                number = index;
+                                $('.notice2 .notice_content2 .J_announce_li2')
+                                        .hide();
+                                $(
+                                        '.notice2 .notice_content2 .J_announce_li2:eq('
+                                        + index + ')').show();
+                            });
+
+                    var auto = 1; //等于1则自动切换，其他任意数字则不自动切换
+                    if (auto == 1) {
+                        var number = 0;
+                        var maxNumber = $('.notice2 .notice_list2 li').length;
+                        function autotab() {
+                            number++;
+                            number == maxNumber ? number = 0 : number;
+                            $('.notice2 .notice_list2 li:eq(' + number + ')')
+                                    .addClass('selected').siblings()
+                                    .removeClass('selected');
+                            $(
+                                    '.notice2 .notice_content2 .J_announce_li2:eq('
+                                    + number + ')').show().siblings()
+                                    .hide();
+                        }
+                    }
+                });
             </script>
 
             <!-- 代码部分end -->
 
-            <div class="notice">
+            <!--  <div class="notice">
                 <ul class="notice_list">
                     <li class="toc J_annouce_trigger selected">唯房会购房攻略</li>
                     <li class="toc J_annouce_trigger ">合作专区</li>
@@ -162,19 +219,19 @@
 
                     <div class="J_announce_li active-pannel" style="display: block;">
                         <ul  class="tt22" id="J-fashionWnews hidden">
-                            
+
                         </ul>
                         <p><a class="notice_link_more" href="/news/newslist/1" target="_blank" title="更多">更多&gt;&gt;</a></p>
                     </div>
                     <div class="J_announce_li  active-pannel" style="display: none;">
-                        <ul id="J-cpnNews hidden">
+                        <ul >
                             <li><a class="notice_link gray" title="唯房会开发商合作热线 ：0898-32861406" href="#">开发商合作热线 ：0898-32861406</a></li>
 
                         </ul>
 
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="banner_index4">
                 <a href="/buildings/78/460000/81/鲁能海蓝福源" target="_blank"><img
                         src="/images/lhfy.jpg" /></a>

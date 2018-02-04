@@ -708,6 +708,7 @@ a:hover {
 .notice {
 	margin-bottom: 14px
 }
+
 .notice_list {
 	width: 348px;
 	overflow: hidden
@@ -6367,4 +6368,82 @@ a.newhouse_login_close span {
 .haikou {
 	font-size: 12px;
 	margin-left: -24px;
+}
+
+
+
+.notice2 {
+	margin-bottom: 14px
+}
+
+.notice_list2 {
+	width: 348px;
+	overflow: hidden
+}
+.notice_list2 .toc2 {
+	float: left;
+	display: inline;
+	width: 172px;
+	height: 29px;
+	text-align: center;
+	line-height: 29px;
+	font-size: 13px;
+	font-weight: bolder;
+	background-position: -150px -150px;
+	/**border-right: 1px solid #edebed;**/
+	cursor: pointer;
+	position: relative;
+	right: -2px
+}
+.notice_list2 .selected {
+	color: #fcfcfc;
+	background-color: #dc5c95;
+
+}
+.notice_content2 {
+	height:auto;
+	padding: 15px 2px 9px 14px;
+	overflow: hidden;
+	width: 348px;
+}
+
+.notice_content2 ul li {
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+}
+
+.notice_link2 {
+	font: 12px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+	color: #333;
+	background-position: -650px 0;
+	padding-left: 19px;
+}
+.notice_link2:hover {
+	background-position: -650px -15px
+}
+.notice_content2 p {
+	text-align: right
+}
+.notice_link_more2 {
+	color: #b3b3b3
+}
+.hot{
+	width: 100%;
+}
+.hotname {
+	width: 60%;
+	float: left;
+}
+
+.hotprice {
+	width: 30%;
+	float: right;
+	margin-right: 0px;
+	padding-right: 0px;
+}
+.J_announce_li2 ul{
+	cursor: pointer;
 }

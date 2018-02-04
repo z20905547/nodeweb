@@ -32,6 +32,8 @@ $(document).ready(function(){
 	$(".top_city_item").on("click",function(){
 		window.location.href=WEBURL+$(this).attr("data-proid");
 	})
+
+
 });
 
 function zhuce() {

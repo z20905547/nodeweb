@@ -97,7 +97,54 @@ $(document).ready(function(){
 
 
 
+//最新楼盘
+//
+//	ajaxGet("get",URLMAP.buildingslist3,params,function(data3){
+//
+//		if(data3.statusCode=="0000"){
+//			totalpage=parseInt((data3.data3.total-1)/pagecount+1);
+//			var sublist3=data3.data3.list;
+//			alert(sublist3);
+//			var str3="";
+//			for(var i=0;i<sublist3.length;i++){
+//				var oneobj3=$("<li></li>");
+//				oneobj3.addClass("notice_link").attr("data-id",sublist3[i].buildings_id).attr("data-id2",sublist3[i].id).attr("data-id3",sublist3[i].buildings_name).on("click",function(){
+//					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+//				})
+//
+//				str3= '<div class="new"><div class="newname">'+sublist3[i].buildings_name+'</div><div class="newdate">'+sublist3[i].open_date+'<span>元</span></div></div>';
+//				oneobj3.append(str3);
+//				alert(str3);
+//				$('#tt333').append(oneobj3);
+//			}
+//
+//		}else{
+//		}
+//
+//	});
 
+// 最热楼盘
+	ajaxGet("get",URLMAP.buildingslist2,params,function(data){
+
+		if(data.statusCode=="0000"){
+			totalpage=parseInt((data.data.total-1)/pagecount+1);
+			var sublist2=data.data.list;
+			var str="";
+			for(var i=0;i<sublist2.length;i++){
+				var oneobj=$("<li></li>");
+				oneobj.addClass("notice_link").attr("data-id",sublist2[i].buildings_id).attr("data-id2",sublist2[i].id).attr("data-id3",sublist2[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				str= '<div class="hot"><div class="hotname">'+sublist2[i].buildings_name+'</div><div class="hotprice">'+sublist2[i].active_price+'<span>元</span></div></div>';
+				oneobj.append(str);
+
+				$('.tt222').append(oneobj);
+			}
+
+		}else{
+		}
+
+	});
 
 
 	params={
@@ -123,6 +170,9 @@ $(document).ready(function(){
 		}else{
 		}
 	});
+
+
+
 
 
 });
