@@ -146,3 +146,78 @@ function tuangouSJ(){
 		return true;
 	}
 }
+
+
+function shut() {
+	$("#rePriceOpen").css('display','none');
+	$("#rePriceOpen2").css('display','none');
+}
+function yuyuePC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#yuyuePC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#yuyuePC').ajaxSubmit(options);
+
+	$('#yuyuePC').clearForm();
+
+	function showRequest() {
+		var name = $("#yyNamePC").val();
+		var phone = $("#yyPhonePC").val();
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！团购客服将尽快与您联系，请保持手机畅通！");
+		$("#rePriceOpen2").css('display','none');
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = phone;
+		//var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
+		//	alert(content);
+		duanxin(content);
+		return true;
+
+	}
+}
+// 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
+$("#hideNotice").click(function(){
+	$("#rePriceOpen").css('display','none');
+});
+
+function yuyuekanfangche() {
+	$("#rePriceOpen2").css('display','block');
+}
+
+function duanxin(content){
+	var ct = content;
+	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":'+ct+' }';
+	//var obj = jQuery.parseJSON(str);
+	//alert(ct);
+
+	$.ajax({
+		url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
+		data:str,
+		type:'post',    //数据传输方式
+		dataType:'json',//数据传输格式
+		success:function(data) {
+			//执行成功后的回调函数，data为返回的数据
+			//alert("成功"+data);
+		},
+		error : function(data22) {
+			//alert("失败"+data22.status+"uu"+JSON.stringify(data22));
+		}
+	});
+}
+

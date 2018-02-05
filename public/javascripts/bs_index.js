@@ -499,3 +499,4 @@ function loupan2() {
 function loupan3() {
 	window.open('/buildings/505/460000/126/石梅山庄');
 }
+

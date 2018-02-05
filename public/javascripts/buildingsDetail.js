@@ -752,7 +752,7 @@ function duanxin(content){
 	var ct = content;
 	var str = '{ "uid": "14", "pwd": "123456", "mobile": "13876002062", "content":'+ct+' }';
 	//var obj = jQuery.parseJSON(str);
-	alert(ct);
+	//alert(ct);
 
 	$.ajax({
 		url:'http://www.467890.com/Admin/index.php/Message/send',  //api接口地址
