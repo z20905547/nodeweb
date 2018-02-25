@@ -1,6 +1,7 @@
 Id=$("#Id").val();
 newsTitle=$("#newsTitle").val();
 curpage=$("#curpage").val();
+mark=$("#mark").val();
 
 loading=true;
 pagecount=8;
@@ -10,6 +11,7 @@ params={
 	newsTitle:newsTitle,
 	first:(curpage-1)*pagecount,
 	last:pagecount,
+	mark:mark,
 };
 
 $(document).ready(function(){

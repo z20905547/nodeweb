@@ -15,26 +15,28 @@ $(document).ready(function(){
 //		$(".notice-content").hide();
 //		$("."+did).show();
 //	});
-
+	$("#e1").show();
+	$("#e2").hide();
+	$("#e3").hide();
 
 	loading=true;
 	curpage=1;
 	totalpage=1;
 	pagecount=15;
 	params={
-			proId:proId,
-			now:1,
-			first:0,
-			last:pagecount,
-		    buildings_name:buildings_name,
-		    city_id:city_id,
-		    area_id:area_id,
-		    active_price: active_price,
-		    acreage: acreage,
-		    shi: shi
+		proId:proId,
+		now:1,
+		first:0,
+		last:pagecount,
+		buildings_name:buildings_name,
+		city_id:city_id,
+		area_id:area_id,
+		active_price: active_price,
+		acreage: acreage,
+		shi: shi
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
-		
+
 		if(data.statusCode=="0000"){
 			totalpage=parseInt((data.data.total-1)/pagecount+1);
 			var sublist=data.data.list;
@@ -55,24 +57,24 @@ $(document).ready(function(){
 					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-sm-6 col-md-5 col-lg-4">'+
-							'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
+					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 
-							'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-							'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-							'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元<span></span></div>'+
-							'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-				//				'<div class="ico_active_count_down"></div><span></span>'+
+					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元<span></span></div>'+
+					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
+						//				'<div class="ico_active_count_down"></div><span></span>'+
 					'<div><a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon"></i>加入团购</a></div><span></span>'+
-							'</div>'+
-						'</div>'+
-						'<div class="right-img col-xs-12  col-sm-6 col-md-7 col-lg-8">'+
-							img+
-							'<div class="float-detail">'+
+					'</div>'+
+					'</div>'+
+					'<div class="right-img col-xs-12  col-sm-6 col-md-7 col-lg-8">'+
+					img+
+					'<div class="float-detail">'+
 					sublist[i].address+
-							'</div>'+
-					        '<div class="float-detail2"><strong>'+
-					          sublist[i].buildings_name+
-					        '</strong>&nbsp;* '+
+					'</div>'+
+					'<div class="float-detail2"><strong>'+
+					sublist[i].buildings_name+
+					'</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
 					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
@@ -83,9 +85,9 @@ $(document).ready(function(){
 
 					'</div>';
 				oneobj.append(str);
-				$('.active-list').append(oneobj); 
+				$('.active-list').append(oneobj);
 			}
-			
+
 		}else{
 			$(".bottom-pull-loading").html("网络繁忙，稍后重试");
 			setTimeout(function(){
@@ -96,32 +98,32 @@ $(document).ready(function(){
 	});
 
 
+//====================最新==最热============================================================
+//最新开盘
 
-//最新楼盘
-//
-//	ajaxGet("get",URLMAP.buildingslist3,params,function(data3){
-//
-//		if(data3.statusCode=="0000"){
-//			totalpage=parseInt((data3.data3.total-1)/pagecount+1);
-//			var sublist3=data3.data3.list;
-//			alert(sublist3);
-//			var str3="";
-//			for(var i=0;i<sublist3.length;i++){
-//				var oneobj3=$("<li></li>");
-//				oneobj3.addClass("notice_link").attr("data-id",sublist3[i].buildings_id).attr("data-id2",sublist3[i].id).attr("data-id3",sublist3[i].buildings_name).on("click",function(){
-//					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
-//				})
-//
-//				str3= '<div class="new"><div class="newname">'+sublist3[i].buildings_name+'</div><div class="newdate">'+sublist3[i].open_date+'<span>元</span></div></div>';
-//				oneobj3.append(str3);
-//				alert(str3);
-//				$('#tt333').append(oneobj3);
-//			}
-//
-//		}else{
-//		}
-//
-//	});
+	ajaxGet("get",URLMAP.buildingslist3,params,function(data3){
+
+		if(data3.statusCode=="0000"){
+			totalpage=parseInt((data3.data3.total-1)/pagecount+1);
+			var sublist3=data3.data3.list;
+			var str3="";
+			for(var i=0;i<sublist3.length;i++){
+				var ddate = sublist3[i].open_date;
+				if(ddate==null||ddate==undefined||ddate=="") ddate='待定';
+				var oneobj3=$("<li></li>");
+				oneobj3.addClass("notice_link").attr("data-id",sublist3[i].buildings_id).attr("data-id2",sublist3[i].id).attr("data-id3",sublist3[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				str3= '<div class="hot"><div class="hotname">'+sublist3[i].buildings_name+'</div><div class="hotprice">'+ddate+'<span></span></div></div>';
+				//str3= '<div class="new"><div class="newname">'+sublist3[i].buildings_name+'</div><div class="newdate">'+sublist3[i].open_date+'<span>元</span></div></div>';
+				oneobj3.append(str3);
+				$('.tt22').append(oneobj3);
+			}
+
+		}else{
+		}
+
+	});
 
 // 最热楼盘
 	ajaxGet("get",URLMAP.buildingslist2,params,function(data){
@@ -146,32 +148,203 @@ $(document).ready(function(){
 
 	});
 
+//============================结束===========================================
+	//params={
+	//	first:0,
+	//	last:5,
+	//	mark:1,
+	//};
+    //
+	//ajaxGet("get",URLMAP.notecelist,params,function(data){
+    //
+	//	if(data.statusCode=="0000"){
+	//		var sublist=data.data.list;
+	//		var str="";
+	//		for(var i=0;i<sublist.length;i++){
+	//			var oneobj=$("<li></li>");
+	//			oneobj.addClass("notice_link").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+	//				window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+	//			})
+	//			str= '&nbsp;&nbsp;'+sublist[i].Title ;
+	//			oneobj.append(str);
+	//			$('.tt22').append(oneobj);
+	//		}
+    //
+	//	}else{
+	//	}
+	//});
 
-	params={
+//================================各类资讯=========================================
+//房产知识 头条
+	params7={
 		first:0,
 		last:5,
+		mark:4,
+		is_top:1,
 	};
 
-	ajaxGet("get",URLMAP.notecelist,params,function(data){
+	ajaxGet("get",URLMAP.notecelist,params7,function(data){
 
 		if(data.statusCode=="0000"){
 			var sublist=data.data.list;
 			var str="";
-			for(var i=0;i<sublist.length;i++){
-				var oneobj=$("<li></li>");
-				oneobj.addClass("notice_link").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+			for(var i=0;i<1;i++){
+				var oneobj=$("<a></a>");
+				oneobj.attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
 					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
 				})
 				str= '&nbsp;&nbsp;'+sublist[i].Title ;
 				oneobj.append(str);
-				$('.tt22').append(oneobj);
+				$('#e1top').append(oneobj);
 			}
 
 		}else{
 		}
 	});
 
+//房产知识 列表
+	params6={
+		first:0,
+		last:10,
+		mark:4,
+		is_top:0,
+	};
 
+	ajaxGet("get",URLMAP.notecelist,params6,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+			for(var i=0;i<sublist.length;i++){
+				var oneobj=$("<li></li>");
+				oneobj.addClass("f14").attr("id","dsy_D04_36").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+				})
+				str= ' <a class="cmsA" href="" target="_blank">'+sublist[i].Title+ ' </a>' ;
+				oneobj.append(str);
+				$('#e1list').append(oneobj);
+			}
+
+		}else{
+		}
+	});
+
+//---------------------------------
+
+//房产快讯 头条
+	params77={
+		first:0,
+		last:5,
+		mark:5,
+		is_top:1,
+	};
+
+	ajaxGet("get",URLMAP.notecelist,params77,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+			for(var i=0;i<1;i++){
+				var oneobj=$("<a></a>");
+				oneobj.attr("style","font-size:18px").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+				})
+				str= '&nbsp;&nbsp;'+sublist[i].Title ;
+				oneobj.append(str);
+				$('#e2top').append(oneobj);
+			}
+
+		}else{
+		}
+	});
+
+//房产快讯 列表
+	params66={
+		first:0,
+		last:10,
+		mark:5,
+		is_top:0,
+	};
+
+	ajaxGet("get",URLMAP.notecelist,params66,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+			for(var i=0;i<sublist.length;i++){
+				var oneobj=$("<li></li>");
+				oneobj.addClass("f14").attr("id","dsy_D04_36").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+				})
+				str= ' <a class="cmsA" href="" target="_blank">'+sublist[i].Title+ ' </a>' ;
+				oneobj.append(str);
+				$('#e2list').append(oneobj);
+			}
+
+		}else{
+		}
+	});
+
+//---------------------------------
+
+
+//---------------------------------
+
+//楼盘导购 头条
+	params777={
+		first:0,
+		last:5,
+		mark:4,
+		is_top:1,
+	};
+
+	ajaxGet("get",URLMAP.notecelist,params777,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+			for(var i=0;i<1;i++){
+				var oneobj=$("<a></a>");
+				oneobj.attr("style","font-size:18px").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+				})
+				str= '&nbsp;&nbsp;'+sublist[i].Title ;
+				oneobj.append(str);
+				$('#e3top').append(oneobj);
+			}
+
+		}else{
+		}
+	});
+
+//楼盘导购  列表
+	params666={
+		first:0,
+		last:10,
+		mark:6,
+		is_top:0,
+	};
+
+	ajaxGet("get",URLMAP.notecelist,params666,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+			for(var i=0;i<sublist.length;i++){
+				var oneobj=$("<li></li>");
+				oneobj.addClass("f14").attr("id","dsy_D04_36").attr("data-id",sublist[i].Id).attr("data-tit",sublist[i].Title).on("click",function(){
+					window.open(WEBMAP.noticedetail+$(this).attr("data-id")+'/'+$(this).attr("data-tit"));
+				})
+				str= ' <a class="cmsA" href="" target="_blank" >'+sublist[i].Title+ ' </a>' ;
+				oneobj.append(str);
+				$('#e3list').append(oneobj);
+			}
+
+		}else{
+		}
+	});
+
+//---------------------------------
 
 
 
@@ -217,7 +390,7 @@ function submiBtn() {
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		$('.active-list').html("");
 		if(data.statusCode=="0000"){
-		//	alert("33333333333");
+			//	alert("33333333333");
 
 			if (typeof(tejia) == "undefined")
 			{
@@ -244,7 +417,7 @@ function submiBtn() {
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-				//	'<div class="ico_active_count_down"></div><span></span>'+
+						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -323,7 +496,7 @@ function submitFourm(){
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-				//	'<div class="ico_active_count_down"></div><span></span>'+
+						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -412,7 +585,7 @@ function submiBtn_p() {
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-			//		'<div class="ico_active_count_down"></div><span></span>'+
+						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+
@@ -588,7 +761,7 @@ function submitFourm_p(){
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
-			//		'<div class="ico_active_count_down"></div><span></span>'+
+						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-sm-6 col-md-7 col-lg-8">'+

@@ -760,7 +760,10 @@ a:hover {
 	text-align: right
 }
 .notice_link_more {
-	color: #b3b3b3
+	color: #b3b3b3;
+	float: right;
+	padding-right: 15px;
+
 }
 .m-forecast {
 	width: 348px;
@@ -6583,4 +6586,114 @@ a.newhouse_login_close span {
     padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 7px;
+}
+
+.a300 {
+	float: right;
+	width: 323px;
+}
+.huan300 {
+	width: 323px;
+	height: 430px;
+	text-align: left;
+}
+.feature-slide-block {
+	position: relative;
+}
+.feature-slide-list {
+	width: 170px;
+	height: 22px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 89;
+}
+.feature-slide-list a.feature-slide-list-previous {
+	width: 13px;
+	height: 12px;
+	float: left;
+	background: url(../images/feature-point-previous.gif) no-repeat;
+	margin-top: 6px;
+}
+.feature-slide-list a {
+	float: left;
+	display: inline;
+	width: 8px;
+	height: 8px;
+	float: left;
+	margin-right: 7px;
+	cursor: pointer;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: block;
+	background-color: #cccccc;
+	margin-top: 8px;
+	overflow: hidden;
+}
+.a200nrbt {
+	height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.feature-slide-list a.feature-slide-list-next {
+	width: 13px;
+	height: 12px;
+	float: left;
+	background: url(../images/feature-point-next.gif) no-repeat;
+	margin-top: 6px;
+}
+
+.a300nr .bigtit {
+	white-space: nowrap;
+	font-weight: 600;
+	overflow: hidden;
+	font-size: 24px;
+	width: 300px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+.ul01 li.f14 a {
+	padding-left: 8px;
+}
+
+
+.f14 {
+	font-size: 14px;
+}
+.banner_index23 {
+	position: relative;
+	overflow: hidden;
+	width: 348px;
+	margin: 0px auto 25px;
+}
+.ul01 li.stit a {
+	color: #df2f30;
+	text-decoration: none;
+}
+.a300nr .bigtit a {
+	color: #df2f30;
+	text-decoration: none;
+}
+.ul01 li.stit {
+	font-weight: 600;
+	overflow: hidden;
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 4px;
+	background: none;
+}
+.ul01 li {
+	width: 298px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+	overflow: hidden;
+	background: url(../images/newgif.gif?v=12) no-repeat 0 -498px;
+	padding-left: 2px;
+}
+.feature-slide-list a.current {
+	background-color: #df2f30;
 }
