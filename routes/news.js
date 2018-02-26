@@ -10,6 +10,10 @@ router.get('/newslist/:curpage(\\d+)/', function (req, res,next) {
 	res.render('news/newslist', { title: '博客首页 | 唯房会官方博客,海南唯房会',curpage: req.params.curpage});
 });
 
+router.get('/newslist/:curpage(\\d+)/:mark(\\d+)/', function (req, res,next) {
+	res.render('news/newslist', { title: '博客首页 | 唯房会官方博客,海南唯房会',curpage: req.params.curpage,mark: req.params.mark});
+});
+
 router.get('/Aboutus', function (req, res,next) {
 	res.render('news/Aboutus', { title: '博客首页 | 唯房会官方博客,海南唯房会',curpage: req.params.curpage});
 });

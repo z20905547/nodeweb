@@ -2,6 +2,7 @@ extends ../layout
 
 block content
     input#curpage(type="hidden",value="#{curpage}")
+    input#mark(type="hidden",value="#{mark}")
     include ../head.jade
     include news_list.html
     include ../footer.html
