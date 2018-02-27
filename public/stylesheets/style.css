@@ -3516,6 +3516,9 @@ h3 {
 		border:none;
 		height: 100%;
 	}
+	.search-tr2{
+		display:none;
+	}
 
 }
 
