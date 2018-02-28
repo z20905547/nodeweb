@@ -294,7 +294,7 @@ $(document).ready(function(){
 	params777={
 		first:0,
 		last:5,
-		mark:4,
+		mark:6,
 		is_top:1,
 	};
 
