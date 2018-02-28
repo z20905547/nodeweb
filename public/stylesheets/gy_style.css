@@ -2728,7 +2728,10 @@ a {
 .f14 {
     font-size: 14px;
 }
-
+.search-hot .f14 {
+    margin-left: 100px;
+    padding-left: 100px;
+}
 
 /*第二页图片注释*/
 .box-img-one {
