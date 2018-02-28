@@ -4597,7 +4597,7 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 .tx_mm ul li p{ line-height:22px;}
 
 .search-hot select {
- PADDING-RIGHT: 10px;border:0;border:none;  PADDING-LEFT: 10px;font-size: 12px; BACKGROUND: url(../images/ubox-select.gif) no-repeat 0px 0px; PADDING-BOTTOM: 0px; WIDTH: 167px; COLOR: #bd1067; LINE-HEIGHT: 24px; PADDING-TOP: 2px; HEIGHT: 24px
+ PADDING-RIGHT: 10px;border:0;border:none;  PADDING-LEFT: 10px;font-size: 12px; BACKGROUND: url(../images/ubox-select.gif) no-repeat 0px 0px; PADDING-BOTTOM: 0px; WIDTH: 166px; COLOR: #bd1067; LINE-HEIGHT: 24px; PADDING-TOP: 2px; HEIGHT: 24px
 ;border-radius:5px;
 	appearance:none;
 	-moz-appearance:none;
@@ -6597,7 +6597,7 @@ a.newhouse_login_close span {
 }
 .huan300 {
 	width: 323px;
-	height: 430px;
+
 	text-align: left;
 }
 .feature-slide-block {

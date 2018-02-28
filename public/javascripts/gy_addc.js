@@ -116,8 +116,9 @@ function duanxin(content){
 		dataType:'json',//数据传输格式
 		async: false,//设置为同步传输
 		success:function(data) {
+			$('div').html(data);
 			//执行成功后的回调函数，data为返回的数据
-		//	alert("成功"+data);
+		//	alert("成功"+$('div').html(data.tips););
 
 			 		},
 		error : function(XMLHttpRequest, textStatus, errorThrown) {

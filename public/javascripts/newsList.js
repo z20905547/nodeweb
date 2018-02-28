@@ -14,6 +14,7 @@ params={
 	mark:mark,
 };
 
+
 $(document).ready(function(){
 
 ajaxGet("get",URLMAP.notecelist,params,function(data){
@@ -27,7 +28,7 @@ ajaxGet("get",URLMAP.notecelist,params,function(data){
 		for(var i=0;i<sublist.length;i++){
 			str='<div class="list_box box_show02">' +
 				'<a href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+
-				'<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/news/'+sublist[i].Id+'/fm.jpg"></a>'+
+				'<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/news/'+sublist[i].Id+'/fm.jpg" onerror="javascript:this.style.display=\'none\'"'+'></a>'+
 				'<h2> <a href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+sublist[i].Title+'</a> </h2>'+
 				'<p class="color_h01"> <edit type="text" name="Index_RightContentArtlistReleaseDate">发布日期：</edit><span><time>'+sublist[i].MessageDate+'</time></span>'+
                 '<edit type="text" name="Index_RightContentArtlistTotalHit">阅读</edit>'+
