@@ -3527,6 +3527,9 @@ h3 {
 		width: 100%;
 
 	}
+	.touxiang2{
+		display: none;
+	}
 	.buildings_detail_price{
 		display: none;
 	}
