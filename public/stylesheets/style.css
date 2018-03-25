@@ -6703,3 +6703,49 @@ a.newhouse_login_close span {
 .feature-slide-list a.current {
 	background-color: #df2f30;
 }
+.wrap {
+	background-color: #fff;
+	width: 90%;
+	max-width: 1090px;
+	min-height: 580px;
+	padding: 10px 4%;
+	margin: 0 auto;
+	font-family: "微软雅黑", 'Merriweather Sans', sans-serif;
+}
+.single {
+
+	float: left;
+	font-size: 20px;
+	line-height: 29px;
+	margin-right: 2px;
+	margin-top: 18px;
+	color: #252525;
+	border-bottom: 3px solid #e20f77;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.single p {
+	font-size: 20px;
+}
+.jlb {
+	width: 90%;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.jlb p {
+	color: #777;
+	text-indent: 2em;
+	line-height: 30px;
+	font-size: 16px;
+}
+.mftzjlb {
+	width: 90%;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.jlb2 p {
+	color: #777;
+	text-indent: 2em;
+	line-height: 30px;
+	font-size: 16px;}
