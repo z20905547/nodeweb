@@ -39,6 +39,9 @@ $(document).ready(function(){
 function zhuce() {
 	window.open('/users/register2');
 }
+function zhuce2() {
+	window.open('/jinrong/jinrong');
+}
 
 function loupan() {
 	window.open('/buildings/505/460000/126/石梅山庄');
