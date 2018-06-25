@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 
+var yunnan = require('./routes/yn_index');
+var guangxi = require('./routes/gx_index');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var buildings = require('./routes/buildings');
@@ -38,6 +40,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
+app.use('/gx_index', guangxi);
+app.use('/yn_index', yunnan);
 app.use('/users', users);
 app.use('/buildings', buildings);
 app.use('/gy_customer', gy_customer);

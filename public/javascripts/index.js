@@ -5,6 +5,8 @@ city_id = $(".haveSelM1").val();
 active_price = $(".haveSelM2").val();
 acreage = $(".haveSelM3").val();
 shi = $(".haveSelM4").val();
+
+if(city_id==='111') city_id='';
 $(document).ready(function(){
 	//公告切换
 //	$(".small-tab").on("mouseover",function(){
@@ -177,6 +179,8 @@ $(document).ready(function(){
 //================================各类资讯=========================================
 //房产知识 头条
 	params7={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:5,
 		mark:4,
@@ -204,6 +208,8 @@ $(document).ready(function(){
 
 //房产知识 列表
 	params6={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:10,
 		mark:4,
@@ -233,6 +239,8 @@ $(document).ready(function(){
 
 //房产快讯 头条
 	params77={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:5,
 		mark:5,
@@ -260,6 +268,8 @@ $(document).ready(function(){
 
 //房产快讯 列表
 	params66={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:10,
 		mark:5,
@@ -292,6 +302,8 @@ $(document).ready(function(){
 
 //楼盘导购 头条
 	params777={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:5,
 		mark:6,
@@ -319,6 +331,8 @@ $(document).ready(function(){
 
 //楼盘导购  列表
 	params666={
+		proId:proId,
+		city_id:city_id,
 		first:0,
 		last:10,
 		mark:6,

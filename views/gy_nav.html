@@ -43,7 +43,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="csearch-input"><span class="choose_title"><font>新房</font>
+                <div class="csearch-input"><span class="choose_title"><font><select onchange="window.location=this.value;">
+                    <option value ="/">海南</option>
+                    <option value ="/gx_index" selected>广西</option>
+                    <option value="/yn_index">云南</option>
+
+                </select></font>
                     <i class="icon-arrow"></i></span><input type="text" class="textInput keyword" name="buildings_name"
                                                             id="buildings_name" placeholder="请输入楼盘名称" value=""><input
                         type="hidden" id="search_type" value="">
