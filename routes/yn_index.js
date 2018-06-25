@@ -1,20 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-
 router.get("/gx_index", function(req, res, next) {
-  //获取广西盘数据
+  //获取楼盘数据
   res.render('gx_index', { title: '唯房会 -一家专门做特价房的网站',backproId: 450000});
 });
-router.get("/yn_index", function(req, res, next) {
-  //获取云南楼盘数据
+router.get("/gx_index", function(req, res, next) {
+  //获取楼盘数据
   res.render('yn_index', { title: '唯房会 -一家专门做特价房的网站',backproId: 530000});
 });
 
-router.get("/:proId(\\d+)", function(req, res, next) {
-	//获取楼盘数据
-  res.render('index', { title: '唯房会 -一家专门做特价房的网站',backproId: req.params.proId});
-});
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	//获取楼盘数据
