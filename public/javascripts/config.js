@@ -8,6 +8,8 @@ var HTTPURL="http://www.vfhui.com:8080/management/";
 
 var WEBMAP={
 		buildingsdetail:WEBURL+"buildings/",
+	    gx_buildingsdetail:WEBURL+"gx_buildings/",
+	    yn_buildingsdetail:WEBURL+"yn_buildings/",
 	    noticedetail:WEBURL+"news/",
 	    orderdetail:WEBURL+"gy_customer/",
 	    gy_buildingsdetail:WEBURL+"gy_buildings/"
