@@ -40,11 +40,11 @@ function zhuce() {
 	window.open('/users/register2');
 }
 function zhuce2() {
-	window.open('/');
+	window.open('/buildings/759/460000/478/海花岛');
 }
 
 function loupan() {
-	window.open('/buildings/505/460000/126/石梅山庄');
+	window.open('/buildings/679/460000/399/融创观澜湖公园壹号');
 }
 
 function tuangoubaoming() {
