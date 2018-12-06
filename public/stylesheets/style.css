@@ -3523,6 +3523,9 @@ h3 {
 }
 
 @media screen and (max-width:768px){
+	.lpdt{
+		display:none;
+	}
 	.main_active_pic img{
 		width: 100%;
 
@@ -3825,7 +3828,12 @@ h3 {
 }
 
 @media screen and (min-width:768px){
+
+
 	.header2{
+		display:none;
+	}
+	.header3{
 		display:none;
 	}
 	.shoujiduan {
@@ -3929,6 +3937,10 @@ h3 {
 }
 .header2 {
 	height: 115px;
+	background-color: #f10582;
+}
+.header3 {
+
 	background-color: #f10582;
 }
 .item img {
@@ -5143,6 +5155,11 @@ li.no-border-r {
 	overflow: hidden;
 	zoom: 1;
 	padding-bottom: 44px;
+}
+.header3 {
+	overflow: hidden;
+	zoom: 1;
+
 }
 a#for-cascade-login-link.logo {
 	width: 315px;
@@ -6745,3 +6762,20 @@ a.newhouse_login_close span {
 	text-indent: 2em;
 	line-height: 30px;
 	font-size: 16px;}
+
+.main_active_count_down a {
+	margin-left: 15px;
+	font-size: 14px;
+	text-align: center;
+	color: #AA6D2B;
+	height: 25px;
+	border: 1px solid #F1E0AB;
+	background: #FFC;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	width: 100px;
+}
