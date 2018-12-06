@@ -19,7 +19,7 @@ $(document).ready(function(){
 			map_y=data.data.map_y;
 			xy(data.data.map_x,data.data.map_y);
 			var tejia = data.data.discount_price;
-			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'元</p></div>';
+			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'元/㎡</p></div>';
 			if (typeof(tejia) == "undefined")
 			{
 				var hongbao = '';
@@ -63,13 +63,13 @@ $(document).ready(function(){
 			//楼盘动态
 			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
-				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>元</span></div>'+
+				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>元/㎡</span></div>'+
 				'			<div class="main_active_price">'+
 				'				<div class="ico_active_price">限时特价</div>'+
 				'				<span>'+data.data.active_price+'</span>'+
 				'			</div>'+
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
-				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon" ></i>降价通知我</a>'+
+				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>降价通知我</a>'+
 		//		'				<div class="ico_active_count_down"></div>'+
 				'				<span></span>'+
 				'			</div>'

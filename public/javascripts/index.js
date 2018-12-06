@@ -48,7 +48,7 @@ $(document).ready(function(){
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				var df = sublist[i].server_phone_num;
 				var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
 				if (typeof(tejia) == "undefined")
@@ -62,8 +62,8 @@ $(document).ready(function(){
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元<span></span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡<span></span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//				'<div class="ico_active_count_down"></div><span></span>'+
 					'<div><a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon"></i>加入团购</a></div><span></span>'+
@@ -79,7 +79,7 @@ $(document).ready(function(){
 					'</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -117,7 +117,7 @@ $(document).ready(function(){
 					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str3= '<div class="hot"><div class="hotname">'+sublist3[i].buildings_name+'</div><div class="hotprice">'+ddate+'<span></span></div></div>';
-				//str3= '<div class="new"><div class="newname">'+sublist3[i].buildings_name+'</div><div class="newdate">'+sublist3[i].open_date+'<span>元</span></div></div>';
+				//str3= '<div class="new"><div class="newname">'+sublist3[i].buildings_name+'</div><div class="newdate">'+sublist3[i].open_date+'<span>元/㎡</span></div></div>';
 				oneobj3.append(str3);
 				$('.tt22').append(oneobj3);
 			}
@@ -139,7 +139,7 @@ $(document).ready(function(){
 				oneobj.addClass("notice_link").attr("data-id",sublist2[i].buildings_id).attr("data-id2",sublist2[i].id).attr("data-id3",sublist2[i].buildings_name).on("click",function(){
 					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
-				str= '<div class="hot"><div class="hotname">'+sublist2[i].buildings_name+'</div><div class="hotprice">'+sublist2[i].active_price+'<span>元</span></div></div>';
+				str= '<div class="hot"><div class="hotname">'+sublist2[i].buildings_name+'</div><div class="hotprice">'+sublist2[i].active_price+'<span>元/㎡</span></div></div>';
 				oneobj.append(str);
 
 				$('.tt222').append(oneobj);
@@ -416,7 +416,7 @@ function submiBtn() {
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
@@ -428,8 +428,8 @@ function submiBtn() {
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -444,7 +444,7 @@ function submiBtn() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -496,7 +496,7 @@ function submitFourm(){
 
 			for(var i=0;i<sublist.length;i++){
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
@@ -507,8 +507,8 @@ function submitFourm(){
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -523,7 +523,7 @@ function submitFourm(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -584,7 +584,7 @@ function submiBtn_p() {
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -596,8 +596,8 @@ function submiBtn_p() {
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -612,7 +612,7 @@ function submiBtn_p() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -676,7 +676,7 @@ function submiBtn_m(ct) {
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -688,8 +688,8 @@ function submiBtn_m(ct) {
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -704,7 +704,7 @@ function submiBtn_m(ct) {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -760,7 +760,7 @@ function submitFourm_p(){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var tejia = sublist[i].discount_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -772,8 +772,8 @@ function submitFourm_p(){
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -788,7 +788,7 @@ function submitFourm_p(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -811,4 +811,4 @@ function submitFourm_p(){
 	});
 }
 
-
+$('#search_submit').on('submit', function(e){ submitFourm_p();}	);
