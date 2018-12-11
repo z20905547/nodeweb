@@ -5,10 +5,17 @@
 </style>
 <div class="content-body">
     <div class="container">
+
+
+
         <div id="div1"
-             class="content-left-block col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
+             class="content-left-block col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+
+
+
             <div class="left-title row">
-                <div class="head-td2 f162">
+              <!--   <div class="head-td2 f162">
                     <ul>
                         <li class="search-tr2">
                             <a href="javascript:void(0)"  class="haikou">热门片区：</a>
@@ -21,10 +28,48 @@
                             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460600)"  class="haikou">文昌市</a>
                             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460800)"  class="haikou">定安县</a>
                         </li>
-                        </ul>
-                    </div>
+                    </ul>
+                </div>-->
+
+                <div id="bNav" class="bNav">
+                    <ul>
+                        <li class="top1"><a href="" class="ttt1" >最近热销&nbsp;&nbsp;&nbsp;</a></li>
+                        <li>|</li>
+                        <li class="top2"><a href=""  class="ttt2" >&nbsp;&nbsp;&nbsp;一线海景&nbsp;&nbsp;&nbsp;</a></li>
+                        <li>|</li>
+                        <li class="top3"><a href=""  class="ttt3" >&nbsp;&nbsp;&nbsp;精品别墅</a></li>
+
+                    </ul>
+                </div>
+                <div class="ui-box">
+
+                    <ul class="feature-box style-2 clearfix eee">
+                     <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
+
+
+
+                    </ul>
+
+                    <ul class="feature-box style-2 clearfix eee2">
+                        <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
+
+
+
+                    </ul>
+
+                    <ul class="feature-box style-2 clearfix eee3">
+                        <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
+
+
+
+                    </ul>
+
+                </div>
+
                 <img src="/images/new_title.png">
+
             </div>
+
             <div class="active-list"></div>
         </div>
         <div class="content-right-block col-sm-4 col-md-4 col-lg-4">
@@ -287,6 +332,7 @@
                     auto : 1
                 });
 
+
                 $('#elm').hover(
                         function(){
                             $(this).addClass('current');
@@ -298,6 +344,8 @@
                             $(this).removeClass('current')
                         }
                 )
+
+
                 $('#elm1').hover(
                         function(){
                             $(this).addClass('current');
@@ -329,6 +377,72 @@
 
 
 
+                <!-- top 开始 -->
+
+                $('.top1').hover(
+                        function(){
+
+                            $(".eee").show();
+                            $(".eee2").hide();
+                            $(".eee3").hide();
+                        },
+                function(){
+                    $('.top1').addClass('divOver');
+                    $('.top3').removeClass('divOver');
+                    $('.top2').removeClass('divOver');
+                }
+                )
+                $('.top2').hover(
+                        function(){
+
+                            $(".eee2").show();
+                            $(".eee").hide();
+                            $(".eee3").hide();
+                        },
+                        function(){
+                            $('.top2').addClass('divOver');
+                            $('.top3').removeClass('divOver');
+                            $('.top1').removeClass('divOver');
+                        }
+                )
+                $('.top3').hover(
+                        function(){
+
+                            $(".eee3").show();
+                            $(".eee2").hide();
+                            $(".eee").hide();
+                        },
+                        function(){
+                            $('.top3').addClass('divOver');
+                            $('.top1').removeClass('divOver');
+                            $('.top2').removeClass('divOver');
+                        }
+                )
+
+                $('.top1').mouseover(
+
+                        function(){
+                            $('.top1').addClass('divOver');
+                            $('.top3').removeClass('divOver');
+                            $('.top2').removeClass('divOver');
+                        }
+                )
+                $('.top2').hover(
+
+                        function(){
+                            $('.top2').addClass('divOver');
+                            $('.top3').removeClass('divOver');
+                            $('.top1').removeClass('divOver');
+                        }
+                )
+                $('.top3').hover(
+
+                        function(){
+                            $('.top3').addClass('divOver');
+                            $('.top1').removeClass('divOver');
+                            $('.top2').removeClass('divOver');
+                        }
+                )
             </script>
             <!-- 代码 结束 -->
 
@@ -401,6 +515,13 @@
                         }
                     }
                 });
+
+
+
+
+
+
+
             </script>
 
             <!-- 代码部分end -->
