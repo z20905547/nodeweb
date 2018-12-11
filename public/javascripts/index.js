@@ -17,6 +17,13 @@ $(document).ready(function(){
 //		$(".notice-content").hide();
 //		$("."+did).show();
 //	});
+
+
+		$(".eee").show();
+		$(".eee2").hide();
+		$(".eee3").hide();
+
+
 	$("#e1").show();
 	$("#e2").hide();
 	$("#e3").hide();
@@ -66,7 +73,7 @@ $(document).ready(function(){
 					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡<span></span></div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//				'<div class="ico_active_count_down"></div><span></span>'+
-					'<div><a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon"></i>加入团购</a></div><span></span>'+
+					//'<div><a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon"></i>加入团购</a></div><span></span>'+
 					'</div>'+
 					'</div>'+
 					'<div class="right-img col-xs-12  col-sm-6 col-md-7 col-lg-8">'+
@@ -98,7 +105,6 @@ $(document).ready(function(){
 		}
 		loading=false;
 	});
-
 
 //====================最新==最热============================================================
 //最新开盘
@@ -146,6 +152,144 @@ $(document).ready(function(){
 			}
 
 		}else{
+		}
+
+	});
+
+
+	params={
+		first:0,
+		last:6,
+		is_top:1,
+		top_type:1
+	};
+// 首页置顶 置顶 热销
+	ajaxGet("get",URLMAP.buildingslist_Top,params,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+
+			for(var i=0;i<sublist.length;i++){
+
+
+				str='<li>'+
+
+					'<figure>'+
+					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+
+					'<figcaption>'+
+					'<h3>'+sublist[i].buildings_name+'</h3>'+
+					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'</figcaption>'+
+					'</figure>'+
+
+					' </li>'
+
+
+				var oneobj=$("<li></li>");
+				oneobj.addClass("feature-box-list").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				oneobj.append(str);
+				$('.eee').append(oneobj);
+			}
+
+		}else{
+			$(".bottom-pull-loading").html("网络繁忙，稍后重试");
+			setTimeout(function(){
+				$(".bottom-pull-loading").hide();
+			},3000);
+		}
+
+});
+
+	params={
+		first:0,
+		last:6,
+		is_top:1,
+		top_type:2
+	};
+// 首页置顶 置顶 一线海景
+	ajaxGet("get",URLMAP.buildingslist_Top,params,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+
+			for(var i=0;i<sublist.length;i++){
+
+
+				str='<li>'+
+
+					'<figure>'+
+					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+
+					'<figcaption>'+
+					'<h3>'+sublist[i].buildings_name+'</h3>'+
+					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'</figcaption>'+
+					'</figure>'+
+
+					' </li>'
+
+
+				var oneobj=$("<li></li>");
+				oneobj.addClass("feature-box-list").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				oneobj.append(str);
+				$('.eee2').append(oneobj);
+			}
+
+		}else{
+			$(".bottom-pull-loading").html("网络繁忙，稍后重试");
+			setTimeout(function(){
+				$(".bottom-pull-loading").hide();
+			},3000);
+		}
+
+	});
+	params={
+		first:0,
+		last:6,
+		is_top:1,
+		top_type:3
+	};
+// 首页置顶 置顶 别墅
+	ajaxGet("get",URLMAP.buildingslist_Top,params,function(data){
+
+		if(data.statusCode=="0000"){
+			var sublist=data.data.list;
+			var str="";
+
+			for(var i=0;i<sublist.length;i++){
+
+
+				str='<li>'+
+
+					'<figure>'+
+					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+
+					'<figcaption>'+
+					'<h3>'+sublist[i].buildings_name+'</h3>'+
+					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'</figcaption>'+
+					'</figure>'+
+
+					' </li>'
+
+
+				var oneobj=$("<li></li>");
+				oneobj.addClass("feature-box-list").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				})
+				oneobj.append(str);
+				$('.eee3').append(oneobj);
+			}
+
+		}else{
+			$(".bottom-pull-loading").html("网络繁忙，稍后重试");
+			setTimeout(function(){
+				$(".bottom-pull-loading").hide();
+			},3000);
 		}
 
 	});

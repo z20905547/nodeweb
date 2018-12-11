@@ -93,11 +93,11 @@ $(document).ready(function(){
 
 	params={
 		first:0,
-		last:5,
+		last:6,
 	};
 
-	
-	ajaxGet("get",URLMAP.gy_roadlist,params,function(data){
+
+	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 
 		if(data.statusCode=="0000"){
 			var sublist=data.data.list;

@@ -3523,6 +3523,9 @@ h3 {
 }
 
 @media screen and (max-width:768px){
+	#bNav{
+		display:none;
+	}
 	.lpdt{
 		display:none;
 	}
@@ -5917,7 +5920,6 @@ ul, ol, li {
 .ui-box {
 	overflow: hidden;
 	margin-top: 10px;
-
 }
 
 .mt0 {
@@ -5960,12 +5962,9 @@ li {
 	flex: 1;
 	text-align: center;
 }
-.ui-box {
-	overflow: hidden;
-	margin-top: 10px;
-}
+
 .feature-box {
-	background-color: #fff;
+	background-color: #FFFCE8;
 }
 .feature-box.style-2 .feature-box-list {
 	width: 33.333%;
@@ -6571,11 +6570,10 @@ a.newhouse_login_close span {
 }
 
 .head-td2 {
-	position: absolute;
-	left: 0;
-	top: 0;
+
+
 	width: 680px;
-	padding-left: 130px;
+
 }
 
 .f162 {
@@ -6778,4 +6776,32 @@ a.newhouse_login_close span {
 	-khtml-border-radius: 4px;
 	border-radius: 4px;
 	width: 100px;
+}
+
+
+#bNav{
+	background:#e14546;
+	text-align:center;
+}
+#bNav ul{
+	padding:12px 0;
+	margin:0;
+	overflow:hidden;
+}
+#bNav ul li{
+	display:inline;
+	padding: 25px;
+	color: #f9f9f9;
+}
+#bNav ul li a{
+
+	color: #f9f9f9;
+	font-size: 18px;
+}
+
+
+
+.divOver{
+	background:#bd1067;
+
 }
