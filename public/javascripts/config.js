@@ -20,6 +20,7 @@ var URLMAP={
 		buildingslist:HTTPURL+"jsondata/buildings/getBuildingsDetailList",
 	    buildingslist2:HTTPURL+"jsondata/buildings/getBuildingsDetailList2",
 	    buildingslist3:HTTPURL+"jsondata/buildings/getBuildingsDetailList3",
+	    buildingslist_Top:HTTPURL+"jsondata/buildings/getBuildingsDetailList_Top",
 	    findListByselect:HTTPURL+"jsondata/buildings/findListByselect",
 		notecelist:HTTPURL+"jsondata/notice/getNoticeList",
 	    noteceliste1top:HTTPURL+"jsondata/notice/getNoticeList",
