@@ -5963,12 +5963,15 @@ li {
 	text-align: center;
 }
 
-.feature-box {
-	background-color: #FFFCE8;
-}
+
 .feature-box.style-2 .feature-box-list {
-	width: 33.333%;
+	width: 32%;
+	margin: 5px;
+	border: 1px solid #ddd;
+	background: white;
 }
+
+
 .feature-box-list {
 	float: left;
 	position: relative;
@@ -5994,10 +5997,16 @@ li {
 	height: 100%;
 }
 .feature-box-list h3 {
-	font-size: 16px;
-	font-weight: 500;
+	font-style: normal;
+	font-size: 14px;
+	padding-left: 10px;
 }
-
+.feature-box-list p{
+	font-style: normal;
+	font-size: 14px;
+	padding-left: 10px;
+	color: red;
+}
 .g-content {
 	height: 600px;
 	background-position: center center;
@@ -6799,9 +6808,4 @@ a.newhouse_login_close span {
 	font-size: 18px;
 }
 
-
-
-.divOver{
-	background:#bd1067;
-
-}
+#bNav ul li a:hover{color: #ddd;}
