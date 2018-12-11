@@ -176,7 +176,7 @@ $(document).ready(function(){
 				str='<li>'+
 
 					'<figure>'+
-					
+
 					'<p class="img">' +
 
 					'<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+

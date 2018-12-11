@@ -3526,6 +3526,9 @@ h3 {
 	#bNav{
 		display:none;
 	}
+	.ui-box{
+		display:none;
+	}
 	.lpdt{
 		display:none;
 	}
