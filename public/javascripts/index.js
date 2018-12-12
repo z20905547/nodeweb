@@ -179,7 +179,7 @@ $(document).ready(function(){
 
 					'<p class="img">' +
 
-					'<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+
+					'<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
 					'<h3>'+sublist[i].buildings_name+'</h3>'+
 					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
@@ -270,7 +270,7 @@ $(document).ready(function(){
 				str='<li>'+
 
 					'<figure>'+
-					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">'+'</p>'+
+					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
 					'<h3>'+sublist[i].buildings_name+'</h3>'+
 					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
