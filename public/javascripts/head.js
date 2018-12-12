@@ -37,19 +37,26 @@ $(document).ready(function(){
 });
 
 function zhuce() {
-	var mobile_flag = isMobile();// true为PC端，false为手机端
-	if(mobile_flag){
-		window.open('/buildings/679/460000/399/融创观澜湖公园壹号');}
+
+	window.open('/users/register2');
+	
 
 }
 function zhuce2() {
 	var mobile_flag = isMobile();// true为PC端，false为手机端
+
 	if(mobile_flag){
-	window.open('/buildings/759/460000/478/海花岛');}
+	}else{
+		window.open('/buildings/759/460000/478/海花岛');
+	}
 }
 
 function loupan() {
-	window.open('/users/register2');
+	var mobile_flag = isMobile();// true为PC端，false为手机端
+	if(mobile_flag){
+	}else{
+		window.open('/buildings/679/460000/399/融创观澜湖公园壹号');
+	}
 }
 
 function tuangoubaoming() {
