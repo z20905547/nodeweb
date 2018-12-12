@@ -181,8 +181,8 @@ $(document).ready(function(){
 
 					'<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
-					'<h3>'+sublist[i].buildings_name+'</h3>'+
-					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
@@ -227,8 +227,8 @@ $(document).ready(function(){
 					'<figure>'+
 					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
-					'<h3>'+sublist[i].buildings_name+'</h3>'+
-					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
@@ -272,8 +272,8 @@ $(document).ready(function(){
 					'<figure>'+
 					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
-					'<h3>'+sublist[i].buildings_name+'</h3>'+
-					'<p class="text">'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
