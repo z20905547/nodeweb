@@ -39,7 +39,7 @@ $(document).ready(function(){
 function zhuce() {
 
 	window.open('/users/register2');
-	
+
 
 }
 function zhuce2() {
