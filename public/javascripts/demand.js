@@ -115,3 +115,83 @@ function onClik123(){
         return true;
     }
 }
+
+function onClik456(){
+    // var data1 = $("#registerPage").serializeArray(); //自动将form表单封装成json
+    //  alert(JSON.stringify(data1));
+    var jsonuserinfo = $('#registerPage').serializeObject();
+   // alert(JSON.stringify(jsonuserinfo));
+
+    var options = {
+        url:URLMAP.demandorder,
+        data:JSON.stringify(jsonuserinfo),
+        type:"post",
+        dataType: "JSONP",
+        async:true,
+        beforeSubmit: showRequest()
+
+
+
+    };
+    $('#registerPage').ajaxSubmit(options);
+
+    //  $('#registerPage').clearForm();
+
+    gy_duanxin();
+    function showRequest() {
+
+        var jsonuserinfo2 = $('#registerPage').serializeObject();
+        var name =jsonuserinfo2['Name'];
+        var phone = jsonuserinfo2['Phone'];
+
+        if (name == '') {
+
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText").css('display') == "none") {
+                $("#sendText").css("display", 'block');
+            }
+            setTimeout(func, "1000");//三秒后执行
+
+            function func() {
+                if ($("#sendText").css('display') == "block") {
+                    $("#sendText").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+
+            return false;
+        }
+
+        if (phone == '') {
+            if ($("#sendFloat").css('display') == "none") {
+                $("#sendFloat").css("display", 'block');
+            }
+
+            if ($("#sendText2").css('display') == "none") {
+                $("#sendText2").css("display", 'block');
+            }
+
+            setTimeout(func, "1000");//三秒后执行
+
+            function func() {
+                if ($("#sendText2").css('display') == "block") {
+                    $("#sendText2").css("display", 'none');
+                }
+                if ($("#sendFloat").css('display') == "block") {
+                    $("#sendFloat").css("display", 'none');
+                }
+            }
+            return false;
+        }
+
+        alert("提交成功！我们将在24小时之内处理您的需求！");
+        $(location).attr('href', 'http://www.vfhui.com');
+
+
+    }
+}

@@ -3523,6 +3523,11 @@ h3 {
 }
 
 @media screen and (max-width:768px){
+
+	.bolg_box{
+		display:none;
+	}
+
 	#bNav{
 		display:none;
 	}
