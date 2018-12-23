@@ -275,3 +275,97 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+<div class="page">
+	<header class="header">
+
+		<div class="left">
+			<a href="/" class="head-icon red-txt red-f7" style="color: black">返回首页</a>
+
+		</div>
+		<div class="cent">
+			<span>团购报名</span>
+		</div>
+		<div class="head-icon red-txt">
+			<!--    <a href="/users/login" class="red-f6">登录</a> -->
+
+		</div>
+		<div class="clear">
+
+
+		</div>
+	</header>
+	<div class="main">
+		<div class="pdX20">
+
+			<div class="tgsm">
+				<p>  </p>
+<p style="color: #e0308b">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会以其优质的网络平台和客户资源，每月都会联合开发商推出“团购价房源”和“特价房源”。</p>
+				<p>  </p>
+				<p style="color: #e0308b"> &nbsp;&nbsp;&nbsp;&nbsp;“团购房源”和“特价房源”的价格，均比正常销售市价要低，但房源数量相对较少！</p>
+				<p>   </p>
+				<p style="color: #e0308b">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最终名额以报名数据为准，先报名先选房！</p>
+			</div>
+			<form id="registerPage" method="post" action="/demand/demandsub" >
+				<section class="mt35">
+					<ul class="uc-login">
+						<li>
+							<div class="tit">姓<i></i>名</div>
+							<div class="input-box mr80">
+
+								<input type="tel" maxlength="11" placeholder="务必填写真实姓名" name="Name" id="Name" onpaste="return false">
+							</div>
+							<!--不可点击状态 class="noClick",可点击状态 class=""-->
+							<div class="btn-code" id="sendIdentifyingCode"><a class="noClick" id="sendIdentifyingCodeChange"></a></div>
+						</li>
+						<li>
+							<div class="tit">手机号</div>
+							<div class="input-box mr80">
+
+								<input type="tel" maxlength="11" placeholder="请输入手机号" name="Phone" id="Phone" onpaste="return false">
+							</div>
+							<!--不可点击状态 class="noClick",可点击状态 class=""-->
+							<div class="btn-code" id="sendIdentifyingCode"><a class="noClick" id="sendIdentifyingCodeChange"></a></div>
+						</li>
+
+					</ul>
+				</section>
+				<div class="mt16 f13 gray-8" id="sendvoice" style="display: none">收不到验证码？试试<a class="gray-b" id="voiceCode">&nbsp;语音验证码&nbsp;</a><!--<a class="gray-b">&nbsp;语音验证码(20s)&nbsp;</a>-->吧</div>
+				<!--“我已阅读并同意”同意<i class="on"></i>-->
+				<!--    <div class="agreement mt14"><a class="radio"><i class="on" id="protocolStatus"></i></a>我已阅读并同意<a id="seeProtocol" class="red-f6" href="/passport/Protocol.aspx">《房天下服务协议》</a></div>
+                   --> <!--以下登录按钮不可点击状态为class="btn-login"可点击状态为class="btn-login click"-->
+				<div class="mt25"><a href="javascript:void(0);" class="btn-login click" style="background-color:  #e0308b" id="registerBtn" onclick="onClik456()">提交报名</a></div>
+			</form>
+		</div>
+
+
+		<div id="sendFloat" class="tz-box txz" style="display: none;">
+			<!--图文验证码提示框-->
+			<div id="mathCode" class="tz-con" style="display: none;">
+				<ul class="ipt-list">
+
+					<li class="tw-yzm">
+						<div class="flexbox">
+							<img id="picVerifyCode" class="yzm" src="https://Captcha.fang.com/Display?type=wap&amp;width=150&amp;height=80&amp;r=">
+							<input id="verifyCode" type="tel" class="ipt-text vcode" placeholder="请输入右侧验证码">
+						</div>
+					</li>
+				</ul>
+				<div class="tz-btn flexbox">
+					<input id="closeMathCode" type="button" value="取消">
+					<input id="submitVerifyCode" type="button" value="确定">
+				</div>
+			</div>
+			<div id="sendText" class="yzm-sta" style="display: none;">亲，姓名不能为空哦！</div>
+			<div id="sendText2" class="yzm-sta" style="display: none;">亲！手机号不能为空哦！</div>
+
+
+			<div id="voiceCodeNum" class="yzm-sta" style="display: none">验证码播报次数过多，请明天再试！<!--登录失败--></div>
+		</div>
+
+</div></div>
