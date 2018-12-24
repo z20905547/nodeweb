@@ -19,7 +19,9 @@ $(document).ready(function(){
 			map_y=data.data.map_y;
 			xy(data.data.map_x,data.data.map_y);
 			var tejia = data.data.discount_price;
-			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'元/㎡</p></div>';
+			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'</p></div>' +
+				'<div class="tuangou33"> <a href="javascript:void(0)" class="btn-ljtg btn-dynamic " onclick="yuyuekanfangche();">报名团购</a> </div>'
+
 			if (typeof(tejia) == "undefined")
 			{
 				var hongbao = '';
@@ -69,8 +71,15 @@ $(document).ready(function(){
 				'				<span>'+data.data.active_price+'</span>'+
 				'			</div>'+
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
-				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>降价通知我</a>'+
 		//		'				<div class="ico_active_count_down"></div>'+
+				'<div class="tanchu row" >'+
+				'<div class="tanchu_left col-xs-6 col-sm-6 ">' +
+				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>降价通知我</a>'+
+				'</div>'+
+				'<div class="tanchu_right col-xs-6 col-sm-6 ">' +
+				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>开盘通知我</a>'+
+				'</div>'+
+				'</div>'
 				'				<span></span>'+
 				'			</div>'
 			$(".small_content").html(adcontent1);
@@ -97,8 +106,12 @@ $(document).ready(function(){
 				'<div class="banner_index5 ">'+
 			//	'<div class="sm_tx"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg" onerror="javascript:this.src=\'/images/tx.jpg\'"'+'></div>'+
 
-				'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'
+				'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'+
 				'</div>'+
+				'<div class="news-notice center">'+
+				'<a href="javascript:void(0)" style="width: 100%;"  onclick="shoujidongtai();" class="btn2 btn-dynamic ">最新动态通知我</a>'+
+				'</div>'+
+
 				'</div>'
 
 			}
@@ -566,6 +579,46 @@ $.fn.serializeObject = function()
 	});
 	return o;
 };
+//最新状态手机端
+function dongtaiSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#dongtaiSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#dongtaiSJ').ajaxSubmit(options);
+
+	$('#dongtaiSJ').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#dongtaiSJ').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#rePriceOpen3").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}
+
 function tuangouSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
@@ -605,8 +658,6 @@ function tuangouSJ(){
 		duanxin(content);
 	}
 }
-
-
 function tuangouPC(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
@@ -737,6 +788,7 @@ function jiangjiatongzhi() {
 function shut() {
 	$("#rePriceOpen").css('display','none');
 	$("#rePriceOpen2").css('display','none');
+	$("#rePriceOpen3").css('display','none');
 }
 
 // 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
@@ -746,6 +798,9 @@ $("#hideNotice").click(function(){
 
 function yuyuekanfangche() {
 	$("#rePriceOpen2").css('display','block');
+}
+function shoujidongtai() {
+	$("#rePriceOpen3").css('display','block');
 }
 
 function duanxin(content){
