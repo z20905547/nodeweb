@@ -3839,8 +3839,11 @@ h3 {
 }
 
 @media screen and (min-width:768px){
-
-
+    .backicon { display:none;
+    }
+	.tanchu {
+		display:none;
+	}
 	.header2{
 		display:none;
 	}
@@ -4697,7 +4700,7 @@ p.hover span{ display:block; background: url(../images/chara.png) no-repeat righ
 .hongbao{
 	background: url(../images/hogbao.png) no-repeat;
 	position: absolute;
-	margin-top: -20px;
+	margin-top: -8px;
 	margin-left: 20px;
 	color: red;
 }
@@ -6250,6 +6253,11 @@ a.newhouse_login_close span {
 	background: url(../images/new_icon.png) -20px 0 no-repeat;
 	margin-top: 5px;
 }
+
+.u-push .tb-icon2 {
+	background: url(../images/ico-ik.png) -20px 0 no-repeat;
+	margin-top: 5px;
+}
 .p-lpindex .dateil .u-push .tb-icon {
 	background-position: -249px -230px;
 }
@@ -6779,23 +6787,26 @@ a.newhouse_login_close span {
 	font-size: 16px;}
 
 .main_active_count_down a {
-	margin-left: 15px;
+
 	font-size: 14px;
 	text-align: center;
 	color: #AA6D2B;
-	height: 25px;
-	border: 1px solid #F1E0AB;
-	background: #FFC;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-o-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	border-radius: 4px;
-	width: 100px;
+
+
+
 }
+.tanchu{
+	height: 40px;
+	border: 1px solid #ddd;
 
+	line-height: 10px;
+   padding-top: 15px;
 
+   background-color: #fffaf3;
+}
+.tanchu_right{
+	padding-right: 50px;
+}
 #bNav{
 	background:#e14546;
 	text-align:center;
@@ -6817,3 +6828,63 @@ a.newhouse_login_close span {
 }
 
 #bNav ul li a:hover{color: #ddd;}
+
+.backicon {
+	position: absolute;
+	left: 10px;
+	top: -5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background: rgba(0,0,0,.3) url(../images/w-back.png) center no-repeat;
+	background-size: 10px;
+	z-index: 10;
+}
+
+.btn-ljtg {
+	color: #f00;
+	border: 1px solid #f00;
+	border-radius: 5px;
+	padding: 0px 5px;
+	right: 12px;
+	top: -0px;
+	padding: .6rem 0.6rem;
+	font-size:16px;
+	position: absolute;
+	padding-right: 5px;
+
+}
+
+.btn2 {
+	background-color: #E5E5E5;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 20px;
+	font-size: 14px;
+	font-family: Helvetica,Arial,"宋体",sans-serif;
+	color: white;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	background-color: #f10582;
+}
+.news-notice{
+	padding-top: -50px;
+}
