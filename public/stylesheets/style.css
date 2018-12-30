@@ -3837,6 +3837,9 @@ h3 {
 }
 
 @media screen and (min-width:768px){
+	.lb{
+		display:none;
+	}
 	.article-box{
 		display:none;
 	}
