@@ -2958,9 +2958,7 @@ a, img {
 	height: auto;
 	margin-top: 20px;
 }
-.fr {
-	float: right;
-}
+
 .bolg_detail {
 
 	height: auto;
@@ -3839,6 +3837,9 @@ h3 {
 }
 
 @media screen and (min-width:768px){
+	.article-box{
+		display:none;
+	}
     .backicon { display:none;
     }
 	.tanchu {
@@ -5269,13 +5270,14 @@ a.logo {
 .fr {
 	float: right;
 }
-.f12 {
-	font-size: 12px;
-}
 .fr {
 	float: right;
 	display: inline;
 }
+.f12 {
+	font-size: 12px;
+}
+
 .regHeaderTip a.hvLine {
 	color: #f10180;
 }
@@ -6888,3 +6890,122 @@ a.newhouse_login_close span {
 .news-notice{
 	padding-top: -50px;
 }
+.news-detail {
+	background-color: #fff;
+	padding: 16px;
+}
+
+
+
+#newsContent {
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.p2 {
+	font-size: 16px;
+	color: #999;
+	margin-bottom: 15px;
+
+}
+
+.p1 {
+	font-size: 25px;
+	font-weight: bolder;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	padding-top: 10px;
+}
+
+.lb {
+	margin: 0 0 0;
+	height: 60px;
+	float: left;
+	background: #FFF;
+	width: 100%;
+	line-height: 30px;
+	border-top: 1px #CCC solid;
+	padding-top: 3px;
+}
+
+
+.dynamic {
+	height: 50px;
+	overflow: hidden;
+	padding: 10px;;
+}
+.dyn-left {
+	float: left;
+	width: 15%;
+	height: 30px;;
+	padding-right: 15px;
+	margin-top: 3px;
+}
+.dyn-left-content a {
+	display: block;
+	width: 7rem;
+	height: auto;
+}
+
+a:link {
+	text-decoration: none;
+}
+.dyn-left img {
+	display: block;
+	width: 100%;
+	margin-top: .1rem;
+}
+.dyn-center {
+	float: left;
+	width: 70%;
+	padding-left: 5px;
+	height: 30px;
+	overflow: hidden;
+}
+
+a:link {
+
+	text-decoration: none;
+
+}
+.reading {
+	float: right;
+	width:15%;
+	background: #48bf01;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 2px;
+	border-radius: 5px;
+}
+.reading span {
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	cursor: pointer;
+}
+.dyn-center ul{
+	width:10px;
+	height:20px;
+}
+
+.dyn-center ul li{
+	float:left;
+	width: 240px;
+	height: 30px;
+
+	overflow:hidden;
+	padding-left: 30px;
+	margin-top: 0px;
+}
+.dyn-center ul li a{font-size: 14px}
+
+.scrolldiv{
+	width: 190px;
+	height: 350px;
+}
+
+p span{
+	style:none;
+}
+

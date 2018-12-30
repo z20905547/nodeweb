@@ -26,13 +26,18 @@ ajaxGet("get",URLMAP.notecelist,params,function(data){
 		var str3="";
 		var str4="";
 		for(var i=0;i<sublist.length;i++){
+			//x上限，y下限
+			var x = 5900;
+			var y = 982;
+			var rand = parseInt(Math.random() * (x - y + 1) + y);
+
 			str='<div class="list_box box_show02">' +
 				'<a href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+
 				'<img src="http://www.vfhui.com:8080/management/resource/upload_buildings/news/'+sublist[i].Id+'/fm.jpg" onerror="javascript:this.style.display=\'none\'"'+'></a>'+
 				'<h2> <a href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+sublist[i].Title+'</a> </h2>'+
 				'<p class="color_h01"> <edit type="text" name="Index_RightContentArtlistReleaseDate">发布日期：</edit><span><time>'+sublist[i].MessageDate+'</time></span>'+
                 '<edit type="text" name="Index_RightContentArtlistTotalHit">阅读</edit>'+
-				'<span>（17130）</span></p>'+
+				'<span>（'+rand+'）</span></p>'+
 				'<div class="tags">' +
 				'<a class="fr c2" href="/news/'+sublist[i].Id+'/'+sublist[i].Title+'" target="_blank">'+
 				'<edit type="text" name="Index_RightContentArtlistViewContent">查看全文</edit></a>'+
