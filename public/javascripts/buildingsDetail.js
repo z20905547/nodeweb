@@ -34,11 +34,14 @@ $(document).ready(function(){
 
 			$(".forbset").html(buildname);
 
-
+//x上限，y下限
+			var x = 98;
+			var y = 32;
+			var rand = parseInt(Math.random() * (x - y + 1) + y);
 //周边顾问
 			var guwen =' <div class="consultant_nearby c_n_2">  '+
 			' <dl class="clearfix">'+
-			'  <dt>团购信息：<a style="cursor:pointer" class="seek_more_" onclick="">213人加入</a></dt>'+
+			'  <dt>团购信息：<a style="cursor:pointer;color: red;font-size: 16px" class="seek_more_" onclick="">已有'+rand+'人加入</a></dt>'+
 			'			<dd>'+
 			'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
 			'                       <img class="cnu_head_asied" alt="">'+
