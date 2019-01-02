@@ -6896,6 +6896,7 @@ a.newhouse_login_close span {
 .news-detail {
 	background-color: #fff;
 	padding: 16px;
+	width:100%;
 }
 
 
@@ -6947,7 +6948,7 @@ a.newhouse_login_close span {
 }
 .dyn-left-content a {
 	display: block;
-	width: 7rem;
+	width:80px;
 	height: auto;
 }
 
@@ -7012,3 +7013,11 @@ p span{
 	style:none;
 }
 
+#newsContent p span img {
+	width: 100%;
+	height: auto;
+}
+#newsContent p img {
+	width: 100%;
+	height: auto;
+}
