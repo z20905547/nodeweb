@@ -19,7 +19,9 @@ $(document).ready(function(){
 			map_y=data.data.map_y;
 			xy(data.data.map_x,data.data.map_y);
 			var tejia = data.data.discount_price;
-			var hongbao = '<div class="hongbao"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+'</p></div>' +
+			var hongbao = '<div class="hongbao">' +
+				//'<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+
+				'</p></div>' +
 				'<div class="tuangou33"> <a href="javascript:void(0)" class="btn-ljtg btn-dynamic " onclick="yuyuekanfangche();">报名团购</a> </div>'
 
 			if (typeof(tejia) == "undefined")

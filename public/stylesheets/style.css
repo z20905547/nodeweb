@@ -2112,7 +2112,7 @@ a:hover {
 	height: 222px;
 }
 .module_detail_body{
-	padding:20px 0px;
+	padding:0px 0px;
 }
 .buildings_detail_price{
 
@@ -2541,8 +2541,8 @@ filter: blur(15px);
 .one_line{
 	height:1px;
 	width:100%;
-	background:#f5f5f5;
-	margin:10px 0px;
+
+	margin:3px 0px;
 }
 .ico_active_name{
 	display:inline-block;
@@ -6837,7 +6837,7 @@ a.newhouse_login_close span {
 .backicon {
 	position: absolute;
 	left: 10px;
-	top: -5px;
+
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
@@ -6924,9 +6924,9 @@ a.newhouse_login_close span {
 
 .lb {
 	margin: 0 0 0;
-	height: 60px;
+	height: 40px;
 	float: left;
-	background: #FFF;
+	background: #fffaf3;
 	width: 100%;
 	line-height: 30px;
 	border-top: 1px #CCC solid;
@@ -6937,7 +6937,9 @@ a.newhouse_login_close span {
 .dynamic {
 	height: 50px;
 	overflow: hidden;
-	padding: 10px;;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-right: 10px;
 }
 .dyn-left {
 	float: left;
@@ -6977,7 +6979,7 @@ a:link {
 	float: right;
 	width:15%;
 	background: #48bf01;
-	line-height: 25px;
+	line-height: 21px;
 	text-align: center;
 	margin-top: 2px;
 	border-radius: 5px;
@@ -7021,3 +7023,14 @@ p span{
 	width: 100%;
 	height: auto;
 }
+.lb2 {
+	margin: 0 0 0;
+	height: 40px;
+	float: left;
+	background: #f10582;
+	width: 100%;
+	line-height: 30px;
+	border-top: 1px #CCC solid;
+	padding-top: 3px;
+}
+
