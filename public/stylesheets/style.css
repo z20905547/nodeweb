@@ -159,9 +159,7 @@ a:hover {
 .main_active_count_down span{
 	vertical-align: middle;
 }
-.main_active_count_down{
-	padding-top: 50px;
-}
+
 .one-active:HOVER{
 	border:solid 1px #ff2ee1;
 }
@@ -3505,7 +3503,9 @@ h3 {
 /*手机导航end*/
 /*响应区*/
 @media screen and (max-width:992px){
-
+	.main_active_count_down{
+		padding-top: 50px;
+	}
 	.bolg_right{
 		withd:100%
 	}
