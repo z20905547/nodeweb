@@ -262,22 +262,23 @@ function isMobile() {
 	return mobile_flag;
 }
 
-function shut() {
+function shutwzdy() {
 
-	$("#rePriceOpen3").css('display','none');
+	$("#wenzhangdingyue_sj").css('display','none');
 }
 
-function shoujidongtai2() {
+function wenzhangdingyue_sj() {
 
-	$("#rePriceOpen3").css('display','block');
+	$("#wenzhangdingyue_sj").css('display','block');
 
 }
+
 
 //最新状态手机端
-function dongtaiSJ(){
+function wenzhangdingyueSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
-	var jsonuserinfo = $('#dongtaiSJ').serializeObject();
+	var jsonuserinfo = $('#wenzhangdingyueSJ').serializeObject();
 	//alert(JSON.stringify(jsonuserinfo));
 
 	var options = {
@@ -294,7 +295,7 @@ function dongtaiSJ(){
 	$('#dongtaiSJ').clearForm();
 
 	function showRequest() {
-		var jsonuserinfo2 = $('#dongtaiSJ').serializeObject();
+		var jsonuserinfo2 = $('#wenzhangdingyueSJ').serializeObject();
 
 		var phone = jsonuserinfo2['Phone'];
 
@@ -304,7 +305,58 @@ function dongtaiSJ(){
 			return false;
 		}
 		alert("提交成功！");
-		$("#rePriceOpen3").css('display','none');
+		$("#wenzhangdingyue_sj").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}
+
+
+function shutmfth() {
+
+	$("#mianfeitonghua_sj").css('display','none');
+}
+
+function mfth_sj() {
+
+	$("#mianfeitonghua_sj").css('display','block');
+
+}
+//最新状态手机端
+function mianfeitonghuaSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#mianfeitonghuaSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#mianfeitonghuaSJ').ajaxSubmit(options);
+
+	$('#mianfeitonghuaSJ').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#mianfeitonghuaSJ').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#mianfeitonghuaSJ").css('display','none');
 		return true;
 		// 发送短信通知
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房

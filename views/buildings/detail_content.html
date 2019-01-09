@@ -112,7 +112,7 @@
     }
 </script>
 
-<div id="rePriceOpen3" class="tz-box" style="display: none;">
+<div id="dongtai" class="tz-box" style="display: none;">
     <div class="tz-con">
         <div class="tz-tit">
             <span>最新动态通知我！</span>
@@ -131,43 +131,37 @@
                     </div>
                 </li>
             </ul>
-            <p class="tz-word">楼盘最新的动态第一时间通知您！</p>
+            <p class="tz-word">掌握最新动态 把握最佳出手时机！</p>
 
             <div class="tz-btn flexbox">
-                <input value="取消" id="hideNotice" type="button" onclick="shut();">
+                <input value="取消" id="hideNotice" type="button" onclick="shut_dongtai();">
                 <input id="qd" value="确定" type="button" onclick="dongtaiSJ()">
             </div>
         </form>
     </div>
 
     <div class="subscribe">
-        <p class="title" style="height:54px;">订阅信息</p>
+        <p class="title" style="height:54px;">最新动态通知我！</p>
 
-        <p class="cue">降价、开盘信息第一时间通知您！</p>
+        <p class="cue">掌握该项目最新动态 把握最佳出手时机！</p>
 
         <div>
-            <form id="tuangouPC" method="post" action="/demand/demandsub">
+            <form id="dongtaiPC" method="post" action="/demand/demandsub">
                 <div class="forbset"></div>
 
                 <div class="p1">
-                    <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
-                    <input class="tel" name="Name" id="NamePC" type="text" placeholder="请输入您的姓名"><!--消息错误加类h-->
-
-                </div>
-                <div class="p1">
                     <label>手机号码：</label>
-                    <input class="tel" name="Phone" id="PhonePC" type="text" placeholder="请输入您的手机号码"><!--消息错误加类h-->
+                    <input class="tel" name="Phone" id="Phone" type="text" placeholder="请输入您的手机号码,免费提供动态信息"><!--消息错误加类h-->
 
                 </div>
                 <div class="p3">
-                    <em class="ml lpt_icon" onclick="chooseType(1);" value="jjtz"></em><span>降价通知</span>
-                    <em class="mlf lpt_icon" onclick="chooseType(2);" value="kptz"></em><span>开盘通知</span>
-                </div>
+                    <span>请您放心预留手机号码，我们竭诚保护好您的个人信息！</span>
 
-                <input type="button" class="quick ts_linear cp tf" onclick="tuangouPC();" value="加入团购">
+                </div>
+                <input type="button" class="quick ts_linear cp tf" onclick="dongtaiPC();" value="提交订阅">
             </form>
         </div>
-        <a class="newhouse_login_close ts_linear" onclick="shut();" title="关闭"><span></span></a>
+        <a class="newhouse_login_close ts_linear" onclick="shut_dongtai();" title="关闭"><span></span></a>
 
     </div>
 
@@ -293,6 +287,60 @@
 
     </div>
 
+</div>
+
+<div id="tejiashenqing" class="tz-box" style="display: none;">
+    <div class="tz-con">
+        <div class="tz-tit">
+            <span>最新动态通知我！</span>
+        </div>
+        <form id="tejiashenqingSJ" method="post" action="/demand/demandsub">
+            <div class="forbset"></div>
+            <ul class="ipt-list">
+
+                <li class="yzm">
+                    <div class="flexbox">
+                        <input class="ipt-text vcode" name="Phone" id="Phone" placeholder="请输入您的手机号码" type="text">
+                        <!-- <input class="ipt-btn1" value="获取验证码" id="getPhoneVcode" type="button">-->
+
+                        <!-- <input type="button" class="ipt-btn1 disabled" value="60S后获取">
+                         <input type="button" class="ipt-btn1" value="重新获取"> -->
+                    </div>
+                </li>
+            </ul>
+            <p class="tz-word">掌握最新动态 把握最佳出手时机！</p>
+
+            <div class="tz-btn flexbox">
+                <input value="取消" id="hideNotice" type="button" onclick="shut_tejiashenqing();">
+                <input id="qd" value="确定" type="button" onclick="tejiashenqingSJ()">
+            </div>
+        </form>
+    </div>
+
+    <div class="subscribe">
+        <p class="title" style="height:54px;">最新动态通知我！</p>
+
+        <p class="cue">掌握该项目最新动态 把握最佳出手时机！</p>
+
+        <div>
+            <form id="tejiashenqingPC" method="post" action="/demand/demandsub">
+                <div class="forbset"></div>
+
+                <div class="p1">
+                    <label>手机号码：</label>
+                    <input class="tel" name="Phone" id="Phone" type="text" placeholder="请输入您的手机号码,免费提供动态信息"><!--消息错误加类h-->
+
+                </div>
+                <div class="p3">
+                    <span>请您放心预留手机号码，我们竭诚保护好您的个人信息！</span>
+
+                </div>
+                <input type="button" class="quick ts_linear cp tf" onclick="tejiashenqingPC();" value="提交订阅">
+            </form>
+        </div>
+        <a class="newhouse_login_close ts_linear" onclick="shut_tejiashenqing();" title="关闭"><span></span></a>
+
+    </div>
 
 </div>
 <div class="map" id="map"></div>

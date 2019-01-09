@@ -49,15 +49,15 @@ ajaxGet("get",URLMAP.notecelist,params,function(data){
 		}
 
 		str2='<span class="page_total">共'+data.data.total+'条</span>&nbsp;&nbsp;'+
-             '<a target="_self"  href="/news/newslist/1">首页</a>';
+             '<a target="_self"  href="/news/newslist/1/'+mark+'">首页</a>';
 
 		var totalpage=parseInt((data.data.total-1)/pagecount+1);
 
 		for(var i=0;i<totalpage;i++){
 			var k = i+1;
-		str3+='&nbsp;&nbsp;<a target="_self" href="/news/newslist/'+k+'">'+k+'</a>'
+		str3+='&nbsp;&nbsp;<a target="_self" href="/news/newslist/'+k+'/'+mark+'">'+k+'</a>'
 		}
-		str4='&nbsp;&nbsp;<a	target="_self" href="/news/newslist/'+totalpage+'">尾页</a>&nbsp;&nbsp;'
+		str4='&nbsp;&nbsp;<a	target="_self" href="/news/newslist/'+totalpage+'/'+mark+'">尾页</a>&nbsp;&nbsp;'
 		var oneobj2=$("<dev></dev>");
 		$('.pagination-xs').append(str2+str3+str4);
 	}else{
