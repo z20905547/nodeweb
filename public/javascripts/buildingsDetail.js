@@ -70,13 +70,21 @@ $(document).ready(function(){
 			//楼盘动态
 			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
-				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>元/㎡</span></div>'+
+				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>&nbsp;&nbsp;元/㎡</span></div>'+
 				'			<div class="main_active_price">'+
-				'				<div class="ico_active_price">限时特价</div>'+
-				'				<span>'+data.data.active_price+'</span>'+
+
+				'				<div class="tj1">限时特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
+				'				<div class="tj2"><a href="javascript:void(0)" onclick="tejiashenqing();"> <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
+				'                 <img src="/images/Talbum.gif" style="width: 35px;">&nbsp;&nbsp;' +
+				'                 申请特价 </span></a></div>' +
+				'              </span>'+
 				'			</div>'+
+				'<div class="tj3"><a href="javascript:void(0)" onclick="tejiashenqing();"> <span class="slcdh btn-sqtj-pc"   style="color: #48bf01;font-size: 15px;line-height: 25px;">' +
+				'                 <img src="/images/Talbum.gif" style="width: 35px;">&nbsp;&nbsp;' +
+				'                 申请特价</span> </a></div>' +
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
-		//		'				<div class="ico_active_count_down"></div>'+
+
+	//			'				<div class="ico_active_count_down"></div>'+
 				'<div class="tanchu row" >'+
 				'<div class="tanchu_left col-xs-6 col-sm-6 ">' +
 				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>降价通知我</a>'+
@@ -114,7 +122,7 @@ $(document).ready(function(){
 				'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'+
 				'</div>'+
 				'<div class="news-notice center">'+
-				'<a href="javascript:void(0)" style="width: 100%;"  onclick="shoujidongtai();" class="btn2 btn-dynamic ">最新动态通知我</a>'+
+				'<a href="javascript:void(0)" style="width: 100%;"  onclick="dongtai();" class="btn2 btn-dynamic ">最 新 动 态 通 知 我</a>'+
 				'</div>'+
 
 				'</div>'
@@ -584,45 +592,6 @@ $.fn.serializeObject = function()
 	});
 	return o;
 };
-//最新状态手机端
-function dongtaiSJ(){
-	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
-	//alert(JSON.stringify(data));
-	var jsonuserinfo = $('#dongtaiSJ').serializeObject();
-	//alert(JSON.stringify(jsonuserinfo));
-
-	var options = {
-		url:URLMAP.demandorder,
-		dataType: "json",
-		data:JSON.stringify(jsonuserinfo),
-		type:"post",
-		beforeSubmit: showRequest,
-
-	};
-
-	$('#dongtaiSJ').ajaxSubmit(options);
-
-	$('#dongtaiSJ').clearForm();
-
-	function showRequest() {
-		var jsonuserinfo2 = $('#dongtaiSJ').serializeObject();
-
-		var phone = jsonuserinfo2['Phone'];
-
-
-		if ( phone == '') {
-			alert('请输入您的联系方式哦!');
-			return false;
-		}
-		alert("提交成功！");
-		$("#rePriceOpen3").css('display','none');
-		return true;
-		// 发送短信通知
-		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
-		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
-		duanxin(content);
-	}
-}
 
 function tuangouSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
@@ -793,8 +762,12 @@ function jiangjiatongzhi() {
 function shut() {
 	$("#rePriceOpen").css('display','none');
 	$("#rePriceOpen2").css('display','none');
-	$("#rePriceOpen3").css('display','none');
+
 }
+
+
+
+
 
 // 首页团购对话框退出 弹出是在点击首页大banner时 在head.js 里面
 $("#hideNotice").click(function(){
@@ -803,9 +776,6 @@ $("#hideNotice").click(function(){
 
 function yuyuekanfangche() {
 	$("#rePriceOpen2").css('display','block');
-}
-function shoujidongtai() {
-	$("#rePriceOpen3").css('display','block');
 }
 
 function duanxin(content){
@@ -827,4 +797,184 @@ function duanxin(content){
 			//alert("失败"+data22.status+"uu"+JSON.stringify(data22));
 		}
 	});
+}
+
+
+//最新动态
+
+function dongtai() {
+	$("#dongtai").css('display','block');
+}
+
+function shut_dongtai() {
+	$("#dongtai").css('display','none');
+}
+
+//最新动态SH端
+function dongtaiSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#dongtaiSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#dongtaiSJ').ajaxSubmit(options);
+
+	$('#dongtaiSJ').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#dongtaiSJ').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#dongtai").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}
+//最新状态手机端
+function dongtaiPC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#dongtaiPC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#dongtaiPC').ajaxSubmit(options);
+
+	$('#dongtaiPC').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#dongtaiPC').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#dongtai").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}
+
+//特价申请
+
+
+function tejiashenqing() {
+	$("#tejiashenqing").css('display','block');
+}
+
+function shut_tejiashenqing() {
+	$("#tejiashenqing").css('display','none');
+}
+
+//最新动态SH端
+function tejiashenqingSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#dongtaiSJ').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tejiashenqingSJ').ajaxSubmit(options);
+
+	$('#tejiashenqingSJ').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#tejiashenqingSJ').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#tejiashenqing").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}
+//最新状态手机端
+function tejiashenqingPC(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#tejiashenqingPC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#tejiashenqingPC').ajaxSubmit(options);
+
+	$('#tejiashenqingPC').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#tejiashenqingPC').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#tejiashenqing").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
 }

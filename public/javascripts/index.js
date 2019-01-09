@@ -1008,5 +1008,6 @@ function dongtaiSJ(){
 
 function shut() {
 
+	$("#rePriceOpen2").css('display','none');
 	$("#rePriceOpen3").css('display','none');
 }

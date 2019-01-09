@@ -43,7 +43,7 @@
 
                 </div>
             </div>
-            <div class="reading"><span onclick=" shoujidongtai2();">原创订阅</span></div>
+            <div class="reading"><span onclick=" wenzhangdingyue_sj();">原创订阅</span></div>
         </div>
     </div>
 
@@ -131,12 +131,12 @@
     </div>  -->
 </div>
 
-<div id="rePriceOpen3" class="tz-box" style="display: none;">
+<div id="wenzhangdingyue_sj" class="tz-box" style="display: none;">
     <div class="tz-con">
         <div class="tz-tit">
             <span>唯房会董事长原创文章订阅！</span>
         </div>
-        <form id="dongtaiSJ" method="post" action="/demand/demandsub">
+        <form id="wenzhangdingyueSJ" method="post" action="/demand/demandsub">
             <div class="forbset"></div>
             <ul class="ipt-list">
 
@@ -153,9 +153,56 @@
             <p class="tz-word">唯房会董事长亲自教你如何在海南购房！</p>
 
             <div class="tz-btn flexbox">
-                <input value="取消" id="hideNotice" type="button" onclick="shut();">
-                <input id="qd" value="确定" type="button" onclick="dongtaiSJ()">
+                <input value="取消" id="hideNotice" type="button" onclick="shutwzdy();">
+                <input id="qd" value="确定" type="button" onclick="wenzhangdingyueSJ()">
             </div>
         </form>
     </div>
 </div>
+
+
+<div id="mianfeitonghua_sj" class="tz-box" style="display: none;">
+    <div class="tz-con">
+        <div class="tz-tit">
+            <span>输入手机号 免费回拨！</span>
+        </div>
+        <form id="mianfeitonghuaSJ" method="post" action="/demand/demandsub">
+            <div class="forbset"></div>
+            <ul class="ipt-list">
+
+                <li class="yzm">
+                    <div class="flexbox">
+                        <input class="ipt-text vcode" name="Phone" id="Phone" placeholder="请输入您的手机号码" type="text">
+                        <!-- <input class="ipt-btn1" value="获取验证码" id="getPhoneVcode" type="button">-->
+
+                        <!-- <input type="button" class="ipt-btn1 disabled" value="60S后获取">
+                         <input type="button" class="ipt-btn1" value="重新获取"> -->
+                    </div>
+                </li>
+            </ul>
+            <p class="tz-word">输入您的手机号码，我们立即回电，该通话对您免费，并竭诚保护好您的个人信息！</p>
+
+            <div class="tz-btn flexbox">
+                <input value="取消" id="hideNotice" type="button" onclick="shutmfth();">
+                <input id="qd" value="确定" type="button" onclick="mianfeitonghuaSJ()">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="left_bm_box" style="background: rgba(232, 73, 214, 0.9);top: 67%;font-size: 13px;">
+    <a href="javascript:mfth_sj();">点<br>击<br>免<br>费<br>通<br>话</a>
+</div>
+
+<style type="text/css">
+    .left_bm_box{position: fixed;width: 10%;cursor: pointer;overflow: hidden;background-color: #b7dde8;color: #fff;text-align: center;text-decoration: none;padding: 5px 0;border-radius: 5px;font-size: 12px;z-index: 2000;}
+    .left_bm_box a{color: #fff;}
+    #LXB_CONTAINER{ display: block;text-decoration: none;visibility: visible!important;}
+    #LXB_CONTAINER{ position: fixed;z-index: 2000;font-size: 12px;}
+    .left_bm_box_1{border: 2px solid #48bf01;border-radius: 4px;height: 128px;width: 85%;background: #fff;left: 7%;top: 35%;-webkit-box-shadow: 3px 0 8px #ccc;-moz-box-shadow: 3px 0 8px #ccc;box-shadow: 3px 0 8px #ccc;}
+    .left_bm_close{position: absolute;right: -12px;top: -14px;}
+    .lxb-cb-input{top: 19px;left: 2%;width: 69%;height: 25px;padding: 0 5px;border: 1px solid #ccc!important;background-color: #fff;-webkit-border-radius: 3px;border-radius: 3px;z-index: 2;}
+    .lxb-cb-input-btn{width: 65px;border: 0;top: 21px;left: 77%;right: 4%;height: 24px;line-height: 24px;background: #48bf01!important;color: #fff;-webkit-border-radius: 3px;border-radius: 3px;font-size: 12px;font-weight: 700;text-align: center;}
+    .lxb-cb-input-tip-content{margin: 2% 4%;color: #48bf01;font-size: 14px;line-height: 19px;}
+</style>
