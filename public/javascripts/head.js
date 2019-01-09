@@ -356,7 +356,7 @@ function mianfeitonghuaSJ(){
 			return false;
 		}
 		alert("提交成功！");
-		$("#mianfeitonghuaSJ").css('display','none');
+		$("#mianfeitonghua_sj").css('display','none');
 		return true;
 		// 发送短信通知
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
