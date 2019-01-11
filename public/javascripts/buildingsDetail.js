@@ -73,8 +73,8 @@ $(document).ready(function(){
 				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>&nbsp;&nbsp;元/㎡</span></div>'+
 				'			<div class="main_active_price">'+
 
-				'				<div class="tj1">限时特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
-				'				<div class="tj2"><a href="javascript:void(0)" onclick="tejiashenqing();"> <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
+				'				<div class="tj1">特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
+				'				<div class="tj2"><a href="tel:089866661386" > <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
 				'                 <img src="/images/Talbum.gif" style="width: 35px;">&nbsp;&nbsp;' +
 				'                 申请特价 </span></a></div>' +
 				'              </span>'+
@@ -183,6 +183,8 @@ $(document).ready(function(){
 		}
 	});
 
+
+
 	//加载楼盘对应展示图
 	ajaxGet("get",URLMAP.resourceList,params,function(data){
 		if(data.statusCode=="0000"){
@@ -191,21 +193,25 @@ $(document).ready(function(){
 			//图片小类：1：一房；2：两房；3：三房；4：四房；5：五房；6：六房；21效果图；22交通图；23实景图；24样板间；30：地产logo  ， 31，地产宣传图，32 banner ,33 ，活动图
 			var firstcount=0;
 			var secendcount=0;
+			var  mark =0 ;
+			var  mark2 =0 ;
 			//移除加载框
 			$(".house_pic_door").empty();
 			$(".effect_pic_door").empty();
+
+
 			for(var i=0;i<data.data.total;i++){
 				if(data.data.list[i].big_type==1){
 					firstcount++;
 					var str='<li onclick="highLevel(1,'+firstcount+')" class="picli1 lipic'+firstcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="hx-p-img"><img class="imgtype1" data-num="'+firstcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'"  alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></div><div class="hx-p-txt"> <p>"'+data.data.list[i].house_type_name+'"</p> <p class="p-last">"'+data.data.list[i].tingshi+'"</p></div></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
-					if($(".hptag10").length==0){
-						var tagobj=$('<span class="pic-tag hptag10 active" data-type="10" data-space="house_pic_door">全部</span>');
-						tagobj.on("click",tagchange);
-						$(".house_pic_tag").append(tagobj);
-						$(".house_pic_door").append('<div class="pic-div picdiv10 active"><ul class="ul10"></ul></div>');
-					}
-					$(".ul10").append(str);
+					//if($(".hptag10").length==0){
+					//	var tagobj=$('<span class="pic-tag hptag10 active" data-type="10" data-space="house_pic_door">全部</span>');
+					//	tagobj.on("click",tagchange);
+					//	$(".house_pic_tag").append(tagobj);
+					//	$(".house_pic_door").append('<div class="pic-div picdiv10 active"><ul class="ul10"></ul></div>');
+					//}
+					//$(".ul10").append(str);
 					//拼接到对应子户型列表中，没有就创建默认隐藏
 					if(($(".hptag"+data.data.list[i].sm_type).length==0)){
 						var tt="";
@@ -230,23 +236,47 @@ $(document).ready(function(){
 								break;
 							
 						};
-						var tagobj=$('<span class="pic-tag hptag'+data.data.list[i].sm_type+'" data-type="'+data.data.list[i].sm_type+'" data-space="house_pic_door">'+tt+'</span>');
+
+						var	tagobj=$('<span class="pic-tag hptag'+data.data.list[i].sm_type+'" data-type="'+data.data.list[i].sm_type+'" data-space="house_pic_door">'+tt+'</span>');
 						tagobj.on("click",tagchange);
 						$(".house_pic_tag").append(tagobj);
 						$(".house_pic_door").append('<div class="pic-div picdiv'+data.data.list[i].sm_type+'" style="display:none;"><ul class="ul'+data.data.list[i].sm_type+'"></ul></div>');
+
+						if(mark ==0) {
+                              if(data.data.list[i].sm_type==1){
+							      $(".hptag"+data.data.list[i].sm_type).addClass("active");
+								  $(".picdiv"+data.data.list[i].sm_type).css('display','block');
+								  mark=1;
+							  }
+							if(data.data.list[i].sm_type==2){
+								$(".hptag"+data.data.list[i].sm_type).addClass("active");
+								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
+								mark=1;
+							}
+							if(data.data.list[i].sm_type==3){
+								$(".hptag"+data.data.list[i].sm_type).addClass("active");
+								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
+								mark=1;
+							}
+							if(data.data.list[i].sm_type==4){
+								$(".hptag"+data.data.list[i].sm_type).addClass("active");
+								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
+								mark=1;
+							}
+						}
 					}
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}else if(data.data.list[i].big_type==2){
 					secendcount++;
 					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-6 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'" alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
-					if($(".hptag20").length==0){
-						var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
-						tagobj.on("click",tagchange);
-						$(".effect_pic_tag").append(tagobj);
-						$(".effect_pic_door").append('<div class="pic-div picdiv20 active"><ul class="ul20"></ul></div>');
-					}
-					$(".ul20").append(str);
+					//if($(".hptag20").length==0){
+					//	var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
+					//	tagobj.on("click",tagchange);
+					//	$(".effect_pic_tag").append(tagobj);
+					//	$(".effect_pic_door").append('<div class="pic-div picdiv20 active"><ul class="ul20"></ul></div>');
+					//}
+					//$(".ul20").append(str);
 					//拼接到对应子户型列表中，没有就创建默认隐藏
 					if(($(".hptag"+data.data.list[i].sm_type).length==0)){
 						switch(data.data.list[i].sm_type){
@@ -268,6 +298,13 @@ $(document).ready(function(){
 						tagobj.on("click",tagchange);
 						$(".effect_pic_tag").append(tagobj);
 						$(".effect_pic_door").append('<div class="pic-div picdiv'+data.data.list[i].sm_type+'" style="display:none;"><ul class="ul'+data.data.list[i].sm_type+'"></ul></div>');
+						if(data.data.list[i].sm_type ==23) {
+
+							$(".hptag"+data.data.list[i].sm_type).addClass("active");
+							$(".picdiv"+data.data.list[i].sm_type).css('display','block');
+
+						}
+
 					}
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}

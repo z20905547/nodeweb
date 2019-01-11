@@ -71,7 +71,7 @@ $(document).ready(function(){
 
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡<span></span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//				'<div class="ico_active_count_down"></div><span></span>'+
 					//'<div><a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="86biguiyuanjinshatanjj"><i class="tb-icon"></i>加入团购</a></div><span></span>'+
@@ -87,7 +87,7 @@ $(document).ready(function(){
 					'</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -183,7 +183,7 @@ $(document).ready(function(){
 					'<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
 					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
-					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
@@ -229,7 +229,7 @@ $(document).ready(function(){
 					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
 					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
-					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
@@ -274,7 +274,7 @@ $(document).ready(function(){
 					'<p class="img"><img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/top/top.jpg" onerror="/images/one5.png">'+'</p>'+
 					'<figcaption>'+
 					'<h3>'+sublist[i].buildings_name+'&nbsp;&nbsp;'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
-					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'<span>元/㎡</span></p>'+
+					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span></p>'+
 					'</figcaption>'+
 					'</figure>'+
 
@@ -577,7 +577,7 @@ function submiBtn() {
 
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -592,7 +592,7 @@ function submiBtn() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -656,7 +656,7 @@ function submitFourm(){
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//	'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -671,7 +671,7 @@ function submitFourm(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -745,7 +745,7 @@ function submiBtn_p() {
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -760,7 +760,7 @@ function submiBtn_p() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -837,7 +837,7 @@ function submiBtn_m(ct) {
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -852,7 +852,7 @@ function submiBtn_m(ct) {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
@@ -921,7 +921,7 @@ function submitFourm_p(){
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 					'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
 					'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
-					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元/㎡</span></div>'+
+					'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 					'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 						//		'<div class="ico_active_count_down"></div><span></span>'+
 					'</div>'+
@@ -936,7 +936,7 @@ function submitFourm_p(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元/㎡</span>' +
+					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
 					'<span class="contact">'+
 					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
 					'</span>'+
