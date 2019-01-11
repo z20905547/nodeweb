@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 
@@ -9,8 +9,8 @@ $(document).ready(function(){
 
 
 	var params={
-			buildingsId:$("#buildingsId").val(),
-	        pid:$("#pid").val()
+		buildingsId:$("#buildingsId").val(),
+		pid:$("#pid").val()
 	}
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
 			xy(data.data.map_x,data.data.map_y);
 			var tejia = data.data.discount_price;
 			var hongbao = '<div class="hongbao">' +
-				//'<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+
+					//'<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+
 				'</p></div>' +
 				'<div class="tuangou33"> <a href="javascript:void(0)" class="btn-ljtg btn-dynamic " onclick="yuyuekanfangche();">报名团购</a> </div>'
 
@@ -30,8 +30,8 @@ $(document).ready(function(){
 			}
 
 			var buildname='<input type="hidden" name="from_tag" id="from_tag"  value="3">'+
-					        '<input type="hidden" name="buildings_name" id="buildings_name"  value="'+data.data.buildings_name+'">'+
-				          '<input type="hidden" name="buildings_id" id="buildings_id"  value="'+data.data.id+'">'
+				'<input type="hidden" name="buildings_name" id="buildings_name"  value="'+data.data.buildings_name+'">'+
+				'<input type="hidden" name="buildings_id" id="buildings_id"  value="'+data.data.id+'">'
 
 
 			$(".forbset").html(buildname);
@@ -42,18 +42,18 @@ $(document).ready(function(){
 			var rand = parseInt(Math.random() * (x - y + 1) + y);
 //周边顾问
 			var guwen =' <div class="consultant_nearby c_n_2">  '+
-			' <dl class="clearfix">'+
-			'  <dt>团购信息：<a style="cursor:pointer;color: red;font-size: 16px" class="seek_more_" onclick="">已有'+rand+'人加入</a></dt>'+
-			'			<dd>'+
-			'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
-			'                       <img class="cnu_head_asied" alt="">'+
+				' <dl class="clearfix">'+
+				'  <dt>团购信息：<a style="cursor:pointer;color: red;font-size: 16px" class="seek_more_" onclick="">已有'+rand+'人加入</a></dt>'+
+				'			<dd>'+
+				'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
+				'                       <img class="cnu_head_asied" alt="">'+
 
-			'                      <div class="cnu_info">'+
-			'                   <div class="cnu_name" ><span id="AgentRealname_164001707">买房团购才<font style="color: #d58512;font-size: 25px" >给力!</font></span> </div> '+
+				'                      <div class="cnu_info">'+
+				'                   <div class="cnu_name" ><span id="AgentRealname_164001707">买房团购才<font style="color: #d58512;font-size: 25px" >给力!</font></span> </div> '+
 				'                   <div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #3366CC;font-size: 19px" >专车接送看房</font></span> </div> '+
 				'                   <div class="cnu_name" ><span id="AgentRealname_164001707">报名专享<font style="color: #2b542c;font-size: 25px" >机票</font>报销</span> </div> '+
 				'<div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #2b542c;font-size: 19px" >获取两年<font style="color: #f9a123;font-size: 25px" >物业费</font></font></span> </div> '+
-			'                 </div></div></dd>' +
+				'                 </div></div></dd>' +
 				'	<div class="fr1">'+
 				'	<a href="javascript:void(0)" class="fr" id="baomingBtn"  onclick="yuyuekanfangche();">报名入团</a>'+
 				'	</div>'
@@ -73,8 +73,8 @@ $(document).ready(function(){
 				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>&nbsp;&nbsp;元/㎡</span></div>'+
 				'			<div class="main_active_price">'+
 
-				'				<div class="tj1">特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
-				'				<div class="tj2"><a href="tel:089866661386" > <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
+				'				<div class="tj1">限时特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
+				'				<div class="tj2"><a href="javascript:void(0)" onclick="tejiashenqing();"> <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
 				'                 <img src="/images/Talbum.gif" style="width: 35px;">&nbsp;&nbsp;' +
 				'                 申请特价 </span></a></div>' +
 				'              </span>'+
@@ -84,7 +84,7 @@ $(document).ready(function(){
 				'                 申请特价</span> </a></div>' +
 				'			<div class="main_active_count_down" data-time="'+data.data.end_date+'">'+
 
-	//			'				<div class="ico_active_count_down"></div>'+
+					//			'				<div class="ico_active_count_down"></div>'+
 				'<div class="tanchu row" >'+
 				'<div class="tanchu_left col-xs-6 col-sm-6 ">' +
 				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>降价通知我</a>'+
@@ -93,8 +93,8 @@ $(document).ready(function(){
 				'<a class="u-push alert-box-btn1" onclick="jiangjiatongzhi();" id="informBtn"><i class="tb-icon" ></i>开盘通知我</a>'+
 				'</div>'+
 				'</div>'
-				'				<span></span>'+
-				'			</div>'
+			'				<span></span>'+
+			'			</div>'
 			$(".small_content").html(adcontent1);
 
 			var df = data.data.server_phone_num;
@@ -111,21 +111,21 @@ $(document).ready(function(){
 			$(".buildings_detail_text").html(adcontent2);
 
 			if(data.data.latestnews != "wu"){
-			    var adcontent3='<div class="banner_index4 row">'+
+				var adcontent3='<div class="banner_index4 row">'+
 
-				'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"  onerror="javascript:this.src=\'/images/tx.jpg\'" '+'></div>'+
-				'<div class="jieshao2 col-sm-8 col-md-8 col-lg-8"><dl><dd><strong>楼盘最新情况：</strong>'+data.data.latestnews+'</dd>'+
-				'<dd  class="ddxx">此消息由 <strong> '+data.data.nickname+' </strong>   最新发布！  想了解更多信息，请联系手机：<strong>'+data.data.user_phone+'</strong>（同微信） <p>'+data.data.recodetime+'</p> </dd></dl></div>'+
-				'<div class="banner_index5 ">'+
-			//	'<div class="sm_tx"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg" onerror="javascript:this.src=\'/images/tx.jpg\'"'+'></div>'+
+					'<div class="touxiang2  col-sm-4 col-md-4 col-lg-4"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg"  onerror="javascript:this.src=\'/images/tx.jpg\'" '+'></div>'+
+					'<div class="jieshao2 col-sm-8 col-md-8 col-lg-8"><dl><dd><strong>楼盘最新情况：</strong>'+data.data.latestnews+'</dd>'+
+					'<dd  class="ddxx">此消息由 <strong> '+data.data.nickname+' </strong>   最新发布！  想了解更多信息，请联系手机：<strong>'+data.data.user_phone+'</strong>（同微信） <p>'+data.data.recodetime+'</p> </dd></dl></div>'+
+					'<div class="banner_index5 ">'+
+						//	'<div class="sm_tx"> <img src="'+HTTPURL+'/resource/upload_buildings/user/'+data.data.user_id+'/tx.jpg" onerror="javascript:this.src=\'/images/tx.jpg\'"'+'></div>'+
 
-				'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'+
-				'</div>'+
-				'<div class="news-notice center">'+
-				'<a href="javascript:void(0)" style="width: 100%;"  onclick="dongtai();" class="btn2 btn-dynamic ">最 新 动 态 通 知 我</a>'+
-				'</div>'+
+					'<div class="sm_nr "><dl><dd><strong>最新发布：</strong>'+data.data.nickname+'</dd><dd><strong>咨询电话：</strong>'+data.data.user_phone+'</dd><dd><strong>发布时间：</strong>'+data.data.recodetime+'</dd></dd></div>'+
+					'</div>'+
+					'<div class="news-notice center">'+
+					'<a href="javascript:void(0)" style="width: 100%;"  onclick="dongtai();" class="btn2 btn-dynamic ">最 新 动 态 通 知 我</a>'+
+					'</div>'+
 
-				'</div>'
+					'</div>'
 
 			}
 			$(".module_detail_zuixinzhuangtai").html(adcontent3);
@@ -138,52 +138,50 @@ $(document).ready(function(){
 
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'	<img src="'+HTTPURL+'/resource/upload_buildings/'+ data.data.buildings_id +'/ldt/ldt.jpg'+'">'+
-			'</div>'+
-			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'	<div class="row">'+
-			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line"><span>占地面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_space+'平方米</div>'+
-			'		<div class="base_content_line"><span>总栋数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_count+'栋</div>'+
-			'		<div class="base_content_line"><span>容积率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.ratio+'</div>'+
-			'		<div class="base_content_line"><span>装修状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.decoration_condition+'</div>'+
-			'		<div class="base_content_line"><span>停车位：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.parking_count+'个</div>'+
+				'	<img src="'+HTTPURL+'/resource/upload_buildings/'+ data.data.buildings_id +'/ldt/ldt.jpg'+'">'+
+				'</div>'+
+				'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
+				'	<div class="row">'+
+				'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
+				'		<div class="base_content_line"><span>占地面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_space+'平方米</div>'+
+				'		<div class="base_content_line"><span>总栋数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_count+'栋</div>'+
+				'		<div class="base_content_line"><span>容积率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.ratio+'</div>'+
+				'		<div class="base_content_line"><span>装修状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.decoration_condition+'</div>'+
+				'		<div class="base_content_line"><span>停车位：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.parking_count+'个</div>'+
 
 
-			'	</div>'+
-			'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'		<div class="base_content_line"><span>建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_space+'㎡</div>'+
-			'		<div class="base_content_line"><span>总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.house_count+'户</div>'+
-			'		<div class="base_content_line"><span>绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.green_rate+'%</div>'+
-			'		<div class="base_content_line"><span>现房期房：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.util_type+'</div>'+
-			'		<div class="base_content_line"><span>产权年限：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.right_years+'年</div>'+
-			'	</div>'+
-			'	</div>'+
-			'		<div class="base_content_line"><span>物业类型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.wuye_type+'</div>'+
-			'		<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
-			'	    <div class="base_content_line"><span>楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_detail+'</div>'+
-			'</div>'+
+				'	</div>'+
+				'	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
+				'		<div class="base_content_line"><span>建筑面积：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.building_space+'㎡</div>'+
+				'		<div class="base_content_line"><span>总套数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.house_count+'户</div>'+
+				'		<div class="base_content_line"><span>绿化率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.green_rate+'%</div>'+
+				'		<div class="base_content_line"><span>现房期房：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.util_type+'</div>'+
+				'		<div class="base_content_line"><span>产权年限：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.right_years+'年</div>'+
+				'	</div>'+
+				'	</div>'+
+				'		<div class="base_content_line"><span>物业类型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.wuye_type+'</div>'+
+				'		<div class="base_content_line"><span>主力户型：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.main_door+'</div>'+
+				'	    <div class="base_content_line"><span>楼层状况：&nbsp;&nbsp;&nbsp;&nbsp;</span>'+data.data.floor_detail+'</div>'+
+				'</div>'+
 
-			'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
-			'	<div class="row">'+
+				'<div class="base_message_text col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
+				'	<div class="row">'+
 
-			'	</div>'+
-			'</div>'+
+				'	</div>'+
+				'</div>'+
 
 				'<div class="base_message_detail col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
-			'	<div class="row">'+
-			'	<div class="message_box  col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+data.data.around_peitao+data.data.traffic+
-			'	</div>'+
-			'	</div>'+
-			'</div>';
+				'	<div class="row">'+
+				'	<div class="message_box  col-xs-12 col-sm-12 col-md-12 col-lg-12" id="box" name="box">'+data.data.buildings_detail+data.data.around_peitao+data.data.traffic+
+				'	</div>'+
+				'	</div>'+
+				'</div>';
 
 			$(".buildings_base_loading").html(basetextcontent);
 
 
 		}
 	});
-
-
 
 	//加载楼盘对应展示图
 	ajaxGet("get",URLMAP.resourceList,params,function(data){
@@ -193,25 +191,21 @@ $(document).ready(function(){
 			//图片小类：1：一房；2：两房；3：三房；4：四房；5：五房；6：六房；21效果图；22交通图；23实景图；24样板间；30：地产logo  ， 31，地产宣传图，32 banner ,33 ，活动图
 			var firstcount=0;
 			var secendcount=0;
-			var  mark =0 ;
-			var  mark2 =0 ;
 			//移除加载框
 			$(".house_pic_door").empty();
 			$(".effect_pic_door").empty();
-
-
 			for(var i=0;i<data.data.total;i++){
 				if(data.data.list[i].big_type==1){
 					firstcount++;
 					var str='<li onclick="highLevel(1,'+firstcount+')" class="picli1 lipic'+firstcount+' col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="hx-p-img"><img class="imgtype1" data-num="'+firstcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'"  alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></div><div class="hx-p-txt"> <p>"'+data.data.list[i].house_type_name+'"</p> <p class="p-last">"'+data.data.list[i].tingshi+'"</p></div></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
-					//if($(".hptag10").length==0){
-					//	var tagobj=$('<span class="pic-tag hptag10 active" data-type="10" data-space="house_pic_door">全部</span>');
-					//	tagobj.on("click",tagchange);
-					//	$(".house_pic_tag").append(tagobj);
-					//	$(".house_pic_door").append('<div class="pic-div picdiv10 active"><ul class="ul10"></ul></div>');
-					//}
-					//$(".ul10").append(str);
+					if($(".hptag10").length==0){
+						var tagobj=$('<span class="pic-tag hptag10 active" data-type="10" data-space="house_pic_door">全部</span>');
+						tagobj.on("click",tagchange);
+						$(".house_pic_tag").append(tagobj);
+						$(".house_pic_door").append('<div class="pic-div picdiv10 active"><ul class="ul10"></ul></div>');
+					}
+					$(".ul10").append(str);
 					//拼接到对应子户型列表中，没有就创建默认隐藏
 					if(($(".hptag"+data.data.list[i].sm_type).length==0)){
 						var tt="";
@@ -234,49 +228,25 @@ $(document).ready(function(){
 							case 6:
 								tt="六房";
 								break;
-							
-						};
 
-						var	tagobj=$('<span class="pic-tag hptag'+data.data.list[i].sm_type+'" data-type="'+data.data.list[i].sm_type+'" data-space="house_pic_door">'+tt+'</span>');
+						};
+						var tagobj=$('<span class="pic-tag hptag'+data.data.list[i].sm_type+'" data-type="'+data.data.list[i].sm_type+'" data-space="house_pic_door">'+tt+'</span>');
 						tagobj.on("click",tagchange);
 						$(".house_pic_tag").append(tagobj);
 						$(".house_pic_door").append('<div class="pic-div picdiv'+data.data.list[i].sm_type+'" style="display:none;"><ul class="ul'+data.data.list[i].sm_type+'"></ul></div>');
-
-						if(mark ==0) {
-                              if(data.data.list[i].sm_type==1){
-							      $(".hptag"+data.data.list[i].sm_type).addClass("active");
-								  $(".picdiv"+data.data.list[i].sm_type).css('display','block');
-								  mark=1;
-							  }
-							if(data.data.list[i].sm_type==2){
-								$(".hptag"+data.data.list[i].sm_type).addClass("active");
-								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
-								mark=1;
-							}
-							if(data.data.list[i].sm_type==3){
-								$(".hptag"+data.data.list[i].sm_type).addClass("active");
-								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
-								mark=1;
-							}
-							if(data.data.list[i].sm_type==4){
-								$(".hptag"+data.data.list[i].sm_type).addClass("active");
-								$(".picdiv"+data.data.list[i].sm_type).css('display','block');
-								mark=1;
-							}
-						}
 					}
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}else if(data.data.list[i].big_type==2){
 					secendcount++;
 					var str='<li onclick="highLevel(2,'+secendcount+')" class="picli2 lipic'+secendcount+' col-xs-6 col-sm-6 col-md-4 col-lg-3"><img class="imgtype2" data-num="'+secendcount+'" src="'+HTTPURL+data.data.list[i].resource_path+"sm_"+data.data.list[i].resource_name+'" alt1="'+HTTPURL+data.data.list[i].resource_path+data.data.list[i].resource_name+'"></li>';
 					//拼接所有图片选项卡和图片列表区，默认选中，没有就先创建
-					//if($(".hptag20").length==0){
-					//	var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
-					//	tagobj.on("click",tagchange);
-					//	$(".effect_pic_tag").append(tagobj);
-					//	$(".effect_pic_door").append('<div class="pic-div picdiv20 active"><ul class="ul20"></ul></div>');
-					//}
-					//$(".ul20").append(str);
+					if($(".hptag20").length==0){
+						var tagobj=$('<span class="pic-tag hptag20 active" data-type="20" data-space="effect_pic_door">全部</span>');
+						tagobj.on("click",tagchange);
+						$(".effect_pic_tag").append(tagobj);
+						$(".effect_pic_door").append('<div class="pic-div picdiv20 active"><ul class="ul20"></ul></div>');
+					}
+					$(".ul20").append(str);
 					//拼接到对应子户型列表中，没有就创建默认隐藏
 					if(($(".hptag"+data.data.list[i].sm_type).length==0)){
 						switch(data.data.list[i].sm_type){
@@ -292,19 +262,12 @@ $(document).ready(function(){
 							case 24:
 								tt="样板间";
 								break;
-						
+
 						}
 						var tagobj=$('<span class="pic-tag hptag'+data.data.list[i].sm_type+'" data-type="'+data.data.list[i].sm_type+'" data-space="effect_pic_door">'+tt+'</span>');
 						tagobj.on("click",tagchange);
 						$(".effect_pic_tag").append(tagobj);
 						$(".effect_pic_door").append('<div class="pic-div picdiv'+data.data.list[i].sm_type+'" style="display:none;"><ul class="ul'+data.data.list[i].sm_type+'"></ul></div>');
-						if(data.data.list[i].sm_type ==23) {
-
-							$(".hptag"+data.data.list[i].sm_type).addClass("active");
-							$(".picdiv"+data.data.list[i].sm_type).css('display','block');
-
-						}
-
 					}
 					$(".ul"+data.data.list[i].sm_type).append(str);
 				}
@@ -316,38 +279,38 @@ $(document).ready(function(){
 			//没有效果图，拼接无数据提示
 			if(!secendcount){
 				$(".effect_pic_door").append(nodata);
-				
+
 			}
 		}else{
 			$(".house_pic_door").append(netbusy);
 			$(".effect_pic_door").append(netbusy);
 		}
 	});
-	
+
 	//关闭遮罩层
 	$(".close_ico").bind("click",function(){
 		$(".high_level").hide();
 		$(".maincontent").removeClass("gaublue");
 		$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
 		$("body").unbind("touchmove");//解除对默认行为的阻止
-		
+
 	});
-	
+
 	//手机滑动
 	$(".big-content").bind("touchstart",function(e){
-		 e.preventDefault();
-		 startX = e.originalEvent.changedTouches[0].pageX,
-		 startY = e.originalEvent.changedTouches[0].pageY;
-		
+		e.preventDefault();
+		startX = e.originalEvent.changedTouches[0].pageX,
+			startY = e.originalEvent.changedTouches[0].pageY;
+
 	});
 	$(".big-content").bind("touchmove",function(e){
-		
-		
+
+
 	});
 	$(".big-content").bind("touchend",function(e){
 
 		e.preventDefault();
-		    moveEndX = e.originalEvent.changedTouches[0].pageX,
+		moveEndX = e.originalEvent.changedTouches[0].pageX,
 			moveEndY = e.originalEvent.changedTouches[0].pageY,
 			X = moveEndX - startX,
 			Y = moveEndY - startY;
@@ -359,10 +322,10 @@ $(document).ready(function(){
 			changeBigPic(1);
 		}else if ( Math.abs(X)== Math.abs(Y) && X == 0 ) {
 
-				$(".high_level").hide();
-				$(".maincontent").removeClass("gaublue");
-				$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
-				$("body").unbind("touchmove");//解除对默认行为的阻止
+			$(".high_level").hide();
+			$(".maincontent").removeClass("gaublue");
+			$("body").attr("style","overflow-y:none;");//关闭时恢复页面的纵向滚动条
+			$("body").unbind("touchmove");//解除对默认行为的阻止
 		}
 
 
@@ -372,9 +335,9 @@ $(document).ready(function(){
 	var winhetght = $(window).height();
 	var winwidth = $(window).width();
 
-    if(winwidth>768) {
-	  $(".cur_big_pic").css("height", winhetght);
-    }
+	if(winwidth>768) {
+		$(".cur_big_pic").css("height", winhetght);
+	}
 
 	//获取图片宽度
 	//var imgWidth = $(".cur_big_pic").attr("width");
@@ -384,7 +347,7 @@ $(document).ready(function(){
 	//拖动大图
 	$(".cur_big_pic").bind("mousedown",function(e){
 		e.preventDefault();
-        e.stopPropagation();
+		e.stopPropagation();
 		//记录坐标，改变鼠标
 		$(this).css("cursor","-webkit-grabbing");
 		parentX=parseInt($(this).css("margin-left"));
@@ -450,7 +413,7 @@ $(".close_ico2").bind("click",function(){
 $(".big-content2").bind("touchstart",function(e){
 	e.preventDefault();
 	startX = e.originalEvent.changedTouches[0].pageX,
-	startY = e.originalEvent.changedTouches[0].pageY;
+		startY = e.originalEvent.changedTouches[0].pageY;
 
 });
 $(".big-content2").bind("touchmove",function(e){
@@ -461,9 +424,9 @@ $(".big-content2").bind("touchend",function(e){
 
 	e.preventDefault();
 	moveEndX = e.originalEvent.changedTouches[0].pageX,
-	moveEndY = e.originalEvent.changedTouches[0].pageY,
-	X = moveEndX - startX,
-	Y = moveEndY - startY;
+		moveEndY = e.originalEvent.changedTouches[0].pageY,
+		X = moveEndX - startX,
+		Y = moveEndY - startY;
 
 	if  ( Math.abs(X)== Math.abs(Y) && X == 0 ) {
 
@@ -530,7 +493,7 @@ function highLevel(type,num){
 		if($(this).attr("data-num")==num){
 			//换大图
 			$(".cur_big_pic").attr("src",$(this).attr("alt1"));
-			
+
 		}
 		picsrclist[i]=$(this).attr("alt1");
 		i++;
@@ -545,10 +508,10 @@ function highLevel(type,num){
 	//显示大图
 	$(".high_level").show();
 	//添加高斯模糊
-    //$(".maincontent").addClass("gaublue");
+	//$(".maincontent").addClass("gaublue");
 	//$(".high_level").animate({top:$(document).scrollTop()+"px"},500);
 	//图片高度不够时设置上边距
-	
+
 	$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
 	$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
 }
@@ -590,15 +553,15 @@ function showControl(index){
 	}
 }
 //获取滚动条距离顶部位置
-function getScrollTop() {  
-        var scrollPos;  
-        if (window.pageYOffset) {  
-        scrollPos = window.pageYOffset; }  
-        else if (document.compatMode && document.compatMode != 'BackCompat')  
-        { scrollPos = document.documentElement.scrollTop; }  
-        else if (document.body) { scrollPos = document.body.scrollTop; }   
-        return scrollPos;   
-} 
+function getScrollTop() {
+	var scrollPos;
+	if (window.pageYOffset) {
+		scrollPos = window.pageYOffset; }
+	else if (document.compatMode && document.compatMode != 'BackCompat')
+	{ scrollPos = document.documentElement.scrollTop; }
+	else if (document.body) { scrollPos = document.body.scrollTop; }
+	return scrollPos;
+}
 //活动图动态加载
 $(function(){
 	//过两秒显示 showImage(); 内容
@@ -743,7 +706,7 @@ function yuyuePC(){
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
 		var content = phone;
 		//var content = '预约看房用户：'+name+'电话：'+phone+'已经注册，请尽快处理！预约楼盘：'+buildings_name;
-	//	alert(content);
+		//	alert(content);
 		duanxin(content);
 		return true;
 
