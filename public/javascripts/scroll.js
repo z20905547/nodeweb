@@ -36,7 +36,7 @@ $(function () {
 							var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 							var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 							var tejia = sublist[i].discount_price;
-							var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
+							var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 							if (typeof(tejia) == "undefined")
 							{
 								var hongbao = '';
@@ -48,8 +48,8 @@ $(function () {
 							str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 										'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
 										'<div class="main_active_buildings_name">'+sublist[i].buildings_name+'</div>'+
-										'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元</span></div>'+
-										'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+										'<div class="main_active_name"><span>原价</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span></div>'+
+										'<div class="main_active_price"><div class="ico_active_price">特价</div><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 										'<div class="main_active_count_down" data-time="'+sublist[i].end_date+'">'+
 										//	'<div class="ico_active_count_down"></div><span></span>'+
 										'</div>'+
@@ -64,7 +64,7 @@ $(function () {
 								'&nbsp;* '+
 								sublist[i].address+
 								' </div>'+
-								'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+								'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡</div>'+
 								'</div>';
 							oneobj.append(str);
 							$('.active-list').append(oneobj); 
