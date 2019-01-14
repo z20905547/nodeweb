@@ -73,7 +73,7 @@ $(document).ready(function(){
 				'			<div class="main_active_name"><span>原价</span><span>'+data.data.first_price+'</span><span>&nbsp;&nbsp;元/㎡</span></div>'+
 				'			<div class="main_active_price">'+
 
-				'				<div class="tj1">限时特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
+				'				<div class="tj1">特价：<span>'+data.data.active_price+'</span>&nbsp;元/㎡</div>'+
 				'				<div class="tj2"><a href="tel:089866661386"> <span class="slcdh btn-sqtj" style="color: #48bf01;font-size: 12px;line-height: 23px;">' +
 				'                 <img src="/images/Talbum.gif" style="width: 35px;">&nbsp;&nbsp;' +
 				'                 申请特价 </span></a></div>' +
