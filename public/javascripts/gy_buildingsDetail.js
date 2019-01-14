@@ -419,7 +419,9 @@ function highLevel(type,num){
 	//显示入口图片
 	//设置当前张数与总张数
 	var i=0;
+	alert(type);
 	$(".ul"+type+"0 .imgtype"+type).each(function(){
+		alert(type);
 		if($(this).attr("data-num")==num){
 			//换大图
 			$(".cur_big_pic").attr("src",$(this).attr("alt1"));
@@ -448,6 +450,13 @@ function highLevel(type,num){
 
 //大图左右切换
 function changeBigPic(index){
+
+	var ttr = curbignum;
+	//curbignum = curbignum+1;
+	var ttr2 =bigpictotal;
+
+	var tt3 = picsrclist.toString();
+
 	var nowindex=curbignum-1;
 	var newnum=nowindex+index;
 	if(newnum<0||newnum>=bigpictotal)return;
