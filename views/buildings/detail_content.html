@@ -44,6 +44,7 @@
             </div>
     -->
 </div>
+
 <div id="elevator_item" class="maincontent  col-lg-12 ">
     <a id="elevator" onclick="return false;" title="回到顶部"></a>
     <a class="qr"></a>
@@ -111,6 +112,154 @@
         marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
     }
 </script>
+
+
+<!--吸底广告开始 -->
+<style type="text/css">
+    .ipt-area .inputbox {width: 318px;height: 40px;border-radius: 2px;background: #fff;float: left;}
+    .ipt-area .inputbox input {display: block;width: 100%;height: 100%;line-height: 40px\9;*line-height: 41px;border-radius: 2px;background: none;border: none;text-indent: 10px;}
+    .app-bottom {
+        width: 100%;
+        height: 120px;
+        background: rgba(182,0,28,.9) !important;
+        position: fixed;
+        left: -100%;
+        bottom: 0;
+        z-index: 999;
+        min-width: 1200px;}
+    .app-bottom .inn {
+        width: 1200px;
+        height: 140px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .app-bottom-ld .pic-person {
+        float: left;
+        width: 256px;
+        height: 200px;
+        margin: -41px 12px 0 -7px;
+        text-indent: -9999px;
+        background: url(/images/bg-app-person.png) no-repeat;
+    }
+    .app-bottom .inn .pic-text {
+        display: inline-block;
+        width: 410px;
+        height: 130px;
+        float: left;
+        margin: -15px 1px 0 0;
+        background: url(/images/bg-app-text.png) no-repeat;
+    }
+    .app-bottom-ld .ld-area {
+        float: left;
+        margin-top: 12px;
+        overflow: hidden;
+    }
+    .app-bottom-ld .ld-area p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+    }
+    .app-bottom-ld .ld-area .hot-line {
+        font-size: 16px;
+        color: #fff;
+        margin-top: 7px;
+    }
+    .app-bottom-ld .ld-area p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+    }
+    .app-bottom .inn .closes {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        cursor: pointer;
+        background: url(/images/bg-app-close.png) no-repeat;
+    }
+    .app-bottom .closes, .app-bottom .pic-app, .app-bottom .pic-phone, .app-bottom .pic-text {
+        text-indent: -9999px;
+    }
+    .app-bottom-ld .ld-area .hot-line {
+        font-size: 16px;
+        color: #fff;
+        margin-top: 7px;
+    }
+    .app-bottom-ld .ld-area p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+    }
+    .app-bottom-ld .ipt-area .btn-ld {
+        margin-left: 10px;
+        float: left;
+        width: 135px;
+        height: 39px;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        border: solid 1px #ed603d;
+        cursor: pointer;
+        background-color: #ed603d;
+        border-radius: 3px;
+    }
+    .app-fixed {
+        display: inline-block;
+        width: 164px;
+        height: 98px;
+        position: fixed;
+        left: 0;
+        bottom: 50px;
+        cursor: pointer;
+        z-index: 999;
+        background: url(/images/bg-app-small.png) no-repeat;
+    }
+    .app-bottom-ld .ld-area p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+    }
+</style>
+<div class="app-bottom app-bottom-ld" style="left: 0px;">
+    <div class="inn">
+
+        <div class="pic-person">小人图片</div>
+        <div class="pic-text">买新房，可以更专业</div>
+
+        <div class="ld-area">
+            <p class="text" style="margin-bottom: 10px;">参加团购享受92-98折优惠</p>
+            <div class="ipt-area">
+                <form method="post"id="xidiPC" method="post" action="/demand/demandsub">
+                    <input type="hidden" name="xdName"  id="xdName"  value="吸底广告留言">
+                    <div class="inputbox"><input type="text" class="common-free-mobile-ipt" name="Phone" id="Phone" placeholder="请输入手机号码"></div>
+                    <input type="button" class="btn-ld common-free-mobile-btn" onclick="xidiSJ()" value="领取优惠">
+
+                </form>
+            </div>
+            <p class="hot-line">免费咨询热线：0898-66661386            </p>
+        </div>
+        <div class="closes">X</div>
+    </div>
+</div>
+<div class="app-fixed app-fixed-ld" style="left: -146px;"></div>
+
+<!--吸底广告结束 -->
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="dongtai" class="tz-box" style="display: none;">
     <div class="tz-con">
