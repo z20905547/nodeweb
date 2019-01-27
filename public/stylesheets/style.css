@@ -3512,6 +3512,9 @@ h3 {
 	.main_active_count_down{
 		padding-top: 50px;
 	}
+	.app-bottom{
+		display: none;
+	}
 	.bolg_right{
 		withd:100%
 	}

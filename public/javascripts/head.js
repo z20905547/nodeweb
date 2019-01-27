@@ -364,3 +364,42 @@ function mianfeitonghuaSJ(){
 		duanxin(content);
 	}
 }
+
+function xidiSJ(){
+	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
+	//alert(JSON.stringify(data));
+	var jsonuserinfo = $('#xidiPC').serializeObject();
+	//alert(JSON.stringify(jsonuserinfo));
+
+	var options = {
+		url:URLMAP.demandorder,
+		dataType: "json",
+		data:JSON.stringify(jsonuserinfo),
+		type:"post",
+		beforeSubmit: showRequest,
+
+	};
+
+	$('#xidiPC').ajaxSubmit(options);
+
+	$('#xidiPC').clearForm();
+
+	function showRequest() {
+		var jsonuserinfo2 = $('#xidiPC').serializeObject();
+
+		var phone = jsonuserinfo2['Phone'];
+
+
+		if ( phone == '') {
+			alert('请输入您的联系方式哦!');
+			return false;
+		}
+		alert("提交成功！");
+		$("#dongtai").css('display','none');
+		return true;
+		// 发送短信通知
+		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
+		var content = '团购用户：电话：'+phone+'已经注册，请尽快处理！团购楼盘：'+buildings_name;
+		duanxin(content);
+	}
+}

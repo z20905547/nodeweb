@@ -593,6 +593,8 @@ $.fn.serializeObject = function()
 	return o;
 };
 
+
+
 function tuangouSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
 	//alert(JSON.stringify(data));
@@ -712,6 +714,10 @@ function yuyuePC(){
 
 	}
 }
+
+
+
+
 
 function yuyueSJ(){
 	//var data = $("#form1").serializeArray(); //自动将form表单封装成json
