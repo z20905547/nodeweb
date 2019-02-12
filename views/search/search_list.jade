@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    input#proId(type="hidden",value="#{backproId}")
+    input#buildings_name(type="hidden",value="#{buildings_name}")
+    input#city_id(type="hidden",value="#{city_id}")
+    input#area_id(type="hidden",value="#{area_id}")
+    include ../head
+    include sh_content.html
+    include ../footer.html
+    script( src='/javascripts/backtop.js')
+    script( src='/javascripts/head.js')
+    script( src='/javascripts/index.js')
+    script( src='/javascripts/scroll.js')
+    script( src='/javascripts/jquery.form.js')
+    script( src='/javascripts/sidebar.js')
+   // script( src='/javascripts/countTime.js')

@@ -23,12 +23,6 @@
     </div>
 </div>
 
-
-
-
-
-
-
 <div class="content-body">
 
 
@@ -38,97 +32,123 @@
 
 
 
-    <div class="container">
+    <div class="container" >
 
-        <div class="section-search mt20">
-            <div class="wrap-v5 clearfix">
-                <div class="search-item w1" style="border: 1px solid #ddd;"  >
-                  <!--   <img id="obj" src ="/images/zqll.png" width=200 height=178 border =0 style="margin-left: -8px;border: 1px solid #ddd;">-->
-                    <div class="no-login">
-                        <div class="ttl">累计团购客户</div>
-                        <div class="rate">
-                            <!--7
-                            <span>%</span>
-                            <i>~</i>12
-                            <span>%</span>
-                            -->
-                            8362 <span>位</span>
-                        </div>
-                        <div class="btn btn1"  onclick="yuyuekanfangche();">
-                            <a>立即报名</a>
-                        </div>
-                        <div style="font-size: 12px;color: #6e7f9c;line-height: 24px;padding-top: 4px">参加团购享受92-98折优惠</div>
+        <div class="lp-public-param mt20">
+            <div class="container-super">
+                <div class="lp-public-nav">
+                    <ul>
+                        <li class="lp-public-active" id="isnotsubwaynav">海口新盘</li>
+                        <li><a href="/bieshu/bs_index" target="_blank" class="gray3 lp-pb-download hui">别墅总汇</a></li>
+                        <li style="float: right; width: 500px;padding-top: 3px"><div class="search-box" style="float: right;" >
+                           <span class="sel-val">
+                             <span class="state" id="choosediv" chooseurl="lp">搜索</span>
+                            </span>
+                            <input type="text"  id="h_bname" placeholder="请输入楼盘名称" class="search-inp">
+                            <button class="search-btn" onclick="submitFourm_p()"></button>
+                            <div class="search-list" id="newcon_ul">
+                            </div>
+                        </div></li>
+                    </ul>
+                </div>
+                <div class="lp-pb-area1" id="qy">
+                    <div class="lp-pb-s1" id="">区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：</div>
+                    <div class="lp-pb-s2 pr">
+                        <ul class="lp-pb-s3 lp-pb-sclick">
+                            <li value="460100" class="act"><a  href="jacascript::void(0)">热门</a></li>
+                            <li value="460100"><a>海口</a></li>
+                            <li value="460200"><a>三亚</a></li>
+                            <li value="460500"><a>澄迈县</a></li>
+                            <li value="460110"><a>临高县</a></li>
+                            <li value="460600"><a>文昌市</a></li>
+                            <li value="460800"><a>定安县</a></li>
+                            <li value="469000"><a>屯昌县</a></li>
+                            <li value="460400"><a>琼海市</a></li>
+                            <li value="460220"><a>儋州市</a></li>
+                            <li value="460150"><a>陵水市</a></li>
+
+                            <li value="460700"><a>万宁市</a></li>
+                            <li value="460300"><a>东方市</a></li>
+                            <li value="460140"><a>乐东县</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="search-item w2 ">
-                    <div class="serch_input cow" >
-                        <div class="col-sm-4 col-md-4 col-lg-4" style="padding-left: 0px;"><p class="lab"><a href="/search/460000/460100" target="_blank">找<span>新房</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/search/460000/460100" target="_blank" style="color: #f10180">找<span >别墅</span></a>  </p>
-                     </div>
-                        <div class="col-sm-2 col-md-2 col-lg-2"  ></div>
-                      <div class="col-sm-6 col-md-6 col-lg-6"  >
-                          <div class="search-box">
-                           <span class="sel-val">
-                             <span class="state" id="choosediv" chooseurl="lp">新房</span>
-                            </span>
-                          <input type="text"  id="h_bname" placeholder="请输入楼盘名称" class="search-inp">
-                          <button class="search-btn" onclick="submitFourm_2()"></button>
-                          <div class="search-list" id="newcon_ul">
-                          </div>
-                      </div></div>
+                <div class="lp-pb-area1" id="jj">
+                    <div class="lp-pb-s1">均&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：</div>
+                    <div class="lp-pb-s2">
+                        <ul class="lp-pb-s3 lp-pb-sclick1">
+                            <li value="222" class="act"><a  >全部</a></li>
+                            <li  value="6000"> <a  title="6千以下" >6千以下</a></li>
+                            <li  value="7000"> <a  title="6-7千" >6-7千</a></li>
+                            <li  value="8000"> <a  title="7-8千" >7-8千</a></li>
+                            <li  value="10000"> <a  title="8千-1万" >8千-1万</a></li>
+                            <li  value="13000"> <a  title="1万-1.3万" >1万-1.3万</a></li>
+                            <li  value="15000"> <a  title="1.3-1.5万" >1.3-1.5万</a></li>
+                            <li  value="20000"> <a title="1.5-2万" >1.5-2万</a></li>
+                            <li  value="21000"> <a  title="2万以上" >2万以上</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lp-pb-area1" id="jj">
+                    <div class="lp-pb-s1">户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</div>
+                    <div class="lp-pb-s2">
+                        <ul class="lp-pb-s3 lp-pb-sclick2">
+                            <li value="444" class="act"><a  >全部</a></li>
+                            <li value="1"><a  title="一居" target="_self">一居</a></li>
+                            <li value="2"><a  title="二居" target="_self">二居</a></li>
+                            <li value="3"><a  title="三居" target="_self">三居</a></li>
+                            <li value="4"><a title="四居" target="_self">四居</a></li>
+                            <li value="5"><a  title="五居" target="_self">五居</a></li>
+                            <li value="6"><a  title="五居以上" target="_self">五居以上</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lp-pb-area1" id="jj">
+                    <div class="lp-pb-s1">面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积：</div>
+                    <div class="lp-pb-s2">
+                        <ul class="lp-pb-s3 lp-pb-sclick3">
+                            <li  value="333" class="act"><a  href="jacascript::void(0)">全部</a></li>
+                            <li  value="50">
+                                <a   title="50㎡以下">50㎡以下</a>
+                            </li>
+                            <li  value="70">
+                                <a   title=">50-70㎡">50-70㎡</a>
+                            </li>
+                            <li  value="90">
+                                <a  title="70-90㎡">70-90㎡</a>
+                            </li>
+                            <li  value="110">
+                                <a  title="90-110㎡">90-110㎡</a>
+                            </li>
+                            <li  value="150">
+                                <a   title="110-150㎡">110-150㎡</a>
+                            </li>
+                            <li  value="200">
+                                <a  title="150-200㎡">150-200㎡</a>
+                            </li>
 
-                     </div>
-                    <ul class="mt15">
-                        <li class="clearfix" style="height: auto;">
-                            <span>区域</span>
 
-                            <a href="/search/460000/460100" title="海口" target="_blank" class="act2">海口</a>
-                            <a href="/search/460000/460200" title="三亚" target="_blank">三亚</a>
-                            <a href="/search/460000/460500" title="澄迈县" target="_blank">澄迈县</a>
-                            <a href="/search/460000/460110" title="临高县" target="_blank">临高县</a>
-                            <a href="/search/460000/460600" title="文昌市" target="_blank">文昌市</a>
-                            <a href="/search/460000/460800" title="定安县" target="_blank">定安县</a>
-                            <a href="/search/460000/469000" title="屯昌县" target="_blank">屯昌县</a>
-                            <a href="/search/460000/460400" title="琼海市" target="_blank">琼海市</a>
-                            <a href="/search/460000/460220" title="儋州市" target="_blank">儋州市</a>
-                            <a href="/search/460000/460150" title="陵水市" target="_blank">陵水市</a>
-                            <a href="/search/460000/460700" title="万宁市" target="_blank">万宁市</a>
-                            <a href="/search/460000/460300" title="东方市" target="_blank">东方市</a>
-                            <a href="/search/460000/460140" title="乐东县" target="_blank">乐东县</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-super">
+                <div class="lp-pb-px">
+                    <div class="lp-pb-check1">排序：</div>
+                    <div class="lp-pb-px1">
+                        <ul>
+                            <li data-flag="true"> <a  class="gray3">默认排序</a></li>
+                            <li data-flag="true">
+                                <a  class="gray3">单价
+                                    <span class="index-icon lp-pb-pxIcon3"></span></a>
+                            </li>
+                            <li data-flag="true">
+                                <a  class="gray3">报名人数
+                                    <span class="index-icon lp-pb-pxIcon3"></span></a>
 
-
-                            <!-- <a href="http://hw.lou86.com/hw/lp/list0_0_0_0_0_1.html" title="海外" target="_blank">海外</a>    -->
-
-                        </li>
-                        <li class="clearfix">
-                            <span>均价</span>
-                            <a href="/search/460000/460100" title="6千以下" target="_blank">6千以下</a>
-                            <a href="/search/460000/460100" title="6-7千" target="_blank">6-7千</a>
-                            <a href="/search/460000/460100" title="7-8千" target="_blank">7-8千</a>
-                            <a href="/search/460000/460100" title="8千-1万" target="_blank">8千-1万</a>
-                            <a href="/search/460000/460100" title="1万-1.3万" target="_blank">1万-1.3万</a>
-                            <a href="/search/460000/460100" title="1.3-1.5万" target="_blank">1.3-1.5万</a>
-                            <a href="/search/460000/460100" title="1.5-2万" target="_blank">1.5-2万</a>
-                            <a href="/search/460000/460100" title="2万以上" target="_blank">2万以上</a>
-                        </li>
-                        <li class="clearfix">
-                            <span>户型</span>
-                            <a href="/search/460000/460100" title="一居" target="_blank">一居</a>
-                            <a href="/search/460000/460100" title="二居" target="_blank">二居</a>
-                            <a href="/search/460000/460100" title="三居" target="_blank">三居</a>
-                            <a href="/search/460000/460100" title="四居" target="_blank">四居</a>
-                            <a href="/search/460000/460100" title="五居" target="_blank">五居</a>
-                            <a href="/search/460000/460100" title="五居以上" target="_blank">五居以上</a>
-                        </li>
-                        <li class="clearfix">
-                            <span>特色</span>
-                            <a href="/search/460000/460100" title="特价优惠" target="_blank">特价优惠</a>
-                            <a href="/search/460000/460100" title="海景房" target="_blank">海景房</a>
-                            <a href="/search/460000/460100" title="高性价比" target="_blank">高性价比</a>
-                            <a href="/search/460000/460100" title="品牌地产" target="_blank">品牌地产</a>
-                            <a href="/search/460000/460100" title="特色别墅" target="_blank">特色别墅</a>
-                        </li>
-                    </ul>
-
+                            </li></ul>
+                    </div>
+                  <!--  <div class="lp-pb-check3">共<strong>170</strong>个新盘</div>  -->
                 </div>
             </div>
         </div>
@@ -139,61 +159,7 @@
 
 
 
-            <div class="left-title row">
-              <!--   <div class="head-td2 f162">
-                    <ul>
-                        <li class="search-tr2">
-                            <a href="javascript:void(0)"  class="haikou">热门片区：</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m()">全岛</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460100)">海口市</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460200)"  class="haikou">三亚市</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460150)"  class="haikou">陵水市</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460700)"  class="haikou">万宁市</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460500)"  class="haikou">澄迈县</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460600)"  class="haikou">文昌市</a>
-                            <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460800)"  class="haikou">定安县</a>
-                        </li>
-                    </ul>
-                </div>-->
 
-                <div id="bNav" class="bNav">
-                    <ul>
-                        <li class="top1"><a class="ttt1" >最近热销&nbsp;&nbsp;&nbsp;</a></li>
-                        <li>|</li>
-                        <li class="top2"><a class="ttt2" >&nbsp;&nbsp;&nbsp;一线海景&nbsp;&nbsp;&nbsp;</a></li>
-                        <li>|</li>
-                        <li class="top3"><a  class="ttt3" >&nbsp;&nbsp;&nbsp;精品别墅</a></li>
-
-                    </ul>
-                </div>
-                <div class="ui-box">
-
-                    <ul class="feature-box style-2 clearfix eee">
-                     <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
-
-
-
-                    </ul>
-
-                    <ul class="feature-box style-2 clearfix eee2">
-                        <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
-
-
-
-                    </ul>
-
-                    <ul class="feature-box style-2 clearfix eee3">
-                        <!--   <div class="lvju">旅居线路（边旅游 边看房） </div>-->
-
-
-
-                    </ul>
-
-                </div>
-
-                <img src="/images/new_title.png">
-
-            </div>
 
             <div class="active-list"></div>
         </div>
@@ -214,148 +180,13 @@
                         src="/images/yzs2.gif" /></a>
                 <div class="indexBanner_num" id="index_numIco"></div>
             </div> -->
-            <div class="banner_index23">
-                <div class="a300">
-                    <div id="index-splash-block" class="huan300">
-                        <div id="feature-slide-block" class="feature-slide-block">
-                            <div id="feature-slide-list" class="feature-slide-list">
-                                <a href="#" id="feature-slide-list-previous" class="feature-slide-list-previous"></a>
-                                <div id="feature-slide-list-items" class="feature-slide-list-items"><a href="/news/newslist/1/4" class="current" id="elm" target="_blank"></a><a href="/news/newslist/1/5" class="" id="elm1" target="_blank"></a><a href="/news/newslist/1/6" class="" id="elm2" target="_blank"></a></div>
-                                <a href="#" id="feature-slide-list-next" class="feature-slide-list-next"></a>
-                                <!-- <div id="dsy_D04_118"><a href="#" id="feature-slide-list-huan" id="dsy_D04_118" class="feature-slide-list-huan">换一换</a></div> -->
 
-
-                            </div>
-                            <div class="feature-slide-preview"  id="e1">
-
-                                <div class="a300nr">
-
-                                    <div class="a200nrbt" id="dsy_D04_114"><a href="/news/newslist/1/4 " target="_blank">购房必读</a></div>
-
-                                    <div class="bigtit" style="white-space:normal;text-overflow: ellipsis;font-size:18px;" id="e1top">
-
-
-                                    </div>
-
-
-                                    <!-- getFangRightZiXun begin -->
-                                    <ul class="ul01" id="e1list" >
-
-                                    </ul><!-- getFangRightZiXun end -->
-                                    <p><a class="notice_link_more" href="/news/newslist/1/4 " target="_blank" title="更多">更多&gt;&gt;</a></p>
-                                    <!-- getFangListRight04 -->
-                                    <!--
-                                                                           <ul class="ul01" id="dsy_D04_122">
-                                                                               <li class="stit" style="font-size:18px;">
-
-                                                                                   <a class="cmsA1" href="http://newhouse.hn.fang.com/house/lplist_1563.html" target="_blank">海南春节七天来电量TOP10</a>
-
-                                                                               </li>
-                                                                           </ul>
-
-                                                                           <ul class="ul01" id="dsy_D04_123">
-                                                                               <li class="f14">
-
-                                                                                   <a class="cmsA" href="http://newhouse.hn.fang.com/house/lplist_1673.html" target="_blank">融创2年布局8城 项目高达17个</a>
-                                                                                   <input type="hidden" name="originalUrl" value="http://newhouse.hn.fang.com/house/lplist_1673.html">
-
-                                                                               </li>
-                                                                           </ul>
-
-                                                                           <ul class="ul01" id="dsy_D04_124">
-                                                                               <li class="f14">
-
-                                                                                   <a class="cmsA" href="http://newhouse.hn.fang.com/house/lplist_1563.html" target="_blank">海南春节七天来电量TOP10</a>
-                                                                                   <input type="hidden" name="originalUrl" value="http://newhouse.hn.fang.com/house/lplist_1563.html">
-
-                                                                               </li>
-                                                                           </ul>
-
-                                                                           <ul class="ul01" id="dsy_D04_125">
-                                                                               <li class="f14" id="dsy_D04_137">
-
-                                                                                   <a class="cmsA" href="http://newhouse.hn.fang.com/house/lplist_834.html" target="_blank">一周楼市播报：海南热盘TOP10出炉</a>
-                                                                                   <input type="hidden" name="originalUrl" value="http://newhouse.hn.fang.com/house/lplist_834.html">
-
-                                                                               </li>
-                                                                           </ul>
-
-                                                                           <ul class="ul01" id="dsy_D04_126">
-                                                                               <li class="f14" id="dsy_D04_137">
-
-                                                                                   <a class="cmsA" href="http://newhouse.hn.fang.com/house/lplist_964.html" target="_blank">还在观望吗？这些盘已经涨价了</a>
-                                                                                   <input type="hidden" name="originalUrl" value="http://newhouse.hn.fang.com/house/lplist_964.html">
-
-                                                                               </li>
-                                                                           </ul>
-
-
-                                    -->
-                                                                       </div>
-                                                                   </div>
-                            <div class="feature-slide-preview" id="e2">
-                                                                       <div class="a300nr">
-                                                                           <div class="a200nrbt"><a href="/news/newslist/1/5" target="_blank">房产快讯</a></div>
-
-                                                                           <div class="bigtit" style="white-space:normal;text-overflow: ellipsis;" id="e2top">
-
-                                                                           </div>
-
-                                                                           <ul class="ul01" id="e2list">
-
-                                                                           </ul>
-                                                                           <p><a class="notice_link_more" href="/news/newslist/1/5 " target="_blank" title="更多">更多&gt;&gt;</a></p>
-                                                                       </div>
-                                                                   </div>
-                            <div class="feature-slide-preview" id="e3">
-                                                                       <div class="a300nr">
-                                                                           <div class="a200nrbt" id="dsy_D04_117"><a href="/news/newslist/1/6" target="_blank">楼盘导购</a></div>
-
-                                                                           <!-- getFangHyhTuanGouList -->
-                                    <div class="hyhLouPanDaoGou">
-
-                                        <div class="bigtit" style="white-space:normal;text-overflow: ellipsis;" id="e3top">
-
-                                        </div>
-
-                                        <ul class="ul01" id="e3list">
-
-                                        </ul>
-                                        <p><a class="notice_link_more" href="/news/newslist/1/6 " target="_blank" title="更多">更多&gt;&gt;</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner_index2">
+            <div class="banner_index6">
                 <a href="/demand/demand" target="_blank"><img
                         src="/images/yzs2.gif" /></a>
                 <div class="indexBanner_num" id="index_numIco2"></div>
             </div>
-            <div class="notice2">
-                <ul class="notice_list2">
-                    <li class="toc2 J_annouce_trigger selected">热销楼盘</li>
-                    <li class="toc2 J_annouce_trigger ">最近开盘</li>
-                </ul>
-                <div class="notice_content2">
 
-                    <div class="J_announce_li2 active-pannel" style="display: block;">
-                        <ul  class="tt222" >
-
-                        </ul>
-                        <!--  <p><a class="notice_link_more" href="/news/newslist/1" target="_blank" title="更多">更多&gt;&gt;</a></p> -->
-                      </div>
-                      <div class="J_announce_li2  active-pannel" style="display: none;">
-                          <ul class="tt22" >
-                             <!-- <li><a class="notice_link gray" title="唯房会开发商合作热线 ：0898-32861406" href="#">开发商合作热线 ：0898-32861406</a></li> -->
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
 
             <div class="banner_index2">
                 <dl class="news-window" id="xfzxxq_C03_04">
@@ -366,7 +197,7 @@
                     <dd style="">
                         <div class="seeHouseM clearfix">
                             <div class="fl">
-                                <img src="../images/banche.png" alt="" class="banche">
+                                <img src="/images/banche.png" alt="" class="banche">
                             </div>
                             <div class="seeHouseMR fr">
                                 <p class="seeHouseML1"><a href="javascript:void(0)" >预约看房</a></p>
@@ -439,23 +270,7 @@
                 </div>
 
             </div>
-            <!--
-                        <div class="banner_index3 row">
 
-                            <div class="touxiang  col-sm-4 col-md-4 col-lg-4">
-                                <img src="/images/dyy.jpg" />
-                            </div>
-                            <div class="jieshao col-sm-8 col-md-8 col-lg-8">
-                                <dl>
-                                    <dd><strong>金牌顾问：</strong>邓永玉</dd>
-                                    <dd><strong>客户评价：</strong>专业的服务精神 倍受老客推荐 </dd>
-                                    <dd><strong>联系方式：</strong>186-6269-4066</dd>
-                                    <dd><strong>综合评价：</strong><img src="/images/xx.gif" /><img src="/images/xx.gif" /><img src="/images/xx.gif" /><img src="/images/xx.gif" /><img src="/images/xx.gif" /></dd>
-                                </dl>
-                            </div>
-
-                        </div>
-                        -->
 
 
 
@@ -657,28 +472,7 @@
 
             <!-- 代码部分end -->
 
-            <!--  <div class="notice">
-                <ul class="notice_list">
-                    <li class="toc J_annouce_trigger selected">唯房会购房攻略</li>
-                    <li class="toc J_annouce_trigger ">合作专区</li>
-                </ul>
-                <div class="notice_content">
 
-                    <div class="J_announce_li active-pannel" style="display: block;">
-                        <ul  class="tt22" id="J-fashionWnews hidden">
-
-                        </ul>
-                        <p><a class="notice_link_more" href="/news/newslist/1" target="_blank" title="更多">更多&gt;&gt;</a></p>
-                    </div>
-                    <div class="J_announce_li  active-pannel" style="display: none;">
-                        <ul >
-                            <li><a class="notice_link gray" title="唯房会开发商合作热线 ：0898-32861406" href="#">开发商合作热线 ：0898-32861406</a></li>
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div> -->
             <div class="banner_index4">
                 <a href="/buildings/78/460000/81/鲁能海蓝福源" target="_blank"><img
                         src="/images/lhfy.jpg" /></a>
@@ -700,175 +494,7 @@
                         src="/images/ngwns.jpg" /></a>
                 <div class="indexBanner_num" id="index_numIco"></div>
             </div>
-     <!--       <div class="m-forecast cellphone-night-warp" id="J_wrap_cellphone">
 
-                <strong class="forecast-title cellphone-night-title">合作伙伴</strong>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-						<span class="forecast-logo J_cellphoneLogo"> <a
-                                href="http://www.vfhui.com/buildings/194/460000/98/信达海天下"
-                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/194/logo/logo.gif"
-                                    height="48" alt="信达 海天下">
-                        </a>
-						</span><span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/21/460000/90/华盛·中央公园"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/21/logo/logo.gif"
-                                height="48" alt="华盛 中央公园">
-                    </a>
-						</span> <span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/123/460000/87/倚能美林湾"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/123/logo/logo.gif"
-                                height="48" alt="倚能 美林湾">
-                    </a>
-						</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-						<span class="forecast-logo J_cellphoneLogo"> <a
-                                href="http://www.vfhui.com/buildings/140/460000/54/远洋华墅"
-                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                    height="48" alt="远洋华墅">
-                        </a>
-						</span><span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/329/460000/97/四季华庭阳光华府"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/329/logo/logo.gif"
-                                height="48" alt="四季华庭阳光华府">
-                    </a>
-						</span> <span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/355/460000/99/海信华庭"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/355/logo/logo.gif"
-                                height="48" alt="海信华庭">
-                    </a>
-						</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-						<span class="forecast-logo J_cellphoneLogo"> <a
-                                href="http://www.vfhui.com/buildings/151/460000/86/永庆湾"
-                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/151/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/140/logo/logo.gif"
-                                    height="48" alt="永庆湾">
-                        </a>
-						</span><span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/182/460000/77/滨江逸品"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/182/logo/logo.gif"
-                                height="48" alt="滨江逸品">
-                    </a>
-						</span> <span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/168/460000/80/船长de海寓"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/168/logo/logo.gif"
-                                height="48" alt="船长de海寓">
-                    </a>
-						</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-						<span class="forecast-logo J_cellphoneLogo"> <a
-                                href="http://www.vfhui.com/buildings/128/460000/61/海航豪庭"
-                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/128/logo/logo.gif"
-                                    height="48" alt="永庆湾">
-                        </a>
-						</span><span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/51/460000/55/保利中央海岸"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/51/logo/logo.gif"
-                                height="48" alt="保利中央海岸">
-                    </a>
-						</span> <span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/26/460000/75/澄迈碧桂园美浪湾"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/26/logo/logo.gif"
-                                height="48" alt="澄迈碧桂园美浪湾">
-                    </a>
-						</span>
-                    </div>
-                </div>
-                <div class="cellphone-night-con" id="J_cellphone-night-con">
-                    <div class="cellphone-night-list J_cellphone_list clearfix"
-                         id="J_cellphone-night-list">
-						<span class="forecast-logo J_cellphoneLogo"> <a
-                                href="http://www.vfhui.com/buildings/54/460000/71/慧远·美林谷"
-                                target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                            <img
-                                    src="http://www.vfhui.com:8080/management/resource/upload_buildings/54/logo/logo.gif"
-                                    class=""
-                                    data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                    height="48" alt="慧远·美林谷">
-                        </a>
-						</span><span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/24/460000/69/富力红树湾"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/24/logo/logo.gif"
-                                height="48" alt="富力红树湾">
-                    </a>
-						</span> <span class="forecast-logo J_cellphoneLogo"> <a
-                            href="http://www.vfhui.com/buildings/78/460000/81/鲁能海蓝福源"
-                            target="_blank" mars_sead="enter_act_mobile_brand_prehot_page">
-                        <img
-                                src="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                class=""
-                                data-original="http://www.vfhui.com:8080/management/resource/upload_buildings/78/logo/logo.gif"
-                                height="48" alt="远洋华墅">
-                    </a>
-						</span>
-                    </div>
-                </div>
-            </div>  -->
         </div>
 
 
@@ -1052,7 +678,7 @@
         height: 200px;
         margin: -41px 12px 0 -7px;
         text-indent: -9999px;
-        background: url(../images/bg-app-person.png) no-repeat;
+        background: url(/images/bg-app-person.png) no-repeat;
     }
     .app-bottom .inn .pic-text {
         display: inline-block;
@@ -1060,7 +686,7 @@
         height: 130px;
         float: left;
         margin: -15px 1px 0 0;
-        background: url(../images/bg-app-text.png) no-repeat;
+        background: url(/images/bg-app-text.png) no-repeat;
     }
     .app-bottom-ld .ld-area {
         float: left;
@@ -1091,7 +717,7 @@
         top: 10px;
         right: -10px;
         cursor: pointer;
-        background: url(../images/bg-app-close.png) no-repeat;
+        background: url(/images/bg-app-close.png) no-repeat;
     }
     .app-bottom .closes, .app-bottom .pic-app, .app-bottom .pic-phone, .app-bottom .pic-text {
         text-indent: -9999px;
@@ -1125,7 +751,7 @@
         bottom: 50px;
         cursor: pointer;
         z-index: 999;
-        background: url(../images/bg-app-small.png) no-repeat;
+        background: url(/images/bg-app-small.png) no-repeat;
     }
     .app-bottom-ld .ld-area p {
         text-overflow: ellipsis;

@@ -2,78 +2,72 @@
   <!-- Indicators -->
   <div class="search">
     <!--<form class="head-tt" id="i_search" method="post"  autocomplete="off" action='/findListBybname'> -->
-      <div class="head-tt-bj"></div>
-      <div class="head-td f16">
-        <ul>
-         <li class="search-tr"><a href="javascript:void(0);" class="hover">找新房</a>
-              <a href="/bieshu/bs_index"  class="haikou">唯房会特价别墅总汇</a>
-           <!--  <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460100)">海口市</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460200)"  class="haikou">三亚市</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460150)"  class="haikou">陵水市</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460700)"  class="haikou">万宁市</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460500)"  class="haikou">澄迈县</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460600)"  class="haikou">文昌市</a>
-             <a href="javascript:void(0)"  class="haikou" onclick="submiBtn_m(460800)"  class="haikou">定安县</a> -->
-           </li>
+    <!--<div class="head-tt-bj"></div>
+    <div class="head-td f16">
+      <ul>
+       <li class="search-tr"><a href="javascript:void(0);" class="hover">找新房</a>
+            <a href="/bieshu/bs_index"  class="haikou">唯房会特价别墅总汇</a>
 
-          <li class="search-tt">
-            <input type="text"  class="search-inp f16 keyword_p" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}">
-            <input type="submit" value="" class="search-but" onclick="submitFourm_p()">
-            <ul class="sous-ts">
-            </ul>
-          </li>
+         </li>
 
-          <li class="search-hot f14">
-            <select class="haveSelM1_p" name="city_id" id="city_id" onchange="submiBtn_p()">
-              <option value="111" selected="selected">区域</option>
-              <option value="460100">海口市</option>
-              <option value="460200">三亚市</option>
-              <option value="460500">澄迈县</option>
-              <option value="460400">琼海市</option>
-              <option value="460600">文昌市</option>
-              <option value="460220">儋州市</option>
-              <option value="460160">保亭县</option>
-              <option value="460700">万宁市</option>
-              <option value="460300">东方市</option>
-              <option value="460150">陵水市</option>
-              <option value="460800">定安县</option>
-              <option value="469000">屯昌县</option>
-              <option value="460110">临高县</option>
-              <option value="460120">白沙县</option>
-              <option value="460130">昌江县</option>
-              <option value="460140">乐东县</option>
-              <option value="460700">兴隆镇</option>
-            </select>
+        <li class="search-tt">
+          <input type="text"  class="search-inp f16 keyword_p" id="buildings_name" name="buildings_name" value="请输入楼盘名称"  onfocus="if (value =='请输入楼盘名称'){value =''}" onblur="if (value ==''){value='请输入楼盘名称'}">
+          <input type="submit" value="" class="search-but" onclick="submitFourm_p()">
+          <ul class="sous-ts">
+          </ul>
+        </li>
 
-            <select class="haveSelM2_p" name="active_price" id="active_price" onchange="submiBtn_p()">
-              <option value="222" selected="selected">价格</option>
-              <option value="4000">4000以下</option>
-              <option value="6000">4000-6000</option>
-              <option value="8000">6000-8000</option>
-              <option value="10000">8000-10000</option>
-              <option value="11000">10000以上</option>
-            </select>
-            <select class="haveSelM3_p" name="acreage" id="acreage" onchange="submiBtn_p()">
-              <option value="333" selected="selected">面积</option>
-              <option value="50"> 50㎡以下</option>
-              <option value="70">50-70㎡</option>
-              <option value="90">70-90㎡</option>
-              <option value="110">90-110㎡</option>
-              <option value="150">110-150㎡</option>
-            </select>
-            <select class="haveSelM4_p" name="shi" id="shi" onchange="submiBtn_p()">
-              <option value="444" selected="selected">户型</option>
-              <option value="1">一居</option>
-              <option value="2">二居</option>
-              <option value="3">三居</option>
-              <option value="4">四居</option>
-              <option value="5">五居居</option>
-              <option value="6">五居以上</option>
-            </select>
+        <li class="search-hot f14">
+          <select class="haveSelM1_p" name="city_id" id="city_id" onchange="submiBtn_p()">
+            <option value="111" selected="selected">区域</option>
+            <option value="460100">海口市</option>
+            <option value="460200">三亚市</option>
+            <option value="460500">澄迈县</option>
+            <option value="460400">琼海市</option>
+            <option value="460600">文昌市</option>
+            <option value="460220">儋州市</option>
+            <option value="460160">保亭县</option>
+            <option value="460700">万宁市</option>
+            <option value="460300">东方市</option>
+            <option value="460150">陵水市</option>
+            <option value="460800">定安县</option>
+            <option value="469000">屯昌县</option>
+            <option value="460110">临高县</option>
+            <option value="460120">白沙县</option>
+            <option value="460130">昌江县</option>
+            <option value="460140">乐东县</option>
+            <option value="460700">兴隆镇</option>
+          </select>
 
-          </li>
-        </ul>
-      </div>
+          <select class="haveSelM2_p" name="active_price" id="active_price" onchange="submiBtn_p()">
+            <option value="222" selected="selected">价格</option>
+            <option value="4000">4000以下</option>
+            <option value="6000">4000-6000</option>
+            <option value="8000">6000-8000</option>
+            <option value="10000">8000-10000</option>
+            <option value="11000">10000以上</option>
+          </select>
+          <select class="haveSelM3_p" name="acreage" id="acreage" onchange="submiBtn_p()">
+            <option value="333" selected="selected">面积</option>
+            <option value="50"> 50㎡以下</option>
+            <option value="70">50-70㎡</option>
+            <option value="90">70-90㎡</option>
+            <option value="110">90-110㎡</option>
+            <option value="150">110-150㎡</option>
+          </select>
+          <select class="haveSelM4_p" name="shi" id="shi" onchange="submiBtn_p()">
+            <option value="444" selected="selected">户型</option>
+            <option value="1">一居</option>
+            <option value="2">二居</option>
+            <option value="3">三居</option>
+            <option value="4">四居</option>
+            <option value="5">五居居</option>
+            <option value="6">五居以上</option>
+          </select>
+
+        </li>
+      </ul>
+    </div> -->
    <!-- </form> -->
   </div>
 
@@ -90,27 +84,69 @@
     <div class="item active ad1" onclick="javascript:window.location.href='/buildings/767/460000/483/碧桂园十里繁花'">
       <picture >
         <source srcset="/images/slfh_sj.jpg" media="(max-width: 768px)" />
-        <img srcset="/images/slfh.jpg" alt="Sample pic"  />
+        <img srcset="/images/bgyslfh.jpg" alt="Sample pic"  />
       </picture>
       <div class="carousel-caption">
       </div>
     </div>
-    <div class="item"  onclick="javascript:window.location.href='/buildings/679/460000/399/融创观澜湖公园壹号'">
+    <div class="item"  onclick="javascript:window.location.href='buildings/710/460000/428/观澜湖·观悦'">
       <picture>
-        <source srcset="/images/glh_sj.jpg" media="(max-width: 768px)" />
-        <img srcset="/images/glh.jpg" alt="Sample pic" />
+        <source srcset="/images/glhgy_sj.png" media="(max-width: 768px)" />
+        <img srcset="/images/glhgy.png" alt="Sample pic" />
       </picture>
       <div class="carousel-caption">
       </div>
     </div>
     <div class="item"  onclick="javascript:window.location.href='/buildings/24/460000/151/富力红树湾'">
       <picture>
-        <source srcset="/images/hsw_sj.jpg" media="(max-width: 768px)" />
-        <img srcset="/images/hsw.jpg" alt="Sample pic" />
+        <source srcset="/images/flhsw_sj.jpg" media="(max-width: 768px)" />
+        <img srcset="/images/flhsw.jpg" alt="Sample pic" />
       </picture>
       <div class="carousel-caption">
       </div>
     </div>
+
+    <div class="item"  onclick="javascript:window.location.href='/buildings/679/460000/399/融创观澜湖公园壹号'">
+      <picture>
+        <source srcset="/images/glh_sj.jpg" media="(max-width: 768px)" />
+        <img srcset="/images/gyyh.jpg" alt="Sample pic" />
+      </picture>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item"  onclick="javascript:window.location.href='/buildings/663/460000/381/融创美伦熙语'">
+      <picture>
+        <source srcset="/images/mlxy_sj.png" media="(max-width: 768px)" />
+        <img srcset="/images/mlxy.png" alt="Sample pic" />
+      </picture>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item"  onclick="javascript:window.location.href='/buildings/720/460000/440/富力·悦海湾'">
+      <picture>
+        <source srcset="/images/flyhw_sj.jpg" media="(max-width: 768px)" />
+        <img srcset="/images/flyhw.jpg" alt="Sample pic" />
+      </picture>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item"  onclick="javascript:window.location.href='/buildings/683/460000/403/恒大御海天下'">
+      <picture>
+        <source srcset="/images/yhtx_sj.jpg" media="(max-width: 768px)" />
+        <img srcset="/images/yhtx.jpg" alt="Sample pic" />
+      </picture>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item"  onclick="javascript:window.location.href='/buildings/579/460000/291/星华海岸城'">
+      <picture>
+        <source srcset="/images/xhhac_sj.jpg" media="(max-width: 768px)" />
+        <img srcset="/images/xhhac.jpg" alt="Sample pic" />
+      </picture>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <!--
     <div class="item"  onclick="javascript:window.location.href='/buildings/281/460000/250/碧桂园珊瑚宫殿'">
       <picture>
         <source srcset="/images/shgd_sj.jpg" media="(max-width: 768px)" />
@@ -127,6 +163,7 @@
       <div class="carousel-caption">
       </div>
     </div>
+     -->
   </div>
 
   <!-- Controls -->
