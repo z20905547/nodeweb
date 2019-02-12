@@ -549,14 +549,6 @@ $(document).ready(function(){
 });
 
 
-$(function () {
-	document.onkeydown = function (event) {
-		var e = event || window.event || arguments.callee.caller.arguments[0];
-		if (e && e.keyCode == 13) {
-			submitFourm_p();
-		}
-	};
-});
 
 
 function submiBtn() {
@@ -918,7 +910,7 @@ function submitFourm_2(){
 }
 function submitFourm_3(){
 
-	buildings_name=$("#h_bname").val();
+	 buildings_name=$("#h_bname").val();
 
 	loading=true;
 	curpage=1;

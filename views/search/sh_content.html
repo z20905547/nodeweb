@@ -4,6 +4,15 @@
     }
 </style>
 
+<script type="text/javascript">
+    $(document).keypress(function(e) {
+        // 回车键事件
+        if(e.which == 13) {
+            jQuery(".search-btn").click();
+        }
+    });
+</script>
+
 <div class="lb" style="border-top:0;">
     <div class="dynamic">
         <div class=" dyn-left">
@@ -45,7 +54,7 @@
                              <span class="state" id="choosediv" chooseurl="lp">搜索</span>
                             </span>
                             <input type="text"  id="h_bname" placeholder="请输入楼盘名称" class="search-inp">
-                            <button class="search-btn" onclick="submitFourm_p()"></button>
+                            <button class="search-btn" onclick="submitFourm_3()"></button>
                             <div class="search-list" id="newcon_ul">
                             </div>
                         </div></li>
