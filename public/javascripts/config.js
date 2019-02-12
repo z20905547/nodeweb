@@ -12,7 +12,8 @@ var WEBMAP={
 	    yn_buildingsdetail:WEBURL+"yn_buildings/",
 	    noticedetail:WEBURL+"news/",
 	    orderdetail:WEBURL+"gy_customer/",
-	    gy_buildingsdetail:WEBURL+"gy_buildings/"
+	    gy_buildingsdetail:WEBURL+"gy_buildings/",
+	    buildingsserch:WEBURL+"search/"
 }
 
 var URLMAP={

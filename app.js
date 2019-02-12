@@ -17,6 +17,7 @@ var news = require('./routes/news');
 var demand = require('./routes/demand');
 var jinrong = require('./routes/jinrong');
 var bieshu = require('./routes/bieshu');
+var search = require('./routes/search');
 var map = require('./routes/map');
 var app = express();
 app.use(session({
@@ -51,6 +52,7 @@ app.use('/demand', demand);
 app.use('/jinrong', jinrong);
 app.use('/map', map);
 app.use('/bieshu', bieshu);
+app.use('/search', search);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
