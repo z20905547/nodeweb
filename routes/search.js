@@ -11,4 +11,10 @@ router.get('/:buildings_name', function (req, res, next) {
 
 });
 
+router.get('/', function (req, res, next) {
+	res.render('search/search_list', { title: '唯房会 -一家专门做特价房的网站',backproId: 460000});
+
+});
+
+
 module.exports = router;
