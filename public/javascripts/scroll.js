@@ -33,8 +33,8 @@ $(function () {
 
 						var str="";
 						for(var i=0;i<sublist.length;i++){
-							var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
-							var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
+							var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
+							var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
 							var tejia = sublist[i].active_price;
 							var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 							if (typeof(tejia) == "undefined")
