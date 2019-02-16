@@ -61,8 +61,8 @@ $(document).ready(function(){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 				var df = sublist[i].server_phone_num;
 				var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
 				if (typeof(tejia) == "undefined")
@@ -596,8 +596,8 @@ function submiBtn() {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
@@ -676,8 +676,8 @@ function submitFourm(){
 			var str="";
 
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
@@ -764,8 +764,8 @@ function submiBtn_p() {
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -856,8 +856,8 @@ function submiBtn_m(ct) {
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -942,8 +942,8 @@ function submitFourm_3(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -1023,8 +1023,8 @@ function submitFourm_p(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
@@ -1282,8 +1282,8 @@ function submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown) {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].active_price;
-				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
+				var tejia = sublist[i].discount_price;
+				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].id+'/xct/xct.jpg" onerror="/images/one5.png">';
