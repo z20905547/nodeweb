@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	var params={
 		buildingsId:$("#buildingsId").val(),
-		pid:$("#pid").val()
+
 	}
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
 
