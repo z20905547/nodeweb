@@ -47,7 +47,9 @@ $(document).ready(function(){
 		area_id:area_id,
 		active_price: active_price,
 		acreage: acreage,
-		shi: shi
+		shi: shi,
+		price_updown:555,
+		fresh_updown:666
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 
@@ -59,7 +61,7 @@ $(document).ready(function(){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				var df = sublist[i].server_phone_num;
 				var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
@@ -591,7 +593,7 @@ function submiBtn() {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
@@ -671,7 +673,7 @@ function submitFourm(){
 			var str="";
 
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
@@ -759,7 +761,7 @@ function submiBtn_p() {
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
@@ -851,7 +853,7 @@ function submiBtn_m(ct) {
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
@@ -937,7 +939,7 @@ function submitFourm_3(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
@@ -1018,7 +1020,7 @@ function submitFourm_p(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
@@ -1133,6 +1135,8 @@ $(function(){
 	var active_price = '222';
 	var acreage = '333';
 	var shi = '444';
+	var price_updown = '555';
+	var fresh_updown = '666';
 
 
 	$(".lp-pb-sclick li").click(function() {
@@ -1144,7 +1148,7 @@ $(function(){
 
 		$(this).addClass('act');                            // 添加当前元素的样式
 		city_id =$(this).val();
-		submiBtn2(city_id,active_price,acreage,shi);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
 	});
 	$(".lp-pb-sclick1 li").click(function() {
 
@@ -1154,7 +1158,7 @@ $(function(){
 
 		active_price =$(this).val();
 
-		submiBtn2(city_id,active_price,acreage,shi);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
 	});
 	$(".lp-pb-sclick2 li").click(function() {
 
@@ -1163,7 +1167,7 @@ $(function(){
 		$(this).addClass('act');                            // 添加当前元素的样式
 
 		shi =$(this).val();
-		submiBtn2(city_id,active_price,acreage,shi);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
 	});
 	$(".lp-pb-sclick3 li").click(function() {
 
@@ -1173,14 +1177,56 @@ $(function(){
 
 		acreage =$(this).val();
 
-		submiBtn2(city_id,active_price,acreage,shi);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
 	});
 
+	$(".updown a").click(function() {
+	//	alert($(".updown span").hasClass('lp-pb-pxIcon3'));
+		if ($(".updown span").hasClass('lp-pb-pxIcon3')) {
 
+			$(".updown span").removeClass('lp-pb-pxIcon3');  // 删除其他兄弟元素的样式
+
+			$(".updown span").addClass('lp-pb-pxIcon2');
+
+			price_updown = "price_up";
+			fresh_updown = "666";
+		} else {
+			$(".updown span").removeClass('lp-pb-pxIcon2');  // 删除其他兄弟元素的样式
+
+			$(".updown span").addClass('lp-pb-pxIcon3');
+
+			price_updown = "price_down";
+			fresh_updown = "666";
+		}
+
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
+	});
+
+	$(".fresh a").click(function() {
+	//	alert($(".fresh span").hasClass('lp-pb-pxIcon3'));
+		if ($(".fresh span").hasClass('lp-pb-pxIcon3')) {
+
+			$(".fresh span").removeClass('lp-pb-pxIcon3');  // 删除其他兄弟元素的样式
+
+			$(".fresh span").addClass('lp-pb-pxIcon2');
+
+			fresh_updown = "fresh_up";
+			price_updown = "555";
+		} else {
+			$(".fresh span").removeClass('lp-pb-pxIcon2');  // 删除其他兄弟元素的样式
+
+			$(".fresh span").addClass('lp-pb-pxIcon3');
+
+			fresh_updown = "fresh_down";
+			price_updown = "555";
+		}
+		alert(fresh_updown);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
+	});
 });
 
 
-function submiBtn2(city_id,active_price,acreage,shi) {
+function submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown) {
 	$('.keyword').val("请输入楼盘名称");
 	buildings_name="";
 	//alert(buildings_name);
@@ -1195,7 +1241,8 @@ function submiBtn2(city_id,active_price,acreage,shi) {
 	var active_price = active_price;
 	var acreage =acreage;
 	var shi = shi;
-
+	var price_updown = price_updown;
+	var fresh_updown = fresh_updown;
 	//alert(city_id);
 	//alert(active_price);
 	//alert(acreage);
@@ -1214,7 +1261,9 @@ function submiBtn2(city_id,active_price,acreage,shi) {
 		area_id:area_id,
 		active_price: active_price,
 		acreage: acreage,
-		shi: shi
+		shi: shi,
+		price_updown:price_updown,
+		fresh_updown:fresh_updown
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
 		$('.active-list').html("");
@@ -1230,7 +1279,7 @@ function submiBtn2(city_id,active_price,acreage,shi) {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元/㎡</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';

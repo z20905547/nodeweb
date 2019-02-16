@@ -4579,6 +4579,7 @@ div#purposeParam {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
+
 }
 .map_popup .title {
 	background: url("http://map.baidu.com/img/popup_title.gif") repeat scroll 0 0 transparent;
@@ -7520,4 +7521,7 @@ font-size: 16px;
 	background: url(/images/icons_v5.png) 12px -18px no-repeat;
 	cursor: pointer;
 	outline: none;
+}
+.lp-pb-pxIcon2 {
+	background-position: -385px -166px;
 }
