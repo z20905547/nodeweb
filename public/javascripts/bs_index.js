@@ -47,7 +47,7 @@ $(document).ready(function(){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
 				var df = sublist[i].server_phone_num;
 				var df3 = df.substring(df.length-3,df.length) ;//截取电话后三位
@@ -55,8 +55,8 @@ $(document).ready(function(){
 				{
 					var hongbao = '';
 				}
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				oneobj.addClass("one-active row").attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-sm-6 col-md-5 col-lg-4">'+
 							'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
@@ -184,14 +184,14 @@ function submiBtn() {
 			var str="";
 			//alert(sublist.length);
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				oneobj.addClass("one-active row").attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
@@ -264,14 +264,14 @@ function submitFourm(){
 			var str="";
 
 			for(var i=0;i<sublist.length;i++){
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
 
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
 				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				oneobj.addClass("one-active row").attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
@@ -353,15 +353,15 @@ function submiBtn_p() {
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
 				}
 				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				oneobj.addClass("one-active row").attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+
@@ -438,15 +438,15 @@ function submitFourm_p(){
 			for(var i=0;i<sublist.length;i++){
 				var imglogo='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/logo/logo.jpg " onerror="/images/logo.png">';
 				var img='<img src="'+HTTPURL+'resource/upload_buildings/'+sublist[i].buildings_id+'/xct/xct.jpg" onerror="/images/one5.png">';
-				var tejia = sublist[i].discount_price;
+				var tejia = sublist[i].active_price;
 				var hongbao = '<div class="red_box red_box_top"><p>'+tejia+'元</p></div>';
 				if (typeof(tejia) == "undefined")
 				{
 					var hongbao = '';
 				}
 				var oneobj=$("<div></div>");
-				oneobj.addClass("one-active row").attr("data-id",sublist[i].buildings_id).attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
-					window.open(WEBMAP.buildingsdetail+$(this).attr("data-id")+"/"+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
+				oneobj.addClass("one-active row").attr("data-id2",sublist[i].id).attr("data-id3",sublist[i].buildings_name).on("click",function(){
+					window.open(WEBMAP.buildingsdetail+proId+"/"+$(this).attr("data-id2")+"/"+$(this).attr("data-id3"));
 				})
 				str='<div class="left-text col-xs-12 col-sm-6 col-md-5 col-lg-4">'+
 					'<div class="main_active_logo">'+imglogo+'</div>'+hongbao+

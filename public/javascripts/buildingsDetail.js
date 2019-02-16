@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	var params={
 		buildingsId:$("#buildingsId").val(),
-		pid:$("#pid").val()
+
 	}
 	ajaxGet("get",URLMAP.buildingsDetail,params,function(data){
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
 			map_x=data.data.map_x;
 			map_y=data.data.map_y;
 			xy(data.data.map_x,data.data.map_y);
-			var tejia = data.data.discount_price;
+			var tejia = data.data.active_price;
 			var hongbao = '<div class="hongbao">' +
 					//'<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唯房会红包'+tejia+
 				'</p></div>' +
