@@ -37,6 +37,7 @@ $(document).ready(function(){
 	curpage=1;
 	totalpage=1;
 	pagecount=15;
+
 	params={
 		proId:proId,
 		now:1,
@@ -47,8 +48,7 @@ $(document).ready(function(){
 		area_id:area_id,
 		active_price: active_price,
 		acreage: acreage,
-		fresh_updown: 666,
-		price_updown: 555,
+
 		shi: shi
 	}
 	ajaxGet("get",URLMAP.buildingslist,params,function(data){
@@ -196,10 +196,10 @@ $(document).ready(function(){
 					'<figcaption>'+
 					'<h3>'+'原价：<span style="text-decoration:line-through;">'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
 					'<div class="row">' +
-					'<div class="col-sm-7 col-md-7 col-lg-7" >' +
+					'<div class="col-sm-8 col-md-8 col-lg-8" >' +
 					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span>' +
 					'</div>' +
-					'<div class="bnt_sqtj col-sm-5 col-md-5 col-lg-5">			'+rand+'人报名	' +
+					'<div class="bnt_sqtj col-sm-4 col-md-4 col-lg-4">			'+rand+'人报名	' +
 
 					//'<a class="act11" onclick="yuyuekanfangche();">申请特价</a>		' +
 					'		</div>' +
@@ -254,10 +254,10 @@ $(document).ready(function(){
 					'<figcaption>'+
 					'<h3>'+'原价：<span style="text-decoration:line-through;">'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
 					'<div class="row">' +
-					'<div class="col-sm-7 col-md-7 col-lg-7" >' +
+					'<div class="col-sm-8 col-md-8 col-lg-8" >' +
 					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span>' +
 					'</div>' +
-					'<div class="bnt_sqtj col-sm-5 col-md-5 col-lg-5">	'+rand+'人报名	' +
+					'<div class="bnt_sqtj col-sm-4 col-md-4 col-lg-4">	'+rand+'人报名	' +
 					//'<a class="act11" onclick="yuyuekanfangche();">申请特价</a>				</div>' +
 
 					'</div>'+
@@ -309,10 +309,10 @@ $(document).ready(function(){
 					'<figcaption>'+
 					'<h3>'+'原价：<span style="text-decoration:line-through;">'+sublist[i].first_price+'<span>元/㎡</span></h3>'+
 					'<div class="row">' +
-					'<div class="col-sm-7 col-md-7 col-lg-7" >' +
+					'<div class=" col-sm-8 col-md-8 col-lg-8" >' +
 					'<p class="text">'+'特价：</span>'+sublist[i].active_price+'元/㎡<span></span>' +
 					'</div>' +
-					'<div class="bnt_sqtj col-sm-5 col-md-5 col-lg-5">		'+rand+'人报名		' +
+					'<div class="bnt_sqtj col-sm-4 col-md-4 col-lg-4">		'+rand+'人报名		' +
 					//'<a class="act11" onclick="yuyuekanfangche();">申请特价</a>			' +
 					'	</div>' +
 					'</div>'+
