@@ -47,7 +47,7 @@ ajaxGet("get",URLMAP.notecelist,params,function(data){
 			oneobj.append(str);
 			$('.ttbox').append(oneobj);
 		}
-
+		if (mark=='undefined'){mark='' }
 		str2='<span class="page_total">共'+data.data.total+'条</span>&nbsp;&nbsp;'+
              '<a target="_self"  href="/news/newslist/1/'+mark+'">首页</a>';
 
