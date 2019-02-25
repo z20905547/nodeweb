@@ -1163,6 +1163,8 @@ $(function(){
 
 		$(this).addClass('act');                            // 添加当前元素的样式
 		city_id =$(this).val();
+		fresh_updown = "fresh_up";
+		price_updown = "555";
 		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
 	});
 	$(".lp-pb-sclick1 li").click(function() {
