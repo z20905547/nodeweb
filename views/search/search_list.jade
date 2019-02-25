@@ -3,8 +3,9 @@ extends ../layout
 block content
     input#proId(type="hidden",value="#{backproId}")
     input#buildings_name(type="hidden",value="#{buildings_name}")
-    input#city_id(type="hidden",value="#{city_id}")
+    input#city_id(type="hidden",value="#{city_id}" class="haveSelM1")
     input#area_id(type="hidden",value="#{area_id}")
+
     include ../head
     include sh_content.html
     include ../footer.html

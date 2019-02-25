@@ -23,7 +23,6 @@ $(document).ready(function(){
 //	});
 
 
-
 		$(".eee").show();
 		$(".eee2").hide();
 		$(".eee3").hide();
@@ -548,7 +547,20 @@ $(document).ready(function(){
 	});
 
 //---------------------------------
+//search_list页面从首页过来的时候自动旋转首页点击的city
+	$(".lp-pb-sclick").each(function () {
+		//var tmp;
+		var city2 =$("input[id='city_id']").val();
+		$(this).find('li').each(function() {
 
+			var city1 = $(this).attr("value");
+			if(city1==city2){
+				$(this).addClass('act');
+				return false;
+			}
+		});
+
+	});
 
 
 });
