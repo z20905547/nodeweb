@@ -1150,7 +1150,7 @@ $(function(){
 	var price_updown = '555';
 	var fresh_updown = '666';
 
-	$(".citylist .city").click(function() {
+	$(".citylist123 .city").click(function() {
 
 		$(this).siblings(' .city').removeClass('act');  // 删除其他兄弟元素的样式
 		$(".city .act").removeClass('act');  // 删除其他兄弟元素的样式

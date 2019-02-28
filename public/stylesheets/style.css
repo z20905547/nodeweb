@@ -3851,9 +3851,11 @@ h3 {
 		margin-right: 50px;
 	}
 }
-
+/* pc端不显示*/
 @media screen and (min-width:768px){
-
+   .citylist123 {
+	   display:none;
+   }
 	.left_bm_box {
 		display:none;
 	}
@@ -7537,7 +7539,7 @@ height: 30px;
 	line-height: 30px;
 	text-align: center;
 }
-.citylist{
+.citylist123{
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
