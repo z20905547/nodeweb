@@ -63,7 +63,7 @@ $(function () {
 								'&nbsp;* '+
 								sublist[i].address+
 								' </div>'+
-								'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
+								'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span></div>'+
 								'</div>';
 							oneobj.append(str);
 							$('.active-list').append(oneobj); 

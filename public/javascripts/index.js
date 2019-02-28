@@ -95,10 +95,10 @@ $(document).ready(function(){
 					'</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span >元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 
 					'</div>';
@@ -637,10 +637,10 @@ function submiBtn() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -716,10 +716,10 @@ function submitFourm(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -805,10 +805,10 @@ function submiBtn_p() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -897,10 +897,10 @@ function submiBtn_m(ct) {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -983,10 +983,10 @@ function submitFourm_3(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 
 
@@ -1064,10 +1064,10 @@ function submitFourm_p(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 
 
@@ -1140,7 +1140,78 @@ function shut() {
 	$("#rePriceOpen3").css('display','none');
 }
 
+// search_list 手机页面点击处理
+$(function(){
 
+	var city_id='111';
+	var active_price = '222';
+	var acreage = '333';
+	var shi = '444';
+	var price_updown = '555';
+	var fresh_updown = '666';
+
+	$(".citylist123 .city").click(function() {
+
+		$(this).siblings(' .city').removeClass('act');  // 删除其他兄弟元素的样式
+		$(".city .act").removeClass('act');  // 删除其他兄弟元素的样式
+
+		$(".act").removeClass('act');
+
+		$(this).addClass('act');  // 添加当前元素的样式
+		//alert($(".act").attr("value"));
+		city_id =$(".act").attr("value");
+		fresh_updown = "fresh_down";
+		price_updown = "555";
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
+	});
+	$(".px .jiage").click(function() {
+		//	alert($(".updown span").hasClass('lp-pb-pxIcon3'));
+		if ($(".jiage span").hasClass('lp-pb-pxIcon3')) {
+
+			$(".jiage span").removeClass('lp-pb-pxIcon3');  // 删除其他兄弟元素的样式
+
+			$(".jiage span").addClass('lp-pb-pxIcon2');
+
+			price_updown = "price_up";
+			fresh_updown = "666";
+		} else {
+			$(".jiage span").removeClass('lp-pb-pxIcon2');  // 删除其他兄弟元素的样式
+
+			$(".jiage span").addClass('lp-pb-pxIcon3');
+
+			price_updown = "price_down";
+			fresh_updown = "666";
+		}
+
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
+	});
+
+	$(".px .gengxin").click(function() {
+		//	alert($(".fresh span").hasClass('lp-pb-pxIcon3'));
+		if ($(".gengxin span").hasClass('lp-pb-pxIcon3')) {
+
+			$(".gengxin span").removeClass('lp-pb-pxIcon3');  // 删除其他兄弟元素的样式
+
+			$(".gengxin span").addClass('lp-pb-pxIcon2');
+
+			fresh_updown = "fresh_up";
+			price_updown = "555";
+		} else {
+			$(".gengxin span").removeClass('lp-pb-pxIcon2');  // 删除其他兄弟元素的样式
+
+			$(".gengxin span").addClass('lp-pb-pxIcon3');
+
+			fresh_updown = "fresh_down";
+			price_updown = "555";
+		}
+		//alert(fresh_updown);
+		submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown);
+	});
+
+
+
+
+});
 
 // search_list 页面点击处理
 $(function(){
@@ -1325,10 +1396,10 @@ function submiBtn2(city_id,active_price,acreage,shi,price_updown,fresh_updown) {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元/㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span>元/㎡' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
