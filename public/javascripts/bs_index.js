@@ -79,10 +79,10 @@ $(document).ready(function(){
 					        '</strong>&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213,'+df3+'"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 
 					'</div>';
@@ -213,10 +213,10 @@ function submiBtn() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -292,10 +292,10 @@ function submitFourm(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -382,10 +382,10 @@ function submiBtn_p() {
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 					'</div>';
 
@@ -467,10 +467,10 @@ function submitFourm_p(){
 					'&nbsp;* '+
 					sublist[i].address+
 					' </div>'+
-					'<div class="shoujiduan"><span>原价：</span><span>'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
-					'<span class="contact">'+
-					'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
-					'</span>'+
+					'<div class="shoujiduan"><span>原价：</span><span style="text-decoration:line-through;">'+sublist[i].first_price+'</span><span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>特价：</span><span>'+sublist[i].active_price+'</span><span>元</span>' +
+				//	'<span class="contact">'+
+				//	'<a href="tel:4008520213"><img src="../images/11.png" alt="联系电话" style="color:#000"></a>'+
+				//	'</span>'+
 					'</div>'+
 
 

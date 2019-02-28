@@ -7530,3 +7530,54 @@ font-size: 16px;
 	margin: 0px;
 
 }
+.city {
+	float:left; border: 0.5px solid #ddd;  background: white;
+width: 20%;
+height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.citylist{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.jiage{
+	float:left; border: 0.5px solid #ddd;  background: white;width: 40%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.gengxin{
+	float:left; border: 0.5px solid #ddd;  background: white;width: 40%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.paixu{
+	float:left; border: 0.5px solid #ddd;  background: white;width: 20%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.px{
+	padding-top: 10px;
+}
+
+.jiage span {
+	display: inline-block;
+	width: 17px;
+	height: 12px;
+	padding-left: 5px;
+}
+.gengxin span {
+	display: inline-block;
+	width: 17px;
+	height: 12px;
+	padding-left: 5px;
+}
+.act {
+	color: #fff!important;
+	background: #f10180;
+
+	border-radius: 3px;
+}
