@@ -3853,6 +3853,9 @@ h3 {
 }
 /* pc端不显示*/
 @media screen and (min-width:768px){
+	.tjlb {
+		display:none;
+	}
    .citylist123 {
 	   display:none;
    }
