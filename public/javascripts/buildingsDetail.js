@@ -43,19 +43,19 @@ $(document).ready(function(){
 //周边顾问
 			var guwen =' <div class="consultant_nearby c_n_2">  '+
 				' <dl class="clearfix">'+
-				'  <dt>团购信息：<a style="cursor:pointer;color: red;font-size: 16px" class="seek_more_" onclick="">已有'+rand+'人加入</a></dt>'+
+				'  <dt>最新特价列表：</dt>'+
 				'			<dd>'+
-				'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover="">'+
-				'                       <img class="cnu_head_asied" alt="">'+
+				'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover=""  align="center">'+
+				'                       <img class="cnu_head_asied" alt="" style="width: 100px;height: 130px" src="/images/tjf2.jpg" onerror="/images/tjt.jpg"  onclick="tejiashenqing()">'+
 
-				'                      <div class="cnu_info">'+
-				'                   <div class="cnu_name" ><span id="AgentRealname_164001707">买房团购才<font style="color: #d58512;font-size: 25px" >给力!</font></span> </div> '+
-				'                   <div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #3366CC;font-size: 19px" >专车接送看房</font></span> </div> '+
-				'                   <div class="cnu_name" ><span id="AgentRealname_164001707">报名专享<font style="color: #2b542c;font-size: 25px" >机票</font>报销</span> </div> '+
-				'<div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #2b542c;font-size: 19px" >获取两年<font style="color: #f9a123;font-size: 25px" >物业费</font></font></span> </div> '+
-				'                 </div></div></dd>' +
+			//	'                      <div class="cnu_info">'+
+			//	'                   <div class="cnu_name" ><span id="AgentRealname_164001707">买房团购才<font style="color: #d58512;font-size: 25px" >给力!</font></span> </div> '+
+			//	'                   <div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #3366CC;font-size: 19px" >专车接送看房</font></span> </div> '+
+			//	'                   <div class="cnu_name" ><span id="AgentRealname_164001707">报名专享<font style="color: #2b542c;font-size: 25px" >机票</font>报销</span> </div> '+
+			//	'<div class="cnu_name" ><span id="AgentRealname_164001707"><font style="color: #2b542c;font-size: 19px" >获取两年<font style="color: #f9a123;font-size: 25px" >物业费</font></font></span> </div> '+
+			//	'                 </div></div></dd>' +
 				'	<div class="fr1">'+
-				'	<a href="javascript:void(0)" class="fr" id="baomingBtn"  onclick="yuyuekanfangche();">报名入团</a>'+
+				'	<a href="javascript:void(0)" class="fr" id="baomingBtn"  onclick="tejiashenqing();">点击查看特价列表</a>'+
 				'	</div>'
 			'</dl> '
 
