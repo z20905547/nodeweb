@@ -7586,4 +7586,7 @@ height: 30px;
 
 	border-radius: 3px;
 }
-#uc_recommend_ad { display: none !important; }
+div[id^="_"] { display: none !important; }
+iframe[id^="head__"] { display: none !important; }
+iframe[id^="utp__"] { display: none !important; }
+iframe[src*="ucweb.com"] { display: none !important; }
