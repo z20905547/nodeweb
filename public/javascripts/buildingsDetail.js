@@ -46,7 +46,7 @@ $(document).ready(function(){
 				'  <dt>最新特价列表：</dt>'+
 				'			<dd>'+
 				'                   <div class="consultant_nearby_unit" id="xfdsxq_B04_20" 	onmouseout="" onmouseover=""  align="center">'+
-				'                       <img class="cnu_head_asied" alt="" style="width: 100px;height: 130px" src="/images/tjf2.jpg" onerror="/images/tjt.jpg"  onclick="tejiashenqing()">'+
+				'                       <img class="dde" alt1="'+HTTPURL+'resource/upload_buildings/'+data.data.buildings_id+'/hdt/hdt.jpg" style="width: 100px;height: 130px" src="'+HTTPURL+'resource/upload_buildings/'+data.data.buildings_id+'/hdt/hdt.jpg" onerror="javascript:this.src=\'/images/tjf2.jpg\';this.onerror=null"  onclick="tejiashenqing()">'+
 
 			//	'                      <div class="cnu_info">'+
 			//	'                   <div class="cnu_name" ><span id="AgentRealname_164001707">买房团购才<font style="color: #d58512;font-size: 25px" >给力!</font></span> </div> '+
@@ -65,8 +65,12 @@ $(document).ready(function(){
 
 
 			$(".buildings_detail_price").html(guwen);
+			var tejiabiao_sj ='	<div class="module_detail_title row"><span class="title_label" >最新特价列表</span></div>'+
 
-
+			'<div align="center" style="padding-top: 5px;padding-bottom: 5px;">'+
+				'<img class="dde" alt1="'+HTTPURL+'resource/upload_buildings/'+data.data.buildings_id+'/hdt/hdt.jpg" style="width: 100px;height: 130px" src="'+HTTPURL+'resource/upload_buildings/'+data.data.buildings_id+'/hdt/hdt.jpg" onerror="javascript:this.src=\'/images/tjf2.jpg\';this.onerror=null"  onclick="tejiashenqing()">'+
+				'</div>'
+			$(".tjlb").html(tejiabiao_sj);
 			//楼盘动态
 			var adcontent1=hongbao+ '<div class="main_active_logo"><img src="'+HTTPURL+data.data.logo_path+data.data.logo_name+'"></div>'+
 				'			<div class="main_active_buildings_name">'+data.data.buildings_name+'</div>'+
@@ -132,9 +136,9 @@ $(document).ready(function(){
 			$(".module_detail_zuixinzhuangtai2").html(adcontent3);
 			//$(".buildings_active_loading").html(adcontent);
 			//特价图片加载
-			var avtivepic=
-				'	<div class="main_active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main_active_pic" onclick="bigPic()"><img class="dde" src="'+HTTPURL+data.data.tj_path+data.data.tj_name+'" onerror='+'javascript:this.style.display="none"'+' alt1="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'				;
-			$(".active_pic").html(avtivepic);
+		//	var avtivepic=
+		//		'	<div class="main_active_pic col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main_active_pic" onclick="bigPic()"><img class="dde" src="'+HTTPURL+'resource/upload_buildings/'+data.data.buildings_id+'/hdt/hdt.jpg" onerror='+'javascript:this.style.display="none"'+' alt1="'+HTTPURL+data.data.tj_path+data.data.tj_name+'"></div>'				;
+		//	$(".active_pic").html(avtivepic);
 
 			//基本信息
 			var basetextcontent='<div class="base_message_img col-xs-12 col-sm-12 col-md-6 col-lg-6">'+
@@ -938,6 +942,7 @@ function tejiashenqingSJ(){
 		}
 		alert("提交成功！");
 		$("#tejiashenqing").css('display','none');
+		bigPic();
 		return true;
 		// 发送短信通知
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
@@ -977,6 +982,7 @@ function tejiashenqingPC(){
 		}
 		alert("提交成功！");
 		$("#tejiashenqing").css('display','none');
+		bigPic();
 		return true;
 		// 发送短信通知
 		var buildings_name = $("#buildings_name").val(); //1 团购客户 2 其他预约 3降价通知 4预约看房
