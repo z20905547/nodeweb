@@ -398,12 +398,20 @@ function tagchange(){
 //------------------特价图片处理
 //活动图点击后放大
 function bigPic() {
-	$(".cur_big_pic2").attr("src",$(".dde").attr("alt1"));
-	$(".high_level2").attr("style","top:"+getScrollTop()+"px");//触发遮罩层显示时，获取当前的高度
-	//显示大图
-	$(".high_level2").show();
-	$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
-	$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
+	var ImgObj = new Image(); //判断图片是否存在
+	ImgObj.src = $(".dde").attr("alt1");
+	//没有图片，则返回-1
+	if (ImgObj.fileSize > 0 || (ImgObj.width > 0 && ImgObj.height > 0)) {
+		$(".cur_big_pic2").attr("src",$(".dde").attr("alt1"));
+		$(".high_level2").attr("style","top:"+getScrollTop()+"px");//触发遮罩层显示时，获取当前的高度
+		//显示大图
+		$(".high_level2").show();
+		$("body").attr("style","overflow-y:hidden;");//加这个是去掉最外层的滚动条，防止滚到遮罩层挡不住的部分
+		$("body").bind("touchmove",function(event){event.preventDefault();});//手机端，出遮罩层就禁止滚动内容
+	} else {
+		alert("该项目暂无特价列表");
+	}
+
 }
 //关闭遮罩层
 $(".close_ico2").bind("click",function(){
