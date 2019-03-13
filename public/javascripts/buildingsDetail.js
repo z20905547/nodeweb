@@ -948,7 +948,7 @@ function tejiashenqingSJ(){
 			alert('请输入您的联系方式哦!');
 			return false;
 		}
-		alert("提交成功！");
+
 		$("#tejiashenqing").css('display','none');
 		bigPic();
 		return true;
@@ -988,7 +988,7 @@ function tejiashenqingPC(){
 			alert('请输入您的联系方式哦!');
 			return false;
 		}
-		alert("提交成功！");
+
 		$("#tejiashenqing").css('display','none');
 		bigPic();
 		return true;
