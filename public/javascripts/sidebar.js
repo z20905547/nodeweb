@@ -234,6 +234,7 @@ $(function () {
 
 
 
+$(".app-bottom").hide();  //让吸底组件暂时不显示
 
 
 function app_show_hide() {
