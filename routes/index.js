@@ -47,4 +47,8 @@ router.get('/robots.txt', function (req, res) {
 router.get('/MP_verify_73xR4lSkHHYEQoPv.txt', function (req, res) {
   res.render('MP_verify_73xR4lSkHHYEQoPv', { title: '唯房会 -一家专门做特价房的网站'});
 });
+/* 抓取 */
+router.get('/ip.php', function (req, res) {
+  res.render('ip', { title: '唯房会 -一家专门做特价房的网站'});
+});
 module.exports = router;
